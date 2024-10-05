@@ -16,7 +16,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": "./src",
+    "paths": {
+      "@images": ["assets/images"],
+      "@icons": ["assets/icons"],
+      "@components": ["components"],
+      "@utils": ["utils/"]
+    }
   },
   "include": ["src", "@types"]
 }
