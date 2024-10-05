@@ -1,0 +1,7 @@
+{
+  "delete": true,
+  "exportDefault": true,
+  "singleQuotes": true,
+  "noHeader": true,
+  "directory": ["src/components", "src/utils"]
+}
