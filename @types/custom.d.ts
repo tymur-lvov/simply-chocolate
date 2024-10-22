@@ -71,3 +71,7 @@ declare module '@images' {
   export const victoria_1x: string;
   export const victoria_2x: string;
 }
+
+declare module '@icons' {
+  export const icons: string;
+}
