@@ -23,7 +23,7 @@
       "@images": ["assets/images"],
       "@icons": ["assets/icons"],
       "@components": ["components"],
-      "@utils": ["utils/"]
+      "@utils": ["utils"]
     }
   },
   "include": ["src", "@types"]
