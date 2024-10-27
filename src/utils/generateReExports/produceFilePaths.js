@@ -1,12 +1,12 @@
 import fs from 'fs/promises';
 
-import filterFilesFromDirs from './filterFilesFromDirs.js';
+import filterFilePaths from './filterFilePaths.js';
 import errorCathingDecorator from './errorCathingDecorator.js';
 
 const produceFilePaths = async (srcFileDirPath) => {
   const dirContent = await fs.readdir(srcFileDirPath, { recursive: true });
 
-  const filePaths = await filterFilesFromDirs(dirContent, srcFileDirPath);
+  const filePaths = await filterFilePaths(dirContent, srcFileDirPath);
 
   return filePaths.map((filePath) => './' + filePath);
 };
