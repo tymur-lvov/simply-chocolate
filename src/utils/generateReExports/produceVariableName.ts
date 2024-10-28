@@ -2,7 +2,7 @@ import path from 'path';
 
 import normalizeBasename from './normalizeBasename.js';
 
-const produceVariableNames = (filePaths) => {
+const produceVariableNames = (filePaths: string[]): string[] => {
   return filePaths.map((filePath) => {
     const basename = path.basename(filePath);
 

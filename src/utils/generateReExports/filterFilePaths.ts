@@ -3,8 +3,8 @@ import path from 'path';
 
 import errorCathingDecorator from './errorCathingDecorator.js';
 
-const filterFilePaths = async (dirContent, srcFileDirPath) => {
-  const invalidEntities = ['generateReExports', 'index', 'DS_Store'];
+const filterFilePaths = async (dirContent: string[], srcFileDirPath: string): Promise<string[]> => {
+  const invalidEntities = ['index', 'DS_Store'];
 
   const segregatedEntities = await Promise.all(
     dirContent.map(async (entity) => {

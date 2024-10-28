@@ -1,9 +1,11 @@
+import { ReExport } from '@types';
+
 import produceError from './produceError.js';
 import produceFilePaths from './produceFilePaths.js';
 import produceVariableNames from './produceVariableName.js';
 import errorCathingDecorator from './errorCathingDecorator.js';
 
-const produceReExports = async (srcFileDirPath) => {
+const produceReExports = async (srcFileDirPath: string): Promise<ReExport> => {
   const filePaths = await produceFilePaths(srcFileDirPath);
 
   const isAnyFilePath = Boolean(filePaths.length);
