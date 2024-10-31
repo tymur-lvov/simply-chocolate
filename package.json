@@ -8,8 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:node": "tsc --project tsconfig.node.json && tsc-alias -p tsconfig.node.json",
-    "gen": "node dist/scripts/generateReExports/generateReExports.js"
+    "build:node": "tsc -p tsconfig.node.json && tsc-alias -p tsconfig.node.json",
+    "gen:node": "node dist/scripts/generateReExports/generateReExports.js",
+    "gen": "npm run build:node && npm run gen:node"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.1.0",

@@ -21,8 +21,8 @@
     /* Paths */
     "outDir": "./dist",
     "paths": {
-      "@types": ["./@types"],
-      "@scripts": ["./scripts"]
+      "@types": ["./@types/index.d.ts"],
+      "@scripts": ["./scripts/index.ts"]
     }
   },
   "include": ["vite.config.ts", "scripts"]
