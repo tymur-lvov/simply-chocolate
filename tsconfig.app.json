@@ -24,8 +24,9 @@
 
     /* Paths */
     "paths": {
+      "@assets": ["./src/assets/index.ts"],
       "@components": ["./src/components/index.ts"]
     }
   },
-  "include": ["src"]
+  "include": ["@types", "src"]
 }
