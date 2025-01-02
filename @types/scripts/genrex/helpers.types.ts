@@ -108,7 +108,7 @@ export type IFilterModules = (dirEnts: IDirEnt[]) => IDirEnt[];
 
 export type IAppendDotAndSlash = (filePath: string) => string;
 
-export type IGetPath = (parentPath: string, name: string) => string;
+export type IGetPath = (parentPath: string, name?: string) => string;
 
 export type IGetBasename = (filePath: string) => string;
 

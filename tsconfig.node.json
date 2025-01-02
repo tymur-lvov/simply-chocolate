@@ -5,20 +5,29 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "outDir": "./dist",
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Paths */
+    "paths": {
+      "@types": ["./@types/scripts/genrex/index.types.ts"],
+      "@config": ["./scripts/genrex/config.json"],
+      "@constants": ["./scripts/genrex/constants.ts"],
+      "@helpers": ["./scripts/genrex/helpers/index.ts"]
+    }
   },
-  "include": ["vite.config.ts"]
+  "include": ["scripts", "vite.config.ts"]
 }
