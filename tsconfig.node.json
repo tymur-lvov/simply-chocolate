@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2022",
+    "target": "ES6",
     "lib": ["ES2023"],
-    "module": "ESNext",
+    "module": "ES6",
     "skipLibCheck": true,
     "outDir": "./dist",
 
     /* Bundler mode */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "isolatedModules": true,
     "moduleDetection": "force",
     "resolveJsonModule": true,
@@ -23,11 +23,11 @@
 
     /* Paths */
     "paths": {
-      "@types": ["./@types/scripts/genrex/index.types.ts"],
-      "@config": ["./scripts/genrex/config.json"],
-      "@constants": ["./scripts/genrex/constants.ts"],
-      "@helpers": ["./scripts/genrex/helpers/index.ts"]
+      "@types": ["./@types/node/generateIndexFiles/index.types.ts"],
+      "@config": ["./node/generateIndexFiles/config.json"],
+      "@constants": ["./node/generateIndexFiles/constants.ts"],
+      "@helpers": ["./node/generateIndexFiles/helpers/index.ts"]
     }
   },
-  "include": ["scripts", "vite.config.ts"]
+  "include": ["node", "vite.config.ts"]
 }
