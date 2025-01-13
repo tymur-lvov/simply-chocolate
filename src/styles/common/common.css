@@ -1,15 +1,10 @@
 body {
   background-color: var(--light);
-
+  color: var(--black);
   font-family: var(--font-family);
 }
 
 .container {
-  padding: 0px 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
-    padding: 0px 16px;
-  }
+  width: 335px;
+  margin: 0 auto;
 }
