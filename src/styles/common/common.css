@@ -3,3 +3,13 @@ body {
 
   font-family: var(--font-family);
 }
+
+.container {
+  padding: 0px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0px 16px;
+  }
+}
