@@ -15,14 +15,19 @@ export interface IDirEntDataCondition {
   getResult: () => ReturnType<IReadFileData>;
 }
 
-export interface IIndexFileNameCondition {
-  checkCondition: () => boolean;
-  getResult: () => ReturnType<IGetIndexFileName> | ReturnType<IGetTypesIndexFileName>;
-}
-
 export interface IErrorMessageCondition {
   checkCondition: () => boolean;
   getResult: () => string;
+}
+
+export interface IBasenameCondition {
+  checkCondition: () => boolean;
+  getResult: () => ReturnType<ICapitalizeNameParts>;
+}
+
+export interface IIndexFileNameCondition {
+  checkCondition: () => boolean;
+  getResult: () => ReturnType<IGetIndexFileName> | ReturnType<IGetTypesIndexFileName>;
 }
 
 export interface IExportStatementCondition {
@@ -54,8 +59,6 @@ export type IGetIndexFileData = (parentPath: string) => Promise<ReturnType<ICrea
 export type IGetDirEntsRecurs = (parentPath: string) => Promise<Dirent[]>;
 
 export type IGetDirEntData = (dirEnt: Dirent) => ReturnType<IFindDirEntData>;
-
-export type IFindErrorMessage = (reason: string) => ReturnType<IErrorMessageCondition['getResult']>;
 
 export type ICompose = (...funcs: ((arg: any) => any)[]) => (arg: any) => any;
 
@@ -136,6 +139,24 @@ export type IGetExportStatementErrorMessage = () => string;
 export type IGetDirEntDataErrorMessage = () => string;
 
 export type IGetEmptyStringPromise = () => Promise<string>;
+
+export type ICapitalize = (string: string) => string;
+
+export type ICapitalizeNameParts = (basename: string) => string;
+
+export type ICapitalizeModuleName = (basename: string) => ReturnType<IFindModuleName>;
+
+export type IIsIncludesDot = (string: string) => boolean;
+
+export type IIsFindModuleNameError = (string: string) => boolean;
+
+export type IGetModuleNameErrorMessage = () => string;
+
+export type IGetBasenameConditions = (basename: string) => IBasenameCondition[];
+
+export type IFindErrorMessage = (reason: string) => ReturnType<IErrorMessageCondition['getResult']>;
+
+export type IFindModuleName = (basename: string) => ReturnType<IBasenameCondition['getResult']>;
 
 export type IGetDirEntDataConditions = (
   dirEnt: Dirent,

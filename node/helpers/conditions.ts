@@ -2,17 +2,21 @@ import {
   isTypesPath,
   isTypeModule,
   readFileData,
+  isIncludesDot,
   isNamedModule,
   isEntityAFile,
   isDefaultModule,
   getIndexFileName,
+  capitalizeNameParts,
   getEmptyStringPromise,
   getTypesIndexFileName,
   isFindDirEntDataError,
+  isFindModuleNameError,
   getNamedExportStatement,
   isFindIndexFileNameError,
   getDefaultExportStatement,
   getDirEntDataErrorMessage,
+  getModuleNameErrorMessage,
   isFindExportStatementError,
   getNamedTypeExportStatement,
   getIndexFileNameErrorMessage,
@@ -20,14 +24,32 @@ import {
 } from '@helpers';
 
 import type {
+  IGetBasenameConditions,
   IGetDirEntDataConditions,
   IGetErrorMessageConditions,
   IGetIndexFileNameConditions,
   IGetExportStatementConditions,
 } from '@types';
 
+export const getBasenameConditions: IGetBasenameConditions = (basename: string) => {
+  return [
+    {
+      checkCondition: () => !isIncludesDot(basename),
+      getResult: () => basename,
+    },
+    {
+      checkCondition: () => isIncludesDot(basename),
+      getResult: () => capitalizeNameParts(basename),
+    },
+  ];
+};
+
 export const getErrorMessageConditions: IGetErrorMessageConditions = (reason) => {
   return [
+    {
+      checkCondition: () => isFindModuleNameError(reason),
+      getResult: () => getModuleNameErrorMessage(),
+    },
     {
       checkCondition: () => isFindIndexFileNameError(reason),
       getResult: () => getIndexFileNameErrorMessage(),

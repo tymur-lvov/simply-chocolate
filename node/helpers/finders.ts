@@ -1,5 +1,6 @@
 import {
   createError,
+  getBasenameConditions,
   getDirEntDataConditions,
   getErrorMessageConditions,
   getIndexFileNameConditions,
@@ -8,17 +9,18 @@ import {
 
 import type {
   IFindDirEntData,
+  IFindModuleName,
   IFindErrorMessage,
   IFindIndexFileName,
   IFindExportStatement,
 } from '@types';
 
-export const findErrorMessage: IFindErrorMessage = (reason: string) => {
-  const conditions = getErrorMessageConditions(reason);
+export const findModuleName: IFindModuleName = (basename) => {
+  const conditions = getBasenameConditions(basename);
   const result = conditions.find(({ checkCondition }) => checkCondition())?.getResult();
 
   if (!result) {
-    throw new Error('Error message condition result not found');
+    throw createError('!findModuleName');
   }
 
   return result;
@@ -52,6 +54,17 @@ export const findDirEntData: IFindDirEntData = async (dirEnt, dirEntPath) => {
 
   if (result === undefined) {
     throw createError('!findDirEntData');
+  }
+
+  return result;
+};
+
+export const findErrorMessage: IFindErrorMessage = (reason) => {
+  const conditions = getErrorMessageConditions(reason);
+  const result = conditions.find(({ checkCondition }) => checkCondition())?.getResult();
+
+  if (!result) {
+    throw new Error('Error message condition result not found');
   }
 
   return result;

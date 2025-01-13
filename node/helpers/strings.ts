@@ -1,17 +1,21 @@
 import {
   compose,
   getBasename,
+  findModuleName,
   getRelativePath,
   sterilizeBasename,
   findExportStatement,
 } from '@helpers';
 
 import type {
+  ICapitalize,
   IGetVarName,
   ISplitToParts,
   IDeleteExtension,
   IGetParentDirIndex,
   IGetExportStatement,
+  ICapitalizeNameParts,
+  ICapitalizeModuleName,
   IConcatExportStatement,
   IGetNamedExportStatement,
   IGetDefaultExportStatement,
@@ -42,8 +46,24 @@ export const splitToParts: ISplitToParts = (div, ...strings) => {
   return strings.map((string) => string.split(div));
 };
 
+export const capitalizeModuleName: ICapitalizeModuleName = (basename) => {
+  return findModuleName(basename);
+};
+
+export const capitalizeNameParts: ICapitalizeNameParts = (basename) => {
+  const nameParts = basename.split('.');
+
+  return nameParts.map(capitalize).join('.');
+};
+
+export const capitalize: ICapitalize = (string) => {
+  const firstChar = string.charAt(0);
+
+  return string.replace(firstChar, firstChar.toUpperCase());
+};
+
 export const getVarName: IGetVarName = (filePath) => {
-  const basename = compose(getBasename, deleteExtension)(filePath);
+  const basename = compose(getBasename, deleteExtension, capitalizeModuleName)(filePath);
 
   return sterilizeBasename(basename);
 };

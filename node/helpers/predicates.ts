@@ -7,9 +7,11 @@ import type {
   IIsTypeModule,
   IIsNamedModule,
   IIsEntityAFile,
+  IIsIncludesDot,
   IIsDefaultModule,
   IIsFileToBeIncluded,
   IIsItemToBeExcluded,
+  IIsFindModuleNameError,
   IIsFindDirEntDataError,
   IIsFindIndexFileNameError,
   IIsFindExportStatementError,
@@ -18,6 +20,10 @@ import type {
 
 export const isEntityAFile: IIsEntityAFile = (dirEnt) => {
   return dirEnt.isFile();
+};
+
+export const isFindModuleNameError: IIsFindModuleNameError = (reason) => {
+  return reason === '!findModuleName';
 };
 
 export const isFindIndexFileNameError: IIsFindIndexFileNameError = (reason) => {
@@ -34,6 +40,10 @@ export const isFindDirEntDataError: IIsFindDirEntDataError = (reason) => {
 
 export const isItemToBeExcluded: IIsItemToBeExcluded = (parentPath, name, item) => {
   return parentPath.includes(item) || name === item;
+};
+
+export const isIncludesDot: IIsIncludesDot = (string) => {
+  return string.includes('.');
 };
 
 export const isTypesPath: IIsTypesPath = (path) => {

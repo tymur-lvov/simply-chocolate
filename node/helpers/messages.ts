@@ -1,8 +1,13 @@
 import type {
   IGetDirEntDataErrorMessage,
+  IGetModuleNameErrorMessage,
   IGetIndexFileNameErrorMessage,
   IGetExportStatementErrorMessage,
 } from '@types';
+
+export const getModuleNameErrorMessage: IGetModuleNameErrorMessage = () => {
+  return 'Index file name condition result not found';
+};
 
 export const getIndexFileNameErrorMessage: IGetIndexFileNameErrorMessage = () => {
   return 'Index file name condition result not found';
