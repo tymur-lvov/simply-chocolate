@@ -1,7 +1,7 @@
 /* Reset and base styles  */
 * {
-  padding: 0px;
   margin: 0px;
+  padding: 0px;
   border: none;
 }
 
@@ -35,8 +35,8 @@ h4,
 h5,
 h6,
 p {
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
 }
 
 ul,
@@ -64,10 +64,10 @@ input,
 textarea,
 button,
 select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
   background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 input::-ms-clear {
@@ -77,9 +77,9 @@ input::-ms-clear {
 button,
 input[type='submit'] {
   display: inline-block;
-  box-shadow: none;
-  background-color: transparent;
   background: none;
+  background-color: transparent;
+  box-shadow: none;
   cursor: pointer;
 }
 
