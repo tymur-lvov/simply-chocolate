@@ -1,4 +1,4 @@
-import { Logo } from '@components';
+import { Logo, MenuButton } from '@components';
 
 import { HeaderModule as css } from '@styles';
 
@@ -7,6 +7,7 @@ export const Header = () => {
     <div className={'container'}>
       <header className={css.wrapper}>
         <Logo />
+        <MenuButton />
       </header>
     </div>
   );
