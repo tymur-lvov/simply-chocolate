@@ -16,7 +16,7 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    // "strict": true,
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
@@ -25,7 +25,7 @@
     /* Paths */
     "baseUrl": "./",
     "paths": {
-      "@types": ["@types/index.types.ts"],
+      "@types": ["@types/components/index.types.ts"],
       "@assets": ["src/assets/index.ts"],
       "@components": ["src/components/index.ts"],
       "@styles": ["src/components/index.ts"]
