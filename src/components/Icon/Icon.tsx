@@ -1,6 +1,8 @@
 import { icons } from '@assets';
 
-export const Icon = ({ width, height, fragment }) => {
+import type { IIcon } from '@types';
+
+export const Icon: IIcon = ({ width, height, fragment }) => {
   return (
     <svg width={width} height={height}>
       <use href={`${icons}#${fragment}`} />
