@@ -7,7 +7,7 @@ import { HeaderModule as css } from '@styles';
 export const Header = () => {
   return (
     <div className={container}>
-      <header className={css.wrapper}>
+      <header className={css.header}>
         <Logo />
         <MenuButton />
       </header>
