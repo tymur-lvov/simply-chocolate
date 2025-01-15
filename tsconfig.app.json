@@ -25,10 +25,11 @@
     /* Paths */
     "baseUrl": "./",
     "paths": {
-      "@types": ["@types/components/index.types.ts"],
+      "@constants": ["src/constants/index.ts"],
       "@assets": ["src/assets/index.ts"],
       "@components": ["src/components/index.ts"],
-      "@styles": ["src/components/index.ts"]
+      "@styles": ["src/components/index.ts"],
+      "@types": ["@types/components/index.types.ts"]
     }
   },
   "include": ["@types", "src"]
