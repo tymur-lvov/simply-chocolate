@@ -1,9 +1,10 @@
-import { Header } from '@components';
+import { Header, Main } from '@components';
 
 export const App = () => {
   return (
     <>
       <Header />
+      <Main />
     </>
   );
 };
