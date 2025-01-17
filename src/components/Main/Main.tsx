@@ -1,3 +1,9 @@
+import { Hero } from '@components';
+
 export const Main = () => {
-  return <main></main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 };
