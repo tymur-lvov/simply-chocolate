@@ -2,6 +2,8 @@ import { container } from '@constants';
 
 import { Button, Icon } from '@components';
 
+import { HeroData as data } from '@data';
+
 import { HeroModule as css } from '@styles';
 
 export const Hero = () => {
@@ -9,23 +11,21 @@ export const Hero = () => {
     <div className={container}>
       <section className={css['hero']}>
         <div className={css['hero__container']}>
-          <h1 className={css['hero__container__title']}>
-            Treat yourself or a loved one to our finest ingredients for a moment of pure delight!
-          </h1>
+          <h1 className={css['hero__container__title']}>{data.title}</h1>
           <div className={css['hero__container__main-buttons-container']}>
             <Button
               className={css['hero__container__main-buttons-container__order-btn']}
-              text='Buy now'
+              text={data.orderBtn}
             />
             <Button
               className={css['hero__container__main-buttons-container__info-btn']}
-              text='How it&#x2019;s made'
+              text={data.infoBtn}
             />
           </div>
           <a className={css['hero__container__aux-buttons-link']} href='#'>
             <div className={css['hero__container__aux-buttons-link__aux-buttons-container']}>
               <p className={css['hero__container__aux-buttons-link__aux-buttons-container__text']}>
-                scroll down
+                {data.auxBtn}
               </p>
               <div
                 className={
