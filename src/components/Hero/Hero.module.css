@@ -1,5 +1,4 @@
 .hero {
-  height: 620px;
   padding: 395px 20px 20px;
   border-radius: 30px;
   background-image: linear-gradient(to bottom, var(--hero-filter), var(--hero-filter)),
@@ -13,6 +12,36 @@
   .hero {
     background-image: linear-gradient(to bottom, var(--hero-filter), var(--hero-filter)),
       url('../../assets/images/hero/heroBg/hero_bg_mobile_2x.webp');
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 671px 40px 40px;
+    background-image: linear-gradient(to bottom, var(--hero-filter), var(--hero-filter)),
+      url('../../assets/images/hero/heroBg/hero_bg_tablet_1x.webp');
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(to bottom, var(--hero-filter), var(--hero-filter)),
+      url('../../assets/images/hero/heroBg/hero_bg_tablet_2x.webp');
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero {
+    padding: 381px 40px 40px;
+    background-image: linear-gradient(to bottom, var(--hero-filter), var(--hero-filter)),
+      url('../../assets/images/hero/heroBg/hero_bg_desktop_1x.webp');
+  }
+}
+
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(to bottom, var(--hero-filter), var(--hero-filter)),
+      url('../../assets/images/hero/heroBg/hero_bg_desktop_2x.webp');
   }
 }
 
