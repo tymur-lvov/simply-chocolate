@@ -8,3 +8,4 @@ export { default as HeroModule } from './Hero/Hero.module.css';
 export * from './Hero/Hero.tsx';
 export { default as HeaderModule } from './Header/Header.module.css';
 export * from './Header/Header.tsx';
+export * from './Button/Button.tsx';
