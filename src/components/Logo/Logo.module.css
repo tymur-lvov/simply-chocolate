@@ -1,4 +1,4 @@
-.logo {
+.logo__link {
   padding: 20px 0 14px;
   font-weight: 700;
   font-size: 14px;
@@ -6,7 +6,7 @@
   letter-spacing: -0.03em;
 }
 
-.logo__container {
+.logo__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;

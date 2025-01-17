@@ -4,8 +4,8 @@ export interface IIconProps {
   className: string;
   width: number;
   height: number;
-  fill?: string;
   fragment: string;
+  fill?: string;
 }
 
 export interface IButtonProps {
@@ -14,5 +14,4 @@ export interface IButtonProps {
 }
 
 export type IIcon = FunctionComponent<IIconProps>;
-
 export type IButton = FunctionComponent<IButtonProps>;

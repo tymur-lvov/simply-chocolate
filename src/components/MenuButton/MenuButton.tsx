@@ -4,8 +4,8 @@ import { MenuButtonModule as css } from '@styles';
 
 export const MenuButton = () => {
   return (
-    <button className={css.button} type='button'>
-      <Icon width={28} height={28} fragment={'burger'} />
+    <button className={css['menu__button']} type='button'>
+      <Icon className={css['menu__icon']} width={28} height={28} fragment={'burger'} />
     </button>
   );
 };

@@ -44,6 +44,8 @@ export { default as hero_bg_desktop_1x } from './images/hero/heroBg/hero_bg_desk
 export { default as hero_bg_desktop_2x } from './images/hero/heroBg/hero_bg_desktop_2x.webp';
 export { default as hero_bg_mobile_1x } from './images/hero/heroBg/hero_bg_mobile_1x.webp';
 export { default as hero_bg_mobile_2x } from './images/hero/heroBg/hero_bg_mobile_2x.webp';
+export { default as hero_bg_tablet_1x } from './images/hero/heroBg/hero_bg_tablet_1x.webp';
+export { default as hero_bg_tablet_2x } from './images/hero/heroBg/hero_bg_tablet_2x.webp';
 export { default as darkChocolate_1x } from './images/bestsellers/darkChocolate/darkChocolate_1x.webp';
 export { default as darkChocolate_2x } from './images/bestsellers/darkChocolate/darkChocolate_2x.webp';
 export { default as chocolateWithNuts_1x } from './images/bestsellers/chocolateWithNuts/chocolateWithNuts_1x.webp';
