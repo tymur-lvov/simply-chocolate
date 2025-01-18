@@ -10,7 +10,7 @@ export const Logo = () => {
       <div className={css['logo__wrapper']}>
         <span className={css['logo__accent']}>{data.accent}</span>
         {data.title}
-        <div className={css['logo__icon_thumb']}>
+        <div className={css['logo__icon-thumb']}>
           <Icon className={'logo__icon'} width={21} height={21} fragment={'logo'} />
         </div>
       </div>
