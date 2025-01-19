@@ -11,6 +11,7 @@ export interface IIconProps {
 export interface IButtonProps {
   className: string;
   type?: 'button' | 'submit' | 'reset';
+  tabIndex?: number;
   text?: string;
   children?: ReactNode;
 }

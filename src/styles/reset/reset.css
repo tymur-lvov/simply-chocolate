@@ -1,24 +1,18 @@
-/* Reset and base styles  */
 * {
   margin: 0px;
   padding: 0px;
   border: none;
 }
 
-/* Links */
-
 a,
 a:link,
-a:visited {
+a:visited,
+a:hover,
+a:focus {
   color: inherit;
+  outline: none;
   text-decoration: none;
 }
-
-a:hover {
-  text-decoration: none;
-}
-
-/* Common */
 
 aside,
 nav,
@@ -58,8 +52,6 @@ svg {
 address {
   font-style: normal;
 }
-
-/* Form */
 
 input,
 textarea,
