@@ -12,8 +12,8 @@ export const Hero = () => {
   return (
     <div className={'container'}>
       <section className={css['hero']}>
-        <div className={css['hero__wrapper']}>
-          <h1 className={css['hero__title']}>{data.title[isMobile ? 'mobile' : 'tablet'].text}</h1>
+        <h1 className={css['hero__title']}>{data.title[isMobile ? 'mobile' : 'tablet'].text}</h1>
+        <div className={css['hero__nav-wrapper']}>
           <div className={css['hero__main-btns-wrapper']}>
             {data.mainBtns.map(({ className, text }) => (
               <Button
