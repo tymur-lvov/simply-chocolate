@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 
-export const useMedia = () => {
+import type { IUseMedia } from '@types';
+
+export const useMedia: IUseMedia = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
