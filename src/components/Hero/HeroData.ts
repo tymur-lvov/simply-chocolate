@@ -1,6 +1,10 @@
 export const HeroData = {
-  title: 'Treat yourself or a loved one to our finest ingredients for a moment of pure delight!',
+  title: {
+    mobile:
+      'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
+    tablet: `Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!`,
+  },
   orderButton: 'Buy now',
   infoButton: `How it’s made`,
-  scrollBtn: 'scroll down',
+  scrollButton: 'scroll down',
 };

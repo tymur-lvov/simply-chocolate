@@ -59,6 +59,15 @@
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.03em;
+  white-space: pre;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__title {
+    width: 484px;
+    font-size: 28px;
+    line-height: 1.21;
+  }
 }
 
 .hero__main-buttons-wrapper {
