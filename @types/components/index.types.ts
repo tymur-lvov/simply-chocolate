@@ -1,4 +1,4 @@
-import type { FunctionComponent } from 'react';
+import type { FunctionComponent, ReactNode } from 'react';
 
 export interface IIconProps {
   className: string;
@@ -10,7 +10,9 @@ export interface IIconProps {
 
 export interface IButtonProps {
   className: string;
+  type?: 'button' | 'submit' | 'reset';
   text?: string;
+  children?: ReactNode;
 }
 
 export type IIcon = FunctionComponent<IIconProps>;

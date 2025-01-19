@@ -27,7 +27,7 @@ export const Hero = () => {
           <a className={css['hero__scroll-link']} href='#'>
             <div className={css['hero__scroll-wrapper']}>
               <p className={css['hero__scroll-label']}>{data.scrollBtn}</p>
-              <button className={css['hero__scroll-btn']} type='button'>
+              <Button className={css['hero__scroll-btn']}>
                 <Icon
                   className={css['hero__scroll-icon']}
                   width={16}
@@ -35,7 +35,7 @@ export const Hero = () => {
                   fragment='arrow-down'
                   fill='var(--orange)'
                 />
-              </button>
+              </Button>
             </div>
           </a>
         </div>
