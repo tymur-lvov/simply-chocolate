@@ -26,6 +26,7 @@
     "baseUrl": "./",
     "paths": {
       "@constants": ["src/constants/index.ts"],
+      "@hooks": ["src/hooks/index.ts"],
       "@assets": ["src/assets/index.ts"],
       "@components": ["src/components/index.ts"],
       "@data": ["src/components/index.ts"],
