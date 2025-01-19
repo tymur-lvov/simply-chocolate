@@ -12,7 +12,9 @@ export const Hero = () => {
   return (
     <div className={'container'}>
       <section className={css['hero']}>
-        <h1 className={css['hero__title']}>{data.title[isMobile ? 'mobile' : 'tablet'].text}</h1>
+        <h1 className={css['hero__title']}>
+          {isMobile ? data.title.mobile.text : data.title.tablet.text}
+        </h1>
         <div className={css['hero__nav-wrapper']}>
           <div className={css['hero__main-btns-wrapper']}>
             {data.mainBtns.map(({ className, text }) => (
@@ -32,7 +34,6 @@ export const Hero = () => {
                   width={16}
                   height={16}
                   fragment='arrow-down'
-                  fill='var(--orange)'
                 />
               </Button>
             </div>

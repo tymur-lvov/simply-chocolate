@@ -5,12 +5,11 @@ export interface IIconProps {
   width: number;
   height: number;
   fragment: string;
-  fill?: string;
 }
 
 export interface IButtonProps {
   className: string;
-  type?: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit';
   tabIndex?: number;
   text?: string;
   children?: ReactNode;
