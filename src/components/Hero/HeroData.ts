@@ -1,10 +1,23 @@
 export const HeroData = {
   title: {
-    mobile:
-      'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
-    tablet: `Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!`,
+    mobile: {
+      text: 'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
+    },
+    tablet: {
+      text: 'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
+    },
   },
-  orderBtn: 'Buy now',
-  infoBtn: `How it’s made`,
-  scrollBtn: 'scroll down',
+  mainBtns: [
+    {
+      className: 'hero__main-btn--order',
+      text: 'Buy now',
+    },
+    {
+      className: 'hero__main-btn--info',
+      text: `How it’s made`,
+    },
+  ],
+  scrollBtn: {
+    text: 'scroll down',
+  },
 };

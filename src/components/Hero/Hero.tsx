@@ -13,20 +13,19 @@ export const Hero = () => {
     <div className={'container'}>
       <section className={css['hero']}>
         <div className={css['hero__wrapper']}>
-          <h1 className={css['hero__title']}>{data.title[isMobile ? 'mobile' : 'tablet']}</h1>
+          <h1 className={css['hero__title']}>{data.title[isMobile ? 'mobile' : 'tablet'].text}</h1>
           <div className={css['hero__main-btns-wrapper']}>
-            <Button
-              className={`${css['hero__main-btn']} ${css['hero__main-btn--order']}`}
-              text={data.orderBtn}
-            />
-            <Button
-              className={`${css['hero__main-btn']} ${css['hero__main-btn--info']}`}
-              text={data.infoBtn}
-            />
+            {data.mainBtns.map(({ className, text }) => (
+              <Button
+                className={`${css['hero__main-btn']} ${css[className]}`}
+                text={text}
+                key={className}
+              />
+            ))}
           </div>
           <a className={css['hero__scroll-link']} href='#'>
             <div className={css['hero__scroll-wrapper']}>
-              <p className={css['hero__scroll-label']}>{data.scrollBtn}</p>
+              <p className={css['hero__scroll-label']}>{data.scrollBtn.text}</p>
               <Button className={css['hero__scroll-btn']}>
                 <Icon
                   className={css['hero__scroll-icon']}

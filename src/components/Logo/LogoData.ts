@@ -1,4 +1,6 @@
 export const LogoData = {
-  title: 'CHOCOLATE',
-  accent: 'SIMPLY',
+  title: {
+    mainText: 'CHOCOLATE',
+    accentText: 'SIMPLY',
+  },
 };
