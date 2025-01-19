@@ -70,7 +70,7 @@
   }
 }
 
-.hero__main-buttons-wrapper {
+.hero__main-btns-wrapper {
   display: flex;
   gap: 14px;
   color: var(--white);
@@ -78,18 +78,18 @@
   font-size: 14px;
 }
 
-.hero__main-button {
+.hero__main-btn {
   height: 41px;
   padding: 12px 28px;
   border-radius: 100px;
 }
 
-.hero__main-button--order {
+.hero__main-btn--order {
   width: 120px;
   background-color: var(--orange);
 }
 
-.hero__main-button--info {
+.hero__main-btn--info {
   height: 41px;
   border: 1px solid var(--white);
 }
@@ -112,7 +112,7 @@
   letter-spacing: -0.03em;
 }
 
-.hero__scroll-button {
+.hero__scroll-btn {
   position: relative;
   width: 28px;
   height: 28px;
