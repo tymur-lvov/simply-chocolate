@@ -12,8 +12,12 @@ export const Header = () => {
       <header className={css['header']}>
         <Logo />
         {isMobile && <MenuButton />}
-        {!isMobile && <HeaderNav />}
-        {!isMobile && <HeaderSocials />}
+        {!isMobile && (
+          <div className={css['header__container']}>
+            <HeaderNav />
+            <HeaderSocials />
+          </div>
+        )}
       </header>
     </div>
   );
