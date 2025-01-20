@@ -1,4 +1,4 @@
-.header-socials__list {
+.header__socials__list {
   display: flex;
   gap: 14px;
   justify-content: center;
@@ -6,7 +6,7 @@
   width: 148px;
 }
 
-.header-socials__item {
+.header__socials__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,15 +14,4 @@
   height: 40px;
   border: 1px solid var(--socials-border);
   border-radius: 10px;
-}
-
-.header-socials__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-}
-
-.header-socials__icon {
-  fill: var(--black);
 }

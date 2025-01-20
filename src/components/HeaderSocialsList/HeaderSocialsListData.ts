@@ -1,4 +1,4 @@
-export const HeaderSocialsData = {
+export const HeaderSocialsListData = {
   socialItems: [
     { fragment: 'facebook', href: 'https://www.facebook.com/' },
     { fragment: 'instagram', href: 'https://www.instagram.com/' },

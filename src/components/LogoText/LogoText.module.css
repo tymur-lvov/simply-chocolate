@@ -1,0 +1,17 @@
+.logo__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+}
+
+@media only screen and (min-width: 1158px) {
+  .logo__text {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
+.logo__accent {
+  font-style: italic;
+}

@@ -14,5 +14,22 @@ export interface IButtonProps {
   children?: ReactNode;
 }
 
+export interface IHeaderNavItemProps {
+  text: string;
+}
+
+export interface IHeaderSocialsItemProps {
+  fragment: string;
+  href: string;
+}
+
+export interface ILogoTextProps {
+  accentText: string;
+  mainText: string;
+}
+
 export type IIcon = FunctionComponent<IIconProps>;
 export type IButton = FunctionComponent<IButtonProps>;
+export type IHeaderNavItem = FunctionComponent<IHeaderNavItemProps>;
+export type IHeaderSocialsItem = FunctionComponent<IHeaderSocialsItemProps>;
+export type ILogoText = FunctionComponent<ILogoTextProps>;

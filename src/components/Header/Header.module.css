@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.header__container {
+.header__nav-socials-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
 }
 
 @media only screen and (min-width: 1158px) {
-  .header__container {
+  .header__nav-socials-wrapper {
     width: 558px;
   }
 }

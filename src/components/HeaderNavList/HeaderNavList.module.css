@@ -1,21 +1,17 @@
-.header__nav-list {
+.nav__list {
   display: flex;
   gap: 20px;
   width: 312px;
 }
 
 @media only screen and (min-width: 1158px) {
-  .header__nav-list {
+  .nav__list {
     gap: 24px;
     width: 320px;
   }
 }
 
-.header__nav-link {
-  padding: 32px 0;
-}
-
-.header__nav-item {
+.nav__item {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;

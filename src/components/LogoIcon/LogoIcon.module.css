@@ -1,0 +1,12 @@
+.logo__icon-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1158px) {
+  .logo__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

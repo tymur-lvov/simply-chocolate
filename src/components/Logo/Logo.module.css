@@ -1,9 +1,5 @@
 .logo__link {
   padding: 20px 0 14px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.03em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -15,8 +11,6 @@
 @media only screen and (min-width: 1158px) {
   .logo__link {
     padding: 28px 0;
-    font-size: 18px;
-    line-height: 1.11;
   }
 }
 
@@ -30,22 +24,5 @@
 @media only screen and (min-width: 1158px) {
   .logo__wrapper {
     width: 213px;
-  }
-}
-
-.logo__accent {
-  font-style: italic;
-}
-
-.logo__icon-thumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media only screen and (min-width: 1158px) {
-  .logo__icon {
-    width: 24px;
-    height: 24px;
   }
 }

@@ -1,0 +1,10 @@
+.header__socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.header__socials__icon {
+  fill: var(--black);
+}
