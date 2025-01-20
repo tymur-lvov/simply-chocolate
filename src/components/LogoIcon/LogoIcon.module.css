@@ -1,11 +1,11 @@
-.logo__icon-thumb {
+.header__logo-icon-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 @media only screen and (min-width: 1158px) {
-  .logo__icon {
+  .header__logo-icon {
     width: 24px;
     height: 24px;
   }

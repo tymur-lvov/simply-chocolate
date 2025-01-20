@@ -4,8 +4,8 @@ import type { ILogoText } from '@types';
 
 export const LogoText: ILogoText = ({ accentText, mainText }) => {
   return (
-    <div className={css['logo__text']}>
-      <span className={css['logo__accent']}>{accentText}</span>
+    <div className={css['header__logo-text']}>
+      <span className={css['header__logo-accent']}>{accentText}</span>
       {mainText}
     </div>
   );

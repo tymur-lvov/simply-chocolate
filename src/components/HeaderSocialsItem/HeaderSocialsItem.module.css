@@ -1,10 +1,10 @@
-.header__socials__link {
+.header__socials-link {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px;
 }
 
-.header__socials__icon {
+.header__socials-icon {
   fill: var(--black);
 }

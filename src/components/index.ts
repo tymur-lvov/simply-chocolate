@@ -1,5 +1,5 @@
-export { default as MenuButtonModule } from './MenuButton/MenuButton.module.css';
-export * from './MenuButton/MenuButton.tsx';
+export * from './MobileMenuButton/MenuButton.tsx';
+export { default as MobileMenuButtonModule } from './MobileMenuButton/MobileMenuButton.module.css';
 export * from './Main/Main.tsx';
 export { default as LogoTextModule } from './LogoText/LogoText.module.css';
 export * from './LogoText/LogoText.tsx';

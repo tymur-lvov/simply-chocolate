@@ -1,4 +1,4 @@
-.logo__text {
+.header__logo-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
@@ -6,12 +6,12 @@
 }
 
 @media only screen and (min-width: 1158px) {
-  .logo__text {
+  .header__logo-text {
     font-size: 18px;
     line-height: 1.11;
   }
 }
 
-.logo__accent {
+.header__logo-accent {
   font-style: italic;
 }

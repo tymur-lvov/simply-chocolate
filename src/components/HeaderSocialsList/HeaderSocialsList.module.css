@@ -1,4 +1,4 @@
-.header__socials__list {
+.header__socials-list {
   display: flex;
   gap: 14px;
   justify-content: center;
@@ -6,7 +6,7 @@
   width: 148px;
 }
 
-.header__socials__item {
+.header__socials-item {
   display: flex;
   justify-content: center;
   align-items: center;
