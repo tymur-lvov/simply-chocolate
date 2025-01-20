@@ -10,7 +10,6 @@ export interface IIconProps {
 export interface IButtonProps {
   className: string;
   type?: 'button' | 'submit';
-  tabIndex?: number;
   text?: string;
   children?: ReactNode;
 }

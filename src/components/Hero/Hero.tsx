@@ -28,14 +28,14 @@ export const Hero = () => {
           <a className={css['hero__scroll-link']} href='#'>
             <div className={css['hero__scroll-wrapper']}>
               <p className={css['hero__scroll-label']}>{data.scrollBtn.text}</p>
-              <Button className={css['hero__scroll-btn']} tabIndex={-1}>
+              <div className={css['hero__scroll-icon-thumb']}>
                 <Icon
                   className={css['hero__scroll-icon']}
                   width={16}
                   height={16}
                   fragment='arrow-down'
                 />
-              </Button>
+              </div>
             </div>
           </a>
         </div>
