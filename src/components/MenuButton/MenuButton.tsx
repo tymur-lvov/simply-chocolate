@@ -1,8 +1,8 @@
 import { Button, Icon } from '@components';
 
-import { MobileMenuButtonModule as css } from '@styles';
+import { MenuButtonModule as css } from '@styles';
 
-export const MobileMenuButton = () => {
+export const MenuButton = () => {
   return (
     <Button className={css['header__mobile-menu-btn']}>
       <Icon
