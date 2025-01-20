@@ -1,5 +1,9 @@
 .header__logo-link {
-  padding: 20px 0 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 169px;
+  padding: 23.5px 0 17.5px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -10,19 +14,38 @@
 
 @media only screen and (min-width: 1158px) {
   .header__logo-link {
+    width: 213px;
     padding: 28px 0;
   }
 }
 
-.header__logo-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 169px;
+.header__logo-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
 }
 
 @media only screen and (min-width: 1158px) {
-  .header__logo-wrapper {
-    width: 213px;
+  .header__logo-text {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
+.header__logo-accent {
+  font-style: italic;
+}
+
+.header__logo-icon-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1158px) {
+  .header__logo-icon {
+    width: 24px;
+    height: 24px;
   }
 }
