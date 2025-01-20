@@ -1,0 +1,28 @@
+.header-socials__list {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 148px;
+}
+
+.header-socials__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--socials-border);
+  border-radius: 10px;
+}
+
+.header-socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.header-socials__icon {
+  fill: var(--black);
+}
