@@ -14,11 +14,11 @@ export interface IButtonProps {
   children?: ReactNode;
 }
 
-export interface IHeaderNavItemProps {
+export interface INavItemProps {
   text: string;
 }
 
-export interface IHeaderSocialsItemProps {
+export interface ISocialsItemProps {
   fragment: string;
   href: string;
 }
@@ -30,6 +30,6 @@ export interface ILogoTextProps {
 
 export type IIcon = FunctionComponent<IIconProps>;
 export type IButton = FunctionComponent<IButtonProps>;
-export type IHeaderNavItem = FunctionComponent<IHeaderNavItemProps>;
-export type IHeaderSocialsItem = FunctionComponent<IHeaderSocialsItemProps>;
+export type INavItem = FunctionComponent<INavItemProps>;
+export type ISocialsItem = FunctionComponent<ISocialsItemProps>;
 export type ILogoText = FunctionComponent<ILogoTextProps>;

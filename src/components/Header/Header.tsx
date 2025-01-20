@@ -1,6 +1,6 @@
 import { useMedia } from '@hooks';
 
-import { Logo, MobileMenuButton, HeaderNav, HeaderSocialsList } from '@components';
+import { Logo, MobileMenuButton, Nav, SocialsList } from '@components';
 
 import { HeaderModule as css } from '@styles';
 
@@ -14,8 +14,8 @@ export const Header = () => {
         {isMobile && <MobileMenuButton />}
         {!isMobile && (
           <div className={css['header__nav-socials-wrapper']}>
-            <HeaderNav />
-            <HeaderSocialsList />
+            <Nav />
+            <SocialsList />
           </div>
         )}
       </header>
