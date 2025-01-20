@@ -1,3 +1,7 @@
 export const HeaderSocialsData = {
-  socialItems: [{ fragment: 'facebook' }, { fragment: 'instagram' }, { fragment: 'twitter' }],
+  socialItems: [
+    { fragment: 'facebook', href: 'https://www.facebook.com/' },
+    { fragment: 'instagram', href: 'https://www.instagram.com/' },
+    { fragment: 'twitter', href: 'https://www.x.com/' },
+  ],
 };
