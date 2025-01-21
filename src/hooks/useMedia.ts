@@ -7,25 +7,23 @@ export const useMedia: IUseMedia = () => {
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  const viewportWidth = window.innerWidth;
-
-  const mediaConditions = [
+  const matchMediaRules = [
     {
-      condition: () => viewportWidth >= 1158,
-      result: () => setIsDesktop(true),
+      isMediaMatches: () => window.matchMedia('(min-width: 1158px)').matches,
+      setState: () => setIsDesktop(true),
     },
     {
-      condition: () => viewportWidth >= 768 && viewportWidth < 1024,
-      result: () => setIsTablet(true),
+      isMediaMatches: () => window.matchMedia('(min-width: 768px) and (max-width:1157px)').matches,
+      setState: () => setIsTablet(true),
     },
     {
-      condition: () => true,
-      result: () => setIsMobile(true),
+      isMediaMatches: () => window.matchMedia('(max-width: 767px)').matches,
+      setState: () => setIsMobile(true),
     },
   ];
 
   useEffect(() => {
-    mediaConditions.find(({ condition }) => condition())?.result();
+    matchMediaRules.find(({ isMediaMatches }) => isMediaMatches())?.setState();
   });
 
   return [isMobile, isTablet, isDesktop];
