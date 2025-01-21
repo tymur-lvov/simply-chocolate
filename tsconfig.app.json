@@ -30,7 +30,7 @@
       "@hooks": ["src/hooks/index.ts"],
       "@assets": ["src/assets/index.ts"],
       "@components": ["src/components/index.ts"],
-      "@data": ["src/components/index.ts"],
+      "@data": ["src/data/index.ts"],
       "@styles": ["src/components/index.ts"]
     }
   },

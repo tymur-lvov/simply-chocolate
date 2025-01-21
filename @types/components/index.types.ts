@@ -1,4 +1,40 @@
-import type { FunctionComponent, ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
+
+export interface IHeaderData {
+  logo: {
+    mainText: string;
+    accentText: string;
+  };
+  navList: {
+    navItems: {
+      text: string;
+    }[];
+  };
+  socialsList: {
+    socialsItems: {
+      fragment: string;
+      href: string;
+    }[];
+  };
+}
+
+export interface IHeroData {
+  title: {
+    mobile: {
+      text: string;
+    };
+    tablet: {
+      text: string;
+    };
+  };
+  mainBtns: {
+    className: string;
+    text: string;
+  }[];
+  scrollBtn: {
+    text: string;
+  };
+}
 
 export interface IIconProps {
   className: string;
@@ -14,8 +50,21 @@ export interface IButtonProps {
   children?: ReactNode;
 }
 
+export interface ILogoProps {
+  mainText: string;
+  accentText: string;
+}
+
+export interface INavListProps {
+  navList: IHeaderData['navList'];
+}
+
 export interface INavItemProps {
   text: string;
+}
+
+export interface ISocialsListProps {
+  socialsList: IHeaderData['socialsList'];
 }
 
 export interface ISocialsItemProps {
@@ -23,13 +72,10 @@ export interface ISocialsItemProps {
   href: string;
 }
 
-export interface ILogoTextProps {
-  accentText: string;
-  mainText: string;
-}
-
-export type IIcon = FunctionComponent<IIconProps>;
-export type IButton = FunctionComponent<IButtonProps>;
-export type INavItem = FunctionComponent<INavItemProps>;
-export type ISocialsItem = FunctionComponent<ISocialsItemProps>;
-export type ILogoText = FunctionComponent<ILogoTextProps>;
+export type IIcon = FC<IIconProps>;
+export type IButton = FC<IButtonProps>;
+export type ILogo = FC<ILogoProps>;
+export type INavList = FC<INavListProps>;
+export type INavItem = FC<INavItemProps>;
+export type ISocialsList = FC<ISocialsListProps>;
+export type ISocialsItem = FC<ISocialsItemProps>;

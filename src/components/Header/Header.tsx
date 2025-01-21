@@ -2,6 +2,8 @@ import { useMedia } from '@hooks';
 
 import { Logo, MenuButton, NavList, SocialsList } from '@components';
 
+import { HeaderData as data } from '@data';
+
 import { HeaderModule as css } from '@styles';
 
 export const Header = () => {
@@ -10,12 +12,12 @@ export const Header = () => {
   return (
     <div className={'container'}>
       <header className={css['header']}>
-        <Logo />
+        <Logo accentText={data.logo.accentText} mainText={data.logo.mainText} />
         {isMobile && <MenuButton />}
         {!isMobile && (
           <div className={css['header__nav-socials-wrapper']}>
-            <NavList />
-            <SocialsList />
+            <NavList navList={data.navList} />
+            <SocialsList socialsList={data.socialsList} />
           </div>
         )}
       </header>
