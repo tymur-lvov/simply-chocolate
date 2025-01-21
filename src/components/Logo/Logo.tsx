@@ -4,7 +4,7 @@ import { LogoModule as css } from '@styles';
 
 import type { ILogo } from '@types';
 
-export const Logo: ILogo = ({ accentText, mainText }) => {
+export const Logo: ILogo = ({ logo: { accentText, mainText } }) => {
   return (
     <a className={css['header__logo-link']} href='/'>
       <div className={css['header__logo-text']}>

@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <div className={'container'}>
       <header className={css['header']}>
-        <Logo accentText={data.logo.accentText} mainText={data.logo.mainText} />
+        <Logo logo={data.logo} />
         {isMobile && <MenuButton />}
         {!isMobile && (
           <div className={css['header__nav-socials-wrapper']}>

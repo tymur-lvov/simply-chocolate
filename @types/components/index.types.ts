@@ -51,8 +51,7 @@ export interface IButtonProps {
 }
 
 export interface ILogoProps {
-  mainText: string;
-  accentText: string;
+  logo: IHeaderData['logo'];
 }
 
 export interface INavListProps {
