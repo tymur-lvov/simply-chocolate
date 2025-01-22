@@ -11,6 +11,7 @@ export * from './MenuButton/MenuButton.tsx';
 export * from './Main/Main.tsx';
 export { default as LogoModule } from './Logo/Logo.module.css';
 export * from './Logo/Logo.tsx';
+export * from './Link/Link.tsx';
 export * from './Icon/Icon.tsx';
 export { default as HeroModule } from './Hero/Hero.module.css';
 export * from './Hero/Hero.tsx';

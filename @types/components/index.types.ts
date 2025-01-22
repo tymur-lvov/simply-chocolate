@@ -36,6 +36,12 @@ export interface IHeroData {
   };
 }
 
+export interface ILinkProps {
+  className: string;
+  href: string;
+  children?: ReactNode;
+}
+
 export interface IIconProps {
   className: string;
   width: number;
@@ -71,6 +77,7 @@ export interface ISocialsItemProps {
   href: string;
 }
 
+export type ILink = FC<ILinkProps>;
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
 export type ILogo = FC<ILogoProps>;
