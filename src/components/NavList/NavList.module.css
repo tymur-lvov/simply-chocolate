@@ -1,9 +1,9 @@
-.nav {
+.header__nav {
   width: 312px;
 }
 
 @media only screen and (min-width: 1158px) {
-  .nav {
+  .header__nav {
     width: 320px;
   }
 }
