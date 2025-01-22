@@ -1,6 +1,7 @@
 .header__socials-list {
   display: flex;
   gap: 14px;
+  width: 148px;
 }
 
 .header__socials-item {

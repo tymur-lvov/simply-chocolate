@@ -1,3 +1,13 @@
+.nav {
+  width: 312px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .nav {
+    width: 320px;
+  }
+}
+
 .header__nav-list {
   display: flex;
   gap: 20px;

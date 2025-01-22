@@ -6,7 +6,7 @@ import type { INavList } from '@types';
 
 export const NavList: INavList = ({ navList: { navItems } }) => {
   return (
-    <nav>
+    <nav className={css['nav']}>
       <ul className={css['header__nav-list']}>
         {navItems.map(({ text }) => (
           <li className={css['header__nav-item']} key={text}>
