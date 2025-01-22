@@ -1,0 +1,26 @@
+.header__logo-icon-thumb {
+  width: 21px;
+  height: 21px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .header__logo-icon-thumb {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.header__logo-icon {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__logo-link:active .header__logo-icon {
+  transform: scale(115%);
+}
+
+@media only screen and (min-width: 1158px) {
+  .header__logo-link:hover .header__logo-icon,
+  .header__logo-link:focus .header__logo-icon {
+    transform: scale(115%);
+  }
+}

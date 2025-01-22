@@ -54,6 +54,11 @@ export interface ILogoProps {
   logo: IHeaderData['logo'];
 }
 
+export interface ILogoTextProps {
+  accentText: string;
+  mainText: string;
+}
+
 export interface INavListProps {
   navList: IHeaderData['navList'];
 }
@@ -74,6 +79,7 @@ export interface ISocialsItemProps {
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
 export type ILogo = FC<ILogoProps>;
+export type ILogoText = FC<ILogoTextProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
