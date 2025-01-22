@@ -6,7 +6,12 @@ import type { ISocialsItem } from '@types';
 
 export const SocialsItem: ISocialsItem = ({ fragment, href }) => {
   return (
-    <a className={css['header__socials-link']} href={href}>
+    <a
+      className={css['header__socials-link']}
+      href={href}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
       <Icon className={css['header__socials-icon']} width={24} height={24} fragment={fragment} />
     </a>
   );
