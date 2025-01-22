@@ -12,6 +12,18 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--socials-border);
   border-radius: 10px;
+  outline: 1px solid var(--socials-border);
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__socials-item:active {
+  outline-color: var(--socials-border-accent);
+}
+
+@media only screen and (min-width: 1158px) {
+  .header__socials-item:hover,
+  .header__socials-item:focus-within {
+    outline-color: var(--socials-border-accent);
+  }
 }
