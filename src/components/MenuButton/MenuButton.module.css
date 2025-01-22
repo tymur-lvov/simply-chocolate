@@ -2,5 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0 14px;
+}
+
+.header__menu-icon {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__menu-btn:active .header__menu-icon {
+  transform: scale(87.5%);
 }
