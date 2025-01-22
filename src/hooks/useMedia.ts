@@ -26,5 +26,5 @@ export const useMedia: IUseMedia = () => {
     matchMediaRules.find(({ isMediaMatches }) => isMediaMatches())?.setState();
   });
 
-  return [isMobile, isTablet, isDesktop];
+  return { isMobile, isTablet, isDesktop };
 };

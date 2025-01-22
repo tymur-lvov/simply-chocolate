@@ -7,7 +7,7 @@ import { HeaderData as data } from '@data';
 import { HeaderModule as css } from '@styles';
 
 export const Header = () => {
-  const [isMobile] = useMedia();
+  const { isMobile } = useMedia();
 
   return (
     <div className={'container'}>

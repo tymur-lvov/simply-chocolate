@@ -7,7 +7,7 @@ import { HeroData as data } from '@data';
 import { HeroModule as css } from '@styles';
 
 export const Hero = () => {
-  const [isMobile] = useMedia();
+  const { isMobile } = useMedia();
 
   return (
     <div className={'container'}>
