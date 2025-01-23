@@ -7,15 +7,15 @@ export const HeroData: IHeroData = {
     tabletText:
       'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
   },
-  ctaBtns: {
-    orderBtn: {
+  ctaButtons: {
+    orderButton: {
       text: 'Buy now',
     },
-    infoBtn: {
+    infoButton: {
       text: `How it’s made`,
     },
   },
-  scrollBtn: {
+  scrollLink: {
     text: 'scroll down',
   },
 };

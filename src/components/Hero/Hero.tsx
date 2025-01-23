@@ -1,4 +1,4 @@
-import { CtaButtons, HeroTitle, Icon } from '@components';
+import { CtaButtons, HeroTitle, ScrollLink } from '@components';
 
 import { HeroData as data } from '@data';
 
@@ -10,18 +10,8 @@ export const Hero = () => {
       <section className={css['hero']}>
         <HeroTitle title={data.title} />
         <div className={css['hero__cta-btns-scroll-link-wrapper']}>
-          <CtaButtons ctaBtns={data.ctaBtns} />
-          <a className={css['hero__scroll-link']} href='/'>
-            {data.scrollBtn.text}
-            <div className={css['hero__scroll-icon-thumb']}>
-              <Icon
-                className={css['hero__scroll-icon']}
-                width={16}
-                height={16}
-                fragment='arrow-down'
-              />
-            </div>
-          </a>
+          <CtaButtons ctaButtons={data.ctaButtons} />
+          <ScrollLink scrollLink={data.scrollLink} />
         </div>
       </section>
     </div>
