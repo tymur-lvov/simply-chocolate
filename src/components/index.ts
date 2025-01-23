@@ -12,6 +12,8 @@ export * from './Main/Main.tsx';
 export { default as LogoModule } from './Logo/Logo.module.css';
 export * from './Logo/Logo.tsx';
 export * from './Icon/Icon.tsx';
+export { default as HeroTitleModule } from './HeroTitle/HeroTitle.module.css';
+export * from './HeroTitle/HeroTitle.tsx';
 export { default as HeroModule } from './Hero/Hero.module.css';
 export * from './Hero/Hero.tsx';
 export { default as HeaderModule } from './Header/Header.module.css';

@@ -1,41 +1,34 @@
-import { useMedia } from '@hooks';
+import { clsx } from 'clsx';
 
-import { Button, Icon } from '@components';
+import { Button, HeroTitle, Icon } from '@components';
 
 import { HeroData as data } from '@data';
 
 import { HeroModule as css } from '@styles';
 
 export const Hero = () => {
-  const { isMobile } = useMedia();
-
   return (
     <div className={'container'}>
       <section className={css['hero']}>
-        <h1 className={css['hero__title']}>
-          {isMobile ? data.title.mobile.text : data.title.tablet.text}
-        </h1>
-        <div className={css['hero__nav-wrapper']}>
-          <div className={css['hero__main-btns-wrapper']}>
-            {data.mainBtns.map(({ className, text }) => (
-              <Button
-                className={`${css['hero__main-btn']} ${css[className]}`}
-                text={text}
-                key={className}
-              />
-            ))}
+        <HeroTitle title={data.title} />
+        <div className={css['hero__cta-btns-scroll-link-wrapper']}>
+          <div className={css['hero__cta-btns-wrapper']}>
+            <Button className={clsx(css['hero__main-btn'], css['hero__main-btn--order'])}>
+              {data.orderBtn.text}
+            </Button>
+            <Button className={clsx(css['hero__main-btn'], css['hero__main-btn--info'])}>
+              {data.infoBtn.text}
+            </Button>
           </div>
-          <a className={css['hero__scroll-link']} href='#'>
-            <div className={css['hero__scroll-wrapper']}>
-              <p className={css['hero__scroll-label']}>{data.scrollBtn.text}</p>
-              <div className={css['hero__scroll-icon-thumb']}>
-                <Icon
-                  className={css['hero__scroll-icon']}
-                  width={16}
-                  height={16}
-                  fragment='arrow-down'
-                />
-              </div>
+          <a className={css['hero__scroll-link']} href='/'>
+            {data.scrollBtn.text}
+            <div className={css['hero__scroll-icon-thumb']}>
+              <Icon
+                className={css['hero__scroll-icon']}
+                width={16}
+                height={16}
+                fragment='arrow-down'
+              />
             </div>
           </a>
         </div>

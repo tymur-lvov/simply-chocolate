@@ -20,17 +20,15 @@ export interface IHeaderData {
 
 export interface IHeroData {
   title: {
-    mobile: {
-      text: string;
-    };
-    tablet: {
-      text: string;
-    };
+    mobileText: string;
+    tabletText: string;
   };
-  mainBtns: {
-    className: string;
+  orderBtn: {
     text: string;
-  }[];
+  };
+  infoBtn: {
+    text: string;
+  };
   scrollBtn: {
     text: string;
   };
@@ -45,9 +43,8 @@ export interface IIconProps {
 
 export interface IButtonProps {
   className: string;
-  type?: 'button' | 'submit';
-  text?: string;
   children?: ReactNode;
+  type?: 'button' | 'submit';
 }
 
 export interface ILogoProps {
@@ -71,6 +68,10 @@ export interface ISocialsItemProps {
   href: string;
 }
 
+export interface IHeroTitleProps {
+  title: IHeroData['title'];
+}
+
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
 export type ILogo = FC<ILogoProps>;
@@ -78,3 +79,4 @@ export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
 export type ISocialsItem = FC<ISocialsItemProps>;
+export type IHeroTitle = FC<IHeroTitleProps>;
