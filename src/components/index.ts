@@ -18,4 +18,6 @@ export { default as HeroModule } from './Hero/Hero.module.css';
 export * from './Hero/Hero.tsx';
 export { default as HeaderModule } from './Header/Header.module.css';
 export * from './Header/Header.tsx';
+export { default as CtaButtonsModule } from './CtaButtons/CtaButtons.module.css';
+export * from './CtaButtons/CtaButtons.tsx';
 export * from './Button/Button.tsx';

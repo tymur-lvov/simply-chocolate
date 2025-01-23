@@ -1,6 +1,4 @@
-import { clsx } from 'clsx';
-
-import { Button, HeroTitle, Icon } from '@components';
+import { CtaButtons, HeroTitle, Icon } from '@components';
 
 import { HeroData as data } from '@data';
 
@@ -12,14 +10,7 @@ export const Hero = () => {
       <section className={css['hero']}>
         <HeroTitle title={data.title} />
         <div className={css['hero__cta-btns-scroll-link-wrapper']}>
-          <div className={css['hero__cta-btns-wrapper']}>
-            <Button className={clsx(css['hero__main-btn'], css['hero__main-btn--order'])}>
-              {data.orderBtn.text}
-            </Button>
-            <Button className={clsx(css['hero__main-btn'], css['hero__main-btn--info'])}>
-              {data.infoBtn.text}
-            </Button>
-          </div>
+          <CtaButtons ctaBtns={data.ctaBtns} />
           <a className={css['hero__scroll-link']} href='/'>
             {data.scrollBtn.text}
             <div className={css['hero__scroll-icon-thumb']}>

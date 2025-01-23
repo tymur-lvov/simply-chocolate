@@ -23,11 +23,13 @@ export interface IHeroData {
     mobileText: string;
     tabletText: string;
   };
-  orderBtn: {
-    text: string;
-  };
-  infoBtn: {
-    text: string;
+  ctaBtns: {
+    orderBtn: {
+      text: string;
+    };
+    infoBtn: {
+      text: string;
+    };
   };
   scrollBtn: {
     text: string;
@@ -72,6 +74,10 @@ export interface IHeroTitleProps {
   title: IHeroData['title'];
 }
 
+export interface ICtaButtonsProps {
+  ctaBtns: IHeroData['ctaBtns'];
+}
+
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
 export type ILogo = FC<ILogoProps>;
@@ -80,3 +86,4 @@ export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
 export type ISocialsItem = FC<ISocialsItemProps>;
 export type IHeroTitle = FC<IHeroTitleProps>;
+export type ICtaButtons = FC<ICtaButtonsProps>;

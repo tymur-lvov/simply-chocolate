@@ -1,0 +1,75 @@
+.hero__cta-btns-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 293px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__cta-btns-wrapper {
+    width: 341px;
+  }
+}
+
+.hero__main-btn {
+  height: 41px;
+  border-radius: 100px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 250ms var(--transition), background-color 250ms var(--transition),
+    border-color 250ms var(--transition);
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__main-btn {
+    height: 45px;
+  }
+}
+
+.hero__main-btn--order {
+  width: 120px;
+  background-color: var(--orange);
+}
+
+.hero__main-btn--order:active {
+  background-color: var(--beige);
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__main-btn--order {
+    width: 144px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero__main-btn--order:hover,
+  .hero__main-btn--order:focus {
+    background-color: var(--beige);
+    color: var(--orange);
+  }
+}
+
+.hero__main-btn--info {
+  width: 159px;
+  border: 1px solid var(--white);
+}
+
+.hero__main-btn--info:active {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__main-btn--info {
+    width: 183px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero__main-btn--info:hover,
+  .hero__main-btn--info:focus {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+}
