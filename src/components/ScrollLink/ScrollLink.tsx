@@ -9,7 +9,7 @@ export const ScrollLink: IScrollLink = ({ scrollLink: { text } }) => {
     <a className={css['hero__scroll-link']} href='/'>
       {text}
       <div className={css['hero__scroll-icon-thumb']}>
-        <Icon className={css['hero__scroll-icon']} width={16} height={16} fragment='arrow-down' />
+        <Icon className={css['hero__scroll-icon']} width={16} height={16} fragment='arrow_down' />
       </div>
     </a>
   );
