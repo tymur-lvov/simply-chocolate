@@ -4,14 +4,13 @@
   border: none;
 }
 
-a,
-a:link,
-a:visited,
-a:hover,
-a:focus {
+a {
   color: inherit;
-  outline: none;
   text-decoration: none;
+}
+
+a:focus {
+  outline: none;
 }
 
 aside,
