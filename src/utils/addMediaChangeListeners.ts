@@ -1,9 +1,4 @@
-import type { IAddMediaChangeListeners } from '@types';
-
-export const addMediaChangeListeners: IAddMediaChangeListeners = (
-  mediaList,
-  mediaStateChangeHandle
-) => {
+export const addMediaChangeListeners = (mediaList, mediaStateChangeHandle) => {
   Object.values(mediaList).forEach((media) => {
     media.addEventListener('change', mediaStateChangeHandle);
   });

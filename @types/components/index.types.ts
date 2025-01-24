@@ -93,20 +93,3 @@ export type ICtaButtons = FC<ICtaButtonsProps>;
 export type IScrollLink = FC<IScrollLinkProps>;
 
 export type IStateSetter = Dispatch<SetStateAction<boolean>>;
-
-export type IUpdateMediaStates = (
-  mediaList: any,
-  setIsMobile: IStateSetter,
-  setIsTablet: IStateSetter,
-  setIsDesktop: IStateSetter
-) => void;
-
-export type IAddMediaChangeListeners = (
-  mediaList: any,
-  mediaStateChangeHandle: IUpdateMediaStates
-) => void;
-
-export type IRemoveMediaChangeListeners = (
-  mediaList: any,
-  mediaStateChangeHandle: IUpdateMediaStates
-) => void;
