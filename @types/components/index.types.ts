@@ -82,9 +82,9 @@ export interface IScrollLinkProps {
 }
 
 export interface IMediaList {
-  mobile: MediaQueryList;
-  tablet: MediaQueryList;
-  desktop: MediaQueryList;
+  mobile: ReturnType<Window['matchMedia']>;
+  tablet: ReturnType<Window['matchMedia']>;
+  desktop: ReturnType<Window['matchMedia']>;
 }
 
 export type IIcon = FC<IIconProps>;
