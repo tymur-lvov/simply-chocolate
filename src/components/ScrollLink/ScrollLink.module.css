@@ -36,11 +36,13 @@
   padding: 6px;
   border-radius: 100%;
   background-color: var(--white);
-  transition: background-color 250ms var(--transition);
+  fill: var(--orange);
+  transition: background-color 250ms var(--transition), fill 250ms var(--transition);
 }
 
 .hero__scroll-link:active .hero__scroll-icon-thumb {
   background-color: var(--orange);
+  fill: var(--white);
 }
 
 @media only screen and (min-width: 768px) {
@@ -55,21 +57,6 @@
   .hero__scroll-link:hover .hero__scroll-icon-thumb,
   .hero__scroll-link:focus .hero__scroll-icon-thumb {
     background-color: var(--orange);
-  }
-}
-
-.hero__scroll-icon {
-  fill: var(--orange);
-  transition: fill 250ms var(--transition);
-}
-
-.hero__scroll-link:active .hero__scroll-icon {
-  fill: var(--white);
-}
-
-@media only screen and (min-width: 1158px) {
-  .hero__scroll-link:hover .hero__scroll-icon,
-  .hero__scroll-link:focus .hero__scroll-icon {
     fill: var(--white);
   }
 }

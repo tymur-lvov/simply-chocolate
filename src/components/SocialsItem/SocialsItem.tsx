@@ -12,7 +12,7 @@ export const SocialsItem: ISocialsItem = ({ fragment, href }) => {
       target='_blank'
       rel='noopener noreferrer'
     >
-      <Icon className={css['header__socials-icon']} width={24} height={24} fragment={fragment} />
+      <Icon width={24} height={24} fragment={fragment} />
     </a>
   );
 };

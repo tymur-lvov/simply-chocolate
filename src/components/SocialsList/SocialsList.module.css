@@ -9,16 +9,19 @@
   height: 40px;
   border: 1px solid var(--socials-border);
   border-radius: 10px;
-  transition: border-color 250ms var(--transition);
+  fill: var(--black);
+  transition: border-color 250ms var(--transition), fill 250ms var(--transition);
 }
 
 .header__socials-item:active {
   border-color: var(--socials-border-accent);
+  fill: var(--orange);
 }
 
 @media only screen and (min-width: 1158px) {
   .header__socials-item:hover,
   .header__socials-item:focus-within {
     border-color: var(--socials-border-accent);
+    fill: var(--orange);
   }
 }
