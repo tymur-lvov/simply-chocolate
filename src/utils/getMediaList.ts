@@ -1,6 +1,4 @@
-import type { IGetMediaList } from '@types';
-
-export const getMediaList: IGetMediaList = () => {
+export const getMediaList = () => {
   return {
     mobile: window.matchMedia('(max-width: 767px)'),
     tablet: window.matchMedia('(min-width: 768px) and (max-width:1157px)'),

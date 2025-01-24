@@ -94,25 +94,19 @@ export type IScrollLink = FC<IScrollLinkProps>;
 
 export type IStateSetter = Dispatch<SetStateAction<boolean>>;
 
-export type IGetMediaList = () => {
-  mobile: MediaQueryList;
-  tablet: MediaQueryList;
-  desktop: MediaQueryList;
-};
-
 export type IUpdateMediaStates = (
-  mediaList: ReturnType<IGetMediaList>,
+  mediaList: any,
   setIsMobile: IStateSetter,
   setIsTablet: IStateSetter,
   setIsDesktop: IStateSetter
 ) => void;
 
 export type IAddMediaChangeListeners = (
-  mediaList: ReturnType<IGetMediaList>,
+  mediaList: any,
   mediaStateChangeHandle: IUpdateMediaStates
 ) => void;
 
 export type IRemoveMediaChangeListeners = (
-  mediaList: ReturnType<IGetMediaList>,
+  mediaList: any,
   mediaStateChangeHandle: IUpdateMediaStates
 ) => void;
