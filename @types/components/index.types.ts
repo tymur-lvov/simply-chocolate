@@ -43,8 +43,8 @@ export interface IIconProps {
 }
 
 export interface IButtonProps {
+  children: ReactNode;
   className: string;
-  children?: ReactNode;
   type?: 'button' | 'submit';
 }
 
