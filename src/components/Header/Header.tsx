@@ -1,3 +1,5 @@
+import { clsx } from 'clsx';
+
 import { useMedia } from '@hooks';
 
 import { Logo, MenuButton, NavList, SocialsList } from '@components';
@@ -10,8 +12,8 @@ export const Header = () => {
   const { isMobile } = useMedia();
 
   return (
-    <div className={'container'}>
-      <header className={css['header']}>
+    <header>
+      <div className={clsx('container', css['header__container'])}>
         <Logo logo={data.logo} />
         {isMobile && <MenuButton />}
         {!isMobile && (
@@ -20,7 +22,7 @@ export const Header = () => {
             <SocialsList socialsList={data.socialsList} />
           </div>
         )}
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
