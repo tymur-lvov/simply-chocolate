@@ -6,7 +6,7 @@ export const HeaderData: IHeaderData = {
     accentText: 'SIMPLY',
   },
   navList: {
-    navItems: [{ text: 'Home' }, { text: 'How it’s made?' }, { text: 'Chocolate is loved' }],
+    navItems: [{ text: 'Home' }, { text: 'How it\u2019s made?' }, { text: 'Chocolate is loved' }],
   },
   socialsList: {
     socialsItems: [

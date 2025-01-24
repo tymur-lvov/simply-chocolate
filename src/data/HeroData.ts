@@ -12,7 +12,7 @@ export const HeroData: IHeroData = {
       text: 'Buy now',
     },
     infoButton: {
-      text: `How it’s made`,
+      text: `How it\u2019s made`,
     },
   },
   scrollLink: {
