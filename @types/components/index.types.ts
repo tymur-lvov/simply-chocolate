@@ -81,12 +81,6 @@ export interface IScrollLinkProps {
   scrollLink: IHeroData['scrollLink'];
 }
 
-export interface IMediaList {
-  mobile: ReturnType<Window['matchMedia']>;
-  tablet: ReturnType<Window['matchMedia']>;
-  desktop: ReturnType<Window['matchMedia']>;
-}
-
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
 export type ILogo = FC<ILogoProps>;
@@ -100,7 +94,11 @@ export type IScrollLink = FC<IScrollLinkProps>;
 
 export type IStateSetter = Dispatch<SetStateAction<boolean>>;
 
-export type IGetMediaList = () => IMediaList;
+export type IGetMediaList = () => {
+  mobile: MediaQueryList;
+  tablet: MediaQueryList;
+  desktop: MediaQueryList;
+};
 
 export type IUpdateMediaStates = (
   mediaList: ReturnType<IGetMediaList>,
@@ -110,11 +108,11 @@ export type IUpdateMediaStates = (
 ) => void;
 
 export type IAddMediaChangeListeners = (
-  mediaList: IMediaList,
+  mediaList: ReturnType<IGetMediaList>,
   mediaStateChangeHandle: IUpdateMediaStates
 ) => void;
 
 export type IRemoveMediaChangeListeners = (
-  mediaList: IMediaList,
+  mediaList: ReturnType<IGetMediaList>,
   mediaStateChangeHandle: IUpdateMediaStates
 ) => void;
