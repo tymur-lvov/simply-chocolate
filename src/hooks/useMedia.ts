@@ -9,6 +9,8 @@ import {
 
 import type { IUseMedia } from '@types';
 
+// Refactor variables
+
 export const useMedia: IUseMedia = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
