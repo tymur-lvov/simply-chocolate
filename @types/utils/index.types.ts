@@ -27,3 +27,8 @@ export type IAddMediaQueryListChangeListeners = (
   mediaQueryLists: IMediaQueryLists,
   mediaQueryListChangeHandle: IMediaQueryListChangeHandle
 ) => void;
+
+export type IRemoveMediaQueryListChangeListeners = (
+  mediaQueryLists: IMediaQueryLists,
+  mediaQueryListChangeHandle: IMediaQueryListChangeHandle
+) => void;

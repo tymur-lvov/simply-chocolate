@@ -4,7 +4,7 @@ import {
   getMediaQueryLists,
   updateMediaQueryStates,
   addMediaQueryListChangeListeners,
-  // removeMediaChangeListeners,
+  removeMediaQueryListChangeListeners,
 } from '@utils';
 
 import type { IMediaQueryListChangeHandle } from '@types';
@@ -27,7 +27,7 @@ export const useMedia = (): { isMobile: boolean; isTablet: boolean; isDesktop: b
 
     addMediaQueryListChangeListeners(mediaQueryLists, mediaQueryListChangeHandle);
 
-    // return () => removeMediaChangeListeners(mediaQueryLists, mediaQueryListChangeHandle);
+    return () => removeMediaQueryListChangeListeners(mediaQueryLists, mediaQueryListChangeHandle);
   }, []);
 
   return { isMobile, isTablet, isDesktop };
