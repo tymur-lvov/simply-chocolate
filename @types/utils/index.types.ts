@@ -20,3 +20,10 @@ export type IUpdateMediaQueryStates = (
   setIsTablet: IStateSetter,
   setIsDesktop: IStateSetter
 ) => void;
+
+export type IMediaQueryListChangeHandle = () => ReturnType<IUpdateMediaQueryStates>;
+
+export type IAddMediaQueryListChangeListeners = (
+  mediaQueryLists: IMediaQueryLists,
+  mediaQueryListChangeHandle: IMediaQueryListChangeHandle
+) => void;

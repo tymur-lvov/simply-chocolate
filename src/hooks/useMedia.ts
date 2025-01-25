@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 import {
   getMediaQueryLists,
   updateMediaQueryStates,
-  // addMediaChangeListeners,
+  addMediaQueryListChangeListeners,
   // removeMediaChangeListeners,
 } from '@utils';
+
+import type { IMediaQueryListChangeHandle } from '@types';
 
 // import type { IUseMedia } from '@types';
 
@@ -15,18 +17,17 @@ export const useMedia = (): { isMobile: boolean; isTablet: boolean; isDesktop: b
   const [isDesktop, setIsDesktop] = useState(false);
 
   const mediaQueryLists = getMediaQueryLists();
-  console.log(mediaQueryLists);
 
-  const mediaChangeHandle = () => {
+  const mediaQueryListChangeHandle: IMediaQueryListChangeHandle = () => {
     updateMediaQueryStates(mediaQueryLists, setIsMobile, setIsTablet, setIsDesktop);
   };
 
-  console.log(mediaChangeHandle());
-
   useEffect(() => {
-    // mediaChangeHandle();
-    // addMediaChangeListeners(mediaQueryLists, mediaChangeHandle);
-    // return () => removeMediaChangeListeners(mediaQueryLists, mediaChangeHandle);
+    mediaQueryListChangeHandle();
+
+    addMediaQueryListChangeListeners(mediaQueryLists, mediaQueryListChangeHandle);
+
+    // return () => removeMediaChangeListeners(mediaQueryLists, mediaQueryListChangeHandle);
   }, []);
 
   return { isMobile, isTablet, isDesktop };
