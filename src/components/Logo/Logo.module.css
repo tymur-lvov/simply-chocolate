@@ -37,20 +37,20 @@
   font-style: italic;
 }
 
-.header__logo-icon-thumb {
+.header__logo-icon {
   width: 21px;
   height: 21px;
   transition: transform 250ms var(--transition);
 }
 
 @media only screen and (min-width: 1158px) {
-  .header__logo-icon-thumb {
+  .header__logo-icon {
     width: 24px;
     height: 24px;
   }
 
-  .header__logo-link:hover .header__logo-icon-thumb,
-  .header__logo-link:focus .header__logo-icon-thumb {
+  .header__logo-link:hover .header__logo-icon,
+  .header__logo-link:focus .header__logo-icon {
     transform: scale(115%);
   }
 }

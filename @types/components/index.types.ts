@@ -37,6 +37,7 @@ export interface IHeroData {
 }
 
 export interface IIconProps {
+  className: string;
   width: number;
   height: number;
   fragment: string;

@@ -11,9 +11,7 @@ export const Logo: ILogo = ({ logo: { accentText, mainText } }) => {
         <span className={css['header__logo-accent']}>{accentText}</span>
         {mainText}
       </div>
-      <div className={css['header__logo-icon-thumb']}>
-        <Icon width={21} height={21} fragment={'logo'} />
-      </div>
+      <Icon className={css['header__logo-icon']} width={21} height={21} fragment={'logo'} />
     </a>
   );
 };
