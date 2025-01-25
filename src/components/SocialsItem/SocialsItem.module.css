@@ -1,6 +1,6 @@
 .header__socials-link {
   display: flex;
-  padding: 7.1px;
+  padding: 7px;
   border: 1px solid var(--socials-border);
   border-radius: 10px;
   fill: var(--black);
