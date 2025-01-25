@@ -1,7 +1,7 @@
 // import { useEffect, useState } from 'react';
 
 import {
-  getMediaList,
+  getMediaQueryLists,
   // updateMediaStates,
   // addMediaChangeListeners,
   // removeMediaChangeListeners,
@@ -14,7 +14,7 @@ export const useMedia = (): void => {
   // const [isTablet, setIsTablet] = useState(false);
   // const [isDesktop, setIsDesktop] = useState(false);
 
-  const mediaList = getMediaList();
+  const mediaList = getMediaQueryLists();
   console.log(mediaList);
 
   // const mediaChangeHandle = () => {

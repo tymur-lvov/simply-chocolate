@@ -81,6 +81,12 @@ export interface IScrollLinkProps {
   scrollLink: IHeroData['scrollLink'];
 }
 
+export interface IMediaQueryLists {
+  mobileList: MediaQueryList;
+  tabletList: MediaQueryList;
+  desktopList: MediaQueryList;
+}
+
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
 export type ILogo = FC<ILogoProps>;
