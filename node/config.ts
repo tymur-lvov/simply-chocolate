@@ -1,4 +1,4 @@
 export const config = {
-  parentPaths: ['./src/assets', './src/components'],
+  parentPaths: ['./src/hooks', './src/utils', './src/assets', './src/components', './src/data'],
   itemsToExclude: ['index.ts', 'index.types.ts', '.DS_Store'],
 };
