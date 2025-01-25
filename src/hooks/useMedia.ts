@@ -7,18 +7,16 @@ import {
   removeMediaQueryListChangeListeners,
 } from '@utils';
 
-import type { IMediaQueryListChangeHandle } from '@types';
+import type { IUseMedia } from '@types';
 
-// import type { IUseMedia } from '@types';
-
-export const useMedia = (): { isMobile: boolean; isTablet: boolean; isDesktop: boolean } => {
+export const useMedia: IUseMedia = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
   const mediaQueryLists = getMediaQueryLists();
 
-  const mediaQueryListChangeHandle: IMediaQueryListChangeHandle = () => {
+  const mediaQueryListChangeHandle = () => {
     updateMediaQueryStates(mediaQueryLists, setIsMobile, setIsTablet, setIsDesktop);
   };
 

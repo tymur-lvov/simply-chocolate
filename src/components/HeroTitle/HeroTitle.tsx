@@ -1,12 +1,11 @@
-// import { useMedia } from '@hooks';
+import { useMedia } from '@hooks';
 
 import { HeroTitleModule as css } from '@styles';
 
 import type { IHeroTitle } from '@types';
 
 export const HeroTitle: IHeroTitle = ({ title: { mobileText, tabletText } }) => {
-  // const { isMobile } = useMedia();
-  const isMobile = true;
+  const { isMobile } = useMedia();
 
   return (
     <h1 className={css['hero__title']}>
