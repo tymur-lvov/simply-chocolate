@@ -9,7 +9,7 @@ import {
 
 // import type { IUseMedia } from '@types';
 
-export const useMedia = (): void => {
+export const useMedia = (): { isMobile: boolean; isTablet: boolean; isDesktop: boolean } => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -21,11 +21,13 @@ export const useMedia = (): void => {
     updateMediaQueryStates(mediaQueryLists, setIsMobile, setIsTablet, setIsDesktop);
   };
 
+  console.log(mediaChangeHandle());
+
   useEffect(() => {
     // mediaChangeHandle();
     // addMediaChangeListeners(mediaQueryLists, mediaChangeHandle);
     // return () => removeMediaChangeListeners(mediaQueryLists, mediaChangeHandle);
   }, []);
 
-  // return { isMobile, isTablet, isDesktop };
+  return { isMobile, isTablet, isDesktop };
 };

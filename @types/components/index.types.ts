@@ -1,4 +1,4 @@
-import type { Dispatch, FC, ReactNode, SetStateAction } from 'react';
+import type { FC, ReactNode } from 'react';
 
 export interface IHeaderData {
   logo: {
@@ -81,12 +81,6 @@ export interface IScrollLinkProps {
   scrollLink: IHeroData['scrollLink'];
 }
 
-export interface IMediaQueryLists {
-  mobileList: MediaQueryList;
-  tabletList: MediaQueryList;
-  desktopList: MediaQueryList;
-}
-
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
 export type ILogo = FC<ILogoProps>;
@@ -97,12 +91,3 @@ export type ISocialsItem = FC<ISocialsItemProps>;
 export type IHeroTitle = FC<IHeroTitleProps>;
 export type ICtaButtons = FC<ICtaButtonsProps>;
 export type IScrollLink = FC<IScrollLinkProps>;
-
-export type IStateSetter = Dispatch<SetStateAction<boolean>>;
-
-export type IUpdateMediaQueryStates = (
-  mediaQueryLists: IMediaQueryLists,
-  setIsMobile: IStateSetter,
-  setIsTablet: IStateSetter,
-  setIsDesktop: IStateSetter
-) => void;
