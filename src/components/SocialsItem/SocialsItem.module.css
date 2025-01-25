@@ -1,4 +1,21 @@
 .header__socials-link {
   display: flex;
-  padding: 7px;
+  padding: 7.1px;
+  border: 1px solid var(--socials-border);
+  border-radius: 10px;
+  fill: var(--black);
+  transition: border-color 250ms var(--transition), fill 250ms var(--transition);
+}
+
+.header__socials-link:active {
+  border-color: var(--socials-border-accent);
+  fill: var(--orange);
+}
+
+@media only screen and (min-width: 1158px) {
+  .header__socials-link:hover,
+  .header__socials-link:focus {
+    border-color: var(--socials-border-accent);
+    fill: var(--orange);
+  }
 }
