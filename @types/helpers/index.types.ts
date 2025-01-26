@@ -6,6 +6,8 @@ export interface IMediaQueryLists {
   desktopList: MediaQueryList;
 }
 
+export type IActionHandle = () => void;
+
 export type IStateSetter = Dispatch<SetStateAction<boolean>>;
 
 export type IUseMedia = () => {
@@ -21,14 +23,9 @@ export type IUpdateMediaQueryStates = (
   setIsDesktop: IStateSetter
 ) => void;
 
-export type IMediaQueryListChangeHandle = () => ReturnType<IUpdateMediaQueryStates>;
-
 export type IAddMediaQueryListChangeListeners = (
   mediaQueryLists: IMediaQueryLists,
-  mediaQueryListChangeHandle: IMediaQueryListChangeHandle
+  mediaQueryListChangeHandle: IActionHandle
 ) => void;
 
-export type IRemoveMediaQueryListChangeListeners = (
-  mediaQueryLists: IMediaQueryLists,
-  mediaQueryListChangeHandle: IMediaQueryListChangeHandle
-) => void;
+export type IRemoveMediaQueryListChangeListeners = IAddMediaQueryListChangeListeners;

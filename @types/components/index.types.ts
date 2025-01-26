@@ -1,15 +1,41 @@
 import type { FC, ReactNode } from 'react';
 
-export interface IHeaderData {
+export interface IFCProps {
+  children?: ReactNode;
+  className?: string;
+  variant?: string;
+}
+
+export interface IIconProps extends IFCProps {
+  width: number;
+  height: number;
+  fragment: string;
+}
+
+export interface IButtonProps extends IFCProps {
+  type?: 'button' | 'submit' | 'reset';
+}
+
+export interface ILogoProps extends IFCProps {
   logo: {
     mainText: string;
     accentText: string;
   };
+}
+
+export interface INavListProps extends IFCProps {
   navList: {
     navItems: {
       text: string;
     }[];
   };
+}
+
+export interface INavItemProps extends IFCProps {
+  text: string;
+}
+
+export interface ISocialsListProps extends IFCProps {
   socialsList: {
     socialsItems: {
       fragment: string;
@@ -18,11 +44,19 @@ export interface IHeaderData {
   };
 }
 
-export interface IHeroData {
+export interface ISocialsItemProps extends IFCProps {
+  fragment: string;
+  href: string;
+}
+
+export interface IHeroTitleProps extends IFCProps {
   title: {
     mobileText: string;
     tabletText: string;
   };
+}
+
+export interface ICtaButtonsProps extends IFCProps {
   ctaButtons: {
     orderButton: {
       text: string;
@@ -31,57 +65,12 @@ export interface IHeroData {
       text: string;
     };
   };
+}
+
+export interface IScrollLinkProps extends IFCProps {
   scrollLink: {
     text: string;
   };
-}
-
-export interface IIconProps {
-  className: string;
-  width: number;
-  height: number;
-  fragment: string;
-}
-
-export interface IButtonProps {
-  children: ReactNode;
-  className: string;
-  type?: 'button' | 'submit';
-}
-
-export interface ILogoProps {
-  logo: IHeaderData['logo'];
-}
-
-export interface INavListProps {
-  className: string;
-  navList: IHeaderData['navList'];
-}
-
-export interface INavItemProps {
-  className: string;
-  text: string;
-}
-
-export interface ISocialsListProps {
-  socialsList: IHeaderData['socialsList'];
-}
-
-export interface ISocialsItemProps {
-  fragment: string;
-  href: string;
-}
-
-export interface IHeroTitleProps {
-  title: IHeroData['title'];
-}
-
-export interface ICtaButtonsProps {
-  ctaButtons: IHeroData['ctaButtons'];
-}
-
-export interface IScrollLinkProps {
-  scrollLink: IHeroData['scrollLink'];
 }
 
 export type IIcon = FC<IIconProps>;
