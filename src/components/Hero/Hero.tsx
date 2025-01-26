@@ -9,7 +9,7 @@ import { HeroModule as css } from '@styles';
 export const Hero = () => {
   return (
     <section>
-      <div className={clsx('container', css['hero__container'])}>
+      <div className={clsx(css['hero__container'], 'container')}>
         <HeroTitle title={data.title} />
         <div className={css['hero__cta-btns-scroll-link-wrapper']}>
           <CtaButtons ctaButtons={data.ctaButtons} />

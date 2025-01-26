@@ -13,12 +13,12 @@ export const Header = () => {
 
   return (
     <header>
-      <div className={clsx('container', css['header__container'])}>
+      <div className={clsx(css['header__container'], 'container')}>
         <Logo logo={data.logo} />
         {isMobile && <MenuButton />}
         {!isMobile && (
           <div className={css['header__nav-socials-wrapper']}>
-            <NavList className={css['header__nav-list']} navList={data.navList} />
+            <NavList variant={'header'} navList={data.navList} />
             <SocialsList socialsList={data.socialsList} />
           </div>
         )}

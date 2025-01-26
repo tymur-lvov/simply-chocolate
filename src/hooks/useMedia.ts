@@ -5,7 +5,7 @@ import {
   updateMediaQueryStates,
   addMediaQueryListChangeListeners,
   removeMediaQueryListChangeListeners,
-} from '@utils';
+} from '@helpers';
 
 import type { IUseMedia } from '@types';
 

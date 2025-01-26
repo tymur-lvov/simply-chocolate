@@ -4,6 +4,7 @@ export { default as SocialsItemModule } from './SocialsItem/SocialsItem.module.c
 export * from './SocialsItem/SocialsItem.tsx';
 export { default as ScrollLinkModule } from './ScrollLink/ScrollLink.module.css';
 export * from './ScrollLink/ScrollLink.tsx';
+export { default as NavListModule } from './NavList/NavList.module.css';
 export * from './NavList/NavList.tsx';
 export { default as NavItemModule } from './NavItem/NavItem.module.css';
 export * from './NavItem/NavItem.tsx';

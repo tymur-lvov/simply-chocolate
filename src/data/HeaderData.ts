@@ -1,6 +1,4 @@
-import type { IHeaderData } from '@types';
-
-export const HeaderData: IHeaderData = {
+export const HeaderData = {
   logo: {
     mainText: ' CHOCOLATE',
     accentText: 'SIMPLY',

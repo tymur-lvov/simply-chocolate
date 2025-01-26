@@ -25,10 +25,3 @@
 .menu__close-btn:active .menu__icon {
   transform: scale(87.5%);
 }
-
-.menu__nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 124px;
-}

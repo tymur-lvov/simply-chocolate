@@ -1,0 +1,22 @@
+.nav-list {
+  display: flex;
+}
+
+.header__nav-list {
+  gap: 20px;
+  width: 312px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .header__nav-list {
+    gap: 24px;
+    width: 320px;
+  }
+}
+
+.menu__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 124px;
+}

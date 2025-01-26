@@ -1,6 +1,4 @@
-import type { IHeroData } from '@types';
-
-export const HeroData: IHeroData = {
+export const HeroData = {
   title: {
     mobileText:
       'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',

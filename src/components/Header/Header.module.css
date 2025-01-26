@@ -16,16 +16,3 @@
     width: 558px;
   }
 }
-
-.header__nav-list {
-  display: flex;
-  gap: 20px;
-  width: 312px;
-}
-
-@media only screen and (min-width: 1158px) {
-  .header__nav-list {
-    gap: 24px;
-    width: 320px;
-  }
-}
