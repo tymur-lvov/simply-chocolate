@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <defs>
-    <symbol id="logo" viewBox="0 0 31 32">
-      <path fill="#e9e9e9" style="fill: var(--color1, #e9e9e9)" d="M0 0h30.545v32h-30.545v-32z"></path>
-      <path fill="#fafafa" style="fill: var(--color2, #fafafa)" d="M-244.364-33.455h545.455v13117.091h-545.455v-13117.091z"></path>
-      <path fill="#fcf1e0" style="fill: var(--color3, #fcf1e0)" d="M3.765 19.89l10.287-16.632 0.611-0.643 7.861 5.242 0.054 3.163 1.919 3.13-8.476 13.437-12.256-7.696z"></path>
-      <path fill="none" stroke="#fd9222" style="stroke: var(--color4, #fd9222)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6182" d="M20.651 23.521l-13.541-8.461M10.845 8.935l13.541 8.461M10.147 25.416l11.202-18.375M25.941 14.844c-2.902-1.813-4.041-3.23-2.174-6.293l-9.188-5.742-11.202 18.375 13.541 8.461 9.024-14.802z"></path>
+    <symbol id="logo" fill="none" viewBox="0 0 24 24">
+      <path fill="#FCF1E0" d="M3.958 16.057 12.04 2.989l.48-.506 6.177 4.118.043 2.486 1.507 2.46-6.66 10.557-9.63-6.047Z"/>
+      <path stroke="#FD9222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.226 17.91-10.64-6.648m2.935-4.813 10.639 6.648M7.972 19.398l8.802-14.437m3.608 6.13c-2.28-1.424-3.175-2.537-1.708-4.943l-7.22-4.512-8.801 14.438 10.639 6.648 7.09-11.63Z"/>
     </symbol>
     <symbol id="burger" viewBox="0 0 32 32">
-      <path stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16h24M4 8h24M4 24h24"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16h24M4 8h24M4 24h24"/>
+    </symbol>
+    <symbol id="close" viewBox="0 0 28 28">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.833 8.167 8.167 19.833m0-11.666 11.666 11.666"/>
     </symbol>
     <symbol id="arrow_down" viewBox="0 0 16 16">
       <path d="M8.473 8.933a.666.666 0 0 1-.947 0l-3.053-3.06a.667.667 0 1 0-.947.94l3.06 3.06a2 2 0 0 0 2.827 0l3.06-3.06a.667.667 0 0 0-.947-.94l-3.053 3.06Z"/>
