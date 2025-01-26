@@ -28,7 +28,7 @@
       "@types": ["@types/index.types.ts"],
       "@constants": ["src/constants/index.ts"],
       "@hooks": ["src/hooks/index.ts"],
-      "@utils": ["src/utils/index.ts"],
+      "@helpers": ["src/helpers/index.ts"],
       "@assets": ["src/assets/index.ts"],
       "@components": ["src/components/index.ts"],
       "@data": ["src/data/index.ts"],
