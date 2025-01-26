@@ -54,10 +54,12 @@ export interface ILogoProps {
 }
 
 export interface INavListProps {
+  className: string;
   navList: IHeaderData['navList'];
 }
 
 export interface INavItemProps {
+  className: string;
   text: string;
 }
 

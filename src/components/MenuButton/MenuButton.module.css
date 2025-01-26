@@ -6,6 +6,7 @@
 .header__menu-icon {
   width: 100%;
   height: 100%;
+  stroke: var(--black);
   transition: transform 250ms var(--transition);
 }
 

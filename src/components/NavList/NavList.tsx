@@ -1,16 +1,14 @@
 import { NavItem } from '@components';
 
-import { NavListModule as css } from '@styles';
-
 import type { INavList } from '@types';
 
-export const NavList: INavList = ({ navList: { navItems } }) => {
+export const NavList: INavList = ({ className, navList: { navItems } }) => {
   return (
-    <nav className={css['header__nav']}>
-      <ul className={css['header__nav-list']}>
+    <nav>
+      <ul className={className}>
         {navItems.map(({ text }) => (
-          <li className={css['header__nav-item']} key={text}>
-            <NavItem text={text} />
+          <li key={text}>
+            <NavItem className={className} text={text} />
           </li>
         ))}
       </ul>

@@ -4,12 +4,13 @@ export { default as SocialsItemModule } from './SocialsItem/SocialsItem.module.c
 export * from './SocialsItem/SocialsItem.tsx';
 export { default as ScrollLinkModule } from './ScrollLink/ScrollLink.module.css';
 export * from './ScrollLink/ScrollLink.tsx';
-export { default as NavListModule } from './NavList/NavList.module.css';
 export * from './NavList/NavList.tsx';
 export { default as NavItemModule } from './NavItem/NavItem.module.css';
 export * from './NavItem/NavItem.tsx';
 export { default as MenuButtonModule } from './MenuButton/MenuButton.module.css';
 export * from './MenuButton/MenuButton.tsx';
+export { default as MenuModule } from './Menu/Menu.module.css';
+export * from './Menu/Menu.tsx';
 export * from './Main/Main.tsx';
 export { default as LogoModule } from './Logo/Logo.module.css';
 export * from './Logo/Logo.tsx';

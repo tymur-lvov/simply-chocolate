@@ -18,7 +18,7 @@ export const Header = () => {
         {isMobile && <MenuButton />}
         {!isMobile && (
           <div className={css['header__nav-socials-wrapper']}>
-            <NavList navList={data.navList} />
+            <NavList className={css['header__nav-list']} navList={data.navList} />
             <SocialsList socialsList={data.socialsList} />
           </div>
         )}
