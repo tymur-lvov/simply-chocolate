@@ -4,6 +4,10 @@
   align-items: center;
   width: 169px;
   padding: 23.5px 0 17.5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -16,18 +20,6 @@
   .header__logo-link {
     width: 213px;
     padding: 28px 0;
-  }
-}
-
-.header__logo-text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.03em;
-}
-
-@media only screen and (min-width: 1158px) {
-  .header__logo-text {
     font-size: 18px;
     line-height: 1.11;
   }

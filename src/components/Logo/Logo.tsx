@@ -7,11 +7,9 @@ import type { ILogo } from '@types';
 export const Logo: ILogo = ({ logo: { accentText, mainText } }) => {
   return (
     <a className={css['header__logo-link']} href='/'>
-      <div className={css['header__logo-text']}>
-        <span className={css['header__logo-accent']}>{accentText}</span>
-        {mainText}
-      </div>
-      <Icon className={css['header__logo-icon']} width={21} height={21} fragment={'logo'} />
+      <span className={css['header__logo-accent']}>{accentText}</span>
+      {mainText}
+      <Icon className={css['header__logo-icon']} fragment='logo' width={21} height={21} />
     </a>
   );
 };

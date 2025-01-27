@@ -5,7 +5,7 @@ export const App = () => {
     <>
       <Header />
       <Main />
-      <Menu />
+      {/* <Menu /> */}
     </>
   );
 };

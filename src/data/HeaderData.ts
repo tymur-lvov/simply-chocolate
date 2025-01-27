@@ -1,6 +1,6 @@
 export const HeaderData = {
   logo: {
-    mainText: ' CHOCOLATE',
+    mainText: 'CHOCOLATE',
     accentText: 'SIMPLY',
   },
   navList: {
