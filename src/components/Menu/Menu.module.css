@@ -6,22 +6,3 @@
   padding: 136px 20px 20px;
   background-color: var(--violet);
 }
-
-.menu__close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 28px;
-  height: 28px;
-}
-
-.menu__icon {
-  width: 100%;
-  height: 100%;
-  stroke: var(--white);
-  transition: transform 250ms var(--transition);
-}
-
-.menu__close-btn:active .menu__icon {
-  transform: scale(87.5%);
-}

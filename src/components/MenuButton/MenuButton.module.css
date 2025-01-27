@@ -1,16 +1,27 @@
-.header__menu-btn {
+.menu-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   width: 32px;
   height: 32px;
-  margin: 13px 0;
 }
 
-.header__menu-icon {
+.menu-icon {
   width: 100%;
   height: 100%;
-  stroke: var(--black);
   transition: transform 250ms var(--transition);
 }
 
-.header__menu-btn:active .header__menu-icon {
+.menu-btn:active .menu-icon {
   transform: scale(87.5%);
+}
+
+.header__menu-btn--open,
+.menu__menu-btn--open {
+  stroke: var(--black);
+}
+
+.header__menu-btn--close,
+.menu__menu-btn--close {
+  stroke: var(--white);
 }
