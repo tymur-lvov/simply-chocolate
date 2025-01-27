@@ -17,7 +17,7 @@ export interface IButtonProps extends IFCProps {
 }
 
 export interface ILogoProps extends IFCProps {
-  logo: {
+  data: {
     mainText: string;
     accentText: string;
   };
