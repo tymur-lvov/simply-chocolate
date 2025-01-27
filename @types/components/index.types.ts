@@ -2,19 +2,19 @@ import type { FC, ReactNode } from 'react';
 
 export interface IComponentProps {
   children?: ReactNode;
-  className?: string;
   block?: string;
+  className?: string;
   variant?: string;
+}
+
+export interface IButtonProps extends IComponentProps {
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export interface IIconProps extends IComponentProps {
   fragment: string;
   width: number;
   height: number;
-}
-
-export interface IButtonProps extends IComponentProps {
-  type?: 'button' | 'submit' | 'reset';
 }
 
 export interface ILogoProps extends IComponentProps {
@@ -27,7 +27,7 @@ export interface ILogoProps extends IComponentProps {
 }
 
 export interface INavListProps extends IComponentProps {
-  navList: {
+  data: {
     navItems: {
       text: string;
     }[];
@@ -35,7 +35,9 @@ export interface INavListProps extends IComponentProps {
 }
 
 export interface INavItemProps extends IComponentProps {
-  text: string;
+  data: {
+    text: string;
+  };
 }
 
 export interface ISocialsListProps extends IComponentProps {
@@ -76,8 +78,8 @@ export interface IScrollLinkProps extends IComponentProps {
   };
 }
 
-export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
+export type IIcon = FC<IIconProps>;
 export type ILogo = FC<ILogoProps>;
 export type IMenuButton = FC<IComponentProps>;
 export type INavList = FC<INavListProps>;

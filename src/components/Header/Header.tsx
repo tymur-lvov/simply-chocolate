@@ -18,7 +18,7 @@ export const Header = () => {
         {isMobile && <MenuButton block='header' />}
         {!isMobile && (
           <div className={css['header__nav-socials-wrapper']}>
-            <NavList variant={'header'} navList={data.navList} />
+            <NavList block='header' data={data.navList} />
             <SocialsList socialsList={data.socialsList} />
           </div>
         )}
@@ -26,4 +26,3 @@ export const Header = () => {
     </header>
   );
 };
-3;

@@ -10,7 +10,7 @@ export const Menu = () => {
       <Button className={css['menu__close-btn']}>
         <Icon className={css['menu__icon']} width={28} height={28} fragment='close' />
       </Button>
-      <NavList variant='menu' navList={data.navList} />
+      <NavList block='menu' data={data.navList} />
     </div>
   );
 };
