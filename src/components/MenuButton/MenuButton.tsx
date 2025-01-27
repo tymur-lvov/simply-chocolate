@@ -2,10 +2,12 @@ import { Button, Icon } from '@components';
 
 import { MenuButtonModule as css } from '@styles';
 
-export const MenuButton = () => {
+import type { IMenuButton } from '@types';
+
+export const MenuButton: IMenuButton = ({ block }) => {
   return (
-    <Button className={css['header__menu-btn']}>
-      <Icon className={css['header__menu-icon']} width={32} height={32} fragment={'burger'} />
+    <Button className={css[`${block}__menu-btn`]}>
+      <Icon className={css[`${block}__menu-icon`]} fragment={'burger'} width={32} height={32} />
     </Button>
   );
 };

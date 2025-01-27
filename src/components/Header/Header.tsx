@@ -15,7 +15,7 @@ export const Header = () => {
     <header>
       <div className={clsx(css['header__container'], 'container')}>
         <Logo block='header' data={data.logo} />
-        {isMobile && <MenuButton />}
+        {isMobile && <MenuButton block='header' />}
         {!isMobile && (
           <div className={css['header__nav-socials-wrapper']}>
             <NavList variant={'header'} navList={data.navList} />

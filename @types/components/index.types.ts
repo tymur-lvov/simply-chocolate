@@ -79,6 +79,7 @@ export interface IScrollLinkProps extends IComponentProps {
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
 export type ILogo = FC<ILogoProps>;
+export type IMenuButton = FC<IComponentProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
