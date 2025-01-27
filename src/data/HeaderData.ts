@@ -1,11 +1,15 @@
 export const HeaderData = {
   logo: {
-    mainText: 'CHOCOLATE',
-    accentText: 'SIMPLY',
+    text: {
+      basePart: 'CHOCOLATE',
+      accentPart: 'SIMPLY',
+    },
   },
+
   navList: {
     navItems: [{ text: 'Home' }, { text: 'How it\u2019s made?' }, { text: 'Chocolate is loved' }],
   },
+
   socialsList: {
     socialsItems: [
       { fragment: 'facebook', href: 'https://www.facebook.com/' },

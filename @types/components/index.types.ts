@@ -1,29 +1,32 @@
 import type { FC, ReactNode } from 'react';
 
-export interface IFCProps {
+export interface IComponentProps {
   children?: ReactNode;
   className?: string;
+  block?: string;
   variant?: string;
 }
 
-export interface IIconProps extends IFCProps {
+export interface IIconProps extends IComponentProps {
+  fragment: string;
   width: number;
   height: number;
-  fragment: string;
 }
 
-export interface IButtonProps extends IFCProps {
+export interface IButtonProps extends IComponentProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export interface ILogoProps extends IFCProps {
+export interface ILogoProps extends IComponentProps {
   data: {
-    mainText: string;
-    accentText: string;
+    text: {
+      basePart: string;
+      accentPart: string;
+    };
   };
 }
 
-export interface INavListProps extends IFCProps {
+export interface INavListProps extends IComponentProps {
   navList: {
     navItems: {
       text: string;
@@ -31,11 +34,11 @@ export interface INavListProps extends IFCProps {
   };
 }
 
-export interface INavItemProps extends IFCProps {
+export interface INavItemProps extends IComponentProps {
   text: string;
 }
 
-export interface ISocialsListProps extends IFCProps {
+export interface ISocialsListProps extends IComponentProps {
   socialsList: {
     socialsItems: {
       fragment: string;
@@ -44,19 +47,19 @@ export interface ISocialsListProps extends IFCProps {
   };
 }
 
-export interface ISocialsItemProps extends IFCProps {
+export interface ISocialsItemProps extends IComponentProps {
   fragment: string;
   href: string;
 }
 
-export interface IHeroTitleProps extends IFCProps {
+export interface IHeroTitleProps extends IComponentProps {
   title: {
     mobileText: string;
     tabletText: string;
   };
 }
 
-export interface ICtaButtonsProps extends IFCProps {
+export interface ICtaButtonsProps extends IComponentProps {
   ctaButtons: {
     orderButton: {
       text: string;
@@ -67,7 +70,7 @@ export interface ICtaButtonsProps extends IFCProps {
   };
 }
 
-export interface IScrollLinkProps extends IFCProps {
+export interface IScrollLinkProps extends IComponentProps {
   scrollLink: {
     text: string;
   };

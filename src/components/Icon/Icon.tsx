@@ -2,7 +2,7 @@ import { icons } from '@assets';
 
 import type { IIcon } from '@types';
 
-export const Icon: IIcon = ({ className, width, height, fragment }) => {
+export const Icon: IIcon = ({ className, fragment, width, height }) => {
   return (
     <div className={className}>
       <svg width={width} height={height}>
