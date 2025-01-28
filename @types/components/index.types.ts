@@ -7,28 +7,22 @@ export interface IComponentProps {
   className?: string;
 }
 
-export interface IButtonProps extends IComponentProps {
-  type?: 'button' | 'submit' | 'reset';
-}
-
-export interface IIconProps extends IComponentProps {
-  fragment: string;
+export interface IAssetProps {
   width: number;
   height: number;
 }
 
-export interface IMainTitleProps extends IComponentProps {
-  data: {
-    mobile: {
-      text: string;
-    };
-    tablet?: {
-      text: string;
-    };
-    desktop?: {
-      text: string;
-    };
-  };
+export interface IIconProps extends IAssetProps {
+  fragment: string;
+}
+
+export interface IImageProps extends IAssetProps {
+  src: string;
+  alt: string;
+}
+
+export interface IButtonProps extends IComponentProps {
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export interface ILogoProps extends IComponentProps {
@@ -74,12 +68,28 @@ export interface ISocialsItemProps extends IComponentProps {
   };
 }
 
-export type IButton = FC<IButtonProps>;
+export interface IMainTitleProps extends IComponentProps {
+  data: {
+    mobile: {
+      text: string;
+    };
+    tablet?: {
+      text: string;
+    };
+    desktop?: {
+      text: string;
+    };
+  };
+}
+
 export type IIcon = FC<IIconProps>;
-export type IMainTitle = FC<IMainTitleProps>;
+export type IImage = FC<IImageProps>;
+export type IButton = FC<IButtonProps>;
+
 export type ILogo = FC<ILogoProps>;
 export type IMenuButton = FC<IMenuButtonProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
 export type ISocialsItem = FC<ISocialsItemProps>;
+export type IMainTitle = FC<IMainTitleProps>;
