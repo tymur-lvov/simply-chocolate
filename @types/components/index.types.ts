@@ -7,7 +7,7 @@ export interface IComponentProps {
   className?: string;
 }
 
-export interface IAssetProps {
+export interface IAssetProps extends IComponentProps {
   width: number;
   height: number;
 }
