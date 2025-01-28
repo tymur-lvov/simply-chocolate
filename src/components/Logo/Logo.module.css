@@ -1,4 +1,4 @@
-.header__logo {
+.header__logo-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,13 +11,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .header__logo {
+  .header__logo-link {
     padding: 29.5px 0;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .header__logo {
+  .header__logo-link {
     width: 213px;
     padding: 28px 0;
     font-size: 18px;
@@ -41,8 +41,8 @@
     height: 24px;
   }
 
-  .header__logo:hover .header__logo-icon,
-  .header__logo:focus .header__logo-icon {
+  .header__logo-link:hover .header__logo-icon,
+  .header__logo-link:focus .header__logo-icon {
     transform: scale(115%);
   }
 }

@@ -143,7 +143,7 @@
   }
 }
 
-.hero__scroll-link-wrapper {
+.hero__scroll-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,12 +156,12 @@
   transition: color 250ms var(--transition);
 }
 
-.hero__scroll-link-wrapper:active {
+.hero__scroll-link:active {
   color: var(--orange);
 }
 
 @media only screen and (min-width: 768px) {
-  .hero__scroll-link-wrapper {
+  .hero__scroll-link {
     width: 130px;
     font-size: 14px;
     line-height: 1.29;
@@ -169,8 +169,8 @@
 }
 
 @media only screen and (min-width: 1158px) {
-  .hero__scroll-link-wrapper:hover,
-  .hero__scroll-link-wrapper:focus {
+  .hero__scroll-link:hover,
+  .hero__scroll-link:focus {
     color: var(--orange);
   }
 }
@@ -185,7 +185,7 @@
   transition: background-color 250ms var(--transition), fill 250ms var(--transition);
 }
 
-.hero__scroll-link-wrapper:active .hero__scroll-icon {
+.hero__scroll-link:active .hero__scroll-icon {
   background-color: var(--orange);
   fill: var(--white);
 }
@@ -199,8 +199,8 @@
 }
 
 @media only screen and (min-width: 1158px) {
-  .hero__scroll-link-wrapper:hover .hero__scroll-icon,
-  .hero__scroll-link-wrapper:focus .hero__scroll-icon {
+  .hero__scroll-link:hover .hero__scroll-icon,
+  .hero__scroll-link:focus .hero__scroll-icon {
     background-color: var(--orange);
     fill: var(--white);
   }

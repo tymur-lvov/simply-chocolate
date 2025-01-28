@@ -20,7 +20,7 @@ export const Hero = () => {
               {data.infoButton.text}
             </Button>
           </div>
-          <a className={css['hero__scroll-link-wrapper']} href='/'>
+          <a className={css['hero__scroll-link']} href='/'>
             {data.scrollLink.text}
             <Icon
               className={css['hero__scroll-icon']}
