@@ -2,8 +2,6 @@ export { default as SocialsListModule } from './SocialsList/SocialsList.module.c
 export * from './SocialsList/SocialsList.tsx';
 export { default as SocialsItemModule } from './SocialsItem/SocialsItem.module.css';
 export * from './SocialsItem/SocialsItem.tsx';
-export { default as ScrollLinkModule } from './ScrollLink/ScrollLink.module.css';
-export * from './ScrollLink/ScrollLink.tsx';
 export { default as NavListModule } from './NavList/NavList.module.css';
 export * from './NavList/NavList.tsx';
 export { default as NavItemModule } from './NavItem/NavItem.module.css';
@@ -22,6 +20,4 @@ export { default as HeroModule } from './Hero/Hero.module.css';
 export * from './Hero/Hero.tsx';
 export { default as HeaderModule } from './Header/Header.module.css';
 export * from './Header/Header.tsx';
-export { default as CtaButtonsModule } from './CtaButtons/CtaButtons.module.css';
-export * from './CtaButtons/CtaButtons.tsx';
 export * from './Button/Button.tsx';

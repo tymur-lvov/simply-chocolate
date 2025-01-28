@@ -1,5 +1,5 @@
 export const HeroData = {
-  title: {
+  mainTitle: {
     mobile: {
       text: 'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
     },
@@ -7,14 +7,15 @@ export const HeroData = {
       text: 'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
     },
   },
-  ctaButtons: {
-    orderButton: {
-      text: 'Buy now',
-    },
-    infoButton: {
-      text: `How it\u2019s made`,
-    },
+
+  orderButton: {
+    text: 'Buy now',
   },
+
+  infoButton: {
+    text: `How it\u2019s made`,
+  },
+
   scrollLink: {
     text: 'scroll down',
   },
