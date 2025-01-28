@@ -1,10 +1,10 @@
-.header__socials-list {
+.socials-list {
   display: flex;
   gap: 14px;
   width: 148px;
 }
 
-.header__socials-item {
+.socials-item {
   width: 40px;
   height: 40px;
 }

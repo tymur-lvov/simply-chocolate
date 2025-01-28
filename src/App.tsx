@@ -1,11 +1,11 @@
-import { Header, Main, Menu } from '@components';
+import { Header, Main } from '@components';
 
 export const App = () => {
   return (
     <>
       <Header />
       <Main />
-      <Menu />
+      {/* <Menu /> */}
     </>
   );
 };
