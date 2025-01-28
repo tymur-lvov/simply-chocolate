@@ -17,6 +17,20 @@ export interface IIconProps extends IComponentProps {
   height: number;
 }
 
+export interface IMainTitleProps extends IComponentProps {
+  data: {
+    mobile: {
+      text: string;
+    };
+    tablet?: {
+      text: string;
+    };
+    desktop?: {
+      text: string;
+    };
+  };
+}
+
 export interface ILogoProps extends IComponentProps {
   data: {
     text: {
@@ -60,13 +74,6 @@ export interface ISocialsItemProps extends IComponentProps {
   };
 }
 
-export interface IHeroTitleProps extends IComponentProps {
-  title: {
-    mobileText: string;
-    tabletText: string;
-  };
-}
-
 export interface ICtaButtonsProps extends IComponentProps {
   ctaButtons: {
     orderButton: {
@@ -86,12 +93,12 @@ export interface IScrollLinkProps extends IComponentProps {
 
 export type IButton = FC<IButtonProps>;
 export type IIcon = FC<IIconProps>;
+export type IMainTitle = FC<IMainTitleProps>;
 export type ILogo = FC<ILogoProps>;
 export type IMenuButton = FC<IMenuButtonProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
 export type ISocialsItem = FC<ISocialsItemProps>;
-export type IHeroTitle = FC<IHeroTitleProps>;
 export type ICtaButtons = FC<ICtaButtonsProps>;
 export type IScrollLink = FC<IScrollLinkProps>;

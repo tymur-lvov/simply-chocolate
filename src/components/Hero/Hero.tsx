@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 
-import { CtaButtons, HeroTitle, ScrollLink } from '@components';
+import { CtaButtons, ScrollLink, MainTitle } from '@components';
 
 import { HeroData as data } from '@data';
 
@@ -10,7 +10,7 @@ export const Hero = () => {
   return (
     <section>
       <div className={clsx(css['hero__container'], 'container')}>
-        <HeroTitle title={data.title} />
+        <MainTitle block='hero' data={data.title} />
         <div className={css['hero__cta-btns-scroll-link-wrapper']}>
           <CtaButtons ctaButtons={data.ctaButtons} />
           <ScrollLink scrollLink={data.scrollLink} />

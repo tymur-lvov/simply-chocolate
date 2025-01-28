@@ -1,9 +1,11 @@
 export const HeroData = {
   title: {
-    mobileText:
-      'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
-    tabletText:
-      'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
+    mobile: {
+      text: 'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
+    },
+    tablet: {
+      text: 'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
+    },
   },
   ctaButtons: {
     orderButton: {
