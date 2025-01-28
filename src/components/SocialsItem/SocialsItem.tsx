@@ -4,15 +4,15 @@ import { SocialsItemModule as css } from '@styles';
 
 import type { ISocialsItem } from '@types';
 
-export const SocialsItem: ISocialsItem = ({ fragment, href }) => {
+export const SocialsItem: ISocialsItem = ({ block, data: { fragment, href } }) => {
   return (
     <a
-      className={css['header__socials-link']}
+      className={css[`${block}__socials-link`]}
       href={href}
       target='_blank'
       rel='noopener noreferrer'
     >
-      <Icon className={css['header__socials-icon']} width={24} height={24} fragment={fragment} />
+      <Icon className={css[`${block}__socials-icon`]} fragment={fragment} width={24} height={24} />
     </a>
   );
 };

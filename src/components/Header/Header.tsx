@@ -19,7 +19,7 @@ export const Header = () => {
         {!isMobile && (
           <div className={css['header__nav-socials-wrapper']}>
             <NavList block='header' data={data.navList} />
-            <SocialsList socialsList={data.socialsList} />
+            <SocialsList block='header' data={data.socialsList} />
           </div>
         )}
       </div>

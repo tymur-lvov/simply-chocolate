@@ -4,12 +4,12 @@ import { SocialsListModule as css } from '@styles';
 
 import type { ISocialsList } from '@types';
 
-export const SocialsList: ISocialsList = ({ socialsList: { socialsItems } }) => {
+export const SocialsList: ISocialsList = ({ block, data: { socialsItems } }) => {
   return (
-    <ul className={css['header__socials-list']}>
-      {socialsItems.map(({ fragment, href }) => (
-        <li className={css['header__socials-item']} key={fragment}>
-          <SocialsItem fragment={fragment} href={href} />
+    <ul className={css[`${block}__socials-list`]}>
+      {socialsItems.map((socialsItem) => (
+        <li className={css[`${block}__socials-item`]} key={socialsItem.href}>
+          <SocialsItem block={block} data={socialsItem} />
         </li>
       ))}
     </ul>

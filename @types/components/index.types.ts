@@ -5,7 +5,6 @@ export interface IComponentProps {
   block?: string;
   modifier?: string;
   className?: string;
-  variant?: string;
 }
 
 export interface IButtonProps extends IComponentProps {
@@ -46,7 +45,7 @@ export interface INavItemProps extends IComponentProps {
 }
 
 export interface ISocialsListProps extends IComponentProps {
-  socialsList: {
+  data: {
     socialsItems: {
       fragment: string;
       href: string;
@@ -55,8 +54,10 @@ export interface ISocialsListProps extends IComponentProps {
 }
 
 export interface ISocialsItemProps extends IComponentProps {
-  fragment: string;
-  href: string;
+  data: {
+    fragment: string;
+    href: string;
+  };
 }
 
 export interface IHeroTitleProps extends IComponentProps {
