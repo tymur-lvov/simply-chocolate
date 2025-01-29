@@ -8,7 +8,7 @@ import type { INavList } from '@types';
 
 export const NavList: INavList = ({ block, data: { navItems } }) => {
   return (
-    <nav className={css[`${block}__nav`]}>
+    <nav className={clsx(css[`${block}__nav`], css['nav'])}>
       <ul className={clsx(css[`${block}__nav-list`], css['nav-list'])}>
         {navItems.map((navItem) => (
           <li key={navItem.text}>
