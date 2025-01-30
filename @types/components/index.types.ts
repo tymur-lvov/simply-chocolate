@@ -23,6 +23,7 @@ export interface IImageProps extends IAssetProps {
 
 export interface IButtonProps extends IComponentProps {
   type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
 }
 
 export interface ILogoProps extends IComponentProps {
@@ -32,10 +33,6 @@ export interface ILogoProps extends IComponentProps {
       accentPart: string;
     };
   };
-}
-
-export interface IMenuButtonProps extends IComponentProps {
-  modifier: string;
 }
 
 export interface INavListProps extends IComponentProps {
@@ -87,7 +84,7 @@ export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
 
 export type ILogo = FC<ILogoProps>;
-export type IMenuButton = FC<IMenuButtonProps>;
+export type IMenuButton = FC<IComponentProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;

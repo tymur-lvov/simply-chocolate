@@ -1,17 +1,32 @@
 import { clsx } from 'clsx';
 
+import { useState } from 'react';
+
 import { Button, Icon } from '@components';
 
 import { MenuButtonModule as css } from '@styles';
 
 import type { IMenuButton } from '@types';
 
-export const MenuButton: IMenuButton = ({ block, modifier }) => {
+export const MenuButton: IMenuButton = ({ block }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuButtonClickHandle = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
-    <Button className={clsx(css[`${block}__menu-btn--${modifier}`], css['menu-btn'])}>
+    <Button
+      className={clsx({
+        [css['menu-btn']]: true,
+        [css[`${block}__menu-btn--open`]]: !isMenuOpen,
+        [css[`${block}__menu-btn--close`]]: isMenuOpen,
+      })}
+      onClick={menuButtonClickHandle}
+    >
       <Icon
-        className={clsx(css[`${block}__menu-icon--${modifier}`], css['menu-icon'])}
-        fragment={modifier}
+        className={clsx(css[`${block}__menu-icon`], css['menu-icon'])}
+        fragment={!isMenuOpen ? 'open' : 'close'}
         width={32}
         height={32}
       />
