@@ -2,13 +2,15 @@ import { clsx } from 'clsx';
 
 import { useState } from 'react';
 
-import { Button, Icon, Menu } from '@components';
+import { Button, Icon, NavList, SocialsList } from '@components';
 
-import { MenuButtonModule as css } from '@styles';
+import { MobileMenuData as data } from '@data';
+
+import { MobileMenuModule as css } from '@styles';
 
 import type { IComponent } from '@types';
 
-export const MenuButton: IComponent = ({ block }) => {
+export const MobileMenu: IComponent = ({ block }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuButtonClickHandle = () => {
@@ -32,7 +34,19 @@ export const MenuButton: IComponent = ({ block }) => {
           height={32}
         />
       </Button>
-      <Menu isMenuOpen={isMenuOpen} />
+      <div className={css['menu__overlay-thumb']}>
+        <div
+          className={clsx({
+            [css['menu__overlay']]: true,
+            [css['menu__overlay--active']]: isMenuOpen,
+          })}
+        >
+          <div className={css['menu__wrapper']}>
+            <NavList block='menu' data={data.navList} />
+            <SocialsList block='menu' data={data.socialsList} />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
