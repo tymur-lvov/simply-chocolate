@@ -3,7 +3,6 @@ import type { FC, ReactNode } from 'react';
 export interface IComponentProps {
   children?: ReactNode;
   block?: string;
-  modifier?: string;
   className?: string;
 }
 
@@ -33,6 +32,10 @@ export interface ILogoProps extends IComponentProps {
       accentPart: string;
     };
   };
+}
+
+export interface IMenuProps {
+  isMenuOpen: boolean;
 }
 
 export interface INavListProps extends IComponentProps {
@@ -79,12 +82,13 @@ export interface IMainTitleProps extends IComponentProps {
   };
 }
 
+export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
 
 export type ILogo = FC<ILogoProps>;
-export type IMenuButton = FC<IComponentProps>;
+export type IMenu = FC<IMenuProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
