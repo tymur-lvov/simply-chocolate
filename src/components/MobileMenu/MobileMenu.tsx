@@ -4,13 +4,13 @@ import { useState } from 'react';
 
 import { Button, Icon, NavList, SocialsList } from '@components';
 
-import { MobileMenuData as data } from '@data';
+import { HeaderData as data } from '@data';
 
 import { MobileMenuModule as css } from '@styles';
 
 import type { IComponent } from '@types';
 
-export const MobileMenu: IComponent = ({ block }) => {
+export const MobileMenu: IComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuButtonClickHandle = () => {
@@ -19,16 +19,13 @@ export const MobileMenu: IComponent = ({ block }) => {
 
   return (
     <>
-      <Button
-        className={clsx({
-          [css['menu-btn']]: true,
-          [css[`${block}__menu-btn--open`]]: !isMenuOpen,
-          [css[`${block}__menu-btn--close`]]: isMenuOpen,
-        })}
-        onClick={menuButtonClickHandle}
-      >
+      <Button className={css['menu__btn']} onClick={menuButtonClickHandle}>
         <Icon
-          className={clsx(css[`${block}__menu-icon`], css['menu-icon'])}
+          className={clsx({
+            [css['menu__btn-icon']]: true,
+            [css['menu__btn-icon--open']]: !isMenuOpen,
+            [css['menu__btn-icon--close']]: isMenuOpen,
+          })}
           fragment={!isMenuOpen ? 'open' : 'close'}
           width={32}
           height={32}
@@ -38,10 +35,10 @@ export const MobileMenu: IComponent = ({ block }) => {
         <div
           className={clsx({
             [css['menu__overlay']]: true,
-            [css['menu__overlay--active']]: isMenuOpen,
+            [css['menu__overlay--visible']]: isMenuOpen,
           })}
         >
-          <div className={css['menu__wrapper']}>
+          <div className={css['menu__nav-wrapper']}>
             <NavList block='menu' data={data.navList} />
             <SocialsList block='menu' data={data.socialsList} />
           </div>

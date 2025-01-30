@@ -34,10 +34,6 @@ export interface ILogoProps extends IComponentProps {
   };
 }
 
-export interface IMenuProps {
-  isMenuOpen: boolean;
-}
-
 export interface INavListProps extends IComponentProps {
   data: {
     navItems: {
@@ -88,7 +84,6 @@ export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
 
 export type ILogo = FC<ILogoProps>;
-export type IMenu = FC<IMenuProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
