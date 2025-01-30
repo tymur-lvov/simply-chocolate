@@ -4,6 +4,10 @@ body {
   font-family: var(--font-family);
 }
 
+body.menu-is-open {
+  overflow: hidden;
+}
+
 .container {
   width: 335px;
   margin: 0 auto;

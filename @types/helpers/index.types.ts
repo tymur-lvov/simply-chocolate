@@ -6,9 +6,11 @@ export interface IMediaQueryLists {
   desktopList: MediaQueryList;
 }
 
-export type IActionHandle = () => void;
+export type IMouseEvent = React.MouseEvent<HTMLElement, MouseEvent>;
 
-export type IStateSetter = Dispatch<SetStateAction<boolean>>;
+export type IBooleanStateSetter = Dispatch<SetStateAction<boolean>>;
+
+export type IActionHandle = () => void;
 
 export type IUseMedia = () => {
   isMobile: boolean;
@@ -18,9 +20,9 @@ export type IUseMedia = () => {
 
 export type IUpdateMediaQueryStates = (
   mediaQueryLists: IMediaQueryLists,
-  setIsMobile: IStateSetter,
-  setIsTablet: IStateSetter,
-  setIsDesktop: IStateSetter
+  setIsMobile: IBooleanStateSetter,
+  setIsTablet: IBooleanStateSetter,
+  setIsDesktop: IBooleanStateSetter
 ) => void;
 
 export type IAddMediaQueryListChangeListeners = (
@@ -29,3 +31,10 @@ export type IAddMediaQueryListChangeListeners = (
 ) => void;
 
 export type IRemoveMediaQueryListChangeListeners = IAddMediaQueryListChangeListeners;
+
+export type IToggleMobileMenu = (
+  event: IMouseEvent,
+  setIsMobileMenuOpen: IBooleanStateSetter
+) => void;
+
+export type IIsTargetElementAList = (event: IMouseEvent) => boolean;

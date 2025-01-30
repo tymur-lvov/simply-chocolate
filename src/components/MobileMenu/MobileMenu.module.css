@@ -1,4 +1,4 @@
-.menu__btn {
+.mobile-menu__btn {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -7,34 +7,39 @@
   height: 32px;
 }
 
-.menu__btn-icon {
+.mobile-menu__btn-icon {
   width: 100%;
   height: 100%;
-  transition: transform 250ms var(--transition);
+  transition: stroke 250ms var(--transition), transform 250ms var(--transition);
 }
 
-.menu__btn:active .menu__btn-icon {
+.mobile-menu__btn:active .mobile-menu__btn-icon {
   transform: scale(87.5%);
 }
 
-.menu__btn-icon--open {
+.mobile-menu__btn-icon--open {
   stroke: var(--black);
 }
 
-.menu__btn-icon--close {
+.mobile-menu__btn-icon--close {
   stroke: var(--white);
 }
 
-.menu__overlay-thumb {
+.mobile-menu__overlay-thumb {
   position: absolute;
   top: 0;
   right: 0;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  pointer-events: none;
 }
 
-.menu__overlay {
+.mobile-menu__overlay-thumb--visible {
+  pointer-events: all;
+}
+
+.mobile-menu__overlay {
   width: 100%;
   height: 100%;
   background-color: var(--violet);
@@ -42,11 +47,11 @@
   transform: translateX(100%);
 }
 
-.menu__overlay--visible {
+.mobile-menu__overlay--visible {
   transform: translateX(0);
 }
 
-.menu__nav-wrapper {
+.mobile-menu__nav-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;

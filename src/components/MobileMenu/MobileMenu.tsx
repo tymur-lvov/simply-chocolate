@@ -1,8 +1,9 @@
 import { clsx } from 'clsx';
+import { useEffect, useState } from 'react';
 
-import { useState } from 'react';
+import { releaseScrollLock, toggleMobileMenu } from '@helpers';
 
-import { Button, Icon, NavList, SocialsList } from '@components';
+import { Button, Icon, NavList, Portal, SocialsList } from '@components';
 
 import { HeaderData as data } from '@data';
 
@@ -11,39 +12,50 @@ import { MobileMenuModule as css } from '@styles';
 import type { IComponent } from '@types';
 
 export const MobileMenu: IComponent = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const menuButtonClickHandle = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+  useEffect(() => {
+    return () => releaseScrollLock();
+  }, []);
 
   return (
     <>
-      <Button className={css['menu__btn']} onClick={menuButtonClickHandle}>
+      <Button
+        className={css['mobile-menu__btn']}
+        onClick={(event) => toggleMobileMenu(event, setIsMobileMenuOpen)}
+      >
         <Icon
           className={clsx({
-            [css['menu__btn-icon']]: true,
-            [css['menu__btn-icon--open']]: !isMenuOpen,
-            [css['menu__btn-icon--close']]: isMenuOpen,
+            [css['mobile-menu__btn-icon']]: true,
+            [css['mobile-menu__btn-icon--open']]: !isMobileMenuOpen,
+            [css['mobile-menu__btn-icon--close']]: isMobileMenuOpen,
           })}
-          fragment={!isMenuOpen ? 'open' : 'close'}
+          fragment={!isMobileMenuOpen ? 'open' : 'close'}
           width={32}
           height={32}
         />
       </Button>
-      <div className={css['menu__overlay-thumb']}>
+      <Portal>
         <div
           className={clsx({
-            [css['menu__overlay']]: true,
-            [css['menu__overlay--visible']]: isMenuOpen,
+            [css['mobile-menu__overlay-thumb']]: true,
+            [css['mobile-menu__overlay-thumb--visible']]: isMobileMenuOpen,
           })}
         >
-          <div className={css['menu__nav-wrapper']}>
-            <NavList block='menu' data={data.navList} />
-            <SocialsList block='menu' data={data.socialsList} />
+          <div
+            className={clsx({
+              [css['mobile-menu__overlay']]: true,
+              [css['mobile-menu__overlay--visible']]: isMobileMenuOpen,
+            })}
+            onClick={(event) => toggleMobileMenu(event, setIsMobileMenuOpen)}
+          >
+            <div className={css['mobile-menu__nav-wrapper']}>
+              <NavList block='mobile-menu' data={data.navList} />
+              <SocialsList block='mobile-menu' data={data.socialsList} />
+            </div>
           </div>
         </div>
-      </div>
+      </Portal>
     </>
   );
 };

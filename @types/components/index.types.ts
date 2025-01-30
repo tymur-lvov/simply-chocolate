@@ -22,7 +22,7 @@ export interface IImageProps extends IAssetProps {
 
 export interface IButtonProps extends IComponentProps {
   type?: 'button' | 'submit' | 'reset';
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface ILogoProps extends IComponentProps {

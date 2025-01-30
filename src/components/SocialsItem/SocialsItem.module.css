@@ -22,7 +22,7 @@
   }
 }
 
-.menu__socials-link {
+.mobile-menu__socials-link {
   border: 1px solid var(--menu-socials-border);
 }
 
@@ -47,6 +47,6 @@
   }
 }
 
-.menu__socials-icon {
+.mobile-menu__socials-icon {
   fill: var(--white);
 }
