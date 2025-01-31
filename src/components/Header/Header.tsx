@@ -13,12 +13,7 @@ export const Header = () => {
 
   return (
     <header>
-      <div
-        className={clsx({
-          [css['header__container']]: true,
-          ['container']: true,
-        })}
-      >
+      <div className={clsx(css['header__container'], 'container')}>
         <Logo block='header' data={data.logo} />
         {isMobile && <MobileMenu />}
         {!isMobile && (

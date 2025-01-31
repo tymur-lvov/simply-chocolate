@@ -12,7 +12,7 @@ export * from './MobileMenu/MobileMenu.tsx';
 export { default as MainTitleModule } from './MainTitle/MainTitle.module.css';
 export * from './MainTitle/MainTitle.tsx';
 export * from './Main/Main.tsx';
-export { default as LogoModule } from './Logo/Logo.module.css';
+export { default as logoModule } from './Logo/Logo.module.css';
 export * from './Logo/Logo.tsx';
 export * from './Icon/Icon.tsx';
 export { default as HeroModule } from './Hero/Hero.module.css';
