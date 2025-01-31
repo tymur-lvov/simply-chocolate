@@ -1,4 +1,4 @@
-.header__logo-link {
+.logo-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,13 +11,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .header__logo-link {
+  .logo-link {
     padding: 29.5px 0;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .header__logo-link {
+  .logo-link {
     width: 213px;
     padding: 28px 0;
     font-size: 18px;
@@ -25,24 +25,24 @@
   }
 }
 
-.header__logo-accent {
+.logo-accent {
   font-style: italic;
 }
 
-.header__logo-icon {
+.logo-icon {
   width: 21px;
   height: 21px;
   transition: transform 250ms var(--transition);
 }
 
 @media only screen and (min-width: 1158px) {
-  .header__logo-icon {
+  .logo-icon {
     width: 24px;
     height: 24px;
   }
 
-  .header__logo-link:hover .header__logo-icon,
-  .header__logo-link:focus .header__logo-icon {
+  .logo-link:hover .logo-icon,
+  .logo-link:focus .logo-icon {
     transform: scale(115%);
   }
 }

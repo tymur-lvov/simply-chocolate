@@ -1,6 +1,8 @@
 import { Header, Main } from '@components';
 
-export const App = () => {
+import type { IApp } from '@types';
+
+export const App: IApp = () => {
   return (
     <>
       <Header />

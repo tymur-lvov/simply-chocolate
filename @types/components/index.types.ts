@@ -78,10 +78,11 @@ export interface IMainTitleProps extends IComponentProps {
   };
 }
 
-export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
+export type IComponent = FC<IComponentProps>;
+export type IApp = FC<IComponentProps>;
 
 export type IHeader = FC<IComponentProps>;
 export type ILogo = FC<ILogoProps>;
@@ -90,4 +91,7 @@ export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
 export type ISocialsItem = FC<ISocialsItemProps>;
+
+export type IMain = FC<IComponentProps>;
 export type IMainTitle = FC<IMainTitleProps>;
+export type IHero = FC<IComponentProps>;

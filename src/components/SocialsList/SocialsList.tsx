@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 
 import { SocialsItem } from '@components';
 
-import { SocialsListModule as css } from '@styles';
+import { socialsListModule as css } from '@styles';
 
 import type { ISocialsList } from '@types';
 

@@ -1,6 +1,6 @@
-export { default as SocialsListModule } from './SocialsList/SocialsList.module.css';
+export { default as socialsListModule } from './SocialsList/SocialsList.module.css';
 export * from './SocialsList/SocialsList.tsx';
-export { default as SocialsItemModule } from './SocialsItem/SocialsItem.module.css';
+export { default as socialsItemModule } from './SocialsItem/SocialsItem.module.css';
 export * from './SocialsItem/SocialsItem.tsx';
 export * from './Portal/Portal.tsx';
 export { default as navListModule } from './NavList/NavList.module.css';

@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 
 import { Icon } from '@components';
 
-import { SocialsItemModule as css } from '@styles';
+import { socialsItemModule as css } from '@styles';
 
 import type { ISocialsItem } from '@types';
 

@@ -6,7 +6,9 @@ import { HeroData as data } from '@data';
 
 import { HeroModule as css } from '@styles';
 
-export const Hero = () => {
+import type { IHero } from '@types';
+
+export const Hero: IHero = () => {
   return (
     <section>
       <div className={clsx(css['hero__container'], 'container')}>

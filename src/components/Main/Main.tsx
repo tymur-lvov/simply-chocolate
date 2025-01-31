@@ -1,6 +1,8 @@
 import { Hero } from '@components';
 
-export const Main = () => {
+import type { IMain } from '@types';
+
+export const Main: IMain = () => {
   return (
     <main>
       <Hero />
