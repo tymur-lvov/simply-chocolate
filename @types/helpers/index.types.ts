@@ -6,8 +6,6 @@ export interface IMediaQueryLists {
   desktopList: MediaQueryList;
 }
 
-export type IBooleanStateSetter = Dispatch<SetStateAction<boolean>>;
-
 export type IUseMedia = () => {
   isMobile: boolean;
   isTablet: boolean;
@@ -16,9 +14,9 @@ export type IUseMedia = () => {
 
 export type IUpdateMediaQueryStates = (
   mediaQueryLists: IMediaQueryLists,
-  setIsMobile: IBooleanStateSetter,
-  setIsTablet: IBooleanStateSetter,
-  setIsDesktop: IBooleanStateSetter
+  setIsMobile: Dispatch<SetStateAction<boolean>>,
+  setIsTablet: Dispatch<SetStateAction<boolean>>,
+  setIsDesktop: Dispatch<SetStateAction<boolean>>
 ) => void;
 
 export type IAddMediaQueryListChangeListeners = (
@@ -33,7 +31,11 @@ export type IRemoveMediaQueryListChangeListeners = (
 
 export type IMobileMenuClickHandle = (
   target: EventTarget,
-  setIsMobileMenuOpen: IBooleanStateSetter
+  setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>
+) => void;
+
+export type ISocialsLinkClickHandle = (
+  setSocialsLinkClickCount: Dispatch<SetStateAction<number>>
 ) => void;
 
 export type IIsTargetElementAList = (target: EventTarget) => boolean;
