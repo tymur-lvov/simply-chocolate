@@ -1,0 +1,23 @@
+.mobile-menu__nav {
+  margin: auto 0;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 20px;
+  width: 312px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .header__nav-list {
+    gap: 24px;
+    width: 320px;
+  }
+}
+
+.mobile-menu__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 124px;
+}

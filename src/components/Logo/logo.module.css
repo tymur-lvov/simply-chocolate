@@ -1,0 +1,48 @@
+.logo-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 169px;
+  padding: 20.5px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo-link {
+    padding: 29.5px 0;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .logo-link {
+    width: 213px;
+    padding: 28px 0;
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
+.logo-accent {
+  font-style: italic;
+}
+
+.logo-icon {
+  width: 21px;
+  height: 21px;
+  transition: transform 250ms var(--transition);
+}
+
+@media only screen and (min-width: 1158px) {
+  .logo-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .logo-link:hover .logo-icon,
+  .logo-link:focus .logo-icon {
+    transform: scale(115%);
+  }
+}
