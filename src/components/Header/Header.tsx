@@ -4,7 +4,7 @@ import { useMedia } from '@hooks';
 
 import { Logo, MobileMenu, NavList, SocialsList } from '@components';
 
-import { headerData as data } from '@data';
+import { HEADER_DATA as data } from '@data';
 
 import { headerModule as css } from '@styles';
 

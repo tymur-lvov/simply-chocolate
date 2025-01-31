@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 
 import { Icon, Button, MainTitle } from '@components';
 
-import { heroData as data } from '@data';
+import { HERO_DATA as data } from '@data';
 
 import { heroModule as css } from '@styles';
 

@@ -1,2 +1,2 @@
-export * from './headerData.ts';
-export * from './heroData.ts';
+export * from './1.ts';
+export * from './2.ts';

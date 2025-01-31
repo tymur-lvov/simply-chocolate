@@ -1,4 +1,4 @@
-export const headerData = {
+export const HEADER_DATA = {
   logo: {
     text: {
       basePart: 'CHOCOLATE',
