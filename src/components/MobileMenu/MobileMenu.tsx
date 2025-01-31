@@ -7,11 +7,11 @@ import { Button, Icon, NavList, Portal, SocialsList } from '@components';
 
 import { headerData as data } from '@data';
 
-import { MobileMenuModule as css } from '@styles';
+import { mobileMenuModule as css } from '@styles';
 
-import type { IComponent } from '@types';
+import type { IMobileMenu } from '@types';
 
-export const MobileMenu: IComponent = () => {
+export const MobileMenu: IMobileMenu = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export const MobileMenu: IComponent = () => {
     <>
       <Button
         className={css['mobile-menu__btn']}
-        onClick={(event) => toggleMobileMenu(event, setIsMobileMenuOpen)}
+        onClick={({ target }) => toggleMobileMenu(target, setIsMobileMenuOpen)}
       >
         <Icon
           className={clsx({
@@ -47,7 +47,7 @@ export const MobileMenu: IComponent = () => {
               [css['mobile-menu__overlay']]: true,
               [css['mobile-menu__overlay--visible']]: isMobileMenuOpen,
             })}
-            onClick={(event) => toggleMobileMenu(event, setIsMobileMenuOpen)}
+            onClick={({ target }) => toggleMobileMenu(target, setIsMobileMenuOpen)}
           >
             <div className={css['mobile-menu__nav-wrapper']}>
               <NavList block='mobile-menu' data={data.navList} />

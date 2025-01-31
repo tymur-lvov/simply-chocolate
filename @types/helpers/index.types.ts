@@ -33,8 +33,8 @@ export type IAddMediaQueryListChangeListeners = (
 export type IRemoveMediaQueryListChangeListeners = IAddMediaQueryListChangeListeners;
 
 export type IToggleMobileMenu = (
-  event: IMouseEvent,
+  target: EventTarget,
   setIsMobileMenuOpen: IBooleanStateSetter
 ) => void;
 
-export type IIsTargetElementAList = (event: IMouseEvent) => boolean;
+export type IIsTargetElementAList = (target: EventTarget) => boolean;

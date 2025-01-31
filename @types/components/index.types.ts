@@ -83,7 +83,9 @@ export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
 
+export type IHeader = FC<IComponentProps>;
 export type ILogo = FC<ILogoProps>;
+export type IMobileMenu = FC<IComponentProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;

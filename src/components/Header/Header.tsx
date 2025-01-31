@@ -8,7 +8,9 @@ import { headerData as data } from '@data';
 
 import { headerModule as css } from '@styles';
 
-export const Header = () => {
+import type { IHeader } from '@types';
+
+export const Header: IHeader = () => {
   const { isMobile } = useMedia();
 
   return (
