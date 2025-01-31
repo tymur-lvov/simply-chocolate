@@ -5,7 +5,7 @@ import { releaseScrollLock, toggleMobileMenu } from '@helpers';
 
 import { Button, Icon, NavList, Portal, SocialsList } from '@components';
 
-import { HeaderData as data } from '@data';
+import { headerData as data } from '@data';
 
 import { MobileMenuModule as css } from '@styles';
 
