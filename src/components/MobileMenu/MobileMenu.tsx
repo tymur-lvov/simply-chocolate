@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { useEffect, useState } from 'react';
 
-import { releaseScrollLock, toggleMobileMenu } from '@helpers';
+import { releaseScrollLock, mobileMenuClickHandle } from '@helpers';
 
 import { Button, Icon, NavList, Portal, SocialsList } from '@components';
 
@@ -22,7 +22,7 @@ export const MobileMenu: IMobileMenu = () => {
     <>
       <Button
         className={css['mobile-menu__btn']}
-        onClick={({ target }) => toggleMobileMenu(target, setIsMobileMenuOpen)}
+        onClick={({ target }) => mobileMenuClickHandle(target, setIsMobileMenuOpen)}
       >
         <Icon
           className={clsx({
@@ -47,7 +47,7 @@ export const MobileMenu: IMobileMenu = () => {
               [css['mobile-menu__overlay']]: true,
               [css['mobile-menu__overlay--visible']]: isMobileMenuOpen,
             })}
-            onClick={({ target }) => toggleMobileMenu(target, setIsMobileMenuOpen)}
+            onClick={({ target }) => mobileMenuClickHandle(target, setIsMobileMenuOpen)}
           >
             <div className={css['mobile-menu__nav-wrapper']}>
               <NavList block='mobile-menu' data={data.navList} />

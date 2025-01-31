@@ -1,8 +1,8 @@
 import { isTargetElementAList, toggleScrollLock } from '@helpers';
 
-import type { IToggleMobileMenu } from '@types';
+import type { IMobileMenuClickHandle } from '@types';
 
-export const toggleMobileMenu: IToggleMobileMenu = (target, setIsMobileMenuOpen) => {
+export const mobileMenuClickHandle: IMobileMenuClickHandle = (target, setIsMobileMenuOpen) => {
   if (isTargetElementAList(target)) return;
 
   setIsMobileMenuOpen((prev) => !prev);
