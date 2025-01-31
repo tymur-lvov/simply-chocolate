@@ -1,0 +1,10 @@
+.socials-list {
+  display: flex;
+  gap: 14px;
+  width: 148px;
+}
+
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
