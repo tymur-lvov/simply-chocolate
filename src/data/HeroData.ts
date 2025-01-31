@@ -1,4 +1,4 @@
-export const HeroData = {
+export const heroData = {
   mainTitle: {
     mobile: {
       text: 'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',

@@ -2,9 +2,9 @@ import { clsx } from 'clsx';
 
 import { Icon, Button, MainTitle } from '@components';
 
-import { HeroData as data } from '@data';
+import { heroData as data } from '@data';
 
-import { HeroModule as css } from '@styles';
+import { heroModule as css } from '@styles';
 
 import type { IHero } from '@types';
 

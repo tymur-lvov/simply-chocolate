@@ -69,9 +69,11 @@ export interface IMainTitleProps extends IComponentProps {
     mobile: {
       text: string;
     };
+
     tablet?: {
       text: string;
     };
+
     desktop?: {
       text: string;
     };

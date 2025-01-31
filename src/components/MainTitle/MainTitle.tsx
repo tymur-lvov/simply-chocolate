@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 
 import { useMedia } from '@hooks';
 
-import { MainTitleModule as css } from '@styles';
+import { mainTitleModule as css } from '@styles';
 
 import type { IMainTitle } from '@types';
 
