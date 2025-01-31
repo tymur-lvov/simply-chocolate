@@ -8,7 +8,7 @@ import {
 } from '@helpers';
 
 import type {
-  ICapitalize,
+  ICapitalizeBesidesFirstElement,
   IGetVarName,
   ISplitToParts,
   IDeleteExtension,
@@ -51,15 +51,18 @@ export const capitalizeModuleName: ICapitalizeModuleName = (basename) => {
 };
 
 export const capitalizeNameParts: ICapitalizeNameParts = (basename) => {
-  const nameParts = basename.split('.');
+  return basename
+    .split('.')
 
-  return nameParts.map(capitalize).join('.');
+    .map((namePart, index) => capitalizeBesidesFirstElement(namePart, index))
+
+    .join('.');
 };
 
-export const capitalize: ICapitalize = (string) => {
+export const capitalizeBesidesFirstElement: ICapitalizeBesidesFirstElement = (string, index) => {
   const firstChar = string.charAt(0);
 
-  return string.replace(firstChar, firstChar.toUpperCase());
+  return index !== 0 ? string.replace(firstChar, firstChar.toUpperCase()) : string;
 };
 
 export const getVarName: IGetVarName = (filePath) => {

@@ -140,7 +140,7 @@ export type IGetDirEntDataErrorMessage = () => string;
 
 export type IGetEmptyStringPromise = () => Promise<string>;
 
-export type ICapitalize = (string: string) => string;
+export type ICapitalizeBesidesFirstElement = (string: string, index: number) => string;
 
 export type ICapitalizeNameParts = (basename: string) => string;
 
