@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 
-import { NavItemModule as css } from '@styles';
+import { navItemModule as css } from '@styles';
 
 import type { INavItem } from '@types';
 
