@@ -25,8 +25,7 @@ export const MobileMenu: IMobileMenu = () => {
         onClick={({ target }) => mobileMenuClickHandle(target, setIsMobileMenuOpen)}
       >
         <Icon
-          className={clsx({
-            [css['mobile-menu__btn-icon']]: true,
+          className={clsx(css['mobile-menu__btn-icon'], {
             [css['mobile-menu__btn-icon--open']]: !isMobileMenuOpen,
             [css['mobile-menu__btn-icon--close']]: isMobileMenuOpen,
           })}
@@ -37,14 +36,12 @@ export const MobileMenu: IMobileMenu = () => {
       </Button>
       <Portal>
         <div
-          className={clsx({
-            [css['mobile-menu__overlay-thumb']]: true,
+          className={clsx(css['mobile-menu__overlay-thumb'], {
             [css['mobile-menu__overlay-thumb--visible']]: isMobileMenuOpen,
           })}
         >
           <div
-            className={clsx({
-              [css['mobile-menu__overlay']]: true,
+            className={clsx(css['mobile-menu__overlay'], {
               [css['mobile-menu__overlay--visible']]: isMobileMenuOpen,
             })}
             onClick={({ target }) => mobileMenuClickHandle(target, setIsMobileMenuOpen)}
