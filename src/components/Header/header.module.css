@@ -1,12 +1,12 @@
 @media only screen and (min-width: 768px) {
-  .header-container {
+  .header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 
-.header-nav-socials-wrapper {
+.header_nav_socials_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,7 @@
 }
 
 @media only screen and (min-width: 1158px) {
-  .header-nav-socials-wrapper {
+  .header_nav_socials_wrapper {
     width: 558px;
   }
 }

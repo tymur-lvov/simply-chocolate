@@ -4,12 +4,12 @@ import { logoModule as css } from '@styles';
 
 import type { ILogo } from '@types';
 
-export const Logo: ILogo = ({ data: { text } }) => {
+export const Logo: ILogo = ({ data: { href, text, icon } }) => {
   return (
-    <a className={css['logo-link']} href='/'>
-      <span className={css['logo-accent']}>{text.accentPart}</span>
-      {text.basePart}
-      <Icon className={css['logo-icon']} fragment='logo' width={21} height={21} />
+    <a className={css.logo_link} href={href}>
+      <span className={css.logo_accent}>{text.accent}</span>
+      {text.main}
+      <Icon className={css.logo_icon} data={icon} />
     </a>
   );
 };

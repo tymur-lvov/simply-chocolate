@@ -7,18 +7,14 @@ export interface IComponentProps {
   block?: string;
 }
 
-export interface IAssetProps extends IComponentProps {
+export interface IIconData {
   width: number;
   height: number;
-}
-
-export interface IIconProps extends IAssetProps {
   fragment: string;
 }
 
-export interface IImageProps extends IAssetProps {
-  src: string;
-  alt: string;
+export interface IIconProps extends IComponentProps {
+  data: IIconData;
 }
 
 export interface IButtonProps extends IComponentProps {
@@ -28,10 +24,12 @@ export interface IButtonProps extends IComponentProps {
 
 export interface ILogoProps extends IComponentProps {
   data: {
+    href: string;
     text: {
-      basePart: string;
-      accentPart: string;
+      accent: string;
+      main: string;
     };
+    icon: IIconData;
   };
 }
 
@@ -45,6 +43,7 @@ export interface INavListProps extends IComponentProps {
 }
 
 export interface INavItemProps extends IComponentProps {
+  variant: string;
   data: {
     text: string;
   };
@@ -83,7 +82,6 @@ export interface IMainTitleProps extends IComponentProps {
 }
 
 export type IIcon = FC<IIconProps>;
-export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
 export type IComponent = FC<IComponentProps>;
 export type IApp = FC<IComponentProps>;

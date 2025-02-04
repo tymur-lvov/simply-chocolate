@@ -1,4 +1,4 @@
-.logo-link {
+.logo_link {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,13 +11,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .logo-link {
+  .logo_link {
     padding: 29.5px 0;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .logo-link {
+  .logo_link {
     width: 213px;
     padding: 28px 0;
     font-size: 18px;
@@ -25,24 +25,24 @@
   }
 }
 
-.logo-accent {
+.logo_accent {
   font-style: italic;
 }
 
-.logo-icon {
+.logo_icon {
   width: 21px;
   height: 21px;
   transition: transform 250ms var(--transition);
 }
 
 @media only screen and (min-width: 1158px) {
-  .logo-icon {
+  .logo_icon {
     width: 24px;
     height: 24px;
   }
 
-  .logo-link:hover .logo-icon,
-  .logo-link:focus .logo-icon {
+  .logo_link:hover .logo_icon,
+  .logo_link:focus .logo_icon {
     transform: scale(115%);
   }
 }

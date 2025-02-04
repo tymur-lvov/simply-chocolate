@@ -1,8 +1,14 @@
 export const HEADER_DATA = {
   logo: {
+    href: '/',
     text: {
-      basePart: 'CHOCOLATE',
-      accentPart: 'SIMPLY',
+      accent: 'SIMPLY',
+      main: 'CHOCOLATE',
+    },
+    icon: {
+      width: 21,
+      height: 21,
+      fragment: 'logo',
     },
   },
 
