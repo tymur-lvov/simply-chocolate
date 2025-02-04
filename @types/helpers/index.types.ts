@@ -29,9 +29,9 @@ export type IRemoveMediaQueryListChangeListeners = (
   mediaQueryListChangeHandle: () => void
 ) => void;
 
-export type IMobileMenuClickHandle = (
+export type IMenuClickHandle = (
   target: EventTarget,
-  setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>
+  setIsMenuOpen: Dispatch<SetStateAction<boolean>>
 ) => void;
 
 export type ISocialsLinkClickHandle = (

@@ -6,13 +6,13 @@ import { navListModule as css } from '@styles';
 
 import type { INavList } from '@types';
 
-export const NavList: INavList = ({ block, data: { navItems } }) => {
+export const NavList: INavList = ({ variant, data: { navItems } }) => {
   return (
-    <nav className={clsx(css[`${block}__nav`], css['nav'])}>
-      <ul className={clsx(css[`${block}__nav-list`], css['nav-list'])}>
+    <nav className={clsx(css[variant], css.nav)}>
+      <ul className={clsx(css[variant], css.nav_list)}>
         {navItems.map((navItem) => (
-          <li className={clsx(css[`${block}__nav-item`], css['nav-item'])} key={navItem.text}>
-            <NavItem block={block} data={navItem} />
+          <li className={clsx(css[variant], css.nav_item)} key={navItem.text}>
+            <NavItem variant={variant} data={navItem} />
           </li>
         ))}
       </ul>

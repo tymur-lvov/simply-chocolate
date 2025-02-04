@@ -2,8 +2,9 @@ import type { ReactNode, MouseEvent, FC } from 'react';
 
 export interface IComponentProps {
   children?: ReactNode;
-  block?: string;
   className?: string;
+  variant?: string;
+  block?: string;
 }
 
 export interface IAssetProps extends IComponentProps {
@@ -35,6 +36,7 @@ export interface ILogoProps extends IComponentProps {
 }
 
 export interface INavListProps extends IComponentProps {
+  variant: string;
   data: {
     navItems: {
       text: string;
@@ -88,7 +90,7 @@ export type IApp = FC<IComponentProps>;
 
 export type IHeader = FC<IComponentProps>;
 export type ILogo = FC<ILogoProps>;
-export type IMobileMenu = FC<IComponentProps>;
+export type IMenu = FC<IComponentProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;

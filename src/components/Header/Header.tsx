@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 
 import { useMedia } from '@hooks';
 
-import { Logo, MobileMenu, NavList, SocialsList } from '@components';
+import { Logo, Menu, NavList, SocialsList } from '@components';
 
 import { HEADER_DATA as data } from '@data';
 
@@ -15,12 +15,12 @@ export const Header: IHeader = () => {
 
   return (
     <header>
-      <div className={clsx(css['header__container'], 'container')}>
-        <Logo block='header' data={data.logo} />
-        {isMobile && <MobileMenu />}
+      <div className={clsx(css['header-container'], 'container')}>
+        <Logo data={data.logo} />
+        {isMobile && <Menu />}
         {!isMobile && (
-          <div className={css['header__nav-socials-wrapper']}>
-            <NavList block='header' data={data.navList} />
+          <div className={css['header-nav-socials-wrapper']}>
+            <NavList variant='header' data={data.navList} />
             <SocialsList block='header' data={data.socialsList} />
           </div>
         )}
