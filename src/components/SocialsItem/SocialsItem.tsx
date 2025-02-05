@@ -9,24 +9,23 @@ import { socialsItemModule as css } from '@styles';
 
 import type { ISocialsItem } from '@types';
 
-export const SocialsItem: ISocialsItem = ({ block, data: { fragment, href } }) => {
+export const SocialsItem: ISocialsItem = ({
+  variant,
+  data: {
+    link: { ...props },
+    icon,
+  },
+}) => {
   const [socialsLinkClickCount, setSocialsLinkClickCount] = useState(0);
 
   return (
     <a
-      className={clsx(css[`${block}__socials-link`], css['socials-link'])}
+      className={clsx(css[variant], css.socials_link)}
       onClick={() => socialsLinkClickHandle(setSocialsLinkClickCount)}
       key={socialsLinkClickCount}
-      href={href}
-      target='_blank'
-      rel='noopener noreferrer'
+      {...props}
     >
-      <Icon
-        className={clsx(css[`${block}__socials-icon`], css['socials-icon'])}
-        fragment={fragment}
-        width={24}
-        height={24}
-      />
+      <Icon className={clsx(css[variant], css.socials_icon)} data={icon} />
     </a>
   );
 };
