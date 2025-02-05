@@ -1,0 +1,156 @@
+export interface IMENU_DATA {
+  toggleIcon: {
+    width: number;
+    height: number;
+    fragments: {
+      open: string;
+      close: string;
+    };
+    getFragmentKey: (isMenuOpen: boolean) => string;
+  };
+
+  navList: {
+    navItems: [
+      {
+        link: {
+          href: string;
+          text: string;
+        };
+      },
+      {
+        link: {
+          href: string;
+          text: string;
+        };
+      },
+      {
+        link: {
+          href: string;
+          text: string;
+        };
+      }
+    ];
+  };
+
+  socialsList: {
+    socialsItems: [
+      {
+        link: {
+          href: string;
+          target: string;
+          rel: string;
+        };
+        icon: {
+          width: number;
+          height: number;
+          fragment: string;
+        };
+      },
+      {
+        link: {
+          href: string;
+          target: string;
+          rel: string;
+        };
+        icon: {
+          width: number;
+          height: number;
+          fragment: string;
+        };
+      },
+      {
+        link: {
+          href: string;
+          target: string;
+          rel: string;
+        };
+        icon: {
+          width: number;
+          height: number;
+          fragment: string;
+        };
+      }
+    ];
+  };
+}
+
+export interface IHEADER_DATA {
+  logo: {
+    link: {
+      href: string;
+      text: {
+        accent: string;
+        main: string;
+      };
+    };
+    icon: {
+      width: number;
+      height: number;
+      fragment: string;
+    };
+  };
+
+  navList: {
+    navItems: [
+      {
+        link: {
+          href: string;
+          text: string;
+        };
+      },
+      {
+        link: {
+          href: string;
+          text: string;
+        };
+      },
+      {
+        link: {
+          href: string;
+          text: string;
+        };
+      }
+    ];
+  };
+
+  socialsList: {
+    socialsItems: [
+      {
+        link: {
+          href: string;
+          target: string;
+          rel: string;
+        };
+        icon: {
+          width: number;
+          height: number;
+          fragment: string;
+        };
+      },
+      {
+        link: {
+          href: string;
+          target: string;
+          rel: string;
+        };
+        icon: {
+          width: number;
+          height: number;
+          fragment: string;
+        };
+      },
+      {
+        link: {
+          href: string;
+          target: string;
+          rel: string;
+        };
+        icon: {
+          width: number;
+          height: number;
+          fragment: string;
+        };
+      }
+    ];
+  };
+}

@@ -1,68 +1,53 @@
 import type { ReactNode, MouseEvent, FC } from 'react';
 
+import type { IHEADER_DATA, IMENU_DATA } from '@types';
+
 export interface IComponentProps {
   children?: ReactNode;
   className?: string;
-  variant?: string;
-  block?: string;
-}
-
-export interface IIconData {
-  width: number;
-  height: number;
-  fragment: string;
 }
 
 export interface IIconProps extends IComponentProps {
-  data: IIconData;
+  fragmentKey?: string;
+  data: {
+    width: number;
+    height: number;
+    fragment?: string;
+    fragments?: {
+      [key: string]: string;
+    };
+  };
 }
 
 export interface IButtonProps extends IComponentProps {
-  type?: 'button' | 'submit' | 'reset';
+  data?: {
+    type: 'button' | 'submit' | 'reset';
+  };
   onClick?: (event: MouseEvent<HTMLElement>) => void;
 }
 
 export interface ILogoProps extends IComponentProps {
-  data: {
-    href: string;
-    text: {
-      accent: string;
-      main: string;
-    };
-    icon: IIconData;
-  };
+  data: IHEADER_DATA['logo'];
 }
 
 export interface INavListProps extends IComponentProps {
-  variant: string;
-  data: {
-    navItems: {
-      text: string;
-    }[];
-  };
+  variant: 'menu' | 'header';
+  data: IMENU_DATA['navList'];
 }
 
 export interface INavItemProps extends IComponentProps {
-  variant: string;
-  data: {
-    text: string;
-  };
+  variant: 'menu' | 'header';
+  data: IMENU_DATA['navList']['navItems'][number];
 }
 
 export interface ISocialsListProps extends IComponentProps {
-  data: {
-    socialsItems: {
-      fragment: string;
-      href: string;
-    }[];
-  };
+  variant: 'menu' | 'header';
+  data: IMENU_DATA['socialsList'];
 }
 
 export interface ISocialsItemProps extends IComponentProps {
-  data: {
-    fragment: string;
-    href: string;
-  };
+  variant: 'menu' | 'header';
+  data: IMENU_DATA['socialsList']['socialsItems'][number];
 }
 
 export interface IMainTitleProps extends IComponentProps {
@@ -81,9 +66,9 @@ export interface IMainTitleProps extends IComponentProps {
   };
 }
 
+export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
-export type IComponent = FC<IComponentProps>;
 export type IApp = FC<IComponentProps>;
 
 export type IHeader = FC<IComponentProps>;
