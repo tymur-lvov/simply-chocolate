@@ -11,7 +11,7 @@ import type { IHero } from '@types';
 export const Hero: IHero = () => {
   return (
     <section>
-      <div className={clsx(css['hero__container'], 'container')}>
+      {/* <div className={clsx(css['hero__container'], 'container')}>
         <MainTitle block='hero' data={data.mainTitle} />
         <div className={css['hero__interactive-elements-wrapper']}>
           <div className={css['hero__order-info-btns-wrapper']}>
@@ -32,7 +32,7 @@ export const Hero: IHero = () => {
             />
           </a>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
