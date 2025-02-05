@@ -6,6 +6,15 @@
   transition: color 250ms var(--transition);
 }
 
+.menu.nav_link {
+  color: var(--white);
+}
+
+.header.nav_link {
+  padding: 32px 0;
+  color: var(--black);
+}
+
 .nav_link:active {
   color: var(--orange);
 }
@@ -15,13 +24,4 @@
   .nav_link:focus {
     color: var(--orange);
   }
-}
-
-.menu.nav_link {
-  color: var(--white);
-}
-
-.header.nav_link {
-  padding: 32px 0;
-  color: var(--black);
 }

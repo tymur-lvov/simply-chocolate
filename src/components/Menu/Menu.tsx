@@ -5,7 +5,7 @@ import { releaseScrollLock, menuClickHandle } from '@helpers';
 
 import { Button, Icon, NavList, Portal, SocialsList } from '@components';
 
-import { HEADER_DATA as data } from '@data';
+import { MENU_DATA as data } from '@data';
 
 import { menuModule as css } from '@styles';
 
@@ -21,34 +21,36 @@ export const Menu: IMenu = () => {
   return (
     <>
       <Button
-        className={css['menu-btn']}
+        className={css.menu_btn}
         onClick={({ target }) => menuClickHandle(target, setIsMenuOpen)}
       >
         <Icon
-          className={clsx(css['menu-btn-icon'], {
-            [css['menu-btn-icon--open']]: !isMenuOpen,
-            [css['menu-btn-icon--close']]: isMenuOpen,
+          className={clsx({
+            [css.menu_btn_icon]: true,
+            [css.menu_btn_icon__open]: !isMenuOpen,
+            [css.menu_btn_icon__close]: isMenuOpen,
           })}
-          fragment={!isMenuOpen ? 'open' : 'close'}
-          width={32}
-          height={32}
+          fragmentKey={data.toggleIcon.getFragmentKey(isMenuOpen)}
+          data={data.toggleIcon}
         />
       </Button>
       <Portal>
         <div
-          className={clsx(css['menu-overlay-thumb'], {
-            [css['menu-overlay-thumb--visible']]: isMenuOpen,
+          className={clsx({
+            [css.menu_overlay_thumb]: true,
+            [css.menu_overlay_thumb__visible]: isMenuOpen,
           })}
         >
           <div
-            className={clsx(css['menu-overlay'], {
-              [css['menu-overlay--visible']]: isMenuOpen,
+            className={clsx({
+              [css.menu_overlay]: true,
+              [css.menu_overlay__visible]: isMenuOpen,
             })}
             onClick={({ target }) => menuClickHandle(target, setIsMenuOpen)}
           >
-            <div className={css['menu-nav-wrapper']}>
-              <NavList block='menu' data={data.navList} />
-              <SocialsList block='menu' data={data.socialsList} />
+            <div className={css.menu_nav_wrapper}>
+              <NavList variant='menu' data={data.navList} />
+              <SocialsList variant='menu' data={data.socialsList} />
             </div>
           </div>
         </div>
