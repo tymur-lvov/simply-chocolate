@@ -1,18 +1,15 @@
-import type { IHEADER_DATA } from '@types';
+import type { IMENU_DATA } from '@types';
 
-export const HEADER_DATA: IHEADER_DATA = {
-  logo: {
-    link: {
-      href: '/',
-      text: {
-        accent: 'SIMPLY',
-        main: 'CHOCOLATE',
-      },
+export const MENU_DATA: IMENU_DATA = {
+  toggleIcon: {
+    width: 32,
+    height: 32,
+    fragments: {
+      open: 'open',
+      close: 'close',
     },
-    icon: {
-      width: 21,
-      height: 21,
-      fragment: 'logo',
+    getFragmentKey(isMenuOpen) {
+      return isMenuOpen ? this.fragments.close : this.fragments.open;
     },
   },
 
