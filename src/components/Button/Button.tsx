@@ -1,8 +1,8 @@
 import type { IButton } from '@types';
 
-export const Button: IButton = ({ children, className, type = 'button', onClick }) => {
+export const Button: IButton = ({ children, data, ...props }) => {
   return (
-    <button className={className} type={type} onClick={onClick}>
+    <button type={data?.type || 'button'} {...props}>
       {children}
     </button>
   );
