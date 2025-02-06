@@ -16,13 +16,13 @@ export const SocialsItem: ISocialsItem = ({
     icon,
   },
 }) => {
-  const [socialsLinkClickCount, setSocialsLinkClickCount] = useState(0);
+  const [linkClickCount, setLinkClickCount] = useState(0);
 
   return (
     <a
       className={clsx(css[variant], css.socials_link)}
-      onClick={() => socialsLinkClickHandle(setSocialsLinkClickCount)}
-      key={socialsLinkClickCount}
+      onClick={() => socialsLinkClickHandle(setLinkClickCount)}
+      key={linkClickCount}
       {...props}
     >
       <Icon className={clsx(css[variant], css.socials_icon)} data={icon} />

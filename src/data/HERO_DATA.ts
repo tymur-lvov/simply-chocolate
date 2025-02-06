@@ -1,10 +1,12 @@
-export const HERO_DATA = {
+import type { IHERO_DATA } from '@types';
+
+export const HERO_DATA: IHERO_DATA = {
   mainTitle: {
-    mobile: {
-      text: 'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
-    },
-    tablet: {
-      text: 'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
+    text: {
+      mobile:
+        'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
+      tablet:
+        'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
     },
   },
 
@@ -16,7 +18,15 @@ export const HERO_DATA = {
     text: `How it\u2019s made`,
   },
 
-  scrollLink: {
-    text: 'scroll down',
+  scrollBlock: {
+    link: {
+      href: '/',
+      text: 'scroll down',
+    },
+    icon: {
+      width: 16,
+      height: 16,
+      fragment: 'arrow_down',
+    },
   },
 };
