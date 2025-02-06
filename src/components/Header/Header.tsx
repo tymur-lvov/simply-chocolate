@@ -4,6 +4,8 @@ import { useMedia } from '@hooks';
 
 import { Logo, Menu, NavList, SocialsList } from '@components';
 
+import { CONTAINER, HEADER } from '@constants';
+
 import { HEADER_DATA as data } from '@data';
 
 import { headerModule as css } from '@styles';
@@ -15,13 +17,13 @@ export const Header: IHeader = () => {
 
   return (
     <header>
-      <div className={clsx(css.header_container, 'container')}>
+      <div className={clsx(css.header_container, CONTAINER)}>
         <Logo data={data.logo} />
         {isMobile && <Menu />}
         {!isMobile && (
           <div className={css.header_nav_socials_wrapper}>
-            <NavList variant='header' data={data.navList} />
-            <SocialsList variant='header' data={data.socialsList} />
+            <NavList variant={HEADER} data={data.navList} />
+            <SocialsList variant={HEADER} data={data.socialsList} />
           </div>
         )}
       </div>

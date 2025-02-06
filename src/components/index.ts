@@ -10,7 +10,6 @@ export { default as navItemModule } from './NavItem/navItem.module.css';
 export * from './Menu/Menu.tsx';
 export { default as menuModule } from './Menu/menu.module.css';
 export * from './MainTitle/MainTitle.tsx';
-export { default as mainTitleModule } from './MainTitle/mainTitle.module.css';
 export * from './Main/Main.tsx';
 export * from './Logo/Logo.tsx';
 export { default as logoModule } from './Logo/logo.module.css';
