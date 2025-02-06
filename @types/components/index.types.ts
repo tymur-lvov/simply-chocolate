@@ -1,6 +1,6 @@
 import type { ReactNode, MouseEvent, FC } from 'react';
 
-import type { IHEADER_DATA, IHERO_DATA, IMENU_DATA } from '@types';
+import type { two, three, one } from '@types';
 
 export interface IComponentProps {
   children?: ReactNode;
@@ -25,31 +25,31 @@ export interface IButtonProps extends IComponentProps {
 }
 
 export interface ILogoProps extends IComponentProps {
-  data: IHEADER_DATA['logo'];
+  data: two['logo'];
 }
 
 export interface INavListProps extends IComponentProps {
   variant: 'menu' | 'header';
-  data: IMENU_DATA['navList'];
+  data: one['navList'];
 }
 
 export interface INavItemProps extends IComponentProps {
   variant: 'menu' | 'header';
-  data: IMENU_DATA['navList']['navItems'][number];
+  data: one['navList']['navItems'][number];
 }
 
 export interface ISocialsListProps extends IComponentProps {
   variant: 'menu' | 'header';
-  data: IMENU_DATA['socialsList'];
+  data: one['socialsList'];
 }
 
 export interface ISocialsItemProps extends IComponentProps {
   variant: 'menu' | 'header';
-  data: IMENU_DATA['socialsList']['socialsItems'][number];
+  data: one['socialsList']['socialsItems'][number];
 }
 
 export interface IMainTitleProps extends IComponentProps {
-  data: IHERO_DATA['mainTitle'];
+  data: three['mainTitle'];
 }
 
 export type IComponent = FC<IComponentProps>;

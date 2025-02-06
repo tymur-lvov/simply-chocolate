@@ -1,6 +1,6 @@
-import type { IHEADER_DATA } from '@types';
+import type { two } from '@types';
 
-export const HEADER_DATA: IHEADER_DATA = {
+export const HEADER_DATA: two = {
   logo: {
     link: {
       href: '/',

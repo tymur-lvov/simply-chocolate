@@ -1,6 +1,6 @@
-import type { IHERO_DATA } from '@types';
+import type { three } from '@types';
 
-export const HERO_DATA: IHERO_DATA = {
+export const HERO_DATA: three = {
   mainTitle: {
     text: {
       mobile:

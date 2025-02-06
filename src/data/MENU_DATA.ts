@@ -1,6 +1,6 @@
-import type { IMENU_DATA } from '@types';
+import type { one } from '@types';
 
-export const MENU_DATA: IMENU_DATA = {
+export const MENU_DATA: one = {
   toggleIcon: {
     width: 32,
     height: 32,
