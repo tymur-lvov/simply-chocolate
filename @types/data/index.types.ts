@@ -154,3 +154,32 @@ export interface IHEADER_DATA {
     ];
   };
 }
+
+export interface IHERO_DATA {
+  mainTitle: {
+    text: {
+      mobile: string;
+      tablet: string;
+    };
+  };
+
+  orderButton: {
+    text: string;
+  };
+
+  infoButton: {
+    text: string;
+  };
+
+  scrollBlock: {
+    link: {
+      href: string;
+      text: string;
+    };
+    icon: {
+      width: number;
+      height: number;
+      fragment: string;
+    };
+  };
+}

@@ -1,6 +1,6 @@
 import type { ReactNode, MouseEvent, FC } from 'react';
 
-import type { IHEADER_DATA, IMENU_DATA } from '@types';
+import type { IHEADER_DATA, IHERO_DATA, IMENU_DATA } from '@types';
 
 export interface IComponentProps {
   children?: ReactNode;
@@ -20,9 +20,7 @@ export interface IIconProps extends IComponentProps {
 }
 
 export interface IButtonProps extends IComponentProps {
-  data?: {
-    type: 'button' | 'submit' | 'reset';
-  };
+  type?: 'button' | 'submit' | 'reset';
   onClick?: (event: MouseEvent<HTMLElement>) => void;
 }
 
@@ -51,19 +49,7 @@ export interface ISocialsItemProps extends IComponentProps {
 }
 
 export interface IMainTitleProps extends IComponentProps {
-  data: {
-    mobile: {
-      text: string;
-    };
-
-    tablet?: {
-      text: string;
-    };
-
-    desktop?: {
-      text: string;
-    };
-  };
+  data: IHERO_DATA['mainTitle'];
 }
 
 export type IComponent = FC<IComponentProps>;

@@ -34,8 +34,16 @@ export type IMenuClickHandle = (
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>
 ) => void;
 
-export type ISocialsLinkClickHandle = (
-  setSocialsLinkClickCount: Dispatch<SetStateAction<number>>
-) => void;
+export type ISocialsLinkClickHandle = (setLinkClickCount: Dispatch<SetStateAction<number>>) => void;
 
 export type IIsTargetElementAList = (target: EventTarget) => boolean;
+
+export type IGetIconPath = (
+  fragment: string,
+  fragments?: {
+    [key: string]: string;
+  },
+  fragmentKey?: string
+) => string;
+
+export type IGetIconFragment = IGetIconPath;
