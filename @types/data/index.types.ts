@@ -1,5 +1,4 @@
-// IMENU_DATA
-export interface one {
+export interface IMENU_DATA {
   toggleIcon: {
     width: number;
     height: number;
@@ -74,8 +73,8 @@ export interface one {
     ];
   };
 }
-// IHEADER_DATA
-export interface two {
+
+export interface IHEADER_DATA {
   logo: {
     link: {
       href: string;
@@ -155,8 +154,8 @@ export interface two {
     ];
   };
 }
-// IHERO_DATA
-export interface three {
+
+export interface IHERO_DATA {
   mainTitle: {
     text: {
       mobile: string;
