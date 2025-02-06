@@ -5,6 +5,8 @@ import { releaseScrollLock, menuClickHandle } from '@helpers';
 
 import { Button, Icon, NavList, Portal, SocialsList } from '@components';
 
+import { MENU } from '@constants';
+
 import { MENU_DATA as data } from '@data';
 
 import { menuModule as css } from '@styles';
@@ -49,8 +51,8 @@ export const Menu: IMenu = () => {
             onClick={({ target }) => menuClickHandle(target, setIsMenuOpen)}
           >
             <div className={css.menu_nav_wrapper}>
-              <NavList variant='menu' data={data.navList} />
-              <SocialsList variant='menu' data={data.socialsList} />
+              <NavList variant={MENU} data={data.navList} />
+              <SocialsList variant={MENU} data={data.socialsList} />
             </div>
           </div>
         </div>
