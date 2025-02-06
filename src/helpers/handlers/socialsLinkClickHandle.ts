@@ -1,5 +1,5 @@
 import type { ISocialsLinkClickHandle } from '@types';
 
-export const socialsLinkClickHandle: ISocialsLinkClickHandle = (setSocialsLinkClickCount) => {
-  setSocialsLinkClickCount((prev) => ++prev);
+export const socialsLinkClickHandle: ISocialsLinkClickHandle = (setLinkClickCount) => {
+  setLinkClickCount((prev) => ++prev);
 };

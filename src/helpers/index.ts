@@ -1,4 +1,6 @@
 export * from './predicates/isTargetElementAList.ts';
+export * from './misc/getIconFragment.ts';
+export * from './misc/getIconPath.ts';
 export * from './misc/releaseScrollLock.ts';
 export * from './misc/toggleScrollLock.ts';
 export * from './hooks/addMediaQueryListChangeListeners.ts';
