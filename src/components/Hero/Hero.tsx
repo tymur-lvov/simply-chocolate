@@ -2,6 +2,8 @@ import { clsx } from 'clsx';
 
 import { Icon, Button, MainTitle } from '@components';
 
+import { CONTAINER } from '@constants';
+
 import { HERO_DATA as data } from '@data';
 
 import { heroModule as css } from '@styles';
@@ -11,28 +13,23 @@ import type { IHero } from '@types';
 export const Hero: IHero = () => {
   return (
     <section>
-      {/* <div className={clsx(css['hero__container'], 'container')}>
-        <MainTitle block='hero' data={data.mainTitle} />
-        <div className={css['hero__interactive-elements-wrapper']}>
-          <div className={css['hero__order-info-btns-wrapper']}>
-            <Button className={clsx(css['hero__order-btn'], css['hero__btn'])}>
+      <div className={clsx(css.hero_container, CONTAINER)}>
+        <MainTitle className={css.hero_main_title} data={data.mainTitle} />
+        <div className={css.hero_interactive_elements_wrapper}>
+          <div className={css.hero_order_info_btns_wrapper}>
+            <Button className={clsx(css.hero_order_btn, css.hero_btn)}>
               {data.orderButton.text}
             </Button>
-            <Button className={clsx(css['hero__info-btn'], css['hero__btn'])}>
+            <Button className={clsx(css.hero_info_btn, css.hero_btn)}>
               {data.infoButton.text}
             </Button>
           </div>
-          <a className={css['hero__scroll-link']} href='/'>
-            {data.scrollLink.text}
-            <Icon
-              className={css['hero__scroll-icon']}
-              fragment='arrow_down'
-              width={16}
-              height={16}
-            />
+          <a className={css.hero_scroll_link} href={data.scrollBlock.link.href}>
+            {data.scrollBlock.link.text}
+            <Icon className={css.hero_scroll_icon} data={data.scrollBlock.icon} />
           </a>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };

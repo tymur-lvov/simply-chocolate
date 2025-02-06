@@ -1,26 +1,16 @@
-import { useEffect, useState } from 'react';
-
-import { icons } from '@assets';
+import { getIconPath } from '@helpers';
 
 import type { IIcon } from '@types';
 
 export const Icon: IIcon = ({
   className,
   fragmentKey,
-  data: { width, height, fragment, fragments },
+  data: { width, height, fragments, fragment = '' },
 }) => {
-  const [fragmentState, setFragmentState] = useState('');
-
-  useEffect(() => {
-    if (fragments && fragmentKey) {
-      setFragmentState(fragments[fragmentKey]);
-    }
-  });
-
   return (
     <div className={className}>
       <svg width={width} height={height}>
-        <use href={`${icons}#${fragment || fragmentState}`} />
+        <use href={getIconPath(fragment, fragments, fragmentKey)} />
       </svg>
     </div>
   );
