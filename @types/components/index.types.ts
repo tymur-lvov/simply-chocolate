@@ -1,6 +1,6 @@
 import type { ReactNode, MouseEvent, FC } from 'react';
 
-import type { IHEADER_DATA, IHERO_DATA, IMENU_DATA } from '../data/index.types';
+import type { IHEADER_DATA, IHERO_DATA, IMENU_DATA } from '@types';
 
 export interface IComponentProps {
   children?: ReactNode;

@@ -22,7 +22,8 @@
     /* Paths */
     "baseUrl": "./",
     "paths": {
-      "@types": ["@types/node/index.types.ts"],
+      // "@types": ["@types/node/index.types.ts"],
+      "@types": ["@types/index.types.ts"],
       "@config": ["node/config.ts"],
       "@constants": ["node/constants.ts"],
       "@helpers": ["node/helpers/index.ts"]
