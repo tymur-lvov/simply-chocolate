@@ -4,9 +4,9 @@ export const HERO_DATA: IHERO_DATA = {
   mainTitle: {
     text: {
       mobile:
-        'Treat yourself or a loved IMENU_DATA\nto our finest ingredients for a\nmoment of pure delight!',
+        'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
       tablet:
-        'Treat yourself or a loved IMENU_DATA to\nour finest ingredients for a moment\nof pure delight!',
+        'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
     },
   },
 

@@ -50,7 +50,7 @@ export const Menu: IMenu = () => {
             })}
             onClick={({ target }) => menuClickHandle(target, setIsMenuOpen)}
           >
-            <div className={css.menu_nav_wrapper}>
+            <div className={css.menu_nav_socials_wrapper}>
               <NavList variant={MENU} data={data.navList} />
               <SocialsList variant={MENU} data={data.socialsList} />
             </div>

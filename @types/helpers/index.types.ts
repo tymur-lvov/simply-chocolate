@@ -38,6 +38,8 @@ export type ISocialsLinkClickHandle = (setLinkClickCount: Dispatch<SetStateActio
 
 export type IIsTargetElementAList = (target: EventTarget) => boolean;
 
+export type IToggleScrollLock = () => void;
+
 export type IGetIconPath = (
   fragment: string,
   fragments?: {
