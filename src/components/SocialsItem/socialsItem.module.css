@@ -8,21 +8,21 @@
 }
 
 .menu.socials_link {
-  border: 1px solid var(--menu-socials-border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header.socials_link {
-  border: 1px solid var(--header-socials-border);
+  border: 1px solid rgba(17, 17, 17, 0.1);
 }
 
 .socials_link:active {
-  border-color: var(--socials-border-accent);
+  border-color: rgba(253, 146, 34, 0.1);
 }
 
 @media only screen and (min-width: 1158px) {
   .header.socials_link:hover,
   .header.socials_link:focus {
-    border-color: var(--socials-border-accent);
+    border-color: rgba(253, 146, 34, 0.1);
   }
 }
 

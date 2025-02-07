@@ -51,7 +51,7 @@
   transform: translateX(0);
 }
 
-.menu_nav_wrapper {
+.menu_nav_socials_wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;

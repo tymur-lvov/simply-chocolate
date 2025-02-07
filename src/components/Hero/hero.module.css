@@ -1,7 +1,11 @@
 .hero_container {
-  padding: 395px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 620px;
+  padding: 20px;
   border-radius: 30px;
-  background-image: linear-gradient(to bottom, var(--hero_filter), var(--hero_filter)),
+  background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
     url('../../assets/images/hero/heroBg/hero_bg_mobile_1x.webp');
   background-position: center;
   background-size: cover;
@@ -10,43 +14,44 @@
 
 @media only screen and (min-resolution: 192dpi) {
   .hero_container {
-    background-image: linear-gradient(to bottom, var(--hero_filter), var(--hero_filter)),
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
       url('../../assets/images/hero/heroBg/hero_bg_mobile_2x.webp');
   }
 }
 
 @media only screen and (min-width: 768px) {
   .hero_container {
-    padding: 671px 40px 40px;
-    background-image: linear-gradient(to bottom, var(--hero_filter), var(--hero_filter)),
+    height: 890px;
+    padding: 40px;
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
       url('../../assets/images/hero/heroBg/hero_bg_tablet_1x.webp');
   }
 }
 
 @media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
   .hero_container {
-    background-image: linear-gradient(to bottom, var(--hero_filter), var(--hero_filter)),
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
       url('../../assets/images/hero/heroBg/hero_bg_tablet_2x.webp');
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .hero_container {
-    padding: 381px 40px 40px;
-    background-image: linear-gradient(to bottom, var(--hero_filter), var(--hero_filter)),
+    height: 600px;
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
       url('../../assets/images/hero/heroBg/hero_bg_desktop_1x.webp');
   }
 }
 
 @media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
   .hero_container {
-    background-image: linear-gradient(to bottom, var(--hero_filter), var(--hero_filter)),
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
       url('../../assets/images/hero/heroBg/hero_bg_desktop_2x.webp');
   }
 }
 
 .hero_main_title {
-  margin-bottom: 32px;
+  margin-top: auto;
   color: var(--white);
   font-weight: 500;
   font-size: 20px;
@@ -73,7 +78,6 @@
     flex-direction: row;
     gap: 0;
     justify-content: space-between;
-    align-items: center;
   }
 }
 
