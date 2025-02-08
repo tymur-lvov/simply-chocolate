@@ -183,3 +183,17 @@ export interface IHERO_DATA {
     };
   };
 }
+
+export interface IBENEFITS_DATA {
+  benefitsList: {
+    benefitsItems: {
+      title: string;
+      description: string;
+      icon: {
+        width: 32;
+        height: 32;
+        fragment: string;
+      };
+    }[];
+  };
+}
