@@ -1,0 +1,9 @@
+.benefits_list {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.benefits_item {
+  width: 308px;
+}

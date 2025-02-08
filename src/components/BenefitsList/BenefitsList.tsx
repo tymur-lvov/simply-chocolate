@@ -8,8 +8,8 @@ export const BenefitsList: IBenefitsList = ({ data: { benefitsItems } }) => {
   return (
     <ul className={css.benefits_list}>
       {benefitsItems.map((benefitsItem) => (
-        <li className={css.benefits_item}>
-          <BenefitsItem key={benefitsItem.title} data={benefitsItem} />
+        <li className={css.benefits_item} key={benefitsItem.title}>
+          <BenefitsItem data={benefitsItem} />
         </li>
       ))}
     </ul>

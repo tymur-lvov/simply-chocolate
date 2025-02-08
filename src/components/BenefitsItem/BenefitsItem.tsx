@@ -8,8 +8,10 @@ export const BenefitsItem: IBenefitsItem = ({ data: { title, description, icon }
   return (
     <>
       <Icon className={css.benefits_icon} data={icon} />
-      <h3 className={css.benefits_sub_title}>{title}</h3>
-      <p className={css.benefits_description}>{description}</p>
+      <div className={css.benefits_text_wrapper}>
+        <h3 className={css.benefits_sub_title}>{title}</h3>
+        <p className={css.benefits_description}>{description}</p>
+      </div>
     </>
   );
 };
