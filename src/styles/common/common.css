@@ -22,18 +22,36 @@ body.menu_is_open {
 }
 
 .container {
-  width: 335px;
+  width: 375px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .container {
-    width: 704px;
+    width: 768px;
+    padding: 0 32px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .container {
-    width: 1136px;
+    width: 1200px;
+  }
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .section {
+    margin-bottom: 120px;
   }
 }

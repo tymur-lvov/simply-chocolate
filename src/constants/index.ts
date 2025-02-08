@@ -4,5 +4,6 @@ export const DESKTOP_MEDIA_QUERY = '(min-width: 1158px)';
 
 export const VISUALLY_HIDDEN = 'visually_hidden';
 export const CONTAINER = 'container';
+export const SECTION = 'section';
 export const MENU = 'menu';
 export const HEADER = 'header';
