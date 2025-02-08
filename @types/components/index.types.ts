@@ -1,6 +1,6 @@
 import type { ReactNode, MouseEvent, FC } from 'react';
 
-import type { IHEADER_DATA, IHERO_DATA, IMENU_DATA } from '../index.types';
+import type { IBENEFITS_DATA, IHEADER_DATA, IHERO_DATA, IMENU_DATA } from '../index.types';
 
 export interface IComponentProps {
   children?: ReactNode;
@@ -52,6 +52,14 @@ export interface IMainTitleProps extends IComponentProps {
   data: IHERO_DATA['mainTitle'];
 }
 
+export interface IBenefitsListProps extends IComponentProps {
+  data: IBENEFITS_DATA['benefitsList'];
+}
+
+export interface IBenefitsItemProps extends IComponentProps {
+  data: IBENEFITS_DATA['benefitsList']['benefitsItems'][number];
+}
+
 export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IButton = FC<IButtonProps>;
@@ -68,3 +76,7 @@ export type ISocialsItem = FC<ISocialsItemProps>;
 export type IMain = FC<IComponentProps>;
 export type IMainTitle = FC<IMainTitleProps>;
 export type IHero = FC<IComponentProps>;
+
+export type IBenefits = FC<IComponentProps>;
+export type IBenefitsList = FC<IBenefitsListProps>;
+export type IBenefitsItem = FC<IBenefitsItemProps>;
