@@ -1,3 +1,4 @@
+export * from './Title/Title.tsx';
 export * from './SocialsList/SocialsList.tsx';
 export { default as socialsListModule } from './SocialsList/socialsList.module.css';
 export * from './SocialsItem/SocialsItem.tsx';

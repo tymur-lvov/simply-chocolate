@@ -1,4 +1,4 @@
-import { Icon } from '@components';
+import { Icon, Title } from '@components';
 
 import { BenefitsItemModule as css } from '@styles';
 
@@ -8,7 +8,7 @@ export const BenefitsItem: IBenefitsItem = ({ data: { title, description, icon }
   return (
     <>
       <Icon className={css.benefits_icon} data={icon} />
-      <h3 className={css.benefits_sub_title}>{title}</h3>
+      <Title className={css.benefits_sub_title} data={title} />
       <p className={css.benefits_description}>{description}</p>
     </>
   );

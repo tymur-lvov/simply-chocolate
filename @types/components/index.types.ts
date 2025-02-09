@@ -49,11 +49,11 @@ export interface ISocialsItemProps extends IComponentProps {
 }
 
 export interface IMainTitleProps extends IComponentProps {
-  data: IHERO_DATA['mainTitle'];
+  data: string;
 }
 
 export interface ISectionTitleProps extends IComponentProps {
-  data: IBENEFITS_DATA['sectionTitle'];
+  data: string;
 }
 
 export interface IBenefitsListProps extends IComponentProps {
@@ -62,6 +62,10 @@ export interface IBenefitsListProps extends IComponentProps {
 
 export interface IBenefitsItemProps extends IComponentProps {
   data: IBENEFITS_DATA['benefitsList']['benefitsItems'][number];
+}
+
+export interface ITitleProps extends IComponentProps {
+  data: string;
 }
 
 export type IComponent = FC<IComponentProps>;
@@ -85,3 +89,4 @@ export type ISectionTitle = FC<ISectionTitleProps>;
 export type IBenefits = FC<IComponentProps>;
 export type IBenefitsList = FC<IBenefitsListProps>;
 export type IBenefitsItem = FC<IBenefitsItemProps>;
+export type ITitle = FC<ITitleProps>;
