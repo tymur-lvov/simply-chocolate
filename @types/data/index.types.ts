@@ -10,67 +10,27 @@ export interface IMENU_DATA {
   };
 
   navList: {
-    navItems: [
-      {
-        link: {
-          href: string;
-          text: string;
-        };
-      },
-      {
-        link: {
-          href: string;
-          text: string;
-        };
-      },
-      {
-        link: {
-          href: string;
-          text: string;
-        };
-      }
-    ];
+    navItems: {
+      link: {
+        href: string;
+        text: string;
+      };
+    }[];
   };
 
   socialsList: {
-    socialsItems: [
-      {
-        link: {
-          href: string;
-          target: string;
-          rel: string;
-        };
-        icon: {
-          width: number;
-          height: number;
-          fragment: string;
-        };
-      },
-      {
-        link: {
-          href: string;
-          target: string;
-          rel: string;
-        };
-        icon: {
-          width: number;
-          height: number;
-          fragment: string;
-        };
-      },
-      {
-        link: {
-          href: string;
-          target: string;
-          rel: string;
-        };
-        icon: {
-          width: number;
-          height: number;
-          fragment: string;
-        };
-      }
-    ];
+    socialsItems: {
+      link: {
+        href: string;
+        target: string;
+        rel: string;
+      };
+      icon: {
+        width: number;
+        height: number;
+        fragment: string;
+      };
+    }[];
   };
 }
 
@@ -91,67 +51,27 @@ export interface IHEADER_DATA {
   };
 
   navList: {
-    navItems: [
-      {
-        link: {
-          href: string;
-          text: string;
-        };
-      },
-      {
-        link: {
-          href: string;
-          text: string;
-        };
-      },
-      {
-        link: {
-          href: string;
-          text: string;
-        };
-      }
-    ];
+    navItems: {
+      link: {
+        href: string;
+        text: string;
+      };
+    }[];
   };
 
   socialsList: {
-    socialsItems: [
-      {
-        link: {
-          href: string;
-          target: string;
-          rel: string;
-        };
-        icon: {
-          width: number;
-          height: number;
-          fragment: string;
-        };
-      },
-      {
-        link: {
-          href: string;
-          target: string;
-          rel: string;
-        };
-        icon: {
-          width: number;
-          height: number;
-          fragment: string;
-        };
-      },
-      {
-        link: {
-          href: string;
-          target: string;
-          rel: string;
-        };
-        icon: {
-          width: number;
-          height: number;
-          fragment: string;
-        };
-      }
-    ];
+    socialsItems: {
+      link: {
+        href: string;
+        target: string;
+        rel: string;
+      };
+      icon: {
+        width: number;
+        height: number;
+        fragment: string;
+      };
+    }[];
   };
 }
 
@@ -185,6 +105,7 @@ export interface IHERO_DATA {
 }
 
 export interface IBENEFITS_DATA {
+  sectionTitle: string;
   benefitsList: {
     benefitsItems: {
       title: string;
