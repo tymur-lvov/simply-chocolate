@@ -2,6 +2,7 @@ export * from './SocialsList/SocialsList.tsx';
 export { default as socialsListModule } from './SocialsList/socialsList.module.css';
 export * from './SocialsItem/SocialsItem.tsx';
 export { default as socialsItemModule } from './SocialsItem/socialsItem.module.css';
+export * from './SectionTitle/SectionTitle.tsx';
 export * from './Portal/Portal.tsx';
 export * from './NavList/NavList.tsx';
 export { default as navListModule } from './NavList/navList.module.css';

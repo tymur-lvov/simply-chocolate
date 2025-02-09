@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 
-import { BenefitsList } from '@components';
+import { BenefitsList, SectionTitle } from '@components';
 
 import { CONTAINER, VISUALLY_HIDDEN } from '@constants';
 
@@ -14,7 +14,7 @@ export const Benefits: IBenefits = () => {
   return (
     <section className={css.benefits}>
       <div className={clsx(css.benefits_container, CONTAINER)}>
-        <h2 className={VISUALLY_HIDDEN}>Benefits</h2>
+        <SectionTitle className={VISUALLY_HIDDEN} data={data.sectionTitle} />
         <BenefitsList data={data.benefitsList} />
       </div>
     </section>

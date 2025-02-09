@@ -1,6 +1,7 @@
 import type { IBENEFITS_DATA } from '@types';
 
 export const BENEFITS_DATA: IBENEFITS_DATA = {
+  sectionTitle: 'Benefits',
   benefitsList: {
     benefitsItems: [
       {

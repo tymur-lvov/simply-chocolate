@@ -52,6 +52,10 @@ export interface IMainTitleProps extends IComponentProps {
   data: IHERO_DATA['mainTitle'];
 }
 
+export interface ISectionTitleProps extends IComponentProps {
+  data: IBENEFITS_DATA['sectionTitle'];
+}
+
 export interface IBenefitsListProps extends IComponentProps {
   data: IBENEFITS_DATA['benefitsList'];
 }
@@ -77,6 +81,7 @@ export type IMain = FC<IComponentProps>;
 export type IMainTitle = FC<IMainTitleProps>;
 export type IHero = FC<IComponentProps>;
 
+export type ISectionTitle = FC<ISectionTitleProps>;
 export type IBenefits = FC<IComponentProps>;
 export type IBenefitsList = FC<IBenefitsListProps>;
 export type IBenefitsItem = FC<IBenefitsItemProps>;
