@@ -20,6 +20,7 @@ export * from './Hero/Hero.tsx';
 export { default as heroModule } from './Hero/hero.module.css';
 export * from './Header/Header.tsx';
 export { default as headerModule } from './Header/header.module.css';
+export * from './Description/Description.tsx';
 export * from './Button/Button.tsx';
 export { default as BenefitsListModule } from './BenefitsList/BenefitsList.module.css';
 export * from './BenefitsList/BenefitsList.tsx';
