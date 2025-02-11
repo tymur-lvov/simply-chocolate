@@ -3,6 +3,7 @@ export * from './misc/getIconFragment.ts';
 export * from './misc/getIconPath.ts';
 export * from './misc/releaseScrollLock.ts';
 export * from './misc/toggleScrollLock.ts';
+export * from './markup/wrapAccentPartsWithSpan.tsx';
 export * from './hooks/addMediaQueryListChangeListeners.ts';
 export * from './hooks/getMediaQueryLists.ts';
 export * from './hooks/removeMediaQueryListChangeListeners.ts';
