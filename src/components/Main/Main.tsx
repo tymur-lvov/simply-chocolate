@@ -1,4 +1,4 @@
-import { Benefits, Hero } from '@components';
+import { Benefits, Hero, Ingredients } from '@components';
 
 import type { IMain } from '@types';
 
@@ -7,6 +7,7 @@ export const Main: IMain = () => {
     <main>
       <Hero />
       <Benefits />
+      <Ingredients />
     </main>
   );
 };
