@@ -1,4 +1,4 @@
-import type { Dispatch, SetStateAction } from 'react';
+import type { Dispatch, ReactNode, SetStateAction } from 'react';
 
 export interface IMediaQueryLists {
   mobileList: MediaQueryList;
@@ -49,3 +49,9 @@ export type IGetIconPath = (
 ) => string;
 
 export type IGetIconFragment = IGetIconPath;
+
+export type IWrapAccentPartsWithSpan = (
+  titleParts: string[],
+  index: number,
+  classNames: string[]
+) => string | ReactNode;

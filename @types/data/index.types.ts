@@ -39,8 +39,8 @@ export interface IHEADER_DATA {
     link: {
       href: string;
       text: {
-        accent: string;
-        main: string;
+        accentPart: string;
+        mainPart: string;
       };
     };
     icon: {
@@ -120,7 +120,11 @@ export interface IBENEFITS_DATA {
 }
 
 export interface IINGREDIENTS_DATA {
-  sectionTitle: string;
+  sectionTitle: {
+    startPart: string;
+    accentPart: string;
+    endPart: string;
+  };
 
   ingredientsList: {
     ingredientsItems: {

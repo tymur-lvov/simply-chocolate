@@ -5,8 +5,8 @@ export const HEADER_DATA: IHEADER_DATA = {
     link: {
       href: '/',
       text: {
-        accent: 'SIMPLY',
-        main: 'CHOCOLATE',
+        accentPart: 'SIMPLY',
+        mainPart: 'CHOCOLATE',
       },
     },
     icon: {

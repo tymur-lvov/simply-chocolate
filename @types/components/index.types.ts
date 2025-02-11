@@ -11,6 +11,7 @@ import type {
 export interface IComponentProps {
   children?: ReactNode;
   className?: string;
+  classNames?: string[];
 }
 
 export interface IIconProps extends IComponentProps {
@@ -71,7 +72,7 @@ export interface IMainTitleProps extends IComponentProps {
 }
 
 export interface ISectionTitleProps extends IComponentProps {
-  data: string;
+  data: string | { [key: string]: string };
 }
 
 export interface IBenefitsListProps extends IComponentProps {
