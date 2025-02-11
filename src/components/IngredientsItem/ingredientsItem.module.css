@@ -1,0 +1,44 @@
+.ingredients_link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 31px 27px 27px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .ingredients_link {
+    gap: 36px;
+    padding: 27px 22px;
+  }
+}
+
+.ingredients_icon {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+  stroke: var(--light);
+}
+
+.ingredients_image {
+  align-self: center;
+  width: 236px;
+  height: 176px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .ingredients_image {
+    width: 214px;
+    height: 160px;
+  }
+}
+
+.ingredients_title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
