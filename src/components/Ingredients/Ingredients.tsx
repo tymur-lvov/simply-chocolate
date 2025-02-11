@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 
 import { IngredientsList, SectionTitle } from '@components';
 
-import { CONTAINER, VISUALLY_HIDDEN } from '@constants';
+import { CONTAINER, SECTION } from '@constants';
 
 import { INGREDIENTS_DATA as data } from '@data';
 
@@ -12,9 +12,12 @@ import type { IIngredients } from '@types';
 
 export const Ingredients: IIngredients = () => {
   return (
-    <section className={css.ingredients}>
+    <section className={clsx(css.ingredients, SECTION)}>
       <div className={clsx(css.ingredients_container, CONTAINER)}>
-        <SectionTitle className={VISUALLY_HIDDEN} data={data.sectionTitle} />
+        <SectionTitle
+          classNames={[css.ingredients_title, css.ingredients_title_accent]}
+          data={data.sectionTitle}
+        />
         <IngredientsList data={data.ingredientsList} />
       </div>
     </section>
