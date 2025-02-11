@@ -1,6 +1,6 @@
 import { BenefitsItem } from '@components';
 
-import { BenefitsListModule as css } from '@styles';
+import { benefitsListModule as css } from '@styles';
 
 import type { IBenefitsList } from '@types';
 
