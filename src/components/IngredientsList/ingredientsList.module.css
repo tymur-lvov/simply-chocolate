@@ -1,0 +1,64 @@
+.ingredients_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .ingredients_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .ingredients_list {
+    gap: 24px 32px;
+  }
+}
+
+.ingredients_item {
+  position: relative;
+  border: 1px solid var(--orange);
+  border-radius: 15px;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.ingredients_item:nth-child(even) {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.ingredients_item:nth-child(4n + 3) {
+  border-color: var(--violet);
+  background-color: var(--violet);
+}
+
+.ingredients_item:nth-child(even) svg {
+  stroke: orange;
+}
+
+.ingredients_item:nth-child(n + 5) {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .ingredients_item:nth-child(n + 5) {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ingredients_item {
+    flex-basis: calc((100% - 32px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .ingredients_item {
+    flex-basis: calc((100% - 96px) / 4);
+  }
+}

@@ -1,6 +1,6 @@
 import { IngredientsItem } from '@components';
 
-import { ingredientsModule as css } from '@styles';
+import { ingredientsListModule as css } from '@styles';
 
 import type { IIngredientsList } from '@types';
 
