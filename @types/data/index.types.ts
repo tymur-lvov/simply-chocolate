@@ -128,6 +128,9 @@ export interface IINGREDIENTS_DATA {
 
   ingredientsList: {
     ingredientsItems: {
+      link: {
+        href: string;
+      };
       icon: {
         width: number;
         height: number;

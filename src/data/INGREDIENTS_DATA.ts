@@ -29,6 +29,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
   ingredientsList: {
     ingredientsItems: [
       {
+        link: {
+          href: '/',
+        },
         icon: {
           width: 24,
           height: 24,
@@ -46,6 +49,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: 'milk chocolate',
       },
       {
+        link: {
+          href: '/',
+        },
         icon: {
           width: 24,
           height: 24,
@@ -63,6 +69,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: 'milk',
       },
       {
+        link: {
+          href: '/',
+        },
         icon: {
           width: 24,
           height: 24,
@@ -80,6 +89,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: 'nuts',
       },
       {
+        link: {
+          href: '/',
+        },
         icon: {
           width: 24,
           height: 24,
@@ -97,6 +109,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: 'semi - sweet chocolate',
       },
       {
+        link: {
+          href: '/',
+        },
         icon: {
           width: 24,
           height: 24,
@@ -114,6 +129,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: 'cacao',
       },
       {
+        link: {
+          href: '/',
+        },
         icon: {
           width: 24,
           height: 24,
@@ -131,6 +149,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: 'raspberry',
       },
       {
+        link: {
+          href: '/',
+        },
         icon: {
           width: 24,
           height: 24,
@@ -148,6 +169,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: 'coconut oil',
       },
       {
+        link: {
+          href: '/',
+        },
         icon: {
           width: 24,
           height: 24,
