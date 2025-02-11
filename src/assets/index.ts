@@ -34,10 +34,10 @@ export { default as coffee_1x } from './images/ingredients/coffee/coffee_1x.webp
 export { default as coffee_2x } from './images/ingredients/coffee/coffee_2x.webp';
 export { default as coconut_1x } from './images/ingredients/coconut/coconut_1x.webp';
 export { default as coconut_2x } from './images/ingredients/coconut/coconut_2x.webp';
-export { default as cocoa_1x } from './images/ingredients/cocoa/cocoa_1x.webp';
-export { default as cocoa_2x } from './images/ingredients/cocoa/cocoa_2x.webp';
 export { default as chocolate_1x } from './images/ingredients/chocolate/chocolate_1x.webp';
 export { default as chocolate_2x } from './images/ingredients/chocolate/chocolate_2x.webp';
+export { default as cacao_1x } from './images/ingredients/cacao/cacao_1x.webp';
+export { default as cacao_2x } from './images/ingredients/cacao/cacao_2x.webp';
 export { default as videoBg_1x } from './images/howItsMade/videoBg/videoBg_1x.webp';
 export { default as videoBg_2x } from './images/howItsMade/videoBg/videoBg_2x.webp';
 export { default as hero_bg_desktop_1x } from './images/hero/heroBg/hero_bg_desktop_1x.webp';

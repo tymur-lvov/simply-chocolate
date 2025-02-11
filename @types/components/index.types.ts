@@ -1,6 +1,12 @@
 import type { ReactNode, MouseEvent, FC } from 'react';
 
-import type { IBENEFITS_DATA, IHEADER_DATA, IHERO_DATA, IMENU_DATA } from '../index.types';
+import type {
+  IBENEFITS_DATA,
+  IHEADER_DATA,
+  IHERO_DATA,
+  IINGREDIENTS_DATA,
+  IMENU_DATA,
+} from '../index.types';
 
 export interface IComponentProps {
   children?: ReactNode;
@@ -16,6 +22,18 @@ export interface IIconProps extends IComponentProps {
     fragments?: {
       [key: string]: string;
     };
+  };
+}
+
+export interface IImageProps extends IComponentProps {
+  data: {
+    width: number;
+    height: number;
+    paths: {
+      x1: string;
+      x2: string;
+    };
+    alt: string;
   };
 }
 
@@ -72,8 +90,17 @@ export interface IDescriptionProps extends IComponentProps {
   data: string;
 }
 
+export interface IIngredientsListProps extends IComponentProps {
+  data: IINGREDIENTS_DATA['ingredientsList'];
+}
+
+export interface IIngredientsItemProps extends IComponentProps {
+  data: IINGREDIENTS_DATA['ingredientsList']['ingredientsItems'][number];
+}
+
 export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
+export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
 export type IApp = FC<IComponentProps>;
 
@@ -95,3 +122,7 @@ export type IBenefitsList = FC<IBenefitsListProps>;
 export type IBenefitsItem = FC<IBenefitsItemProps>;
 export type ITitle = FC<ITitleProps>;
 export type IDescription = FC<IDescriptionProps>;
+
+export type IIngredients = FC<IComponentProps>;
+export type IIngredientsList = FC<IIngredientsListProps>;
+export type IIngredientsItem = FC<IIngredientsItemProps>;

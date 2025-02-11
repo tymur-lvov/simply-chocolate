@@ -118,3 +118,27 @@ export interface IBENEFITS_DATA {
     }[];
   };
 }
+
+export interface IINGREDIENTS_DATA {
+  sectionTitle: string;
+
+  ingredientsList: {
+    ingredientsItems: {
+      icon: {
+        width: number;
+        height: number;
+        fragment: string;
+      };
+      image: {
+        width: number;
+        height: number;
+        paths: {
+          x1: string;
+          x2: string;
+        };
+        alt: string;
+      };
+      title: string;
+    }[];
+  };
+}
