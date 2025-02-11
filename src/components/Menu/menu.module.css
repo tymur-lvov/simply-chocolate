@@ -1,0 +1,60 @@
+.menu_btn {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+}
+
+.menu_btn_icon {
+  width: 100%;
+  height: 100%;
+  transition: stroke 250ms var(--transition), transform 250ms var(--transition);
+}
+
+.menu_btn:active .menu_btn_icon {
+  transform: scale(87.5%);
+}
+
+.menu_btn_icon__open {
+  stroke: var(--black);
+}
+
+.menu_btn_icon__close {
+  stroke: var(--white);
+}
+
+.menu_overlay_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.menu_overlay_thumb__visible {
+  pointer-events: all;
+}
+
+.menu_overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--violet);
+  transition: transform 250ms var(--transition);
+  transform: translateX(100%);
+}
+
+.menu_overlay__visible {
+  transform: translateX(0);
+}
+
+.menu_nav_socials_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}

@@ -1,0 +1,57 @@
+body {
+  background-color: var(--light);
+  color: var(--black);
+  font-family: var(--font-family);
+}
+
+body.menu_is_open {
+  overflow: hidden;
+}
+
+.visually_hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+.container {
+  width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .section {
+    margin-bottom: 120px;
+  }
+}
