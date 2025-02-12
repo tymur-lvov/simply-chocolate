@@ -1,10 +1,11 @@
 .menu_btn {
   position: absolute;
-  top: 15px;
-  right: 17px;
+  top: 50%;
+  right: 18px;
   z-index: 1;
   width: 32px;
   height: 32px;
+  transform: translateY(-50%);
 }
 
 .menu_btn_icon {

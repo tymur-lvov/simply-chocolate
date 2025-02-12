@@ -73,7 +73,12 @@
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.03em;
-  white-space: pre;
+}
+
+@media only screen and (min-width: 375px) {
+  .hero_main_title {
+    white-space: pre;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -99,14 +104,7 @@
 
 .hero_order_info_btns_wrapper {
   display: flex;
-  justify-content: space-between;
-  width: 293px;
-}
-
-@media only screen and (min-width: 768px) {
-  .hero_order_info_btns_wrapper {
-    width: 341px;
-  }
+  gap: 14px;
 }
 
 .hero_btn {

@@ -1,3 +1,7 @@
+.header_container {
+  position: relative;
+}
+
 @media only screen and (min-width: 768px) {
   .header_container {
     display: flex;
