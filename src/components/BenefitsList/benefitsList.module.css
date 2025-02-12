@@ -20,12 +20,13 @@
 
 .benefits_item {
   position: relative;
-  width: 308px;
+  padding-right: 28px;
 }
 
 @media only screen and (min-width: 768px) {
   .benefits_item {
     flex-basis: calc((100% - 88px) / 2);
+    padding-right: 0;
   }
 }
 
@@ -40,5 +41,10 @@
     height: 124px;
     background-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-50%);
+  }
+
+  .benefits_item:hover svg {
+    transition: transform 1000ms var(--transition);
+    transform: rotateY(360deg);
   }
 }

@@ -25,6 +25,7 @@
   border-radius: 15px;
   background-color: var(--orange);
   color: var(--white);
+  transition: transform 250ms var(--transition);
 }
 
 .ingredients_item:nth-child(even) {
@@ -60,5 +61,10 @@
 @media only screen and (min-width: 1158px) {
   .ingredients_item {
     flex-basis: calc((100% - 96px) / 4);
+  }
+
+  .ingredients_item:hover,
+  .ingredients_item:focus-within {
+    transform: scale(105%);
   }
 }
