@@ -139,13 +139,36 @@ export interface IINGREDIENTS_DATA {
       image: {
         width: number;
         height: number;
+        alt: string;
         paths: {
           x1: string;
           x2: string;
         };
-        alt: string;
       };
       title: string;
+    }[];
+  };
+}
+
+export interface IHOW_ITS_MADE_DATA {
+  sectionTitle: {
+    basePart: string;
+    accentPart: string;
+  };
+
+  videoThumb: {
+    icon: {
+      width: number;
+      height: number;
+      fragment: string;
+    };
+  };
+
+  title: string;
+
+  recipeList: {
+    recipeItems: {
+      text: string;
     }[];
   };
 }
