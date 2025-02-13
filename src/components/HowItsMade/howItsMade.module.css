@@ -1,0 +1,160 @@
+@media only screen and (min-width: 768px) {
+  .how_its_made_section .how_its_made_container {
+    padding: 0 77px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .how_its_made_section .how_its_made_container {
+    padding: 0 32px;
+  }
+}
+
+.how_its_made_section_title {
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  .how_its_made_section_title {
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+.how_its_made_section_title_accent {
+  color: var(--orange);
+}
+
+.how_its_made_video_thumb_recipe_list_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .how_its_made_video_thumb_recipe_list_wrapper {
+    flex-direction: row;
+  }
+}
+
+.how_its_made_video_thumb {
+  position: relative;
+  height: 500px;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+    url('../../assets/images/howItsMade/videoThumb/video_thumb_mobile_1x.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media only screen and (min-resolution: 192dpi) {
+  .how_its_made_video_thumb {
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+      url('../../assets/images/howItsMade/videoThumb/video_thumb_mobile_2x.webp');
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .how_its_made_video_thumb {
+    width: 614px;
+    height: 400px;
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+      url('../../assets/images/howItsMade/videoThumb/video_thumb_tablet_1x.webp');
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .how_its_made_video_thumb {
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+      url('../../assets/images/howItsMade/videoThumb/video_thumb_tablet_2x.webp');
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .how_its_made_video_thumb {
+    width: 600px;
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+      url('../../assets/images/howItsMade/videoThumb/video_thumb_desktop_1x.webp');
+  }
+}
+
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .how_its_made_video_thumb {
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+      url('../../assets/images/howItsMade/videoThumb/video_thumb_desktop_2x.webp');
+  }
+}
+
+.how_its_made_video_thumb_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 10px 7px 8px 12px;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  fill: var(--play-fill);
+  transition: transform 250ms var(--transition);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.how_its_made_video_thumb:active .how_its_made_video_thumb_icon {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .how_its_made_video_thumb_icon {
+    width: 44px;
+    height: 44px;
+    padding: 11px 8px 10px 14px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .how_its_made_video_thumb:hover .how_its_made_video_thumb_icon,
+  .how_its_made_video_thumb:focus .how_its_made_video_thumb_icon {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.how_its_made_recipe_list_wrapper {
+  padding: 20px 14px;
+  border-radius: 15px;
+  background-color: var(--white);
+}
+
+@media only screen and (min-width: 768px) {
+  .how_its_made_recipe_list_wrapper {
+    padding: 32px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .how_its_made_recipe_list_wrapper {
+    width: 516px;
+  }
+}
+
+.how_its_made_title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+@media only screen and (min-width: 768px) {
+  .how_its_made_title {
+    width: 350px;
+    margin-bottom: 28px;
+  }
+}

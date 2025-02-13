@@ -4,6 +4,7 @@ import type {
   IBENEFITS_DATA,
   IHEADER_DATA,
   IHERO_DATA,
+  IHOW_ITS_MADE_DATA,
   IINGREDIENTS_DATA,
   IMENU_DATA,
 } from '../index.types';
@@ -99,6 +100,14 @@ export interface IIngredientsItemProps extends IComponentProps {
   data: IINGREDIENTS_DATA['ingredientsList']['ingredientsItems'][number];
 }
 
+export interface IRecipeListProps extends IComponentProps {
+  data: IHOW_ITS_MADE_DATA['recipeList'];
+}
+
+export interface IRecipeItemProps extends IComponentProps {
+  data: IHOW_ITS_MADE_DATA['recipeList']['recipeItems'][number];
+}
+
 export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
@@ -127,3 +136,7 @@ export type IDescription = FC<IDescriptionProps>;
 export type IIngredients = FC<IComponentProps>;
 export type IIngredientsList = FC<IIngredientsListProps>;
 export type IIngredientsItem = FC<IIngredientsItemProps>;
+
+export type IHowItsMade = FC<IComponentProps>;
+export type IRecipeList = FC<IRecipeListProps>;
+export type IRecipeItem = FC<IRecipeItemProps>;

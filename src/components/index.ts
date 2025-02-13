@@ -4,6 +4,9 @@ export { default as socialsListModule } from './SocialsList/socialsList.module.c
 export * from './SocialsItem/SocialsItem.tsx';
 export { default as socialsItemModule } from './SocialsItem/socialsItem.module.css';
 export * from './SectionTitle/SectionTitle.tsx';
+export * from './RecipeList/RecipeList.tsx';
+export { default as recipeListModule } from './RecipeList/recipeList.module.css';
+export * from './RecipeItem/RecipeItem.tsx';
 export * from './Portal/Portal.tsx';
 export * from './NavList/NavList.tsx';
 export { default as navListModule } from './NavList/navList.module.css';
@@ -23,6 +26,8 @@ export * from './Ingredients/Ingredients.tsx';
 export { default as ingredientsModule } from './Ingredients/ingredients.module.css';
 export * from './Image/Image.tsx';
 export * from './Icon/Icon.tsx';
+export * from './HowItsMade/HowItsMade.tsx';
+export { default as howItsMadeModule } from './HowItsMade/howItsMade.module.css';
 export * from './Hero/Hero.tsx';
 export { default as heroModule } from './Hero/hero.module.css';
 export * from './Header/Header.tsx';
