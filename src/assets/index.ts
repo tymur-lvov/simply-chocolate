@@ -38,8 +38,10 @@ export { default as chocolate_1x } from './images/ingredients/chocolate/chocolat
 export { default as chocolate_2x } from './images/ingredients/chocolate/chocolate_2x.webp';
 export { default as cacao_1x } from './images/ingredients/cacao/cacao_1x.webp';
 export { default as cacao_2x } from './images/ingredients/cacao/cacao_2x.webp';
-export { default as videoBg_1x } from './images/howItsMade/videoBg/videoBg_1x.webp';
-export { default as videoBg_2x } from './images/howItsMade/videoBg/videoBg_2x.webp';
+export { default as video_thumb_desktop_1x } from './images/howItsMade/videoThumb/video_thumb_desktop_1x.webp';
+export { default as video_thumb_desktop_2x } from './images/howItsMade/videoThumb/video_thumb_desktop_2x.webp';
+export { default as video_thumb_mobile_1x } from './images/howItsMade/videoThumb/video_thumb_mobile_1x.webp';
+export { default as video_thumb_mobile_2x } from './images/howItsMade/videoThumb/video_thumb_mobile_2x.webp';
 export { default as hero_bg_desktop_1x } from './images/hero/heroBg/hero_bg_desktop_1x.webp';
 export { default as hero_bg_desktop_2x } from './images/hero/heroBg/hero_bg_desktop_2x.webp';
 export { default as hero_bg_mobile_1x } from './images/hero/heroBg/hero_bg_mobile_1x.webp';
