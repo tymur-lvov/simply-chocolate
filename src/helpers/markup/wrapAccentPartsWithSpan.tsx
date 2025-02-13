@@ -1,17 +1,17 @@
+import { findClassNameForSpan } from '@helpers';
+
 import type { IWrapAccentPartsWithSpan } from '@types';
 
-export const wrapAccentPartsWithSpan: IWrapAccentPartsWithSpan = (
-  [key, value],
-  index,
-  classNames
-) => {
-  if (key.includes('accentPart')) {
-    return (
-      <span className={classNames[index]} key={value}>
-        {value}
-      </span>
-    );
-  }
+export const wrapAccentPartsWithSpan: IWrapAccentPartsWithSpan = (sectionTitle, classNames) => {
+  return Object.entries(sectionTitle).map(([key, value]) => {
+    if (key.includes('accentPart')) {
+      return (
+        <span className={findClassNameForSpan(classNames)} key={value}>
+          {value}
+        </span>
+      );
+    }
 
-  return value;
+    return value;
+  });
 };

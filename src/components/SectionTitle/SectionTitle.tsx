@@ -1,16 +1,18 @@
-import { wrapAccentPartsWithSpan } from '@helpers';
+import { clsx } from 'clsx';
+
+import { filterClassNamesForHeading, wrapAccentPartsWithSpan } from '@helpers';
 
 import type { ISectionTitle } from '@types';
 
 export const SectionTitle: ISectionTitle = ({ className, classNames, data: sectionTitle }) => {
+  const isTitleWithAccent = typeof sectionTitle !== 'string';
+
   return (
     <>
-      {typeof sectionTitle !== 'object' && <h2 className={className}>{sectionTitle}</h2>}
-      {typeof sectionTitle === 'object' && classNames && (
-        <h2 className={classNames[0]}>
-          {Object.entries(sectionTitle).map((titleParts, index) =>
-            wrapAccentPartsWithSpan(titleParts, index, classNames)
-          )}
+      {!isTitleWithAccent && <h2 className={className}>{sectionTitle}</h2>}
+      {isTitleWithAccent && classNames && (
+        <h2 className={clsx(filterClassNamesForHeading(classNames))}>
+          {wrapAccentPartsWithSpan(sectionTitle, classNames)}
         </h2>
       )}
     </>

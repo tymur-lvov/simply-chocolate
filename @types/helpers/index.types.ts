@@ -51,7 +51,12 @@ export type IGetIconPath = (
 export type IGetIconFragment = IGetIconPath;
 
 export type IWrapAccentPartsWithSpan = (
-  titleParts: string[],
-  index: number,
+  sectionTitle: {
+    [key: string]: string;
+  },
   classNames: string[]
 ) => string | ReactNode;
+
+export type IFindClassNameForSpan = (classNames: string[]) => string;
+
+export type IFilterClassNamesForHeading = (classNames: string[]) => string[];

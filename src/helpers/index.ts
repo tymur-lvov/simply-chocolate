@@ -1,4 +1,6 @@
 export * from './predicates/isTargetElementAList.ts';
+export * from './misc/filterClassNamesForHeading.ts';
+export * from './misc/findClassNameForSpan.ts';
 export * from './misc/getIconFragment.ts';
 export * from './misc/getIconPath.ts';
 export * from './misc/releaseScrollLock.ts';

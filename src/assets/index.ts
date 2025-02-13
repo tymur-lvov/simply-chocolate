@@ -42,6 +42,8 @@ export { default as video_thumb_desktop_1x } from './images/howItsMade/videoThum
 export { default as video_thumb_desktop_2x } from './images/howItsMade/videoThumb/video_thumb_desktop_2x.webp';
 export { default as video_thumb_mobile_1x } from './images/howItsMade/videoThumb/video_thumb_mobile_1x.webp';
 export { default as video_thumb_mobile_2x } from './images/howItsMade/videoThumb/video_thumb_mobile_2x.webp';
+export { default as video_thumb_tablet_1x } from './images/howItsMade/videoThumb/video_thumb_tablet_1x.webp';
+export { default as video_thumb_tablet_2x } from './images/howItsMade/videoThumb/video_thumb_tablet_2x.webp';
 export { default as hero_bg_desktop_1x } from './images/hero/heroBg/hero_bg_desktop_1x.webp';
 export { default as hero_bg_desktop_2x } from './images/hero/heroBg/hero_bg_desktop_2x.webp';
 export { default as hero_bg_mobile_1x } from './images/hero/heroBg/hero_bg_mobile_1x.webp';
