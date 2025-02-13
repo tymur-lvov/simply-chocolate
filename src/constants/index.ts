@@ -7,5 +7,7 @@ export const x2_QUERY = '(min-resolution: 192dpi)';
 export const VISUALLY_HIDDEN = 'visually_hidden';
 export const CONTAINER = 'container';
 export const SECTION = 'section';
+export const SECTION_TITLE = 'section_title';
+export const SECTION_TITLE_ACCENT = 'section_title_accent';
 export const MENU = 'menu';
 export const HEADER = 'header';

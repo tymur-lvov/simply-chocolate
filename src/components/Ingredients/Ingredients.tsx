@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 
 import { IngredientsList, SectionTitle } from '@components';
 
-import { CONTAINER, SECTION } from '@constants';
+import { CONTAINER, SECTION, SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
 import { INGREDIENTS_DATA as data } from '@data';
 
@@ -15,7 +15,7 @@ export const Ingredients: IIngredients = () => {
     <section className={clsx(css.ingredients, SECTION)}>
       <div className={clsx(css.ingredients_container, CONTAINER)}>
         <SectionTitle
-          classNames={[css.ingredients_section_title, css.ingredients_title_accent]}
+          classNames={[SECTION_TITLE, SECTION_TITLE_ACCENT, css.ingredients_section_title]}
           data={data.sectionTitle}
         />
         <IngredientsList data={data.ingredientsList} />

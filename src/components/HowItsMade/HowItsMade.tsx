@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 
 import { Icon, RecipeList, SectionTitle, Title } from '@components';
 
-import { CONTAINER, SECTION } from '@constants';
+import { CONTAINER, SECTION, SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
 import { HOW_ITS_MADE_DATA as data } from '@data';
 
@@ -14,10 +14,7 @@ export const HowItsMade: IHowItsMade = () => {
   return (
     <section className={clsx(css.how_its_made_section, SECTION)}>
       <div className={clsx(css.how_its_made_container, CONTAINER)}>
-        <SectionTitle
-          classNames={[css.how_its_made_section_title, css.how_its_made_section_title_accent]}
-          data={data.sectionTitle}
-        />
+        <SectionTitle classNames={[SECTION_TITLE, SECTION_TITLE_ACCENT]} data={data.sectionTitle} />
         <div className={css.how_its_made_video_thumb_recipe_list_wrapper}>
           <div className={css.how_its_made_video_thumb} tabIndex={0}>
             <Icon className={css.how_its_made_video_thumb_icon} data={data.videoThumb.icon} />

@@ -51,3 +51,26 @@ body.menu_is_open {
     margin-bottom: 120px;
   }
 }
+
+.section_title {
+  margin: 0 auto;
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section_title_accent {
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+  .section_title {
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
