@@ -1,171 +1,83 @@
-export interface IMENU_DATA {
-  toggleIcon: {
-    width: number;
-    height: number;
-    fragments: {
-      open: string;
-      close: string;
-    };
-    getFragmentKey: (isMenuOpen: boolean) => string;
-  };
+import type {
+  ICommonIcon,
+  ICommonLink,
+  ICommonImage,
+  ICommonButton,
+  ICommonSectionTitle,
+} from '../common/index.types';
 
+export interface IMENU_DATA {
+  toggleIcon: ICommonIcon;
   navList: {
     navItems: {
-      link: {
-        href: string;
-        text: string;
-      };
+      link: ICommonLink;
     }[];
   };
-
   socialsList: {
     socialsItems: {
-      link: {
-        href: string;
-        target: string;
-        rel: string;
-      };
-      icon: {
-        width: number;
-        height: number;
-        fragment: string;
-      };
+      icon: ICommonIcon;
+      link: ICommonLink;
     }[];
   };
 }
 
 export interface IHEADER_DATA {
   logo: {
-    link: {
-      href: string;
-      text: {
-        accentPart: string;
-        mainPart: string;
-      };
-    };
-    icon: {
-      width: number;
-      height: number;
-      fragment: string;
-    };
+    icon: ICommonIcon;
+    link: ICommonLink;
   };
-
   navList: {
     navItems: {
-      link: {
-        href: string;
-        text: string;
-      };
+      link: ICommonLink;
     }[];
   };
-
   socialsList: {
     socialsItems: {
-      link: {
-        href: string;
-        target: string;
-        rel: string;
-      };
-      icon: {
-        width: number;
-        height: number;
-        fragment: string;
-      };
+      icon: ICommonIcon;
+      link: ICommonLink;
     }[];
   };
 }
 
 export interface IHERO_DATA {
-  mainTitle: {
-    text: {
-      mobile: string;
-      tablet: string;
-    };
-  };
-
-  orderButton: {
-    text: string;
-  };
-
-  infoButton: {
-    text: string;
-  };
-
+  infoButton: ICommonButton;
+  orderButton: ICommonButton;
+  mainTitle: ICommonSectionTitle;
   scrollBlock: {
-    link: {
-      href: string;
-      text: string;
-    };
-    icon: {
-      width: number;
-      height: number;
-      fragment: string;
-    };
+    icon: ICommonIcon;
+    link: ICommonLink;
   };
 }
 
 export interface IBENEFITS_DATA {
-  sectionTitle: string;
+  sectionTitle: ICommonSectionTitle;
   benefitsList: {
     benefitsItems: {
       title: string;
+      icon: ICommonIcon;
       description: string;
-      icon: {
-        width: 32;
-        height: 32;
-        fragment: string;
-      };
     }[];
   };
 }
 
 export interface IINGREDIENTS_DATA {
-  sectionTitle: {
-    startPart: string;
-    accentPart: string;
-    endPart: string;
-  };
-
+  sectionTitle: ICommonSectionTitle;
   ingredientsList: {
     ingredientsItems: {
-      link: {
-        href: string;
-      };
-      icon: {
-        width: number;
-        height: number;
-        fragment: string;
-      };
-      image: {
-        width: number;
-        height: number;
-        alt: string;
-        paths: {
-          x1: string;
-          x2: string;
-        };
-      };
       title: string;
+      icon: ICommonIcon;
+      link: ICommonLink;
+      image: ICommonImage;
     }[];
   };
 }
 
 export interface IHOW_ITS_MADE_DATA {
-  sectionTitle: {
-    basePart: string;
-    accentPart: string;
-  };
-
-  videoThumb: {
-    icon: {
-      width: number;
-      height: number;
-      fragment: string;
-    };
-  };
-
   title: string;
-
+  sectionTitle: ICommonSectionTitle;
+  videoThumb: {
+    icon: ICommonIcon;
+  };
   recipeList: {
     recipeItems: {
       text: string;

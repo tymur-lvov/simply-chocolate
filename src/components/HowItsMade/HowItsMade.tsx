@@ -4,13 +4,11 @@ import { Icon, RecipeList, SectionTitle, Title } from '@components';
 
 import { CONTAINER, SECTION, SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
-import { HOW_ITS_MADE_DATA as data } from '@data';
-
 import { howItsMadeModule as css } from '@styles';
 
 import type { IHowItsMade } from '@types';
 
-export const HowItsMade: IHowItsMade = () => {
+export const HowItsMade: IHowItsMade = ({ data }) => {
   return (
     <section className={clsx(css.how_its_made_section, SECTION)}>
       <div className={clsx(css.how_its_made_container, CONTAINER)}>

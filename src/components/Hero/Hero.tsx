@@ -4,13 +4,11 @@ import { Icon, Button, MainTitle } from '@components';
 
 import { CONTAINER } from '@constants';
 
-import { HERO_DATA as data } from '@data';
-
 import { heroModule as css } from '@styles';
 
 import type { IHero } from '@types';
 
-export const Hero: IHero = () => {
+export const Hero: IHero = ({ data }) => {
   return (
     <section className={clsx(css.hero)}>
       <div className={clsx(css.hero_container, CONTAINER)}>

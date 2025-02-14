@@ -7,13 +7,11 @@ import { Button, Icon, NavList, Portal, SocialsList } from '@components';
 
 import { MENU } from '@constants';
 
-import { MENU_DATA as data } from '@data';
-
 import { menuModule as css } from '@styles';
 
 import type { IMenu } from '@types';
 
-export const Menu: IMenu = () => {
+export const Menu: IMenu = ({ data }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {

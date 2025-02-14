@@ -1,5 +1,3 @@
-import type { IToggleScrollLock } from '@types';
-
-export const toggleScrollLock: IToggleScrollLock = () => {
+export const toggleScrollLock = () => {
   document.body.classList.toggle('menu_is_open');
 };

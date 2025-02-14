@@ -1,4 +1,4 @@
-import type { Dispatch, ReactNode, SetStateAction } from 'react';
+import type { Dispatch, ReactNode, SetStateAction, MouseEvent } from 'react';
 
 export interface IMediaQueryLists {
   mobileList: MediaQueryList;
@@ -14,9 +14,9 @@ export type IUseMedia = () => {
 
 export type IUpdateMediaQueryStates = (
   mediaQueryLists: IMediaQueryLists,
-  setIsMobile: Dispatch<SetStateAction<boolean>>,
-  setIsTablet: Dispatch<SetStateAction<boolean>>,
-  setIsDesktop: Dispatch<SetStateAction<boolean>>
+  setIsMobile: IBooleanStateSetter,
+  setIsTablet: IBooleanStateSetter,
+  setIsDesktop: IBooleanStateSetter
 ) => void;
 
 export type IAddMediaQueryListChangeListeners = (
@@ -29,32 +29,33 @@ export type IRemoveMediaQueryListChangeListeners = (
   mediaQueryListChangeHandle: () => void
 ) => void;
 
-export type IMenuClickHandle = (
-  target: EventTarget,
-  setIsMenuOpen: Dispatch<SetStateAction<boolean>>
-) => void;
+export type IOnClick = (event: MouseEvent<HTMLElement>) => void;
 
-export type ISocialsLinkClickHandle = (setLinkClickCount: Dispatch<SetStateAction<number>>) => void;
+export type IBooleanStateSetter = Dispatch<SetStateAction<boolean>>;
+
+export type INumberStateSetter = Dispatch<SetStateAction<number>>;
+
+export type IMenuClickHandle = (target: EventTarget, setIsMenuOpen: IBooleanStateSetter) => void;
+
+export type ISocialsLinkClickHandle = (setLinkClickCount: INumberStateSetter) => void;
 
 export type IIsTargetElementAList = (target: EventTarget) => boolean;
 
-export type IToggleScrollLock = () => void;
-
 export type IGetIconPath = (
   fragment: string,
+  fragmentKey?: string,
   fragments?: {
     [key: string]: string;
-  },
-  fragmentKey?: string
+  }
 ) => string;
 
 export type IGetIconFragment = IGetIconPath;
 
 export type IWrapAccentPartsWithSpan = (
+  classNames: string[],
   sectionTitle: {
     [key: string]: string;
-  },
-  classNames: string[]
+  }
 ) => string | ReactNode;
 
 export type IFindClassNameForSpan = (classNames: string[]) => string;

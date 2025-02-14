@@ -2,7 +2,7 @@ import { findClassNameForSpan } from '@helpers';
 
 import type { IWrapAccentPartsWithSpan } from '@types';
 
-export const wrapAccentPartsWithSpan: IWrapAccentPartsWithSpan = (sectionTitle, classNames) => {
+export const wrapAccentPartsWithSpan: IWrapAccentPartsWithSpan = (classNames, sectionTitle) => {
   return Object.entries(sectionTitle).map(([key, value]) => {
     if (key.includes('accentPart')) {
       return (

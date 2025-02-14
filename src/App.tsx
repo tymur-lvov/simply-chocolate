@@ -1,12 +1,17 @@
-import { Header, Main } from '@components';
+import { Header, Benefits, Hero, HowItsMade, Ingredients } from '@components';
 
-import type { IApp } from '@types';
+import { HEADER_DATA, HERO_DATA, BENEFITS_DATA, INGREDIENTS_DATA, HOW_ITS_MADE_DATA } from '@data';
 
-export const App: IApp = () => {
+export const App = () => {
   return (
     <>
-      <Header />
-      <Main />
+      <Header data={HEADER_DATA} />
+      <main>
+        <Hero data={HERO_DATA} />
+        <Benefits data={BENEFITS_DATA} />
+        <Ingredients data={INGREDIENTS_DATA} />
+        <HowItsMade data={HOW_ITS_MADE_DATA} />
+      </main>
     </>
   );
 };

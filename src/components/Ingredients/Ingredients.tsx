@@ -4,13 +4,11 @@ import { IngredientsList, SectionTitle } from '@components';
 
 import { CONTAINER, SECTION, SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
-import { INGREDIENTS_DATA as data } from '@data';
-
 import { ingredientsModule as css } from '@styles';
 
 import type { IIngredients } from '@types';
 
-export const Ingredients: IIngredients = () => {
+export const Ingredients: IIngredients = ({ data }) => {
   return (
     <section className={clsx(css.ingredients, SECTION)}>
       <div className={clsx(css.ingredients_container, CONTAINER)}>
