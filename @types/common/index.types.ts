@@ -3,7 +3,7 @@ export interface ICommonIcon {
   height: number;
   fragment?: string;
   fragments?: { [key: string]: string };
-  getFragmentKey: (isMenuOpen: boolean) => string;
+  getFragmentKey?: (isMenuOpen: boolean) => string;
 }
 
 export interface ICommonImage {
@@ -18,9 +18,10 @@ export interface ICommonImage {
 
 export interface ICommonLink {
   href: string;
-  text?: string | { [key: string]: string };
-  target?: string;
   rel?: string;
+  text?: string;
+  target?: string;
+  textParts?: { [key: string]: string };
 }
 
 export interface ICommonButton {
@@ -28,5 +29,6 @@ export interface ICommonButton {
 }
 
 export interface ICommonSectionTitle {
-  text: string | { [key: string]: string };
+  text?: string;
+  textParts?: { [key: string]: string };
 }

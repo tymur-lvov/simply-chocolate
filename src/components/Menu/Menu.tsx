@@ -30,7 +30,7 @@ export const Menu: IMenu = ({ data }) => {
             [css.menu_btn_icon__open]: !isMenuOpen,
             [css.menu_btn_icon__close]: isMenuOpen,
           })}
-          fragmentKey={data.toggleIcon.getFragmentKey(isMenuOpen)}
+          fragmentKey={data.toggleIcon.getFragmentKey?.(isMenuOpen)}
           data={data.toggleIcon}
         />
       </Button>

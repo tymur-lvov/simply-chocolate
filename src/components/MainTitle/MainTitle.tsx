@@ -2,13 +2,13 @@ import { useMedia } from '@hooks';
 
 import type { IMainTitle } from '@types';
 
-export const MainTitle: IMainTitle = ({ className, data: { text } }) => {
+export const MainTitle: IMainTitle = ({ className, data: { textParts } }) => {
   const { isMobile } = useMedia();
 
   return (
     <h1 className={className}>
-      {isMobile && text.mobile}
-      {!isMobile && text.tablet}
+      {isMobile && textParts?.mobile}
+      {!isMobile && textParts?.tablet}
     </h1>
   );
 };

@@ -10,7 +10,7 @@ export const Icon: IIcon = ({
   return (
     <div className={className}>
       <svg width={width} height={height}>
-        <use href={getIconPath(fragment, fragments, fragmentKey)} />
+        <use href={getIconPath(fragment, fragmentKey, fragments)} />
       </svg>
     </div>
   );

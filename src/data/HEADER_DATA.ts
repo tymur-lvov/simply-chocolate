@@ -4,7 +4,7 @@ export const HEADER_DATA: IHEADER_DATA = {
   logo: {
     link: {
       href: '/',
-      text: {
+      textParts: {
         accentPart: 'SIMPLY',
         mainPart: 'CHOCOLATE',
       },

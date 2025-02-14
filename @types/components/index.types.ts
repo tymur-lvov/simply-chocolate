@@ -10,6 +10,7 @@ import type {
   IBENEFITS_DATA,
   IINGREDIENTS_DATA,
   IHOW_ITS_MADE_DATA,
+  ICommonSectionTitle,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -73,7 +74,7 @@ export interface IMainTitleProps extends IComponentProps {
 }
 
 export interface ISectionTitleProps extends IComponentProps {
-  data: string | { [key: string]: string };
+  data: ICommonSectionTitle;
 }
 
 export interface IBenefitsProps extends IComponentProps {
@@ -120,6 +121,7 @@ export interface IRecipeItemProps extends IComponentProps {
   data: IHOW_ITS_MADE_DATA['recipeList']['recipeItems'][number];
 }
 
+export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
