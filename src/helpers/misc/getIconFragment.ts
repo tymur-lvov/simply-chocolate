@@ -1,6 +1,6 @@
 import type { IGetIconFragment } from '@types';
 
-export const getIconFragment: IGetIconFragment = (fragment, fragments, fragmentKey) => {
+export const getIconFragment: IGetIconFragment = (fragment, fragmentKey, fragments) => {
   if (fragments && fragmentKey) {
     return fragments[fragmentKey];
   }
