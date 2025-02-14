@@ -4,11 +4,6 @@ body {
   font-family: var(--font-family);
 }
 
-html.menu_is_open,
-body.menu_is_open {
-  overflow: hidden;
-}
-
 .visually_hidden {
   position: absolute;
   overflow: hidden;
@@ -22,8 +17,11 @@ body.menu_is_open {
   clip-path: inset(100%);
 }
 
+.menu_is_open {
+  overflow: hidden;
+}
+
 .container {
-  width: 100vw;
   min-width: 280px;
   max-width: 1200px;
   margin: 0 auto;
