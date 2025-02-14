@@ -9,10 +9,9 @@ export const MENU_DATA: IMENU_DATA = {
       close: 'close',
     },
     getFragmentKey(isMenuOpen) {
-      return isMenuOpen ? this.fragments.close : this.fragments.open;
+      return (isMenuOpen ? this.fragments?.close : this.fragments?.open) || '';
     },
   },
-
   navList: {
     navItems: [
       {
@@ -35,7 +34,6 @@ export const MENU_DATA: IMENU_DATA = {
       },
     ],
   },
-
   socialsList: {
     socialsItems: [
       {

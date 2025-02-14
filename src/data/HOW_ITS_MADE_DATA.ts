@@ -2,10 +2,11 @@ import type { IHOW_ITS_MADE_DATA } from '@types';
 
 export const HOW_ITS_MADE_DATA: IHOW_ITS_MADE_DATA = {
   sectionTitle: {
-    basePart: 'How it\u2019s ',
-    accentPart: 'made?',
+    textParts: {
+      base: 'How it\u2019s ',
+      accent: 'made?',
+    },
   },
-
   videoThumb: {
     icon: {
       width: 35,
@@ -13,9 +14,7 @@ export const HOW_ITS_MADE_DATA: IHOW_ITS_MADE_DATA = {
       fragment: 'play',
     },
   },
-
   title: 'Try our chocolates today and discover the perfect balance of flavor',
-
   recipeList: {
     recipeItems: [
       {

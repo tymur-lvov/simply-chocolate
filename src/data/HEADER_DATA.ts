@@ -5,8 +5,8 @@ export const HEADER_DATA: IHEADER_DATA = {
     link: {
       href: '/',
       textParts: {
-        accentPart: 'SIMPLY',
-        mainPart: 'CHOCOLATE',
+        accent: 'SIMPLY',
+        main: 'CHOCOLATE',
       },
     },
     icon: {
@@ -15,7 +15,6 @@ export const HEADER_DATA: IHEADER_DATA = {
       fragment: 'logo',
     },
   },
-
   navList: {
     navItems: [
       {
@@ -38,7 +37,6 @@ export const HEADER_DATA: IHEADER_DATA = {
       },
     ],
   },
-
   socialsList: {
     socialsItems: [
       {

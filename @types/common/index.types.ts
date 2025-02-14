@@ -31,4 +31,5 @@ export interface ICommonButton {
 export interface ICommonSectionTitle {
   text?: string;
   textParts?: { [key: string]: string };
+  textVersions?: { [key: string]: string };
 }

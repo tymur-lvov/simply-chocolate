@@ -21,11 +21,12 @@ import type { IINGREDIENTS_DATA } from '@types';
 
 export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
   sectionTitle: {
-    startPart: 'It all adds up to one exceptional ',
-    accentPart: 'taste',
-    endPart: ' sensation',
+    textParts: {
+      start: 'It all adds up to one exceptional ',
+      accent: 'taste',
+      end: ' sensation',
+    },
   },
-
   ingredientsList: {
     ingredientsItems: [
       {

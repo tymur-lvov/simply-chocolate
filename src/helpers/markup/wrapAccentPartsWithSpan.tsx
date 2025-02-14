@@ -4,7 +4,7 @@ import type { IWrapAccentPartsWithSpan } from '@types';
 
 export const wrapAccentPartsWithSpan: IWrapAccentPartsWithSpan = (classNames, textParts) => {
   return Object.entries(textParts).map(([key, value]) => {
-    if (key.includes('accentPart')) {
+    if (key.includes('accent')) {
       return (
         <span className={findClassNameForSpan(classNames)} key={value}>
           {value}
