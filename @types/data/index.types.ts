@@ -89,10 +89,11 @@ export interface IOUR_PRODUCTS_DATA {
   sectionTitle: ICommonSectionTitle;
   productsList: {
     productsItems: {
+      link: ICommonLink;
       image: ICommonImage;
       title: string;
       description: string;
-      button: ICommonButton;
+      price: string;
     }[];
   };
 }

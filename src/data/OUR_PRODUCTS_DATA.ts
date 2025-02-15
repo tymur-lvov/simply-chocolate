@@ -28,6 +28,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
   productsList: {
     productsItems: [
       {
+        link: {
+          href: '/',
+        },
         image: {
           width: 230,
           height: 201,
@@ -39,11 +42,12 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         },
         title: 'Orange',
         description: 'Dark chocolate',
-        button: {
-          text: '45 UAH',
-        },
+        price: '45 UAH',
       },
       {
+        link: {
+          href: '/',
+        },
         image: {
           width: 230,
           height: 201,
@@ -55,11 +59,12 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         },
         title: 'Apple&cranberry',
         description: 'Milk chocolate',
-        button: {
-          text: '50 UAH',
-        },
+        price: '50 UAH',
       },
       {
+        link: {
+          href: '/',
+        },
         image: {
           width: 230,
           height: 201,
@@ -71,11 +76,12 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         },
         title: 'Lime&sea salt',
         description: 'Dark chocolate',
-        button: {
-          text: '66 UAH',
-        },
+        price: '66 UAH',
       },
       {
+        link: {
+          href: '/',
+        },
         image: {
           width: 230,
           height: 201,
@@ -87,11 +93,12 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         },
         title: 'Pineapple',
         description: 'Dark chocolate',
-        button: {
-          text: '54 UAH',
-        },
+        price: '54 UAH',
       },
       {
+        link: {
+          href: '/',
+        },
         image: {
           width: 230,
           height: 201,
@@ -103,11 +110,12 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         },
         title: 'Classic',
         description: 'Milk chocolate',
-        button: {
-          text: '45 UAH',
-        },
+        price: '45 UAH',
       },
       {
+        link: {
+          href: '/',
+        },
         image: {
           width: 230,
           height: 201,
@@ -119,11 +127,12 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         },
         title: 'Honey',
         description: 'Milk chocolate',
-        button: {
-          text: '50 UAH',
-        },
+        price: '50 UAH',
       },
       {
+        link: {
+          href: '/',
+        },
         image: {
           width: 230,
           height: 201,
@@ -135,11 +144,12 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         },
         title: 'Roasted fruits',
         description: 'Dark chocolate',
-        button: {
-          text: '66 UAH',
-        },
+        price: '66 UAH',
       },
       {
+        link: {
+          href: '/',
+        },
         image: {
           width: 230,
           height: 201,
@@ -151,9 +161,7 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         },
         title: 'Classic',
         description: 'White chocolate',
-        button: {
-          text: '54 UAH',
-        },
+        price: '54 UAH',
       },
     ],
   },
