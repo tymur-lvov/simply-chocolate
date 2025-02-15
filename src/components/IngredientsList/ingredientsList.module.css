@@ -46,6 +46,10 @@
   display: none;
 }
 
+.ingredients_item:active {
+  transform: scale(1.02);
+}
+
 @media only screen and (min-width: 768px) {
   .ingredients_item:nth-child(n + 5) {
     display: block;
@@ -65,6 +69,6 @@
 
   .ingredients_item:hover,
   .ingredients_item:focus-within {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 }
