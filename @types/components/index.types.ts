@@ -31,7 +31,7 @@ export interface IImageProps extends IComponentProps {
 }
 
 export interface IButtonProps extends IComponentProps {
-  data: ICommonButton;
+  data?: ICommonButton;
   type?: 'button' | 'submit' | 'reset';
   onClick?: IOnClick;
 }

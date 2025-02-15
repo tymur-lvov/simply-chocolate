@@ -12,7 +12,9 @@ import {
 export const App = () => {
   return (
     <>
-      <Header data={HEADER_DATA} />
+      <header>
+        <Header data={HEADER_DATA} />
+      </header>
       <main>
         <Hero data={HERO_DATA} />
         <Benefits data={BENEFITS_DATA} />

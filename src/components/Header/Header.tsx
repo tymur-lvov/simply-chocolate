@@ -16,17 +16,15 @@ export const Header: IHeader = ({ data }) => {
   const { isMobile } = useMedia();
 
   return (
-    <header>
-      <div className={clsx(css.header_container, CONTAINER)}>
-        <Logo data={data.logo} />
-        {isMobile && <Menu data={MENU_DATA} />}
-        {!isMobile && (
-          <div className={css.header_nav_socials_wrapper}>
-            <NavList variant={HEADER} data={data.navList} />
-            <SocialsList variant={HEADER} data={data.socialsList} />
-          </div>
-        )}
-      </div>
-    </header>
+    <div className={clsx(css.header_container, CONTAINER)}>
+      <Logo data={data.logo} />
+      {isMobile && <Menu data={MENU_DATA} />}
+      {!isMobile && (
+        <div className={css.header_nav_socials_wrapper}>
+          <NavList variant={HEADER} data={data.navList} />
+          <SocialsList variant={HEADER} data={data.socialsList} />
+        </div>
+      )}
+    </div>
   );
 };
