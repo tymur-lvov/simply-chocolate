@@ -16,12 +16,8 @@ export const Hero: IHero = ({ data }) => {
           <MainTitle className={css.hero_main_title} data={data.mainTitle} />
           <div className={css.hero_interactive_elements_wrapper}>
             <div className={css.hero_order_info_btns_wrapper}>
-              <Button className={clsx(css.hero_order_btn, css.hero_btn)}>
-                {data.orderButton.text}
-              </Button>
-              <Button className={clsx(css.hero_info_btn, css.hero_btn)}>
-                {data.infoButton.text}
-              </Button>
+              <Button className={clsx(css.hero_order_btn, css.hero_btn)} data={data.orderButton} />
+              <Button className={clsx(css.hero_info_btn, css.hero_btn)} data={data.infoButton} />
             </div>
             <a className={css.hero_scroll_link} href={data.scrollBlock.link.href}>
               {data.scrollBlock.link.text}
