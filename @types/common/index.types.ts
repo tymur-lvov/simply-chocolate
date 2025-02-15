@@ -26,6 +26,7 @@ export interface ICommonLink {
 
 export interface ICommonButton {
   text: string;
+  icon?: ICommonIcon;
 }
 
 export interface ICommonSectionTitle {

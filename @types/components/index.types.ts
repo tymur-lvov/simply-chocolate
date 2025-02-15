@@ -11,6 +11,8 @@ import type {
   IINGREDIENTS_DATA,
   IHOW_ITS_MADE_DATA,
   ICommonSectionTitle,
+  IOUR_PRODUCTS_DATA,
+  ICommonButton,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -29,6 +31,7 @@ export interface IImageProps extends IComponentProps {
 }
 
 export interface IButtonProps extends IComponentProps {
+  data: ICommonButton;
   type?: 'button' | 'submit' | 'reset';
   onClick?: IOnClick;
 }
@@ -121,6 +124,18 @@ export interface IRecipeItemProps extends IComponentProps {
   data: IHOW_ITS_MADE_DATA['recipeList']['recipeItems'][number];
 }
 
+export interface IProductsProps extends IComponentProps {
+  data: IOUR_PRODUCTS_DATA;
+}
+
+export interface IProductsListProps extends IComponentProps {
+  data: IOUR_PRODUCTS_DATA['productsList'];
+}
+
+export interface IProductsItemsProps extends IComponentProps {
+  data: IOUR_PRODUCTS_DATA['productsList']['productsItems'][number];
+}
+
 export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
@@ -151,3 +166,7 @@ export type IIngredientsItem = FC<IIngredientsItemProps>;
 export type IHowItsMade = FC<IHowItsMadeProps>;
 export type IRecipeList = FC<IRecipeListProps>;
 export type IRecipeItem = FC<IRecipeItemProps>;
+
+export type IProducts = FC<IProductsProps>;
+export type IProductsList = FC<IProductsListProps>;
+export type IProductsItem = FC<IProductsItemsProps>;

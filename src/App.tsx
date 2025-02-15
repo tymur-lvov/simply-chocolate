@@ -1,6 +1,13 @@
-import { Header, Benefits, Hero, HowItsMade, Ingredients } from '@components';
+import { Header, Benefits, Hero, HowItsMade, Ingredients, Products } from '@components';
 
-import { HEADER_DATA, HERO_DATA, BENEFITS_DATA, INGREDIENTS_DATA, HOW_ITS_MADE_DATA } from '@data';
+import {
+  HEADER_DATA,
+  HERO_DATA,
+  BENEFITS_DATA,
+  INGREDIENTS_DATA,
+  HOW_ITS_MADE_DATA,
+  OUR_PRODUCTS_DATA,
+} from '@data';
 
 export const App = () => {
   return (
@@ -11,6 +18,7 @@ export const App = () => {
         <Benefits data={BENEFITS_DATA} />
         <Ingredients data={INGREDIENTS_DATA} />
         <HowItsMade data={HOW_ITS_MADE_DATA} />
+        <Products data={OUR_PRODUCTS_DATA} />
       </main>
     </>
   );
