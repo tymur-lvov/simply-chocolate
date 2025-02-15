@@ -15,16 +15,16 @@ export interface IMENU_DATA {
   };
   socialsList: {
     socialsItems: {
-      icon: ICommonIcon;
       link: ICommonLink;
+      icon: ICommonIcon;
     }[];
   };
 }
 
 export interface IHEADER_DATA {
   logo: {
-    icon: ICommonIcon;
     link: ICommonLink;
+    icon: ICommonIcon;
   };
   navList: {
     navItems: {
@@ -33,19 +33,19 @@ export interface IHEADER_DATA {
   };
   socialsList: {
     socialsItems: {
-      icon: ICommonIcon;
       link: ICommonLink;
+      icon: ICommonIcon;
     }[];
   };
 }
 
 export interface IHERO_DATA {
-  infoButton: ICommonButton;
-  orderButton: ICommonButton;
   mainTitle: ICommonSectionTitle;
+  orderButton: ICommonButton;
+  infoButton: ICommonButton;
   scrollBlock: {
-    icon: ICommonIcon;
     link: ICommonLink;
+    icon: ICommonIcon;
   };
 }
 
@@ -53,8 +53,8 @@ export interface IBENEFITS_DATA {
   sectionTitle: ICommonSectionTitle;
   benefitsList: {
     benefitsItems: {
-      title: string;
       icon: ICommonIcon;
+      title: string;
       description: string;
     }[];
   };
@@ -64,23 +64,35 @@ export interface IINGREDIENTS_DATA {
   sectionTitle: ICommonSectionTitle;
   ingredientsList: {
     ingredientsItems: {
-      title: string;
-      icon: ICommonIcon;
       link: ICommonLink;
+      icon: ICommonIcon;
       image: ICommonImage;
+      title: string;
     }[];
   };
 }
 
 export interface IHOW_ITS_MADE_DATA {
-  title: string;
   sectionTitle: ICommonSectionTitle;
   videoThumb: {
     icon: ICommonIcon;
   };
+  title: string;
   recipeList: {
     recipeItems: {
       text: string;
+    }[];
+  };
+}
+
+export interface IOUR_PRODUCTS_DATA {
+  sectionTitle: ICommonSectionTitle;
+  productsList: {
+    productsItems: {
+      image: ICommonImage;
+      title: string;
+      description: string;
+      button: ICommonButton;
     }[];
   };
 }
