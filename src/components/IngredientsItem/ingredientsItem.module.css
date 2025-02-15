@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: center;
   padding: 31px 27px 27px;
 }
 
@@ -23,7 +24,6 @@
 }
 
 .ingredients_image {
-  align-self: center;
   width: 236px;
   height: 176px;
 }
@@ -36,6 +36,7 @@
 }
 
 .ingredients_title {
+  align-self: flex-start;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
