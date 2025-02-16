@@ -1,0 +1,38 @@
+.top_sellers_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .top_sellers_list {
+    flex-direction: row;
+  }
+}
+
+.top_sellers_item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.top_sellers_item:nth-child(n + 2) {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .top_sellers_item:nth-child(n + 2) {
+    display: block;
+  }
+
+  .top_sellers_item:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .top_sellers_item:nth-child(n + 3) {
+    display: block;
+  }
+}

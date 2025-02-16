@@ -1,3 +1,9 @@
+export * from './TopSellersList/TopSellersList.tsx';
+export { default as topSellersListModule } from './TopSellersList/topSellersList.module.css';
+export * from './TopSellersItem/TopSellersItem.tsx';
+export { default as topSellersItemModule } from './TopSellersItem/topSellersItem.module.css';
+export * from './TopSellers/TopSellers.tsx';
+export { default as topSellersModule } from './TopSellers/topSellers.module.css';
 export * from './Title/Title.tsx';
 export { default as titleModule } from './Title/title.module.css';
 export * from './SocialsList/SocialsList.tsx';

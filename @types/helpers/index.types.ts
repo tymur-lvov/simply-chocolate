@@ -35,6 +35,8 @@ export type IBooleanStateSetter = Dispatch<SetStateAction<boolean>>;
 
 export type INumberStateSetter = Dispatch<SetStateAction<number>>;
 
+export type INumberOrNullStateSetter = Dispatch<SetStateAction<number | null>>;
+
 export type IMenuClickHandle = (target: EventTarget, setIsMenuOpen: IBooleanStateSetter) => void;
 
 export type ISocialsLinkClickHandle = (setLinkClickCount: INumberStateSetter) => void;
@@ -59,3 +61,9 @@ export type IWrapAccentPartsWithSpan = (
 export type IFindClassNameForSpan = (classNames: string[]) => string;
 
 export type IFilterClassNamesForHeading = (classNames: string[]) => string[];
+
+export type IHandleTopSellersItemClick = (
+  itemIndex: number,
+  handleTopSellersItemClick: number | null,
+  setActiveItemIndex: INumberOrNullStateSetter
+) => void;

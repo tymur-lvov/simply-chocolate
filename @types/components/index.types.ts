@@ -13,6 +13,7 @@ import type {
   ICommonSectionTitle,
   IOUR_PRODUCTS_DATA,
   ICommonButton,
+  ITOP_SELLERS_DATA,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -136,6 +137,18 @@ export interface IProductsItemsProps extends IComponentProps {
   data: IOUR_PRODUCTS_DATA['productsList']['productsItems'][number];
 }
 
+export interface ITopSellersProps extends IComponentProps {
+  data: ITOP_SELLERS_DATA;
+}
+
+export interface ITopSellersListProps extends IComponentProps {
+  data: ITOP_SELLERS_DATA['topSellersList'];
+}
+
+export interface ITopSellersItemProps extends IComponentProps {
+  data: ITOP_SELLERS_DATA['topSellersList']['topSellersItems'][number];
+}
+
 export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
@@ -170,3 +183,7 @@ export type IRecipeItem = FC<IRecipeItemProps>;
 export type IProducts = FC<IProductsProps>;
 export type IProductsList = FC<IProductsListProps>;
 export type IProductsItem = FC<IProductsItemsProps>;
+
+export type ITopSellers = FC<ITopSellersProps>;
+export type ITopSellersList = FC<ITopSellersListProps>;
+export type ITopSellersItem = FC<ITopSellersItemProps>;

@@ -97,3 +97,14 @@ export interface IOUR_PRODUCTS_DATA {
     }[];
   };
 }
+
+export interface ITOP_SELLERS_DATA {
+  sectionTitle: ICommonSectionTitle;
+  topSellersList: {
+    topSellersItems: {
+      image: ICommonImage;
+      title: string;
+      description: string;
+    }[];
+  };
+}
