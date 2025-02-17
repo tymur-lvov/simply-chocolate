@@ -62,8 +62,8 @@ export type IFindClassNameForSpan = (classNames: string[]) => string;
 
 export type IFilterClassNamesForHeading = (classNames: string[]) => string[];
 
-export type IHandleTopSellersItemClick = (
+export type ITopSellersItemClickHandle = (
   itemIndex: number,
-  handleTopSellersItemClick: number | null,
+  topSellersItemClickHandle: number | null,
   setActiveItemIndex: INumberOrNullStateSetter
 ) => void;

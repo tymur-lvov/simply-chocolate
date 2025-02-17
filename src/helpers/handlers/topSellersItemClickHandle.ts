@@ -1,6 +1,6 @@
-import type { IHandleTopSellersItemClick } from '@types';
+import type { ITopSellersItemClickHandle } from '@types';
 
-export const handleTopSellersItemClick: IHandleTopSellersItemClick = (
+export const topSellersItemClickHandle: ITopSellersItemClickHandle = (
   itemIndex,
   activeItemIndex,
   setActiveItemIndex

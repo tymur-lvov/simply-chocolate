@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { useState } from 'react';
 
-import { handleTopSellersItemClick } from '@helpers';
+import { topSellersItemClickHandle } from '@helpers';
 
 import { TopSellersItem } from '@components';
 
@@ -23,7 +23,7 @@ export const TopSellersList: ITopSellersList = ({ data: { topSellersItems } }) =
             [VISIBLE]: itemIndex === activeItemIndex,
           })}
           key={topSellersItem.title}
-          onClick={() => handleTopSellersItemClick(itemIndex, activeItemIndex, setActiveItemIndex)}
+          onClick={() => topSellersItemClickHandle(itemIndex, activeItemIndex, setActiveItemIndex)}
         >
           <TopSellersItem data={topSellersItem} />
         </li>
