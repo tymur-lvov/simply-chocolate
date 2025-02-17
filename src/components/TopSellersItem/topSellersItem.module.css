@@ -12,7 +12,7 @@
 }
 
 @media only screen and (max-width: 1157px) {
-  li:global(.active) > .top_sellers_item_overlay {
+  li:global(.visible) > .top_sellers_item_overlay {
     opacity: 1;
     backdrop-filter: blur(7px);
   }

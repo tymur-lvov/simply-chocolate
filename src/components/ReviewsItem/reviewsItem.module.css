@@ -1,0 +1,30 @@
+.reviews_item_image {
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  transform: translateX(-50%);
+}
+
+.reviews_item_title {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.reviews_item_description {
+  width: 299px;
+  color: rgba(17, 17, 17, 0.7);
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+  .reviews_item_description {
+    width: 312px;
+  }
+}

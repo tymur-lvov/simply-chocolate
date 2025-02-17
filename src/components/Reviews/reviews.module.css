@@ -1,0 +1,42 @@
+.reviews_container .reviews_section_title {
+  margin-bottom: 74px;
+}
+
+@media only screen and (min-width: 768px) {
+  .reviews_container .reviews_section_title {
+    margin-bottom: 91px;
+  }
+}
+
+.reviews_modal_toggle_button {
+  display: block;
+  width: 165px;
+  height: 41px;
+  margin: 0 auto;
+  border: 1px solid var(--orange);
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 250ms var(--transition), color 250ms var(--transition);
+}
+
+.reviews_modal_toggle_button:active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+@media only screen and (min-width: 768px) {
+  .reviews_modal_toggle_button {
+    width: 222px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .reviews_modal_toggle_button:hover,
+  .reviews_modal_toggle_button:focus {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+}

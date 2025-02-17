@@ -14,6 +14,7 @@ import type {
   IOUR_PRODUCTS_DATA,
   ICommonButton,
   ITOP_SELLERS_DATA,
+  IREVIEWS_DATA,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -144,9 +145,20 @@ export interface ITopSellersProps extends IComponentProps {
 export interface ITopSellersListProps extends IComponentProps {
   data: ITOP_SELLERS_DATA['topSellersList'];
 }
-
 export interface ITopSellersItemProps extends IComponentProps {
   data: ITOP_SELLERS_DATA['topSellersList']['topSellersItems'][number];
+}
+
+export interface IReviewsProps extends IComponentProps {
+  data: IREVIEWS_DATA;
+}
+
+export interface IReviewsListProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsList'];
+}
+
+export interface IReviewsItemProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsList']['reviewsItems'][number];
 }
 
 export type IComponent = FC<IComponentProps>;
@@ -187,3 +199,7 @@ export type IProductsItem = FC<IProductsItemsProps>;
 export type ITopSellers = FC<ITopSellersProps>;
 export type ITopSellersList = FC<ITopSellersListProps>;
 export type ITopSellersItem = FC<ITopSellersItemProps>;
+
+export type IReviews = FC<IReviewsProps>;
+export type IReviewsList = FC<IReviewsListProps>;
+export type IReviewsItem = FC<IReviewsItemProps>;

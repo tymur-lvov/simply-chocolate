@@ -5,7 +5,7 @@ export const x1_MEDIA_QUERY = '(max-resolution: 191dpi)';
 export const x2_MEDIA_QUERY = '(min-resolution: 192dpi)';
 
 export const VISUALLY_HIDDEN = 'visually_hidden';
-export const ACTIVE = 'active';
+export const VISIBLE = 'visible';
 export const CONTAINER = 'container';
 export const SECTION = 'section';
 export const SECTION_TITLE = 'section_title';

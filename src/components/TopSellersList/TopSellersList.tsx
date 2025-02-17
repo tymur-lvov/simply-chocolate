@@ -5,7 +5,7 @@ import { handleTopSellersItemClick } from '@helpers';
 
 import { TopSellersItem } from '@components';
 
-import { ACTIVE } from '@constants';
+import { VISIBLE } from '@constants';
 
 import { topSellersListModule as css } from '@styles';
 
@@ -20,7 +20,7 @@ export const TopSellersList: ITopSellersList = ({ data: { topSellersItems } }) =
         <li
           className={clsx({
             [css.top_sellers_item]: true,
-            [ACTIVE]: itemIndex === activeItemIndex,
+            [VISIBLE]: itemIndex === activeItemIndex,
           })}
           key={topSellersItem.title}
           onClick={() => handleTopSellersItemClick(itemIndex, activeItemIndex, setActiveItemIndex)}
