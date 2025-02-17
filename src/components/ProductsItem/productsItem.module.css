@@ -45,4 +45,16 @@
   background-color: var(--light);
   font-weight: 600;
   font-size: 14px;
+  transition: background-color 250ms var(--transition);
+}
+
+.products_item_link:active .products_item_price {
+  background-color: var(--beige);
+}
+
+@media only screen and (min-width: 1158px) {
+  .products_item_link:hover .products_item_price,
+  .products_item_link:focus .products_item_price {
+    background-color: var(--beige);
+  }
 }
