@@ -108,3 +108,30 @@ export interface ITOP_SELLERS_DATA {
     }[];
   };
 }
+
+export interface IREVIEWS_DATA {
+  sectionTitle: {
+    textParts: {
+      accent: string;
+      base: string;
+    };
+  };
+  reviewsList: {
+    reviewsItems: {
+      image: {
+        width: number;
+        height: number;
+        alt: string;
+        paths: {
+          x1: string;
+          x2: string;
+        };
+      };
+      title: string;
+      description: string;
+    }[];
+  };
+  modalToggleButton: {
+    text: string;
+  };
+}
