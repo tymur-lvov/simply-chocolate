@@ -39,12 +39,14 @@
 
 @media only screen and (min-width: 768px) {
   .reviews_item {
-    padding: 55px 15px 25px;
+    width: 344px;
+    padding: 55px 14px 25px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .reviews_item {
+    width: 360px;
     padding: 55px 23px 23px;
   }
 }
