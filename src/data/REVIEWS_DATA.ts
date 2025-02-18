@@ -21,7 +21,9 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             x2: victoria_2x,
           },
         },
-        title: 'Victoria Dobrzhanska',
+        title: {
+          text: 'Victoria Dobrzhanska',
+        },
         description:
           'I love this chocolate bar. Perfect combination of light crispy wafer, covered in a thin layer chocolate.',
       },
@@ -35,7 +37,9 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             x2: nazar_2x,
           },
         },
-        title: 'Nazar Babenko',
+        title: {
+          text: 'Nazar Babenko',
+        },
         description:
           'This chocolate confection is a delight! A delight! The wafer is light and crisp, the hazelnut cream is smooth, and the chocolate is good.',
       },
@@ -49,7 +53,9 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             x2: olena_2x,
           },
         },
-        title: 'Olena Kampusch',
+        title: {
+          text: 'Olena Kampusch',
+        },
         description:
           'Chocolate is a family favourite treat. Love the delicious smooth chocolate and the creaminess inside. The wafer is soft but crunchy.',
       },
@@ -57,5 +63,79 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
   },
   modalToggleButton: {
     text: 'Leave  a review',
+  },
+  reviewsModal: {
+    form: {
+      closeButton: {
+        icon: {
+          width: 24,
+          height: 24,
+          fragment: 'close',
+        },
+      },
+      title: {
+        textVersions: {
+          mobile: {
+            textParts: {
+              base: 'Leave a review\nabout ',
+              accent: 'our chocolate',
+            },
+          },
+          tablet: {
+            textParts: {
+              base: 'Leave a review about ',
+              accent: 'our chocolate',
+            },
+          },
+        },
+      },
+      nameInput: {
+        type: 'text',
+        label: 'Name',
+        icon: {
+          width: 18,
+          height: 18,
+          fragment: 'user',
+        },
+      },
+      emainInput: {
+        type: 'email',
+        label: 'Email',
+        icon: {
+          width: 18,
+          height: 18,
+          fragment: 'email',
+        },
+      },
+      phoneInput: {
+        type: 'number',
+        label: 'Phone number',
+        icon: {
+          width: 18,
+          height: 18,
+          fragment: 'phone',
+        },
+      },
+      commentInput: {
+        label: 'Comment',
+        placeholder: 'Enter text',
+      },
+      checkboxInput: {
+        link: {
+          href: '/',
+          text: 'Privacy Policy',
+        },
+        label: 'I accept the terms and conditions of the ',
+        icon: {
+          width: 10,
+          height: 10,
+          fragment: 'checked',
+        },
+      },
+      button: {
+        text: 'Send',
+        type: 'submit',
+      },
+    },
   },
 };

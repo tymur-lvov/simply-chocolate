@@ -47,7 +47,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
           },
           alt: 'milk chocolate',
         },
-        title: 'milk chocolate',
+        title: {
+          text: 'milk chocolate',
+        },
       },
       {
         link: {
@@ -67,7 +69,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
           },
           alt: 'milk',
         },
-        title: 'milk',
+        title: {
+          text: 'milk',
+        },
       },
       {
         link: {
@@ -87,7 +91,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
           },
           alt: 'nuts',
         },
-        title: 'nuts',
+        title: {
+          text: 'nuts',
+        },
       },
       {
         link: {
@@ -107,7 +113,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
           },
           alt: 'semi - sweet chocolate',
         },
-        title: 'semi - sweet chocolate',
+        title: {
+          text: 'semi - sweet chocolate',
+        },
       },
       {
         link: {
@@ -127,7 +135,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
           },
           alt: 'cacao',
         },
-        title: 'cacao',
+        title: {
+          text: 'cacao',
+        },
       },
       {
         link: {
@@ -147,7 +157,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
           },
           alt: 'raspberry',
         },
-        title: 'raspberry',
+        title: {
+          text: 'raspberry',
+        },
       },
       {
         link: {
@@ -167,7 +179,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
           },
           alt: 'coconut oil',
         },
-        title: 'coconut oil',
+        title: {
+          text: 'coconut oil',
+        },
       },
       {
         link: {
@@ -187,7 +201,9 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
           },
           alt: 'vanilla',
         },
-        title: 'vanilla',
+        title: {
+          text: 'vanilla',
+        },
       },
     ],
   },
