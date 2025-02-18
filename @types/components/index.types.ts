@@ -24,7 +24,7 @@ export interface IComponentProps {
 }
 
 export interface IIconProps extends IComponentProps {
-  data: ICommonIcon;
+  data?: ICommonIcon;
   fragmentKey?: string;
 }
 
@@ -95,7 +95,7 @@ export interface IBenefitsItemProps extends IComponentProps {
 }
 
 export interface ITitleProps extends IComponentProps {
-  data: string;
+  data: ICommonSectionTitle;
 }
 
 export interface IDescriptionProps extends IComponentProps {
@@ -161,6 +161,10 @@ export interface IReviewsItemProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsList']['reviewsItems'][number];
 }
 
+export interface IReviewsModalProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal'];
+}
+
 export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
@@ -203,3 +207,4 @@ export type ITopSellersItem = FC<ITopSellersItemProps>;
 export type IReviews = FC<IReviewsProps>;
 export type IReviewsList = FC<IReviewsListProps>;
 export type IReviewsItem = FC<IReviewsItemProps>;
+export type IReviewsModal = FC<IReviewsModalProps>;

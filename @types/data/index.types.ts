@@ -4,6 +4,7 @@ import type {
   ICommonImage,
   ICommonButton,
   ICommonSectionTitle,
+  ICommonInput,
 } from '../common/index.types';
 
 export interface IMENU_DATA {
@@ -54,7 +55,7 @@ export interface IBENEFITS_DATA {
   benefitsList: {
     benefitsItems: {
       icon: ICommonIcon;
-      title: string;
+      title: ICommonSectionTitle;
       description: string;
     }[];
   };
@@ -67,7 +68,7 @@ export interface IINGREDIENTS_DATA {
       link: ICommonLink;
       icon: ICommonIcon;
       image: ICommonImage;
-      title: string;
+      title: ICommonSectionTitle;
     }[];
   };
 }
@@ -77,7 +78,7 @@ export interface IHOW_ITS_MADE_DATA {
   videoThumb: {
     icon: ICommonIcon;
   };
-  title: string;
+  title: ICommonSectionTitle;
   recipeList: {
     recipeItems: {
       text: string;
@@ -91,7 +92,7 @@ export interface IOUR_PRODUCTS_DATA {
     productsItems: {
       link: ICommonLink;
       image: ICommonImage;
-      title: string;
+      title: ICommonSectionTitle;
       description: string;
       price: string;
     }[];
@@ -103,35 +104,32 @@ export interface ITOP_SELLERS_DATA {
   topSellersList: {
     topSellersItems: {
       image: ICommonImage;
-      title: string;
+      title: ICommonSectionTitle;
       description: string;
     }[];
   };
 }
 
 export interface IREVIEWS_DATA {
-  sectionTitle: {
-    textParts: {
-      accent: string;
-      base: string;
-    };
-  };
+  sectionTitle: ICommonSectionTitle;
   reviewsList: {
     reviewsItems: {
-      image: {
-        width: number;
-        height: number;
-        alt: string;
-        paths: {
-          x1: string;
-          x2: string;
-        };
-      };
-      title: string;
+      image: ICommonImage;
+      title: ICommonSectionTitle;
       description: string;
     }[];
   };
-  modalToggleButton: {
-    text: string;
+  modalToggleButton: ICommonButton;
+  reviewsModal: {
+    form: {
+      closeButton: ICommonButton;
+      title: ICommonSectionTitlenSectionTitle;
+      nameInput: ICommonInput;
+      emainInput: ICommonInput;
+      phoneInput: ICommonInput;
+      commentInput: ICommonInput;
+      checkboxInput: ICommonInput;
+      button: ICommonButton;
+    };
   };
 }
