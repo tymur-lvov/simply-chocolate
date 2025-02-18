@@ -3,10 +3,12 @@ import type { IHERO_DATA } from '@types';
 export const HERO_DATA: IHERO_DATA = {
   mainTitle: {
     textVersions: {
-      mobile:
-        'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
-      tablet:
-        'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
+      mobile: {
+        text: 'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
+      },
+      tablet: {
+        text: 'Treat yourself or a loved one to\nour finest ingredients for a moment\nof pure delight!',
+      },
     },
   },
   orderButton: {

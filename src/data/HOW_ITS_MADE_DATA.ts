@@ -14,7 +14,9 @@ export const HOW_ITS_MADE_DATA: IHOW_ITS_MADE_DATA = {
       fragment: 'play',
     },
   },
-  title: 'Try our chocolates today and discover the perfect balance of flavor',
+  title: {
+    text: 'Try our chocolates today and discover the perfect balance of flavor',
+  },
   recipeList: {
     recipeItems: [
       {
