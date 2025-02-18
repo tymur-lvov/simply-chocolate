@@ -8,7 +8,7 @@ export const IngredientsList: IIngredientsList = ({ data: { ingredientsItems } }
   return (
     <ul className={css.ingredients_list}>
       {ingredientsItems.map((ingredientsItem) => (
-        <li className={css.ingredients_item} key={ingredientsItem.title}>
+        <li className={css.ingredients_item} key={ingredientsItem.title.text}>
           <IngredientsItem data={ingredientsItem} />
         </li>
       ))}

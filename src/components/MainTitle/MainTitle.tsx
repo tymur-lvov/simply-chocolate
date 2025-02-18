@@ -9,8 +9,8 @@ export const MainTitle: IMainTitle = ({ className, data: { textVersions } }) => 
     <>
       {textVersions && (
         <h1 className={className}>
-          {isMobile && textVersions.mobile}
-          {!isMobile && textVersions.tablet}
+          {isMobile && textVersions.mobile.text}
+          {!isMobile && textVersions.tablet.text}
         </h1>
       )}
     </>
