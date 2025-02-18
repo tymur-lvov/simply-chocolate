@@ -22,7 +22,7 @@ export const TopSellersList: ITopSellersList = ({ data: { topSellersItems } }) =
             [css.top_sellers_item]: true,
             [VISIBLE]: itemIndex === activeItemIndex,
           })}
-          key={topSellersItem.title}
+          key={topSellersItem.title.text}
           onClick={() => topSellersItemClickHandle(itemIndex, activeItemIndex, setActiveItemIndex)}
         >
           <TopSellersItem data={topSellersItem} />
