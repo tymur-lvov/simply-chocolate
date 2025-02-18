@@ -123,7 +123,7 @@ export interface IREVIEWS_DATA {
   reviewsModal: {
     form: {
       closeButton: ICommonButton;
-      title: ICommonSectionTitlenSectionTitle;
+      title: ICommonSectionTitle;
       nameInput: ICommonInput;
       emainInput: ICommonInput;
       phoneInput: ICommonInput;
