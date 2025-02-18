@@ -12,6 +12,8 @@ export * from './SocialsItem/SocialsItem.tsx';
 export { default as socialsItemModule } from './SocialsItem/socialsItem.module.css';
 export * from './SectionTitle/SectionTitle.tsx';
 export { default as sectionTitleModule } from './SectionTitle/sectionTitle.module.css';
+export * from './ReviewsModal/ReviewsModal.tsx';
+export { default as reviewsModalModule } from './ReviewsModal/reviewsModal.module.css';
 export * from './ReviewsList/ReviewsList.tsx';
 export { default as reviewsListModule } from './ReviewsList/reviewsList.module.css';
 export * from './ReviewsItem/ReviewsItem.tsx';
