@@ -6,6 +6,7 @@ export const HOW_ITS_MADE_DATA: IHOW_ITS_MADE_DATA = {
       base: 'How it\u2019s ',
       accent: 'made?',
     },
+    isAccented: true,
   },
   videoThumb: {
     icon: {

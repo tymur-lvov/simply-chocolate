@@ -26,6 +26,7 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
       accent: 'taste',
       end: ' sensation',
     },
+    isAccented: true,
   },
   ingredientsList: {
     ingredientsItems: [

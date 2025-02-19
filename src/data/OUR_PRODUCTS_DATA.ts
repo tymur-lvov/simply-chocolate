@@ -24,6 +24,7 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
       base: 'Our ',
       accent: 'products',
     },
+    isAccented: true,
   },
   productsList: {
     productsItems: [
