@@ -1,40 +1,4 @@
-export interface ICommonIcon {
-  width: number;
-  height: number;
-  fragment?: string;
-  fragments?: {
-    [key: string]: string;
-  };
-  getFragmentKey?: (isMenuOpen: boolean) => string;
-}
-
-export interface ICommonImage {
-  width: number;
-  height: number;
-  alt: string;
-  paths: {
-    x1: string;
-    x2: string;
-  };
-}
-
-export interface ICommonLink {
-  href: string;
-  rel?: string;
-  text?: string;
-  target?: string;
-  textParts?: {
-    [key: string]: string;
-  };
-}
-
-export interface ICommonButton {
-  type?: string;
-  text?: string;
-  icon?: ICommonIcon;
-}
-
-export interface ICommonTitle {
+export interface ICommonComponent {
   text?: string;
   textParts?: {
     [key: string]: string;
@@ -47,6 +11,42 @@ export interface ICommonTitle {
       };
     };
   };
+}
+
+export interface ICommonAsset {
+  width: number;
+  height: number;
+}
+
+export interface ICommonIcon extends ICommonAsset {
+  fragment?: string;
+  fragments?: {
+    [key: string]: string;
+  };
+  getFragmentKey?: (isMenuOpen: boolean) => string;
+}
+
+export interface ICommonImage extends ICommonAsset {
+  alt: string;
+  paths: {
+    x1: string;
+    x2: string;
+  };
+}
+
+export interface ICommonLink extends ICommonComponent {
+  href: string;
+  rel?: string;
+  target?: string;
+}
+
+export interface ICommonButton extends ICommonComponent {
+  type?: string;
+  icon?: ICommonIcon;
+}
+
+export interface ICommonTitle extends ICommonComponent {
+  isAccented?: boolean;
 }
 
 export interface ICommonInput {

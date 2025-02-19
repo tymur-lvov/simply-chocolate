@@ -1,5 +1,7 @@
 import type { Dispatch, ReactNode, SetStateAction, MouseEvent } from 'react';
 
+import type { ICommonTitle } from '../common/index.types';
+
 export interface IMediaQueryLists {
   mobileList: MediaQueryList;
   tabletList: MediaQueryList;
@@ -55,12 +57,8 @@ export type IGetIconFragment = IGetIconPath;
 
 export type IWrapTextPartsWithSpan = (
   classNames?: string[],
-  textParts?: {
-    [key: string]: string;
-  },
-  textVariants?: {
-    [key: string]: string;
-  }
+  textParts?: ICommonTitle['textParts'],
+  textVariants?: ICommonTitle['textVariants']
 ) => string | ReactNode;
 
 export type IFilterClassNameForSpan = (classNames: string[]) => string[];
@@ -72,3 +70,9 @@ export type ITopSellersItemClickHandle = (
   topSellersItemClickHandle: number | null,
   setActiveItemIndex: INumberOrNullStateSetter
 ) => void;
+
+export type IGetVariantText = (textVariants: ICommonTitle['textVariants']) => string;
+
+export type IGetVariantTextParts = (
+  textVariants: ICommonTitle['textVariants']
+) => ICommonTitle['textParts'];
