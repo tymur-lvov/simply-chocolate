@@ -8,6 +8,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
       accent: 'Chocolate',
       base: ' is loved',
     },
+    isAccented: true,
   },
   reviewsList: {
     reviewsItems: [
@@ -88,6 +89,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             },
           },
         },
+        isAccented: true,
       },
       nameInput: {
         type: 'text',

@@ -14,6 +14,7 @@ export const TOP_SELLERS_DATA: ITOP_SELLERS_DATA = {
       accent: 'Top',
       base: ' sellers',
     },
+    isAccented: true,
   },
   topSellersList: {
     topSellersItems: [
