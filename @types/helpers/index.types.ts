@@ -1,4 +1,3 @@
-import type { ICommonTitle } from '@types';
 import type { Dispatch, ReactNode, SetStateAction, MouseEvent } from 'react';
 
 export interface IMediaQueryLists {
@@ -56,8 +55,12 @@ export type IGetIconFragment = IGetIconPath;
 
 export type IWrapTextPartsWithSpan = (
   classNames?: string[],
-  textParts?: ICommonTitle['textParts'],
-  textVariants?: ICommonTitle['textVariants']
+  textParts?: {
+    [key: string]: string;
+  },
+  textVariants?: {
+    [key: string]: string;
+  }
 ) => string | ReactNode;
 
 export type IFilterClassNameForSpan = (classNames: string[]) => string[];
