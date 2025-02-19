@@ -3,7 +3,7 @@ import type {
   ICommonLink,
   ICommonImage,
   ICommonButton,
-  ICommonSectionTitle,
+  ICommonTitle,
   ICommonInput,
 } from '../common/index.types';
 
@@ -41,7 +41,7 @@ export interface IHEADER_DATA {
 }
 
 export interface IHERO_DATA {
-  mainTitle: ICommonSectionTitle;
+  mainTitle: ICommonTitle;
   orderButton: ICommonButton;
   infoButton: ICommonButton;
   scrollBlock: {
@@ -51,34 +51,34 @@ export interface IHERO_DATA {
 }
 
 export interface IBENEFITS_DATA {
-  sectionTitle: ICommonSectionTitle;
+  sectionTitle: ICommonTitle;
   benefitsList: {
     benefitsItems: {
       icon: ICommonIcon;
-      title: ICommonSectionTitle;
+      title: ICommonTitle;
       description: string;
     }[];
   };
 }
 
 export interface IINGREDIENTS_DATA {
-  sectionTitle: ICommonSectionTitle;
+  sectionTitle: ICommonTitle;
   ingredientsList: {
     ingredientsItems: {
       link: ICommonLink;
       icon: ICommonIcon;
       image: ICommonImage;
-      title: ICommonSectionTitle;
+      title: ICommonTitle;
     }[];
   };
 }
 
 export interface IHOW_ITS_MADE_DATA {
-  sectionTitle: ICommonSectionTitle;
+  sectionTitle: ICommonTitle;
   videoThumb: {
     icon: ICommonIcon;
   };
-  title: ICommonSectionTitle;
+  title: ICommonTitle;
   recipeList: {
     recipeItems: {
       text: string;
@@ -87,12 +87,12 @@ export interface IHOW_ITS_MADE_DATA {
 }
 
 export interface IOUR_PRODUCTS_DATA {
-  sectionTitle: ICommonSectionTitle;
+  sectionTitle: ICommonTitle;
   productsList: {
     productsItems: {
       link: ICommonLink;
       image: ICommonImage;
-      title: ICommonSectionTitle;
+      title: ICommonTitle;
       description: string;
       price: string;
     }[];
@@ -100,22 +100,22 @@ export interface IOUR_PRODUCTS_DATA {
 }
 
 export interface ITOP_SELLERS_DATA {
-  sectionTitle: ICommonSectionTitle;
+  sectionTitle: ICommonTitle;
   topSellersList: {
     topSellersItems: {
       image: ICommonImage;
-      title: ICommonSectionTitle;
+      title: ICommonTitle;
       description: string;
     }[];
   };
 }
 
 export interface IREVIEWS_DATA {
-  sectionTitle: ICommonSectionTitle;
+  sectionTitle: ICommonTitle;
   reviewsList: {
     reviewsItems: {
       image: ICommonImage;
-      title: ICommonSectionTitle;
+      title: ICommonTitle;
       description: string;
     }[];
   };
@@ -123,7 +123,7 @@ export interface IREVIEWS_DATA {
   reviewsModal: {
     form: {
       closeButton: ICommonButton;
-      title: ICommonSectionTitle;
+      title: ICommonTitle;
       nameInput: ICommonInput;
       emainInput: ICommonInput;
       phoneInput: ICommonInput;

@@ -74,7 +74,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
         },
       },
       title: {
-        textVersions: {
+        textVariants: {
           mobile: {
             textParts: {
               base: 'Leave a review\nabout ',

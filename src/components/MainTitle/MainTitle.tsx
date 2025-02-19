@@ -1,16 +1,22 @@
-import { useMedia } from '@hooks';
+import { clsx } from 'clsx';
+
+import { Heading } from '@components';
+
+import { filterClassNamesForHeading, filterClassNamesForSpan } from '@helpers';
 
 import type { IMainTitle } from '@types';
 
-export const MainTitle: IMainTitle = ({ className, data: { textVersions } }) => {
-  const { isMobile } = useMedia();
-
+export const MainTitle: IMainTitle = ({ className, classNames, data }) => {
   return (
     <>
-      {textVersions && (
+      {className && (
         <h1 className={className}>
-          {isMobile && textVersions.mobile.text}
-          {!isMobile && textVersions.tablet.text}
+          <Heading data={data} />
+        </h1>
+      )}
+      {classNames && (
+        <h1 className={clsx(filterClassNamesForHeading(classNames))}>
+          <Heading classNames={filterClassNamesForSpan(classNames)} data={data} />
         </h1>
       )}
     </>

@@ -34,12 +34,12 @@ export interface ICommonButton {
   icon?: ICommonIcon;
 }
 
-export interface ICommonSectionTitle {
+export interface ICommonTitle {
   text?: string;
   textParts?: {
     [key: string]: string;
   };
-  textVersions?: {
+  textVariants?: {
     [key: string]: {
       text?: string;
       textParts?: {

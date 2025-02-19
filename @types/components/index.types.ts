@@ -10,7 +10,7 @@ import type {
   IBENEFITS_DATA,
   IINGREDIENTS_DATA,
   IHOW_ITS_MADE_DATA,
-  ICommonSectionTitle,
+  ICommonTitle,
   IOUR_PRODUCTS_DATA,
   ICommonButton,
   ITOP_SELLERS_DATA,
@@ -79,7 +79,7 @@ export interface IMainTitleProps extends IComponentProps {
 }
 
 export interface ISectionTitleProps extends IComponentProps {
-  data: ICommonSectionTitle;
+  data: ICommonTitle;
 }
 
 export interface IBenefitsProps extends IComponentProps {
@@ -95,7 +95,7 @@ export interface IBenefitsItemProps extends IComponentProps {
 }
 
 export interface ITitleProps extends IComponentProps {
-  data: ICommonSectionTitle;
+  data: ICommonTitle;
 }
 
 export interface IDescriptionProps extends IComponentProps {
@@ -181,11 +181,11 @@ export type ISocialsItem = FC<ISocialsItemProps>;
 export type IMainTitle = FC<IMainTitleProps>;
 export type IHero = FC<IHeroProps>;
 
-export type ISectionTitle = FC<ISectionTitleProps>;
+export type ITitle = FC<ISectionTitleProps>;
 export type IBenefits = FC<IBenefitsProps>;
 export type IBenefitsList = FC<IBenefitsListProps>;
 export type IBenefitsItem = FC<IBenefitsItemProps>;
-export type ITitle = FC<ITitleProps>;
+export type IHeading = FC<ITitleProps>;
 export type IDescription = FC<IDescriptionProps>;
 
 export type IIngredients = FC<IIngredientsProps>;

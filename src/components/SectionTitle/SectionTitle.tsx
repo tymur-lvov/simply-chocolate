@@ -1,20 +1,22 @@
 import { clsx } from 'clsx';
 
-import { filterClassNamesForHeading, wrapAccentPartsWithSpan } from '@helpers';
+import { Heading } from '@components';
 
-import type { ISectionTitle } from '@types';
+import { filterClassNamesForHeading, filterClassNamesForSpan } from '@helpers';
 
-export const SectionTitle: ISectionTitle = ({
-  className,
-  classNames,
-  data: { text, textParts },
-}) => {
+import type { ITitle } from '@types';
+
+export const SectionTitle: ITitle = ({ className, classNames, data }) => {
   return (
     <>
-      {text && <h2 className={className}>{text}</h2>}
-      {textParts && classNames && (
+      {className && (
+        <h2 className={className}>
+          <Heading data={data} />
+        </h2>
+      )}
+      {classNames && (
         <h2 className={clsx(filterClassNamesForHeading(classNames))}>
-          {wrapAccentPartsWithSpan(classNames, textParts)}
+          <Heading classNames={filterClassNamesForSpan(classNames)} data={data} />
         </h2>
       )}
     </>

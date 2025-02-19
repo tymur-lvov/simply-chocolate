@@ -2,7 +2,7 @@ import type { IHERO_DATA } from '@types';
 
 export const HERO_DATA: IHERO_DATA = {
   mainTitle: {
-    textVersions: {
+    textVariants: {
       mobile: {
         text: 'Treat yourself or a loved one\nto our finest ingredients for a\nmoment of pure delight!',
       },
