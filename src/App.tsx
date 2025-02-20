@@ -5,8 +5,8 @@ import {
   Benefits,
   Products,
   HowItsMade,
-  Ingredients,
   TopSellers,
+  Ingredients,
 } from '@components';
 
 import {
