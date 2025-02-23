@@ -1,10 +1,11 @@
 import type {
   ICommonIcon,
   ICommonLink,
+  ICommonInput,
+  ICommonTitle,
   ICommonImage,
   ICommonButton,
-  ICommonTitle,
-  ICommonInput,
+  ICommonDescription,
 } from '../common/index.types';
 
 export interface IMENU_DATA {
@@ -56,7 +57,7 @@ export interface IBENEFITS_DATA {
     benefitsItems: {
       icon: ICommonIcon;
       title: ICommonTitle;
-      description: string;
+      description: ICommonDescription;
     }[];
   };
 }
@@ -86,14 +87,14 @@ export interface IHOW_ITS_MADE_DATA {
   };
 }
 
-export interface IOUR_PRODUCTS_DATA {
+export interface IPRODUCTS_DATA {
   sectionTitle: ICommonTitle;
   productsList: {
     productsItems: {
       link: ICommonLink;
       image: ICommonImage;
       title: ICommonTitle;
-      description: string;
+      description: ICommonDescription;
       price: string;
     }[];
   };
@@ -105,7 +106,7 @@ export interface ITOP_SELLERS_DATA {
     topSellersItems: {
       image: ICommonImage;
       title: ICommonTitle;
-      description: string;
+      description: ICommonDescription;
     }[];
   };
 }
@@ -116,7 +117,7 @@ export interface IREVIEWS_DATA {
     reviewsItems: {
       image: ICommonImage;
       title: ICommonTitle;
-      description: string;
+      description: ICommonDescription;
     }[];
   };
   modalToggleButton: ICommonButton;

@@ -14,10 +14,10 @@ import {
   HEADER_DATA,
   REVIEWS_DATA,
   BENEFITS_DATA,
+  PRODUCTS_DATA,
   INGREDIENTS_DATA,
   TOP_SELLERS_DATA,
   HOW_ITS_MADE_DATA,
-  OUR_PRODUCTS_DATA,
 } from '@data';
 
 export const App = () => {
@@ -31,7 +31,7 @@ export const App = () => {
         <Benefits data={BENEFITS_DATA} />
         <Ingredients data={INGREDIENTS_DATA} />
         <HowItsMade data={HOW_ITS_MADE_DATA} />
-        <Products data={OUR_PRODUCTS_DATA} />
+        <Products data={PRODUCTS_DATA} />
         <TopSellers data={TOP_SELLERS_DATA} />
         <Reviews data={REVIEWS_DATA} />
       </main>

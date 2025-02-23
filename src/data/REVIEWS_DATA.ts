@@ -25,8 +25,9 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
         title: {
           text: 'Victoria Dobrzhanska',
         },
-        description:
-          'I love this chocolate bar. Perfect combination of light crispy wafer, covered in a thin layer chocolate.',
+        description: {
+          text: 'I love this chocolate bar. Perfect combination of light crispy wafer, covered in a thin layer chocolate.',
+        },
       },
       {
         image: {
@@ -41,8 +42,9 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
         title: {
           text: 'Nazar Babenko',
         },
-        description:
-          'This chocolate confection is a delight! A delight! The wafer is light and crisp, the hazelnut cream is smooth, and the chocolate is good.',
+        description: {
+          text: 'This chocolate confection is a delight! A delight! The wafer is light and crisp, the hazelnut cream is smooth, and the chocolate is good.',
+        },
       },
       {
         image: {
@@ -57,13 +59,14 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
         title: {
           text: 'Olena Kampusch',
         },
-        description:
-          'Chocolate is a family favourite treat. Love the delicious smooth chocolate and the creaminess inside. The wafer is soft but crunchy.',
+        description: {
+          text: 'Chocolate is a family favourite treat. Love the delicious smooth chocolate and the creaminess inside. The wafer is soft but crunchy.',
+        },
       },
     ],
   },
   modalToggleButton: {
-    text: 'Leave  a review',
+    text: 'Leave a review',
   },
   reviewsModal: {
     form: {

@@ -16,9 +16,10 @@ import {
   apple_and_cranberry_1x,
   apple_and_cranberry_2x,
 } from '@assets';
-import type { IOUR_PRODUCTS_DATA } from '@types';
 
-export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
+import type { IPRODUCTS_DATA } from '@types';
+
+export const PRODUCTS_DATA: IPRODUCTS_DATA = {
   sectionTitle: {
     textParts: {
       base: 'Our ',
@@ -44,7 +45,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         title: {
           text: 'Orange',
         },
-        description: 'Dark chocolate',
+        description: {
+          text: 'Dark chocolate',
+        },
         price: '45 UAH',
       },
       {
@@ -63,7 +66,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         title: {
           text: 'Apple&cranberry',
         },
-        description: 'Milk chocolate',
+        description: {
+          text: 'Milk chocolate',
+        },
         price: '50 UAH',
       },
       {
@@ -82,7 +87,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         title: {
           text: 'Lime&sea salt',
         },
-        description: 'Dark chocolate',
+        description: {
+          text: 'Dark chocolate',
+        },
         price: '66 UAH',
       },
       {
@@ -101,7 +108,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         title: {
           text: 'Pineapple',
         },
-        description: 'Dark chocolate',
+        description: {
+          text: 'Dark chocolate',
+        },
         price: '54 UAH',
       },
       {
@@ -120,7 +129,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         title: {
           text: 'Classic',
         },
-        description: 'Milk chocolate',
+        description: {
+          text: 'Milk chocolate',
+        },
         price: '45 UAH',
       },
       {
@@ -139,7 +150,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         title: {
           text: 'Honey',
         },
-        description: 'Milk chocolate',
+        description: {
+          text: 'Milk chocolate',
+        },
         price: '50 UAH',
       },
       {
@@ -158,7 +171,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         title: {
           text: 'Roasted fruits',
         },
-        description: 'Dark chocolate',
+        description: {
+          text: 'Dark chocolate',
+        },
         price: '66 UAH',
       },
       {
@@ -177,7 +192,9 @@ export const OUR_PRODUCTS_DATA: IOUR_PRODUCTS_DATA = {
         title: {
           text: 'Classic',
         },
-        description: 'White chocolate',
+        description: {
+          text: 'White chocolate',
+        },
         price: '54 UAH',
       },
     ],

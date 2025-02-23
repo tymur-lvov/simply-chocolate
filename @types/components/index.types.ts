@@ -11,10 +11,11 @@ import type {
   IINGREDIENTS_DATA,
   IHOW_ITS_MADE_DATA,
   ICommonTitle,
-  IOUR_PRODUCTS_DATA,
+  IPRODUCTS_DATA,
   ICommonButton,
   ITOP_SELLERS_DATA,
   IREVIEWS_DATA,
+  ICommonDescription,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -99,7 +100,7 @@ export interface ITitleProps extends IComponentProps {
 }
 
 export interface IDescriptionProps extends IComponentProps {
-  data: string;
+  data: ICommonDescription;
 }
 
 export interface IIngredientsProps extends IComponentProps {
@@ -127,15 +128,15 @@ export interface IRecipeItemProps extends IComponentProps {
 }
 
 export interface IProductsProps extends IComponentProps {
-  data: IOUR_PRODUCTS_DATA;
+  data: IPRODUCTS_DATA;
 }
 
 export interface IProductsListProps extends IComponentProps {
-  data: IOUR_PRODUCTS_DATA['productsList'];
+  data: IPRODUCTS_DATA['productsList'];
 }
 
 export interface IProductsItemsProps extends IComponentProps {
-  data: IOUR_PRODUCTS_DATA['productsList']['productsItems'][number];
+  data: IPRODUCTS_DATA['productsList']['productsItems'][number];
 }
 
 export interface ITopSellersProps extends IComponentProps {

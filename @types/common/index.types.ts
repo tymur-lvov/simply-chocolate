@@ -49,6 +49,10 @@ export interface ICommonTitle extends ICommonComponent {
   isAccented?: boolean;
 }
 
+export interface ICommonDescription extends ICommonComponent {
+  isAccented?: boolean;
+}
+
 export interface ICommonInput {
   type?: string;
   label?: string;

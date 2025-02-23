@@ -6,6 +6,7 @@ import {
   chocolate_with_fruits_1x,
   chocolate_with_fruits_2x,
 } from '@assets';
+
 import type { ITOP_SELLERS_DATA } from '@types';
 
 export const TOP_SELLERS_DATA: ITOP_SELLERS_DATA = {
@@ -31,8 +32,9 @@ export const TOP_SELLERS_DATA: ITOP_SELLERS_DATA = {
         title: {
           text: 'Chocolate with nuts',
         },
-        description:
-          "Chocolate with nuts is a delectable combination that brings together the smoothness of chocolate and the crunchiness of nuts. Whether it's milk chocolate, dark chocolate, or white chocolate, the addition of nuts adds a whole new dimension of flavor and texture.",
+        description: {
+          text: "Chocolate with nuts is a delectable combination that brings together the smoothness of chocolate and the crunchiness of nuts. Whether it's milk chocolate, dark chocolate, or white chocolate, the addition of nuts adds a whole new dimension of flavor and texture.",
+        },
       },
       {
         image: {
@@ -47,8 +49,9 @@ export const TOP_SELLERS_DATA: ITOP_SELLERS_DATA = {
         title: {
           text: 'Chocolate with fruits',
         },
-        description:
-          'Chocolate with fruit is an unbeatable combination of two of the tastiest things in the world. This dessert combines delicate and aromatic chocolate with fresh and juicy fruits, creating a true poetry of taste.',
+        description: {
+          text: 'Chocolate with fruit is an unbeatable combination of two of the tastiest things in the world. This dessert combines delicate and aromatic chocolate with fresh and juicy fruits, creating a true poetry of taste.',
+        },
       },
       {
         image: {
@@ -63,8 +66,9 @@ export const TOP_SELLERS_DATA: ITOP_SELLERS_DATA = {
         title: {
           text: 'Dark chocolate',
         },
-        description:
-          'Dark chocolate is a rich and indulgent treat that is beloved by many chocolate enthusiasts. It is made from cocoa beans, which are roasted, ground, and then processed to produce chocolate liquor. Dark chocolate contains a higher percentage of cocoa solids compared to milk chocolate.',
+        description: {
+          text: 'Dark chocolate is a rich and indulgent treat that is beloved by many chocolate enthusiasts. It is made from cocoa beans, which are roasted, ground, and then processed to produce chocolate liquor. Dark chocolate contains a higher percentage of cocoa solids compared to milk chocolate.',
+        },
       },
     ],
   },

@@ -1,5 +1,5 @@
 import type { IDescription } from '@types';
 
-export const Description: IDescription = ({ className, data: description }) => {
-  return <p className={className}>{description}</p>;
+export const Description: IDescription = ({ className, data: { text } }) => {
+  return <p className={className}>{text}</p>;
 };
