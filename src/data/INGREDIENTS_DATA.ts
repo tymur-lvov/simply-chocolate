@@ -1,20 +1,20 @@
 import {
-  chocolate_1x,
-  chocolate_2x,
   milk_1x,
   milk_2x,
   nuts_1x,
   nuts_2x,
-  coffee_1x,
-  coffee_2x,
   cacao_1x,
   cacao_2x,
-  raspberry_1x,
-  raspberry_2x,
+  coffee_1x,
+  coffee_2x,
   coconut_1x,
   coconut_2x,
   vanilla_1x,
   vanilla_2x,
+  raspberry_1x,
+  raspberry_2x,
+  chocolate_1x,
+  chocolate_2x,
 } from '@assets';
 
 import type { IINGREDIENTS_DATA } from '@types';

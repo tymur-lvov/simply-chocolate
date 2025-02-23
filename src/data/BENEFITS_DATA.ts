@@ -39,7 +39,6 @@ export const BENEFITS_DATA: IBENEFITS_DATA = {
         description: {
           text: 'We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting the finest ingredients to handcrafting each piece, our attention to detail is evident in every bite.',
         },
-
         icon: {
           width: 32,
           height: 32,
