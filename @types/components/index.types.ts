@@ -1,21 +1,22 @@
 import type { ReactNode, FC } from 'react';
 
 import type {
+  IMENU_DATA,
+  IHERO_DATA,
+  IHEADER_DATA,
+  IREVIEWS_DATA,
+  IBENEFITS_DATA,
+  IPRODUCTS_DATA,
+  IINGREDIENTS_DATA,
+  ITOP_SELLERS_DATA,
+  IHOW_ITS_MADE_DATA,
   IOnClick,
   ICommonIcon,
   ICommonImage,
-  IHERO_DATA,
-  IMENU_DATA,
-  IHEADER_DATA,
-  IBENEFITS_DATA,
-  IINGREDIENTS_DATA,
-  IHOW_ITS_MADE_DATA,
   ICommonTitle,
-  IPRODUCTS_DATA,
   ICommonButton,
-  ITOP_SELLERS_DATA,
-  IREVIEWS_DATA,
   ICommonDescription,
+  IBooleanStateSetter,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -26,6 +27,7 @@ export interface IComponentProps {
 
 export interface IIconProps extends IComponentProps {
   data?: ICommonIcon;
+  fragment?: string;
   fragmentKey?: string;
 }
 
@@ -162,8 +164,14 @@ export interface IReviewsItemProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsList']['reviewsItems'][number];
 }
 
-export interface IReviewsModalProps extends IComponentProps {
+export interface IModalProps extends IComponentProps {
+  isModalOpen: boolean;
+  setIsModalOpen: IBooleanStateSetter;
   data: IREVIEWS_DATA['reviewsModal'];
+}
+
+export interface IReviewSubmitFormProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm'];
 }
 
 export type IComponent = FC<IComponentProps>;
@@ -208,4 +216,5 @@ export type ITopSellersItem = FC<ITopSellersItemProps>;
 export type IReviews = FC<IReviewsProps>;
 export type IReviewsList = FC<IReviewsListProps>;
 export type IReviewsItem = FC<IReviewsItemProps>;
-export type IReviewsModal = FC<IReviewsModalProps>;
+export type IModal = FC<IModalProps>;
+export type IReviewSubmitForm = FC<IReviewSubmitFormProps>;

@@ -120,10 +120,10 @@ export interface IREVIEWS_DATA {
       description: ICommonDescription;
     }[];
   };
-  modalToggleButton: ICommonButton;
+  modalOpenButton: ICommonButton;
   reviewsModal: {
-    form: {
-      closeButton: ICommonButton;
+    closeButton: ICommonButton;
+    reviewSubmitForm: {
       title: ICommonTitle;
       nameInput: ICommonInput;
       emainInput: ICommonInput;
