@@ -65,18 +65,18 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
       },
     ],
   },
-  modalToggleButton: {
+  modalOpenButton: {
     text: 'Leave a review',
   },
   reviewsModal: {
-    form: {
-      closeButton: {
-        icon: {
-          width: 24,
-          height: 24,
-          fragment: 'close',
-        },
+    closeButton: {
+      icon: {
+        width: 24,
+        height: 24,
+        fragment: 'close',
       },
+    },
+    reviewSubmitForm: {
       title: {
         textVariants: {
           mobile: {
