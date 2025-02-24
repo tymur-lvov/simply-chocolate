@@ -1,0 +1,20 @@
+:global(.section_title).modal_title {
+  margin: 0;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  :global(.section_title).modal_title {
+    width: 255px;
+    white-space: pre;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  :global(.section_title).modal_title {
+    width: 298px;
+    margin-bottom: 40px;
+    white-space: initial;
+  }
+}
