@@ -2,11 +2,13 @@ import { getIconPath } from '@helpers';
 
 import type { IIcon } from '@types';
 
-export const Icon: IIcon = ({ className, fragmentKey, data }) => {
+export const Icon: IIcon = ({ className, fragment, fragmentKey, data }) => {
+  const iconPath = getIconPath(data?.fragment || fragment || '', fragmentKey, data?.fragments);
+
   return (
     <div className={className}>
       <svg width={data?.width} height={data?.height}>
-        <use href={getIconPath(data?.fragment || '', fragmentKey, data?.fragments)} />
+        <use href={iconPath} />
       </svg>
     </div>
   );
