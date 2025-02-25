@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { useState } from 'react';
 
-import { Button, Portal, ReviewsList, Modal, SectionTitle, ReviewSubmitForm } from '@components';
+import { Button, Portal, ReviewsList, Modal, SectionTitle } from '@components';
 
 import { CONTAINER, SECTION, SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
@@ -38,7 +38,7 @@ export const Reviews: IReviews = ({
       </div>
       <Portal>
         <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} data={reviewsModal}>
-          <ReviewSubmitForm data={reviewsModal.reviewSubmitForm} />
+          {/* <ReviewSubmitForm data={reviewsModal.reviewSubmitForm} /> */}
         </Modal>
       </Portal>
     </section>
