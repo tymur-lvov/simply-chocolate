@@ -1,25 +1,23 @@
 import { clsx } from 'clsx';
 import { useState } from 'react';
 
+import { toggleModal } from '@helpers';
+
 import { Button, Portal, ReviewsList, Modal, SectionTitle, ReviewSubmitForm } from '@components';
 
 import { CONTAINER, SECTION, SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
 import { reviewsModule as css } from '@styles';
 
-import type { IBooleanStateSetter, IReviews } from '@types';
+import type { IReviews } from '@types';
 
 export const Reviews: IReviews = ({
   data: { sectionTitle, reviewsList, modalOpenButton, reviewsModal },
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (setIsModalOpen: IBooleanStateSetter) => {
-    setIsModalOpen(true);
-  };
-
   const reviewsButtonClickHandle = () => {
-    openModal(setIsModalOpen);
+    toggleModal('open', setIsModalOpen);
   };
 
   return (

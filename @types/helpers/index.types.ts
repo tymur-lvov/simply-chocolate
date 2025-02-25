@@ -76,3 +76,5 @@ export type IGetVariantText = (textVariants: ICommonTitle['textVariants']) => st
 export type IGetVariantTextParts = (
   textVariants: ICommonTitle['textVariants']
 ) => ICommonTitle['textParts'];
+
+export type IToggleModal = (action: 'open' | 'close', setIsModalOpen: IBooleanStateSetter) => void;

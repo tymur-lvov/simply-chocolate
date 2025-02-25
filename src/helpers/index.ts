@@ -4,6 +4,7 @@ export * from './misc/getIconPath.ts';
 export * from './misc/getVariantText.ts';
 export * from './misc/getVariantTextParts.ts';
 export * from './misc/releaseScrollLock.ts';
+export * from './misc/toggleModal.ts';
 export * from './misc/toggleScrollLock.ts';
 export * from './markup/wrapTextPartsWithSpan.tsx';
 export * from './hooks/addMediaQueryListChangeListeners.ts';

@@ -1,6 +1,8 @@
 import { clsx } from 'clsx';
 import { useEffect, type MouseEvent } from 'react';
 
+import { toggleModal } from '@helpers';
+
 import { Button, Icon } from '@components';
 
 import { modalModule as css } from '@styles';
@@ -8,13 +10,9 @@ import { modalModule as css } from '@styles';
 import type { IBooleanStateSetter, IModal } from '@types';
 
 export const Modal: IModal = ({ children, isModalOpen, setIsModalOpen, data: { closeButton } }) => {
-  const closeModal = (setIsModalOpen: IBooleanStateSetter) => {
-    setIsModalOpen(false);
-  };
-
   const keydownHandle = (event: KeyboardEvent, setIsModalOpen: IBooleanStateSetter) => {
     if (event.key === 'Escape') {
-      closeModal(setIsModalOpen);
+      toggleModal('close', setIsModalOpen);
     }
   };
 
@@ -23,7 +21,7 @@ export const Modal: IModal = ({ children, isModalOpen, setIsModalOpen, data: { c
     setIsModalOpen: IBooleanStateSetter
   ) => {
     if (event.target === event.currentTarget) {
-      setIsModalOpen(false);
+      toggleModal('close', setIsModalOpen);
     }
   };
 
@@ -34,7 +32,7 @@ export const Modal: IModal = ({ children, isModalOpen, setIsModalOpen, data: { c
     const parentButton = (event.target as HTMLElement).closest('button');
 
     if (parentButton?.className.includes('close_button')) {
-      setIsModalOpen(false);
+      toggleModal('close', setIsModalOpen);
     }
   };
 
