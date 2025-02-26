@@ -1,9 +1,9 @@
-import { isTargetElementAList, toggleScrollLock } from '@helpers';
+import { toggleScrollLock } from '@helpers';
 
 import type { IMenuClickHandle } from '@types';
 
 export const menuClickHandle: IMenuClickHandle = (target, setIsMenuOpen) => {
-  if (isTargetElementAList(target)) {
+  if (target instanceof HTMLElement && target.nodeName === 'UL') {
     return;
   }
 
