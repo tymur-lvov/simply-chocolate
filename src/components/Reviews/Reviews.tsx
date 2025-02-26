@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { useState } from 'react';
 
-import { toggleModal } from '@helpers';
+import { reviewsButtonClickHandle } from '@helpers';
 
 import { Button, Portal, ReviewsList, Modal, SectionTitle, ReviewSubmitForm } from '@components';
 
@@ -16,10 +16,6 @@ export const Reviews: IReviews = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const reviewsButtonClickHandle = () => {
-    toggleModal('open', setIsModalOpen);
-  };
-
   return (
     <section className={clsx(css.reviews, SECTION)}>
       <div className={clsx(css.reviews_container, CONTAINER)}>
@@ -31,7 +27,7 @@ export const Reviews: IReviews = ({
         <Button
           className={css.reviews_modal_toggle_button}
           data={modalOpenButton}
-          onClick={reviewsButtonClickHandle}
+          onClick={() => reviewsButtonClickHandle(setIsModalOpen)}
         />
       </div>
       <Portal>
