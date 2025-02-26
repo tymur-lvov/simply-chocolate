@@ -78,3 +78,27 @@ export type IGetVariantTextParts = (
 ) => ICommonTitle['textParts'];
 
 export type IToggleModal = (action: 'open' | 'close', setIsModalOpen: IBooleanStateSetter) => void;
+
+export type IReviewsButtonClickHandle = (setIsModalOpen: IBooleanStateSetter) => void;
+
+export type IKeydownHandle = (event: KeyboardEvent, setIsModalOpen: IBooleanStateSetter) => void;
+
+export type IBackdropClickHandle = (
+  event: MouseEvent<HTMLElement>,
+  setIsModalOpen: IBooleanStateSetter
+) => void;
+
+export type ICloseButtonClickHandle = (
+  event: MouseEvent<HTMLElement>,
+  setIsModalOpen: IBooleanStateSetter
+) => void;
+
+export type IAddKeydownEventListener = (
+  keydownHandle: IKeydownHandle,
+  setIsModalOpen: IBooleanStateSetter
+) => void;
+
+export type IRemoveKeydownEventListener = (
+  keydownHandle: IKeydownHandle,
+  setIsModalOpen: IBooleanStateSetter
+) => void;
