@@ -44,6 +44,8 @@ export * from './MainTitle/MainTitle.tsx';
 export { default as mainTitleModule } from './MainTitle/mainTitle.module.css';
 export * from './Logo/Logo.tsx';
 export { default as logoModule } from './Logo/logo.module.css';
+export * from './Input/Input.tsx';
+export { default as inputModule } from './Input/input.module.css';
 export * from './IngredientsList/IngredientsList.tsx';
 export { default as ingredientsListModule } from './IngredientsList/ingredientsList.module.css';
 export * from './IngredientsItem/IngredientsItem.tsx';
