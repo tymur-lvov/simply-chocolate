@@ -94,49 +94,68 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
         },
         isAccented: true,
       },
-      nameInput: {
-        type: 'text',
-        label: 'Name',
-        icon: {
-          width: 18,
-          height: 18,
-          fragment: 'user',
+      inputs: [
+        {
+          type: 'text',
+          id: 'name',
+          label: {
+            text: 'Name',
+          },
+          icon: {
+            width: 18,
+            height: 18,
+            fragment: 'user',
+          },
         },
-      },
-      emainInput: {
-        type: 'email',
-        label: 'Email',
-        icon: {
-          width: 18,
-          height: 18,
-          fragment: 'email',
+        {
+          type: 'email',
+          id: 'email',
+          label: {
+            text: 'Email',
+          },
+          icon: {
+            width: 18,
+            height: 18,
+            fragment: 'email',
+          },
         },
-      },
-      phoneInput: {
-        type: 'number',
-        label: 'Phone number',
-        icon: {
-          width: 18,
-          height: 18,
-          fragment: 'phone',
+        {
+          type: 'number',
+          id: 'phone',
+          label: {
+            text: 'Phone number',
+          },
+          icon: {
+            width: 18,
+            height: 18,
+            fragment: 'phone',
+          },
         },
-      },
-      commentInput: {
-        label: 'Comment',
-        placeholder: 'Enter text',
-      },
-      checkboxInput: {
-        link: {
-          href: '/',
-          text: 'Privacy Policy',
+        {
+          type: 'textArea',
+          id: 'comment',
+          label: {
+            text: 'Comment',
+          },
+          placeholder: 'Enter text',
         },
-        label: 'I accept the terms and conditions of the ',
-        icon: {
-          width: 10,
-          height: 10,
-          fragment: 'checked',
+        {
+          type: 'checkbox',
+          id: 'privacy',
+          link: {
+            href: '/',
+            text: 'Privacy Policy',
+          },
+          label: {
+            text: 'I accept the terms and conditions of the ',
+          },
+          icon: {
+            width: 10,
+            height: 10,
+            fragment: 'checked',
+          },
         },
-      },
+      ],
       button: {
         text: 'Send',
         type: 'submit',

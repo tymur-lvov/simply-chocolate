@@ -9,6 +9,7 @@
   --play-fill: #f5f4f4;
   --marker-body: #4c4c4c;
   --marker-border: #eceded;
+  --input-icon-stroke: #404040;
   --font-family: 'Montserrat', sans-serif;
   --transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
