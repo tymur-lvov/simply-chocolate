@@ -125,11 +125,7 @@ export interface IREVIEWS_DATA {
     closeButton: ICommonButton;
     reviewSubmitForm: {
       title: ICommonTitle;
-      nameInput: ICommonInput;
-      emainInput: ICommonInput;
-      phoneInput: ICommonInput;
-      commentInput: ICommonInput;
-      checkboxInput: ICommonInput;
+      inputs: ICommonInput[];
       button: ICommonButton;
     };
   };

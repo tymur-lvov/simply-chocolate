@@ -43,8 +43,6 @@ export type IMenuClickHandle = (target: EventTarget, setIsMenuOpen: IBooleanStat
 
 export type ISocialsLinkClickHandle = (setLinkClickCount: INumberStateSetter) => void;
 
-export type IIsTargetElementAList = (target: EventTarget) => boolean;
-
 export type IGetIconPath = (
   fragment: string,
   fragmentKey?: string,
