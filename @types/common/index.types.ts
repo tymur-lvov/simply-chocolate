@@ -53,9 +53,14 @@ export interface ICommonDescription extends ICommonComponent {
   isAccented?: boolean;
 }
 
+export interface ICommonLabel extends ICommonComponent {}
+
+export interface ICommonPlaceholder extends ICommonComponent {}
+
 export interface ICommonInput {
-  type?: string;
-  label?: string;
+  type: string;
+  id: string;
+  label?: ICommonLabel;
   icon?: ICommonIcon;
   placeholder?: string;
   link?: ICommonLink;

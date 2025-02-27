@@ -174,6 +174,10 @@ export interface IReviewSubmitFormProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm'];
 }
 
+export interface IInputProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+}
+
 export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
@@ -218,3 +222,4 @@ export type IReviewsList = FC<IReviewsListProps>;
 export type IReviewsItem = FC<IReviewsItemProps>;
 export type IModal = FC<IModalProps>;
 export type IReviewSubmitForm = FC<IReviewSubmitFormProps>;
+export type IInput = FC<IInputProps>;
