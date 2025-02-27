@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   padding: 0 32px;
@@ -22,7 +23,6 @@
   position: relative;
   top: 50%;
   left: 50%;
-  width: 100%;
   padding: 32px 24px;
   border-radius: 15px;
   background-color: var(--light);
@@ -58,6 +58,11 @@
   height: 100%;
   stroke: var(--black);
   transition: transform 250ms var(--transition);
+  transition: transform 250ms var(--transition);
+}
+
+.modal_close_button:focus .modal_close_icon {
+  transform: scale(112.5%);
 }
 
 .modal_close_button:active .modal_close_icon {
