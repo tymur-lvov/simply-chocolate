@@ -58,9 +58,10 @@ export interface ICommonLabel extends ICommonComponent {}
 export interface ICommonPlaceholder extends ICommonComponent {}
 
 export interface ICommonInput {
-  type: string;
-  id: string;
+  type?: string;
+  id?: string;
   label?: ICommonLabel;
+  description?: ICommonDescription;
   icon?: ICommonIcon;
   placeholder?: string;
   link?: ICommonLink;
