@@ -1,0 +1,14 @@
+.review_form_label {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(64, 64, 64, 0.3);
+  font-size: 13px;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+  .review_form_label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+}
