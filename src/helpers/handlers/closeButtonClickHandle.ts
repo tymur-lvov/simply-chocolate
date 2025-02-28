@@ -1,4 +1,4 @@
-import { toggleModal } from '@helpers';
+import { toggleModal, toggleScrollLock } from '@helpers';
 
 import type { ICloseButtonClickHandle } from '@types';
 
@@ -7,5 +7,6 @@ export const closeButtonClickHandle: ICloseButtonClickHandle = (event, setIsModa
 
   if (parentButton?.className.includes('close_button')) {
     toggleModal('close', setIsModalOpen);
+    toggleScrollLock();
   }
 };
