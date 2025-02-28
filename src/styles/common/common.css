@@ -17,7 +17,7 @@ body {
   clip-path: inset(100%);
 }
 
-.menu_is_open {
+.modal_is_open {
   overflow: hidden;
 }
 
