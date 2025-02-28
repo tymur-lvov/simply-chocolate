@@ -1,0 +1,89 @@
+.review_form_checkbox_description_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .review_form_checkbox_description_wrapper {
+    height: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.review_form_checkbox_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.review_form_checkbox {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.review_form_checkbox_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  border-radius: 6px;
+  pointer-events: none;
+  fill: none;
+  transition: border-color 250ms var(--transition), background-color 250ms var(--transition),
+    fill 250ms var(--transition);
+}
+
+.review_form_checkbox:focus + .review_form_checkbox_icon {
+  border-color: var(--orange);
+}
+
+.review_form_checkbox:checked + .review_form_checkbox_icon {
+  border-color: var(--orange);
+  background-color: var(--orange);
+  fill: var(--white);
+}
+
+.review_form_checkbox_icon > svg {
+  width: 10px;
+  height: 10px;
+}
+
+.review_form_checkbox_description {
+  display: block;
+  margin-left: 32px;
+  color: rgba(64, 64, 64, 0.6);
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+  .review_form_checkbox_description {
+    font-size: 14px;
+  }
+}
+
+.review_form_checkbox_description_link {
+  display: inline-block;
+  color: var(--orange);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: transform 250ms var(--transition);
+  text-decoration-skip-ink: none;
+}
+
+.review_form_checkbox_description_link:focus {
+  transform: scale(104%);
+}

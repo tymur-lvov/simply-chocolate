@@ -1,0 +1,21 @@
+.review_form_input {
+  width: 100%;
+  height: 46px;
+  padding: 13px 18px 13px 43px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+  transition: border-color 250ms var(--transition);
+}
+
+.review_form_input:focus {
+  border-color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+  .review_form_input {
+    height: 68px;
+    padding: 22px 24px 22px 62px;
+    border-radius: 13px;
+  }
+}
