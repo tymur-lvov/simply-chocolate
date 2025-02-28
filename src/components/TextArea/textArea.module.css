@@ -1,0 +1,26 @@
+textarea.review_form_text_area {
+  height: 91px;
+  margin-bottom: 18px;
+  padding: 13px 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  textarea.review_form_text_area {
+    height: 137px;
+    padding: 22px 24px;
+  }
+}
+
+textarea.review_form_text_area::placeholder {
+  color: rgba(64, 64, 64, 0.3);
+  font-weight: 400;
+  font-size: 13px;
+  font-family: var(--font-family);
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+  textarea.review_form_text_area::placeholder {
+    font-size: 18px;
+  }
+}

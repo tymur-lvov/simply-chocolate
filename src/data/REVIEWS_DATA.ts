@@ -146,7 +146,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             href: '/',
             text: 'Privacy Policy',
           },
-          label: {
+          description: {
             text: 'I accept the terms and conditions of the ',
           },
           icon: {
