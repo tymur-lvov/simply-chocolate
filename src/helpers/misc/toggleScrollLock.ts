@@ -1,3 +1,3 @@
 export const toggleScrollLock = () => {
-  document.body.classList.toggle('menu_is_open');
+  document.body.classList.toggle('modal_is_open');
 };

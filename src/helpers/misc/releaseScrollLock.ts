@@ -1,3 +1,3 @@
 export const releaseScrollLock = () => {
-  document.body.classList.remove('menu_is_open');
+  document.body.classList.remove('modal_is_open');
 };
