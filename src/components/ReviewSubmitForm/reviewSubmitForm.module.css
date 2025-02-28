@@ -1,20 +1,51 @@
-:global(.section_title).modal_title {
+:global(.section_title).review_form_title {
   margin: 0;
   margin-bottom: 32px;
   text-align: left;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
-  :global(.section_title).modal_title {
+  :global(.section_title).review_form_title {
     width: 255px;
     white-space: pre;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  :global(.section_title).modal_title {
+  :global(.section_title).review_form_title {
     width: 298px;
     margin-bottom: 40px;
     white-space: initial;
+  }
+}
+
+.review_form_button {
+  width: 93px;
+  height: 41px;
+  border-radius: 100px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 250ms var(--transition), color 250ms var(--transition);
+}
+
+.review_form_button:active {
+  background-color: var(--beige);
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+  .review_form_button {
+    width: 117px;
+    height: 45px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .review_form_button:hover,
+  .review_form_button:focus {
+    background-color: var(--beige);
+    color: var(--orange);
   }
 }

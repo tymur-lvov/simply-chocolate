@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 import {
   keydownHandle,
+  releaseScrollLock,
   backdropClickHandle,
   closeButtonClickHandle,
   addKeydownEventListener,
@@ -19,7 +20,10 @@ export const Modal: IModal = ({ children, isModalOpen, setIsModalOpen, data: { c
   useEffect(() => {
     addKeydownEventListener(keydownHandle, setIsModalOpen);
 
-    return () => removeKeydownEventListener(keydownHandle, setIsModalOpen);
+    return () => {
+      removeKeydownEventListener(keydownHandle, setIsModalOpen);
+      releaseScrollLock();
+    };
   }, []);
 
   return (
