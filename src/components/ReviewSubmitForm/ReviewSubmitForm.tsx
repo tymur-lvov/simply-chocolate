@@ -1,4 +1,4 @@
-import { Button, Field, Title } from '@components';
+import { Field, Title } from '@components';
 
 import { SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
@@ -6,7 +6,7 @@ import { reviewSubmitFormModule as css } from '@styles';
 
 import type { IReviewSubmitForm } from '@types';
 
-export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, button } }) => {
+export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs } }) => {
   return (
     <>
       <Title
@@ -16,7 +16,7 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
       {inputs.map((input) => (
         <Field data={input} key={input.id} />
       ))}
-      <Button className={css.review_form_button} data={button} />
+      {/* <Button className={css.review_form_button} data={button} /> */}
     </>
   );
 };
