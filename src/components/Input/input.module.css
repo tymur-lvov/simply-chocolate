@@ -21,10 +21,6 @@
   transform: translateY(-50%);
 }
 
-.review_form_input:focus + .review_form_input_icon {
-  stroke: var(--orange);
-}
-
 @media only screen and (min-width: 768px) {
   .review_form_input_icon {
     left: 24px;

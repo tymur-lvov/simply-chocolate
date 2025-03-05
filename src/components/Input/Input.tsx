@@ -6,7 +6,7 @@ import { inputModule as css } from '@styles';
 
 import type { IInput } from '@types';
 
-export const Input: IInput = ({ className, data: { id, type, icon } }) => {
+export const Input: IInput = ({ className, data: { id, type, icon }, onChange }) => {
   return (
     <div className={css.review_form_input_icon_wrapper}>
       <input
@@ -14,6 +14,7 @@ export const Input: IInput = ({ className, data: { id, type, icon } }) => {
         id={id}
         type={type}
         autoComplete='true'
+        onChange={onChange}
       />
       <Icon className={css.review_form_input_icon} data={icon} />
     </div>
