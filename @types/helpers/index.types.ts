@@ -1,4 +1,4 @@
-import type { Dispatch, ReactNode, SetStateAction, MouseEvent } from 'react';
+import type { Dispatch, ReactNode, SetStateAction, MouseEvent, ChangeEvent } from 'react';
 
 import type { ICommonTitle } from '../common/index.types';
 
@@ -31,7 +31,9 @@ export type IRemoveMediaQueryListChangeListeners = (
   mediaQueryListChangeHandle: () => void
 ) => void;
 
-export type IOnClick = (event: MouseEvent<HTMLElement>) => void;
+export type IOnButtonClick = (event: MouseEvent<HTMLElement>) => void;
+
+export type IOnFieldChange = (event: ChangeEvent<HTMLInputElement>) => void;
 
 export type IBooleanStateSetter = Dispatch<SetStateAction<boolean>>;
 
