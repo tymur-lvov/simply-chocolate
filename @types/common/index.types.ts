@@ -59,10 +59,11 @@ export interface ICommonPlaceholder extends ICommonComponent {}
 
 export interface ICommonInput {
   type?: string;
-  id?: string;
+  id: string;
   label?: ICommonLabel;
   description?: ICommonDescription;
   icon?: ICommonIcon;
   placeholder?: string;
   link?: ICommonLink;
+  errorText?: string;
 }

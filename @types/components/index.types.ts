@@ -10,11 +10,12 @@ import type {
   IINGREDIENTS_DATA,
   ITOP_SELLERS_DATA,
   IHOW_ITS_MADE_DATA,
-  IOnClick,
+  IOnButtonClick,
   ICommonIcon,
   ICommonImage,
   ICommonTitle,
   ICommonButton,
+  IOnFieldChange,
   ICommonDescription,
   IBooleanStateSetter,
 } from '../index.types';
@@ -38,7 +39,7 @@ export interface IImageProps extends IComponentProps {
 export interface IButtonProps extends IComponentProps {
   data?: ICommonButton;
   type?: 'button' | 'submit' | 'reset';
-  onClick?: IOnClick;
+  onClick?: IOnButtonClick;
 }
 
 export interface IHeaderProps extends IComponentProps {
@@ -176,6 +177,13 @@ export interface IReviewSubmitFormProps extends IComponentProps {
 
 export interface IInputProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  isFieldDataValid?: boolean;
+  onChange?: IOnFieldChange;
+}
+
+export interface IFieldErrorProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number]['errorText'];
+  fieldError?: boolean;
 }
 
 export type IComponent = FC<IComponentProps>;
@@ -223,6 +231,7 @@ export type IReviewsItem = FC<IReviewsItemProps>;
 export type IModal = FC<IModalProps>;
 export type IReviewSubmitForm = FC<IReviewSubmitFormProps>;
 export type IField = FC<IInputProps>;
+export type IFieldError = FC<IFieldErrorProps>;
 export type ILabel = FC<IInputProps>;
 export type IInput = FC<IInputProps>;
 export type ITextArea = FC<IInputProps>;
