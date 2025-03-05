@@ -10,13 +10,6 @@ import { type ChangeEvent, type FormEvent } from 'react';
 import type { IReviewSubmitForm } from '@types';
 
 export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, button } }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    comment: '',
-  });
-
   const [fieldError, setFieldError] = useState({
     name: false,
     email: false,
@@ -25,8 +18,6 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
   });
 
   const validateField = ({ id, value }: HTMLInputElement) => {
-    console.log(id, value);
-
     const regExp = {
       name: /^[A-Za-z\s\-]{2,50}$/,
       email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
@@ -56,7 +47,7 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
 
     const form = event.target as HTMLFormElement;
 
-    console.log(validateFields(form.elements));
+    validateFields(form.elements);
   };
 
   return (
