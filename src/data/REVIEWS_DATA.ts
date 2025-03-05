@@ -106,6 +106,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             height: 18,
             fragment: 'user',
           },
+          errorText: 'Name is not correct.',
         },
         {
           type: 'email',
@@ -118,6 +119,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             height: 18,
             fragment: 'email',
           },
+          errorText: 'Email is not correct.',
         },
         {
           type: 'number',
@@ -130,6 +132,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             height: 18,
             fragment: 'phone',
           },
+          errorText: 'Phone number is not correct.',
         },
         {
           type: 'textArea',
@@ -138,6 +141,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             text: 'Comment',
           },
           placeholder: 'Enter text',
+          errorText: 'Comment is not correct.',
         },
         {
           type: 'checkbox',

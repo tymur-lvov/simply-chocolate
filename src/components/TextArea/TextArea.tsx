@@ -4,12 +4,13 @@ import { textAreaModule as css } from '@styles';
 
 import type { ITextArea } from '@types';
 
-export const TextArea: ITextArea = ({ className, data: { id, placeholder } }) => {
+export const TextArea: ITextArea = ({ className, data: { id, placeholder }, onChange }) => {
   return (
     <textarea
       id={id}
       className={clsx(css.review_form_text_area, className)}
       placeholder={placeholder}
+      onChange={() => onChange}
     />
   );
 };
