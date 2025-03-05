@@ -19,3 +19,15 @@
     border-radius: 13px;
   }
 }
+
+.review_form_input:focus + div {
+  stroke: var(--orange);
+}
+
+.review_form_input.review_form_input__error {
+  border-color: #e74a3b;
+}
+
+.review_form_input.review_form_input__error + div {
+  stroke: #e74a3b;
+}
