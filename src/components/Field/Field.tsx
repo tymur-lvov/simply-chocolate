@@ -6,30 +6,22 @@ import { fieldModule as css } from '@styles';
 
 import type { IField } from '@types';
 
-export const Field: IField = ({ isFieldDataValid, data, onChange }) => {
+export const Field: IField = ({ isFieldError, data, onChange }) => {
   return (
     <>
       {data.label && <Label data={data} />}
       {(data.type === 'text' || data.type === 'email' || data.type === 'number') && (
         <Input
           className={clsx({
-            [css.review_form_input]: true,
-            [css.review_form_input__error]: isFieldDataValid,
+            [css.review_form_field]: true,
+            [css.review_form_field__error]: isFieldError,
           })}
+          isFieldError={isFieldError}
           data={data}
           onChange={onChange}
         />
       )}
-      {data.type === 'textArea' && (
-        <TextArea
-          className={clsx({
-            [css.review_form_input]: true,
-            [css.review_form_input__error]: isFieldDataValid,
-          })}
-          data={data}
-          onChange={onChange}
-        />
-      )}
+      {data.type === 'textArea' && <TextArea className={css.review_form_field} data={data} />}
       {data.type === 'checkbox' && <Checkbox data={data} />}
     </>
   );

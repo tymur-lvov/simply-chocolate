@@ -1,4 +1,4 @@
-.review_form_input {
+.review_form_field {
   width: 100%;
   height: 46px;
   padding: 13px 18px 13px 43px;
@@ -8,26 +8,26 @@
   transition: border-color 250ms var(--transition);
 }
 
-.review_form_input:focus {
+.review_form_field:focus {
   border-color: var(--orange);
 }
 
 @media only screen and (min-width: 768px) {
-  .review_form_input {
+  .review_form_field {
     height: 68px;
     padding: 22px 24px 22px 62px;
     border-radius: 13px;
   }
 }
 
-.review_form_input:focus + div {
+.review_form_field:focus + div {
   stroke: var(--orange);
 }
 
-.review_form_input.review_form_input__error {
+.review_form_field.review_form_field__error {
   border-color: #e74a3b;
 }
 
-.review_form_input.review_form_input__error + div {
+.review_form_field.review_form_field__error + div {
   stroke: #e74a3b;
 }
