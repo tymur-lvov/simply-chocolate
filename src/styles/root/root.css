@@ -9,7 +9,8 @@
   --play-fill: #f5f4f4;
   --marker-body: #4c4c4c;
   --marker-border: #eceded;
-  --Field-icon-stroke: #404040;
+  --field-icon-stroke: #404040;
+  --field-icon-fill-error: #e74a3b;
   --font-family: 'Montserrat', sans-serif;
   --transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
