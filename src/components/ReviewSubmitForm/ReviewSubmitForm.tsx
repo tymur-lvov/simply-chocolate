@@ -6,48 +6,81 @@ import { SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
 import { reviewSubmitFormModule as css } from '@styles';
 
-import { type ChangeEvent, type FormEvent } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
+
 import type { IReviewSubmitForm } from '@types';
 
 export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, button } }) => {
-  const [fieldError, setFieldError] = useState({
-    name: false,
-    email: false,
-    phone: false,
-    comment: false,
+  const [isSubmitAttempted, setIsSubmitAttempted] = useState(false);
+
+  const [_, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    comment: '',
   });
 
-  const validateField = ({ id, value }: HTMLInputElement) => {
+  const [errorStatus, setErrorStatus] = useState({
+    isNameError: false,
+    isEmailError: false,
+    isPhoneError: false,
+    isCommentError: false,
+  });
+
+  const validateField = (field: HTMLInputElement) => {
     const regExp = {
       name: /^[A-Za-z\s\-]{2,50}$/,
       email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
       phone: /^(\+?\d{1,3})?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{2}[-.\s]?\d{2}$/,
-      comment: /^[A-Za-z0-9\s.,!?()\-'"%$#@:;]{2,500}$/,
     };
 
-    const pattern = regExp[id as keyof typeof regExp];
-
-    return pattern.test(value);
+    return !regExp[field.id as keyof typeof regExp]?.test(field.value);
   };
 
-  const validateFields = (fields: HTMLFormControlsCollection) => {
-    return Array.from(fields).some((field) => !validateField(field as HTMLInputElement));
-  };
-
-  const fieldChangeHandle = (event: ChangeEvent<HTMLInputElement>) => {
-    if (!validateField(event.target) && event.target.value !== '') {
-      setFieldError((prev) => ({ ...prev, [event.target.id]: true }));
-    } else {
-      setFieldError((prev) => ({ ...prev, [event.target.id]: false }));
-    }
-  };
-
-  const formSubmitHandle = (event: FormEvent<HTMLFormElement>) => {
+  const formSubmitHandle = (event: FormEvent) => {
     event.preventDefault();
+
+    setIsSubmitAttempted(true);
 
     const form = event.target as HTMLFormElement;
 
-    validateFields(form.elements);
+    const fields = {
+      name: form.elements.namedItem('name') as HTMLInputElement,
+      email: form.elements.namedItem('email') as HTMLInputElement,
+      phone: form.elements.namedItem('phone') as HTMLInputElement,
+      comment: form.elements.namedItem('comment') as HTMLInputElement,
+    };
+
+    const errorStatus = Object.keys(fields).reduce((obj, key) => {
+      const errorKey = `is${key.charAt(0).toUpperCase()}${key.slice(1)}Error`;
+
+      obj[errorKey] = validateField(fields[key as keyof typeof fields]);
+
+      return obj;
+    }, {} as Record<string, boolean>);
+
+    setErrorStatus((prev) => ({ ...prev, ...errorStatus }));
+
+    if (!Object.keys(errorStatus).some((key) => errorStatus[key])) {
+      setFormData({
+        name: fields.name.value,
+        email: fields.email.value,
+        phone: fields.phone.value,
+        comment: fields.comment.value,
+      });
+    }
+  };
+
+  const fieldChangeHandle = (event: ChangeEvent) => {
+    if (isSubmitAttempted) {
+      const field = event.target;
+
+      const errorKey = `is${field.id.charAt(0).toUpperCase()}${field.id.slice(1)}Error`;
+
+      const error = { [errorKey]: validateField(event.target as HTMLInputElement) };
+
+      setErrorStatus((prev) => ({ ...prev, ...error }));
+    }
   };
 
   return (
@@ -59,14 +92,10 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
       {inputs.map((input) => (
         <div className={css.field_error_wrapper} key={input.id}>
           <Field
-            isFieldDataValid={fieldError[input.id as keyof typeof fieldError]}
-            data={input}
+            isFieldError={errorStatus[input.error?.key as keyof typeof errorStatus]}
             onChange={fieldChangeHandle}
+            data={input}
           />
-          {/* <FieldError
-            data={input.errorText}
-            fieldError={fieldError[input.id as keyof typeof fieldError]}
-          /> */}
         </div>
       ))}
       <Button className={css.review_form_button} type='submit' data={button} />
