@@ -16,8 +16,8 @@
   width: 18px;
   height: 18px;
   fill: none;
-  stroke: var(--Field-icon-stroke);
-  transition: stroke 250ms var(--transition);
+  stroke: var(--field-icon-stroke);
+  transition: stroke 250ms var(--transition), opacity 250ms var(--transition);
   transform: translateY(-50%);
 }
 
@@ -27,4 +27,16 @@
     width: 24px;
     height: 24px;
   }
+}
+
+.review_form_input_icon.review_form_input_icon__error {
+  right: 14px;
+  left: auto;
+  opacity: 0;
+  fill: var(--field-icon-fill-error);
+  stroke: none;
+}
+
+.review_form_input_icon.review_form_input_icon__error.review_form_input_icon__error__visible {
+  opacity: 1;
 }
