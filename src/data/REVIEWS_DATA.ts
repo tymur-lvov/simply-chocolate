@@ -106,7 +106,15 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             height: 18,
             fragment: 'user',
           },
-          errorText: 'Name is not correct.',
+          error: {
+            text: 'Name is not correct.',
+            key: 'isNameError',
+            icon: {
+              width: 18,
+              height: 18,
+              fragment: 'error',
+            },
+          },
         },
         {
           type: 'email',
@@ -119,7 +127,15 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             height: 18,
             fragment: 'email',
           },
-          errorText: 'Email is not correct.',
+          error: {
+            text: 'Email is not correct.',
+            key: 'isEmailError',
+            icon: {
+              width: 18,
+              height: 18,
+              fragment: 'error',
+            },
+          },
         },
         {
           type: 'number',
@@ -132,7 +148,15 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             height: 18,
             fragment: 'phone',
           },
-          errorText: 'Phone number is not correct.',
+          error: {
+            text: 'Phone number is not correct',
+            key: 'isPhoneError',
+            icon: {
+              width: 18,
+              height: 18,
+              fragment: 'error',
+            },
+          },
         },
         {
           type: 'textArea',
@@ -141,7 +165,10 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             text: 'Comment',
           },
           placeholder: 'Enter text',
-          errorText: 'Comment is not correct.',
+          error: {
+            text: 'Comment is not correct.',
+            key: 'isCommentError',
+          },
         },
         {
           type: 'checkbox',
