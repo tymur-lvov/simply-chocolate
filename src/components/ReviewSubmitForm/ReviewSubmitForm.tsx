@@ -61,7 +61,7 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
 
     setErrorStatus((prev) => ({ ...prev, ...errorStatus }));
 
-    if (!Object.keys(errorStatus).some((key) => errorStatus[key])) {
+    if (!Object.keys(errorStatus).some((key) => errorStatus[key as keyof typeof errorStatus])) {
       setFormData({
         name: fields.name.value,
         email: fields.email.value,
@@ -77,9 +77,9 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
 
       const errorKey = `is${field.id.charAt(0).toUpperCase()}${field.id.slice(1)}Error`;
 
-      const error = { [errorKey]: validateField(event.target as HTMLInputElement) };
+      const errorStatus = { [errorKey]: validateField(event.target as HTMLInputElement) };
 
-      setErrorStatus((prev) => ({ ...prev, ...error }));
+      setErrorStatus((prev) => ({ ...prev, ...errorStatus }));
     }
   };
 
@@ -90,13 +90,12 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
         data={title}
       />
       {inputs.map((input) => (
-        <div className={css.field_error_wrapper} key={input.id}>
-          <Field
-            isFieldError={errorStatus[input.error?.key as keyof typeof errorStatus]}
-            onChange={fieldChangeHandle}
-            data={input}
-          />
-        </div>
+        <Field
+          onChange={fieldChangeHandle}
+          isFieldError={errorStatus[input.error?.key as keyof typeof errorStatus]}
+          data={input}
+          key={input.id}
+        />
       ))}
       <Button className={css.review_form_button} type='submit' data={button} />
     </form>

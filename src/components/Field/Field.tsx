@@ -16,9 +16,9 @@ export const Field: IField = ({ isFieldError, data, onChange }) => {
             [css.review_form_field]: true,
             [css.review_form_field__error]: isFieldError,
           })}
+          onChange={onChange}
           isFieldError={isFieldError}
           data={data}
-          onChange={onChange}
         />
       )}
       {data.type === 'textArea' && <TextArea className={css.review_form_field} data={data} />}
