@@ -53,6 +53,12 @@ export interface ICommonDescription extends ICommonComponent {
   isAccented?: boolean;
 }
 
+export interface ICommonInputError extends ICommonComponent {
+  text: string;
+  key: string;
+  icon?: ICommonIcon;
+}
+
 export interface ICommonLabel extends ICommonComponent {}
 
 export interface ICommonPlaceholder extends ICommonComponent {}
@@ -65,5 +71,5 @@ export interface ICommonInput {
   icon?: ICommonIcon;
   placeholder?: string;
   link?: ICommonLink;
-  errorText?: string;
+  error?: ICommonInputError;
 }

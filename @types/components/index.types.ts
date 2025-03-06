@@ -177,13 +177,12 @@ export interface IReviewSubmitFormProps extends IComponentProps {
 
 export interface IInputProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
-  isFieldDataValid?: boolean;
+  isFieldError?: boolean;
   onChange?: IOnFieldChange;
 }
 
 export interface IFieldErrorProps extends IComponentProps {
-  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number]['errorText'];
-  fieldError?: boolean;
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number]['error'];
 }
 
 export type IComponent = FC<IComponentProps>;
