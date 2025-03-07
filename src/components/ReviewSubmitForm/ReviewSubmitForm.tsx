@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Button, Field, Title } from '@components';
+import { Field, Title } from '@components';
 
 import { SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
@@ -10,7 +10,7 @@ import type { ChangeEvent, FormEvent } from 'react';
 
 import type { IReviewSubmitForm } from '@types';
 
-export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, button } }) => {
+export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs } }) => {
   const [isSubmitAttempted, setIsSubmitAttempted] = useState(false);
 
   const [_, setFormData] = useState({
@@ -97,7 +97,7 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
           key={input.id}
         />
       ))}
-      <Button className={css.review_form_button} type='submit' data={button} />
+      {/* <Button className={css.review_form_button} type='submit' data={button} /> */}
     </form>
   );
 };
