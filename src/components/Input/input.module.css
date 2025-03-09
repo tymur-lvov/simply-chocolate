@@ -17,8 +17,12 @@
   height: 18px;
   fill: none;
   stroke: var(--field-icon-stroke);
-  transition: stroke 250ms var(--transition), opacity 250ms var(--transition);
+  transition: stroke 250ms var(--transition);
   transform: translateY(-50%);
+}
+
+input:focus + .review_form_input_icon {
+  stroke: var(--orange);
 }
 
 @media only screen and (min-width: 768px) {
@@ -29,14 +33,19 @@
   }
 }
 
-.review_form_input_icon.review_form_input_icon__error {
+input + .review_form_input_icon.review_form_input_icon__error {
+  stroke: var(--field-icon-error);
+}
+
+.review_form_input_icon.review_form_input_icon__error_icon {
   right: 14px;
   left: auto;
   opacity: 0;
-  fill: var(--field-icon-fill-error);
+  fill: var(--field-icon-error);
   stroke: none;
+  transition: opacity 250ms var(--transition);
 }
 
-.review_form_input_icon.review_form_input_icon__error.review_form_input_icon__error__visible {
+.review_form_input_icon.review_form_input_icon__error_icon.review_form_input_icon__error_icon__visible {
   opacity: 1;
 }

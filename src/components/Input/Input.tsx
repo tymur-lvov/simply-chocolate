@@ -6,29 +6,16 @@ import { inputModule as css } from '@styles';
 
 import type { IInput } from '@types';
 
-export const Input: IInput = ({
-  className,
-  isFieldError,
-  data: { id, type, icon, error },
-  onChange,
-}) => {
+export const Input: IInput = ({ className, data: { id, type, icon }, isFieldValid, onChange }) => {
   return (
     <div className={css.review_form_input_icon_wrapper}>
-      <input
-        className={clsx(css.review_form_input, className)}
-        id={id}
-        type={type}
-        autoComplete='true'
-        onChange={onChange}
-      />
-      <Icon className={css.review_form_input_icon} data={icon} />
+      <input className={className} id={id} type={type} autoComplete='true' onChange={onChange} />
       <Icon
         className={clsx({
           [css.review_form_input_icon]: true,
-          [css.review_form_input_icon__error]: true,
-          [css.review_form_input_icon__error__visible]: isFieldError,
+          [css.review_form_input_icon__error]: !isFieldValid,
         })}
-        data={error?.icon}
+        data={icon}
       />
     </div>
   );
