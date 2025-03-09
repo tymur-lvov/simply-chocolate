@@ -1,3 +1,7 @@
+.review_form_field_wrapper {
+  position: relative;
+}
+
 .review_form_field {
   width: 100%;
   height: 46px;
@@ -20,14 +24,58 @@
   }
 }
 
-.review_form_field:focus + div {
-  stroke: var(--orange);
-}
-
 .review_form_field.review_form_field__error {
   border-color: #e74a3b;
 }
 
-.review_form_field.review_form_field__error + div {
-  stroke: #e74a3b;
+/*  */
+
+.review_form_input_icon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--field-icon-stroke);
+  transition: stroke 250ms var(--transition);
+  transform: translateY(-50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .review_form_input_icon {
+    left: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.review_form_input_icon.review_form_input_icon__error_icon {
+  right: 18px;
+  left: auto;
+  opacity: 0;
+  fill: var(--field-icon-error);
+  stroke: none;
+  transition: opacity 250ms var(--transition);
+}
+
+@media only screen and (min-width: 768px) {
+  .review_form_input_icon.review_form_input_icon__error_icon {
+    right: 24px;
+  }
+}
+
+textarea + .review_form_input_icon.review_form_input_icon__error_icon {
+  top: 14px;
+  transform: none;
+}
+
+@media only screen and (min-width: 768px) {
+  textarea + .review_form_input_icon.review_form_input_icon__error_icon {
+    top: 22px;
+  }
+}
+
+.review_form_input_icon.review_form_input_icon__error_icon.review_form_input_icon__error_icon__visible {
+  opacity: 1;
 }
