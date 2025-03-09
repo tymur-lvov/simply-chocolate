@@ -10,13 +10,13 @@ import type {
   IINGREDIENTS_DATA,
   ITOP_SELLERS_DATA,
   IHOW_ITS_MADE_DATA,
-  IOnButtonClick,
   ICommonIcon,
   ICommonImage,
   ICommonTitle,
   ICommonButton,
-  IOnFieldChange,
   ICommonDescription,
+  IOnFieldChange,
+  IOnButtonClick,
   IBooleanStateSetter,
 } from '../index.types';
 
@@ -167,8 +167,8 @@ export interface IReviewsItemProps extends IComponentProps {
 
 export interface IModalProps extends IComponentProps {
   isModalOpen: boolean;
-  setIsModalOpen: IBooleanStateSetter;
   data: IREVIEWS_DATA['reviewsModal'];
+  setIsModalOpen: IBooleanStateSetter;
 }
 
 export interface IReviewSubmitFormProps extends IComponentProps {
@@ -177,7 +177,7 @@ export interface IReviewSubmitFormProps extends IComponentProps {
 
 export interface IInputProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
-  isFieldError?: boolean;
+  isFieldValid?: boolean;
   onChange?: IOnFieldChange;
 }
 
