@@ -96,7 +96,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
       },
       inputs: [
         {
-          type: 'text',
+          type: 'input',
           id: 'name',
           label: {
             text: 'Name',
@@ -117,7 +117,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
           },
         },
         {
-          type: 'email',
+          type: 'input',
           id: 'email',
           label: {
             text: 'Email',
@@ -138,7 +138,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
           },
         },
         {
-          type: 'number',
+          type: 'input',
           id: 'phone',
           label: {
             text: 'Phone number',
@@ -168,6 +168,11 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
           error: {
             text: 'Comment is not correct.',
             key: 'isCommentError',
+            icon: {
+              width: 18,
+              height: 18,
+              fragment: 'error',
+            },
           },
         },
         {
