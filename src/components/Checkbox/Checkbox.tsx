@@ -4,11 +4,15 @@ import { checkboxModule as css } from '@styles';
 
 import type { ICheckbox } from '@types';
 
-export const Checkbox: ICheckbox = ({ data: { id, type, icon, description, link } }) => {
+export const Checkbox: ICheckbox = ({
+  data: { id, type, icon, description, link },
+  isFieldValid,
+  onChange,
+}) => {
   return (
     <div className={css.review_form_checkbox_description_wrapper}>
       <div className={css.review_form_checkbox_wrapper}>
-        <input id={id} className={css.review_form_checkbox} type={type} />
+        <input className={css.review_form_checkbox} onChange={onChange} id={id} type={type} />
         <Icon className={css.review_form_checkbox_icon} data={icon} />
       </div>
       <p className={css.review_form_checkbox_description}>
