@@ -70,6 +70,8 @@ export * from './Header/Header.tsx';
 export { default as headerModule } from './Header/header.module.css';
 export * from './Field/Field.tsx';
 export { default as fieldModule } from './Field/field.module.css';
+export * from './ErrorMessage/ErrorMessage.tsx';
+export { default as errorMessageModule } from './ErrorMessage/errorMessage.module.css';
 export * from './Description/Description.tsx';
 export { default as descriptionModule } from './Description/description.module.css';
 export * from './Checkbox/Checkbox.tsx';

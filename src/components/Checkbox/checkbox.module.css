@@ -45,14 +45,14 @@
     fill 250ms var(--transition);
 }
 
-.review_form_checkbox:focus + .review_form_checkbox_icon {
-  border-color: var(--orange);
-}
-
 .review_form_checkbox:checked + .review_form_checkbox_icon {
   border-color: var(--orange);
   background-color: var(--orange);
   fill: var(--white);
+}
+
+.review_form_checkbox_icon.review_form_checkbox_icon__error {
+  border-color: var(--field-icon-error);
 }
 
 .review_form_checkbox_icon > svg {
