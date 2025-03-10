@@ -31,8 +31,6 @@ export type IRemoveMediaQueryListChangeListeners = (
   mediaQueryListChangeHandle: () => void
 ) => void;
 
-export type IOnButtonClick = (event: MouseEvent<HTMLElement>) => void;
-
 export type IOnFieldChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 
 export type IBooleanStateSetter = Dispatch<SetStateAction<boolean>>;

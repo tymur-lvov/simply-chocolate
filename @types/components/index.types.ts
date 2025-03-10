@@ -1,4 +1,4 @@
-import type { ReactNode, FC } from 'react';
+import type { ReactNode, FC, MouseEvent, Dispatch, SetStateAction } from 'react';
 
 import type {
   IMENU_DATA,
@@ -16,14 +16,15 @@ import type {
   ICommonButton,
   ICommonDescription,
   IOnFieldChange,
-  IOnButtonClick,
   IBooleanStateSetter,
 } from '../index.types';
 
 export interface IComponentProps {
-  className?: string;
+  index?: number;
   children?: ReactNode;
+  className?: string;
   classNames?: string[];
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
 }
 
 export interface IIconProps extends IComponentProps {
@@ -39,7 +40,6 @@ export interface IImageProps extends IComponentProps {
 export interface IButtonProps extends IComponentProps {
   data?: ICommonButton;
   type?: 'button' | 'submit' | 'reset';
-  onClick?: IOnButtonClick;
 }
 
 export interface IHeaderProps extends IComponentProps {
@@ -178,7 +178,19 @@ export interface IReviewSubmitFormProps extends IComponentProps {
 export interface IInputProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
   isFieldValid?: boolean;
+  isSubmitAttempted?: boolean;
+  isErrorPopupVisible?: boolean;
+  formStatus?: {
+    isSubmitAttempted: boolean;
+  };
+  errorPopupStatus?: {
+    isErrorPopupVisible: boolean;
+    errorPopupIndex: number | null | undefined;
+  };
   onChange?: IOnFieldChange;
+  setErrorPopupStatus?: Dispatch<
+    SetStateAction<{ isErrorPopupVisible: boolean; errorPopupIndex: number | null | undefined }>
+  >;
 }
 
 export type IComponent = FC<IComponentProps>;
@@ -230,3 +242,4 @@ export type ILabel = FC<IInputProps>;
 export type IInput = FC<IInputProps>;
 export type ITextArea = FC<IInputProps>;
 export type ICheckbox = FC<IInputProps>;
+export type IErrorMessage = FC<IComponentProps>;
