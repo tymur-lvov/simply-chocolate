@@ -3,13 +3,25 @@ import { Icon } from '@components';
 import { checkboxModule as css } from '@styles';
 
 import type { ICheckbox } from '@types';
+import { clsx } from 'clsx';
 
-export const Checkbox: ICheckbox = ({ data: { id, type, icon, description, link }, onChange }) => {
+export const Checkbox: ICheckbox = ({
+  data: { id, type, icon, description, link },
+  isFieldValid,
+  isSubmitAttempted,
+  onChange,
+}) => {
   return (
     <div className={css.review_form_checkbox_description_wrapper}>
       <div className={css.review_form_checkbox_wrapper}>
         <input className={css.review_form_checkbox} onChange={onChange} id={id} type={type} />
-        <Icon className={css.review_form_checkbox_icon} data={icon} />
+        <Icon
+          className={clsx({
+            [css.review_form_checkbox_icon]: true,
+            [css.review_form_checkbox_icon__error]: !isFieldValid && isSubmitAttempted,
+          })}
+          data={icon}
+        />
       </div>
       <p className={css.review_form_checkbox_description}>
         {description?.text}

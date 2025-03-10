@@ -1,0 +1,16 @@
+.error_message_text_wrapper {
+  position: absolute;
+  top: 35px;
+  right: -20px;
+  width: 100px;
+  padding: 6px;
+  border: 1px solid var(--field-icon-stroke);
+  border-radius: 6px;
+  background-color: var(--light);
+  z-index: 1;
+}
+
+.error_message_text {
+  font-size: 13px;
+  letter-spacing: -0.02em;
+}
