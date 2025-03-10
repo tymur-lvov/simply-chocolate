@@ -28,8 +28,6 @@
   border-color: #e74a3b;
 }
 
-/*  */
-
 .review_form_input_icon {
   position: absolute;
   top: 50%;
@@ -78,4 +76,15 @@ textarea + .review_form_input_icon.review_form_input_icon__error_icon {
 
 .review_form_input_icon.review_form_input_icon__error_icon.review_form_input_icon__error_icon__visible {
   opacity: 1;
+}
+
+.error_message {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms var(--transition);
+}
+
+.error_message.error_message__visible {
+  opacity: 1;
+  visibility: visible;
 }
