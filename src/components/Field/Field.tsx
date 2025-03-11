@@ -20,7 +20,7 @@ export const Field: IField = ({
 
   const isErrorPopupVisible = errorPopupStatus?.isErrorPopupVisible;
 
-  const errorPopupIndex = errorPopupStatus?.errorPopupIndex;
+  const errorFieldIndex = errorPopupStatus?.errorFieldIndex;
 
   const validateField = (field: HTMLInputElement) => {
     if (field.id === 'privacy') {
@@ -49,7 +49,7 @@ export const Field: IField = ({
     if (isSubmitAttempted && !isFieldValid) {
       setErrorPopupStatus?.((prev) => ({
         isErrorPopupVisible: !prev.isErrorPopupVisible,
-        errorPopupIndex: index,
+        errorFieldIndex: index,
       }));
     }
   };
@@ -59,7 +59,7 @@ export const Field: IField = ({
       {data.label && <Label data={data} />}
       {data.type !== 'checkbox' && (
         <div className={css.review_form_field_wrapper}>
-          {data.type === 'input' && (
+          {data.type !== 'textArea' && (
             <Input
               className={clsx({
                 [css.review_form_field]: true,
@@ -93,8 +93,9 @@ export const Field: IField = ({
           <ErrorMessage
             className={clsx({
               [css.error_message]: true,
-              [css.error_message__visible]: isErrorPopupVisible && errorPopupIndex === index,
+              [css.error_message__visible]: isErrorPopupVisible && errorFieldIndex === index,
             })}
+            data={data.error}
           />
         </div>
       )}

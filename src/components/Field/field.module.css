@@ -51,6 +51,7 @@
 .review_form_input_icon.review_form_input_icon__error_icon {
   right: 18px;
   left: auto;
+  pointer-events: none;
   opacity: 0;
   fill: var(--field-icon-error);
   stroke: none;
@@ -76,6 +77,8 @@ textarea + .review_form_input_icon.review_form_input_icon__error_icon {
 
 .review_form_input_icon.review_form_input_icon__error_icon.review_form_input_icon__error_icon__visible {
   opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
 }
 
 .error_message {
