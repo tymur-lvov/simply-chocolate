@@ -16,10 +16,10 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
 
   const [errorPopupStatus, setErrorPopupStatus] = useState<{
     isErrorPopupVisible: boolean;
-    errorPopupIndex: number | null | undefined;
+    errorFieldIndex: number | null | undefined;
   }>({
     isErrorPopupVisible: false,
-    errorPopupIndex: null,
+    errorFieldIndex: null,
   });
 
   const formSubmitHandle = (event: FormEvent) => {
@@ -34,7 +34,7 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
     if (element.nodeName !== 'svg' && element.nodeName !== 'use') {
       setErrorPopupStatus({
         isErrorPopupVisible: false,
-        errorPopupIndex: null,
+        errorFieldIndex: null,
       });
     }
   };
