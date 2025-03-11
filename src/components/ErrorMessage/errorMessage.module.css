@@ -1,16 +1,29 @@
 .error_message_text_wrapper {
   position: absolute;
-  top: 35px;
-  right: -20px;
-  width: 100px;
+  top: 31px;
+  right: 33px;
+  z-index: 1;
+  width: 150px;
   padding: 6px;
   border: 1px solid var(--field-icon-stroke);
   border-radius: 6px;
   background-color: var(--light);
-  z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .error_message_text_wrapper {
+    top: 43px;
+    right: 45px;
+  }
 }
 
 .error_message_text {
   font-size: 13px;
   letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+  .error_message_text {
+    font-size: 14px;
+  }
 }
