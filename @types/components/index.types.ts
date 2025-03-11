@@ -185,12 +185,16 @@ export interface IInputProps extends IComponentProps {
   };
   errorPopupStatus?: {
     isErrorPopupVisible: boolean;
-    errorPopupIndex: number | null | undefined;
+    errorFieldIndex: number | null | undefined;
   };
   onChange?: IOnFieldChange;
   setErrorPopupStatus?: Dispatch<
-    SetStateAction<{ isErrorPopupVisible: boolean; errorPopupIndex: number | null | undefined }>
+    SetStateAction<{ isErrorPopupVisible: boolean; errorFieldIndex: number | null | undefined }>
   >;
+}
+
+export interface IErrorMessageProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number]['error'];
 }
 
 export type IComponent = FC<IComponentProps>;
@@ -242,4 +246,4 @@ export type ILabel = FC<IInputProps>;
 export type IInput = FC<IInputProps>;
 export type ITextArea = FC<IInputProps>;
 export type ICheckbox = FC<IInputProps>;
-export type IErrorMessage = FC<IComponentProps>;
+export type IErrorMessage = FC<IErrorMessageProps>;

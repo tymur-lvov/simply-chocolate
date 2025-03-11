@@ -63,7 +63,7 @@ export interface ICommonLabel extends ICommonComponent {}
 
 export interface ICommonPlaceholder extends ICommonComponent {}
 
-export interface ICommonInput {
+export interface ICommonInput extends ICommonComponent {
   type?: string;
   id: string;
   label?: ICommonLabel;
