@@ -96,7 +96,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
       },
       inputs: [
         {
-          type: 'input',
+          type: 'text',
           id: 'name',
           label: {
             text: 'Name',
@@ -107,7 +107,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             fragment: 'user',
           },
           error: {
-            text: 'Name is not correct.',
+            text: 'Name must contain only letters, spaces, and hyphens (2-50 characters).',
             key: 'isNameError',
             icon: {
               width: 18,
@@ -117,7 +117,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
           },
         },
         {
-          type: 'input',
+          type: 'email',
           id: 'email',
           label: {
             text: 'Email',
@@ -128,7 +128,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             fragment: 'email',
           },
           error: {
-            text: 'Email is not correct.',
+            text: 'Invalid email format. The email must contain "@" symbol and a valid domain name.',
             key: 'isEmailError',
             icon: {
               width: 18,
@@ -138,7 +138,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
           },
         },
         {
-          type: 'input',
+          type: 'tel',
           id: 'phone',
           label: {
             text: 'Phone number',
@@ -149,7 +149,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
             fragment: 'phone',
           },
           error: {
-            text: 'Phone number is not correct',
+            text: 'Invalid phone number format. It should be in international or local format.',
             key: 'isPhoneError',
             icon: {
               width: 18,
@@ -166,7 +166,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
           },
           placeholder: 'Enter text',
           error: {
-            text: 'Comment is not correct.',
+            text: 'Comment must contain only letters, numbers, and common punctuation (2-500 characters).',
             key: 'isCommentError',
             icon: {
               width: 18,
