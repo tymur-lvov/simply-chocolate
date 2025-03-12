@@ -10,14 +10,25 @@ import type { FormEvent, MouseEvent } from 'react';
 import type { IReviewSubmitForm } from '@types';
 
 export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, button } }) => {
-  const [formStatus, setFormStatus] = useState({
+  const [formEventStatus, setFormEventStatus] = useState({
     isSubmitAttempted: false,
+    isAnyFieldChanged: false,
   });
 
-  const [errorPopupStatus, setErrorPopupStatus] = useState<{
+  const [formErrorStatus, setFormErrorStatus] = useState<{
+    isNameError: boolean;
+    isEmailError: boolean;
+    isPhoneError: boolean;
+    isCommentError: boolean;
+    isPrivacyError: boolean;
     isErrorPopupVisible: boolean;
     errorFieldIndex: number | null | undefined;
   }>({
+    isNameError: false,
+    isEmailError: false,
+    isPhoneError: false,
+    isCommentError: false,
+    isPrivacyError: false,
     isErrorPopupVisible: false,
     errorFieldIndex: null,
   });
@@ -25,17 +36,30 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
   const formSubmitHandle = (event: FormEvent) => {
     event.preventDefault();
 
-    setFormStatus((prev) => ({ ...prev, isSubmitAttempted: true }));
+    setFormEventStatus((prev) => ({ ...prev, isSubmitAttempted: true }));
+
+    if (!formEventStatus.isAnyFieldChanged) {
+      return;
+    }
+
+    const errorKeys = Object.keys(formErrorStatus);
+
+    const formError = errorKeys.some((key) => formErrorStatus[key as keyof typeof formErrorStatus]);
+
+    if (formError) {
+      return;
+    }
   };
 
   const formClickHandle = (event: MouseEvent) => {
     const element = event.target as HTMLElement;
 
     if (element.nodeName !== 'svg' && element.nodeName !== 'use') {
-      setErrorPopupStatus({
+      setFormErrorStatus((prev) => ({
+        ...prev,
         isErrorPopupVisible: false,
         errorFieldIndex: null,
-      });
+      }));
     }
   };
 
@@ -50,9 +74,10 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({ data: { title, inputs, but
           data={input}
           index={index}
           key={input.id}
-          formStatus={formStatus}
-          errorPopupStatus={errorPopupStatus}
-          setErrorPopupStatus={setErrorPopupStatus}
+          formEventStatus={formEventStatus}
+          formErrorStatus={formErrorStatus}
+          setFormEventStatus={setFormEventStatus}
+          setFormErrorStatus={setFormErrorStatus}
         />
       ))}
       <Button className={css.review_form_button} type='submit' data={button} />

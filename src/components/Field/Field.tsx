@@ -1,53 +1,68 @@
 import { clsx } from 'clsx';
+import { useState } from 'react';
 
 import { Checkbox, ErrorMessage, Icon, Input, Label, TextArea } from '@components';
 
 import { fieldModule as css } from '@styles';
 
+import type { ChangeEvent } from 'react';
 import type { IField } from '@types';
-import { useState, type ChangeEvent } from 'react';
 
 export const Field: IField = ({
   data,
   index,
-  formStatus,
-  errorPopupStatus,
-  setErrorPopupStatus,
+  formEventStatus,
+  formErrorStatus,
+  setFormEventStatus,
+  setFormErrorStatus,
 }) => {
   const [isFieldValid, setIsFieldValid] = useState(false);
 
-  const isSubmitAttempted = formStatus?.isSubmitAttempted;
+  const isSubmitAttempted = formEventStatus?.isSubmitAttempted;
 
-  const isErrorPopupVisible = errorPopupStatus?.isErrorPopupVisible;
+  const isErrorPopupVisible = formErrorStatus?.isErrorPopupVisible;
 
-  const errorFieldIndex = errorPopupStatus?.errorFieldIndex;
+  const errorFieldIndex = formErrorStatus?.errorFieldIndex;
 
   const validateField = (field: HTMLInputElement) => {
-    if (field.id === 'privacy') {
-      return field.checked;
+    const fieldName = field.id as keyof typeof userInputRegExpCollection | 'privacy';
+
+    const userInput = field.value;
+
+    const isCheckboxChecked = field.checked;
+
+    if (fieldName === 'privacy') {
+      return isCheckboxChecked;
     }
 
-    const fieldValueRegExpCollection = {
+    const userInputRegExpCollection = {
       name: /^[A-Za-z\s\-]{2,50}$/,
       email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
       phone: /^(\+?\d{1,3})?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{2}[-.\s]?\d{2}$/,
       comment: /^[A-Za-z0-9\s.,!?()\-'"%$#@:;]{2,500}$/,
     };
 
-    const fieldName = field.id as keyof typeof fieldValueRegExpCollection;
-
-    return fieldValueRegExpCollection[fieldName].test(field.value);
+    return userInputRegExpCollection[fieldName].test(userInput);
   };
 
   const fieldChangeHandle = (event: ChangeEvent) => {
     const field = event.target as HTMLInputElement;
 
-    setIsFieldValid(validateField(field));
+    const errorKey = `is${field.id}Error`;
+
+    const isFieldValid = validateField(field);
+
+    setFormEventStatus?.((prev) => ({ ...prev, isAnyFieldChanged: true }));
+
+    setFormErrorStatus?.((prev) => ({ ...prev, [errorKey]: isFieldValid }));
+
+    setIsFieldValid(isFieldValid);
   };
 
   const errorIconClickHandle = () => {
     if (isSubmitAttempted && !isFieldValid) {
-      setErrorPopupStatus?.((prev) => ({
+      setFormErrorStatus?.((prev) => ({
+        ...prev,
         isErrorPopupVisible: !prev.isErrorPopupVisible,
         errorFieldIndex: index,
       }));

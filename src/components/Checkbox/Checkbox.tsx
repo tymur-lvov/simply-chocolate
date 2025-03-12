@@ -1,9 +1,10 @@
+import { clsx } from 'clsx';
+
 import { Icon } from '@components';
 
 import { checkboxModule as css } from '@styles';
 
 import type { ICheckbox } from '@types';
-import { clsx } from 'clsx';
 
 export const Checkbox: ICheckbox = ({
   data: { id, type, icon, description, link },
