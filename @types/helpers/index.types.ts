@@ -1,4 +1,4 @@
-import type { Dispatch, ReactNode, SetStateAction, MouseEvent, ChangeEvent } from 'react';
+import type { Dispatch, ReactNode, SetStateAction, MouseEvent } from 'react';
 
 import type { ICommonTitle } from '../common/index.types';
 
@@ -16,9 +16,9 @@ export type IUseMedia = () => {
 
 export type IUpdateMediaQueryStates = (
   mediaQueryLists: IMediaQueryLists,
-  setIsMobile: IBooleanStateSetter,
-  setIsTablet: IBooleanStateSetter,
-  setIsDesktop: IBooleanStateSetter
+  setIsMobile: Dispatch<SetStateAction<boolean>>,
+  setIsTablet: Dispatch<SetStateAction<boolean>>,
+  setIsDesktop: Dispatch<SetStateAction<boolean>>
 ) => void;
 
 export type IAddMediaQueryListChangeListeners = (
@@ -31,17 +31,12 @@ export type IRemoveMediaQueryListChangeListeners = (
   mediaQueryListChangeHandle: () => void
 ) => void;
 
-export type IOnFieldChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+export type IMenuClickHandle = (
+  target: EventTarget,
+  setIsMenuOpen: Dispatch<SetStateAction<boolean>>
+) => void;
 
-export type IBooleanStateSetter = Dispatch<SetStateAction<boolean>>;
-
-export type INumberStateSetter = Dispatch<SetStateAction<number>>;
-
-export type INumberOrNullStateSetter = Dispatch<SetStateAction<number | null>>;
-
-export type IMenuClickHandle = (target: EventTarget, setIsMenuOpen: IBooleanStateSetter) => void;
-
-export type ISocialsLinkClickHandle = (setLinkClickCount: INumberStateSetter) => void;
+export type ISocialsLinkClickHandle = (setLinkClickCount: Dispatch<SetStateAction<number>>) => void;
 
 export type IGetIconPath = (
   fragment: string,
@@ -66,7 +61,7 @@ export type IFilterClassNamesForHeading = (classNames: string[]) => string[];
 export type ITopSellersItemClickHandle = (
   itemIndex: number,
   topSellersItemClickHandle: number | null,
-  setActiveItemIndex: INumberOrNullStateSetter
+  setActiveItemIndex: Dispatch<SetStateAction<number | null>>
 ) => void;
 
 export type IGetVariantText = (textVariants: ICommonTitle['textVariants']) => string;
@@ -75,28 +70,34 @@ export type IGetVariantTextParts = (
   textVariants: ICommonTitle['textVariants']
 ) => ICommonTitle['textParts'];
 
-export type IToggleModal = (action: 'open' | 'close', setIsModalOpen: IBooleanStateSetter) => void;
+export type IToggleModal = (
+  action: 'open' | 'close',
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>
+) => void;
 
-export type IReviewsButtonClickHandle = (setIsModalOpen: IBooleanStateSetter) => void;
+export type IReviewsButtonClickHandle = (setIsModalOpen: Dispatch<SetStateAction<boolean>>) => void;
 
-export type IKeydownHandle = (event: KeyboardEvent, setIsModalOpen: IBooleanStateSetter) => void;
+export type IKeydownHandle = (
+  event: KeyboardEvent,
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>
+) => void;
 
 export type IBackdropClickHandle = (
   event: MouseEvent<HTMLElement>,
-  setIsModalOpen: IBooleanStateSetter
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>
 ) => void;
 
 export type ICloseButtonClickHandle = (
   event: MouseEvent<HTMLElement>,
-  setIsModalOpen: IBooleanStateSetter
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>
 ) => void;
 
 export type IAddKeydownEventListener = (
   keydownHandle: IKeydownHandle,
-  setIsModalOpen: IBooleanStateSetter
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>
 ) => void;
 
 export type IRemoveKeydownEventListener = (
   keydownHandle: IKeydownHandle,
-  setIsModalOpen: IBooleanStateSetter
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>
 ) => void;
