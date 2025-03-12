@@ -1,4 +1,4 @@
-import type { ReactNode, FC, MouseEvent, Dispatch, SetStateAction } from 'react';
+import type { ReactNode, FC, MouseEvent, ChangeEvent, Dispatch, SetStateAction } from 'react';
 
 import type {
   IMENU_DATA,
@@ -15,8 +15,6 @@ import type {
   ICommonTitle,
   ICommonButton,
   ICommonDescription,
-  IOnFieldChange,
-  IBooleanStateSetter,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -168,7 +166,7 @@ export interface IReviewsItemProps extends IComponentProps {
 export interface IModalProps extends IComponentProps {
   isModalOpen: boolean;
   data: IREVIEWS_DATA['reviewsModal'];
-  setIsModalOpen: IBooleanStateSetter;
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface IReviewSubmitFormProps extends IComponentProps {
@@ -180,16 +178,36 @@ export interface IInputProps extends IComponentProps {
   isFieldValid?: boolean;
   isSubmitAttempted?: boolean;
   isErrorPopupVisible?: boolean;
-  formStatus?: {
+  formEventStatus?: {
     isSubmitAttempted: boolean;
+    isAnyFieldChanged: boolean;
   };
-  errorPopupStatus?: {
+  formErrorStatus?: {
+    isNameError: boolean;
+    isEmailError: boolean;
+    isPhoneError: boolean;
+    isCommentError: boolean;
+    isPrivacyError: boolean;
     isErrorPopupVisible: boolean;
     errorFieldIndex: number | null | undefined;
   };
-  onChange?: IOnFieldChange;
-  setErrorPopupStatus?: Dispatch<
-    SetStateAction<{ isErrorPopupVisible: boolean; errorFieldIndex: number | null | undefined }>
+  onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  setFormEventStatus?: React.Dispatch<
+    React.SetStateAction<{
+      isSubmitAttempted: boolean;
+      isAnyFieldChanged: boolean;
+    }>
+  >;
+  setFormErrorStatus?: React.Dispatch<
+    React.SetStateAction<{
+      isNameError: boolean;
+      isEmailError: boolean;
+      isPhoneError: boolean;
+      isCommentError: boolean;
+      isPrivacyError: boolean;
+      isErrorPopupVisible: boolean;
+      errorFieldIndex: number | null | undefined;
+    }>
   >;
 }
 
