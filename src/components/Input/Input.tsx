@@ -10,9 +10,11 @@ export const Input: IInput = ({
   className,
   data: { id, type, icon },
   isFieldValid,
-  isSubmitAttempted,
+  reviewFormStatus,
   onChange,
 }) => {
+  const { isSubmitAttempted } = reviewFormStatus.event;
+
   return (
     <div className={css.review_form_input_icon_wrapper}>
       <input className={className} id={id} type={type} autoComplete='true' onChange={onChange} />
