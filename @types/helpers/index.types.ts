@@ -1,6 +1,21 @@
-import type { Dispatch, ReactNode, SetStateAction, MouseEvent } from 'react';
+import type {
+  Dispatch,
+  FormEvent,
+  ReactNode,
+  MouseEvent,
+  ChangeEvent,
+  SetStateAction,
+} from 'react';
 
 import type { ICommonTitle } from '../common/index.types';
+
+export type IBooleanStateSetter = Dispatch<SetStateAction<boolean>>;
+
+export type INumberStateSetter = Dispatch<SetStateAction<number>>;
+
+export type INumberOrNullStateSetter = Dispatch<SetStateAction<number | null>>;
+
+export type IReviewFormStatusSetter = React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
 
 export interface IMediaQueryLists {
   mobileList: MediaQueryList;
@@ -16,9 +31,9 @@ export type IUseMedia = () => {
 
 export type IUpdateMediaQueryStates = (
   mediaQueryLists: IMediaQueryLists,
-  setIsMobile: Dispatch<SetStateAction<boolean>>,
-  setIsTablet: Dispatch<SetStateAction<boolean>>,
-  setIsDesktop: Dispatch<SetStateAction<boolean>>
+  setIsMobile: IBooleanStateSetter,
+  setIsTablet: IBooleanStateSetter,
+  setIsDesktop: IBooleanStateSetter
 ) => void;
 
 export type IAddMediaQueryListChangeListeners = (
@@ -31,12 +46,9 @@ export type IRemoveMediaQueryListChangeListeners = (
   mediaQueryListChangeHandle: () => void
 ) => void;
 
-export type IMenuClickHandle = (
-  target: EventTarget,
-  setIsMenuOpen: Dispatch<SetStateAction<boolean>>
-) => void;
+export type IMenuClickHandle = (target: EventTarget, setIsMenuOpen: IBooleanStateSetter) => void;
 
-export type ISocialsLinkClickHandle = (setLinkClickCount: Dispatch<SetStateAction<number>>) => void;
+export type ISocialsLinkClickHandle = (setLinkClickCount: INumberStateSetter) => void;
 
 export type IGetIconPath = (
   fragment: string,
@@ -61,7 +73,7 @@ export type IFilterClassNamesForHeading = (classNames: string[]) => string[];
 export type ITopSellersItemClickHandle = (
   itemIndex: number,
   topSellersItemClickHandle: number | null,
-  setActiveItemIndex: Dispatch<SetStateAction<number | null>>
+  setActiveItemIndex: INumberOrNullStateSetter
 ) => void;
 
 export type IGetVariantText = (textVariants: ICommonTitle['textVariants']) => string;
@@ -70,34 +82,70 @@ export type IGetVariantTextParts = (
   textVariants: ICommonTitle['textVariants']
 ) => ICommonTitle['textParts'];
 
-export type IToggleModal = (
-  action: 'open' | 'close',
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>
-) => void;
+export type IToggleModal = (action: 'open' | 'close', setIsModalOpen: IBooleanStateSetter) => void;
 
-export type IReviewsButtonClickHandle = (setIsModalOpen: Dispatch<SetStateAction<boolean>>) => void;
+export type IReviewsButtonClickHandle = (setIsModalOpen: IBooleanStateSetter) => void;
 
-export type IKeydownHandle = (
-  event: KeyboardEvent,
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>
-) => void;
+export type IKeydownHandle = (event: KeyboardEvent, setIsModalOpen: IBooleanStateSetter) => void;
 
 export type IBackdropClickHandle = (
   event: MouseEvent<HTMLElement>,
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>
+  setIsModalOpen: IBooleanStateSetter
 ) => void;
 
 export type ICloseButtonClickHandle = (
   event: MouseEvent<HTMLElement>,
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>
+  setIsModalOpen: IBooleanStateSetter
 ) => void;
 
 export type IAddKeydownEventListener = (
   keydownHandle: IKeydownHandle,
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>
+  setIsModalOpen: IBooleanStateSetter
 ) => void;
 
 export type IRemoveKeydownEventListener = (
   keydownHandle: IKeydownHandle,
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>
+  setIsModalOpen: IBooleanStateSetter
+) => void;
+
+export type IReviewFormStatus = {
+  event: {
+    isSubmitAttempted: boolean;
+    isAnyFieldChanged: boolean;
+  };
+  error: {
+    isNameError: boolean;
+    isEmailError: boolean;
+    isPhoneError: boolean;
+    isCommentError: boolean;
+    isPrivacyError: boolean;
+    isErrorPopupVisible: boolean;
+    errorFieldIndex: number | null | undefined;
+  };
+};
+
+export type IReviewFormSubmitHandle = (
+  event: FormEvent,
+  reviewFormStatus: IReviewFormStatus,
+  setReviewFormStatus: IReviewFormStatusSetter
+) => void;
+
+export type IReviewFormClickHandle = (
+  event: MouseEvent,
+  setReviewFormStatus: IReviewFormStatusSetter
+) => void;
+
+export type IValidateReviewField = (field: HTMLInputElement) => boolean;
+
+export type IReviewFieldChangeHandle = (
+  event: ChangeEvent,
+  setReviewFormStatus: IReviewFormStatusSetter,
+  setIsFieldValid: IBooleanStateSetter
+) => void;
+
+export type IReviewFieldErrorIconClickHandle = (
+  fieldIndex: number,
+  isFieldValid: boolean,
+  reviewFormStatus: IReviewFormStatus,
+  setReviewFormStatus: IReviewFormStatusSetter
 ) => void;
