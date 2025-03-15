@@ -9,13 +9,15 @@ import type { ICheckbox } from '@types';
 export const Checkbox: ICheckbox = ({
   data: { id, type, icon, description, link },
   isFieldValid,
-  isSubmitAttempted,
+  reviewFormStatus,
   onChange,
 }) => {
+  const { isSubmitAttempted } = reviewFormStatus.event;
+
   return (
     <div className={css.review_form_checkbox_description_wrapper}>
       <div className={css.review_form_checkbox_wrapper}>
-        <input className={css.review_form_checkbox} onChange={onChange} id={id} type={type} />
+        <input className={css.review_form_checkbox} id={id} type={type} onChange={onChange} />
         <Icon
           className={clsx({
             [css.review_form_checkbox_icon]: true,
