@@ -12,3 +12,10 @@ export const SECTION_TITLE = 'section_title';
 export const SECTION_TITLE_ACCENT = 'section_title_accent';
 export const MENU = 'menu';
 export const HEADER = 'header';
+
+export const REVIEW_FIELD_INPUT_REGEXP = {
+  name: /^[A-Za-z\s\-]{2,50}$/,
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+  phone: /^(\+?\d{1,3})?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{2}[-.\s]?\d{2}$/,
+  comment: /^[A-Za-z0-9\s.,!?()\-'"%$#@:;]{2,500}$/,
+};
