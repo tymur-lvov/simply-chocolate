@@ -15,6 +15,7 @@ import type {
   ICommonTitle,
   ICommonButton,
   ICommonDescription,
+  IReviewFormStatus,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -164,8 +165,8 @@ export interface IReviewsItemProps extends IComponentProps {
 }
 
 export interface IModalProps extends IComponentProps {
-  isModalOpen: boolean;
   data: IREVIEWS_DATA['reviewsModal'];
+  isModalOpen: boolean;
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }
 
@@ -173,42 +174,35 @@ export interface IReviewSubmitFormProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm'];
 }
 
+export interface ILabelProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+}
+
+export interface IFieldProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  fieldIndex: number;
+  reviewFormStatus: IReviewFormStatus;
+  setReviewFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
+}
+
 export interface IInputProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
-  isFieldValid?: boolean;
-  isSubmitAttempted?: boolean;
-  isErrorPopupVisible?: boolean;
-  formEventStatus?: {
-    isSubmitAttempted: boolean;
-    isAnyFieldChanged: boolean;
-  };
-  formErrorStatus?: {
-    isNameError: boolean;
-    isEmailError: boolean;
-    isPhoneError: boolean;
-    isCommentError: boolean;
-    isPrivacyError: boolean;
-    isErrorPopupVisible: boolean;
-    errorFieldIndex: number | null | undefined;
-  };
+  isFieldValid: boolean;
+  reviewFormStatus: IReviewFormStatus;
+  setReviewFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
   onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  setFormEventStatus?: React.Dispatch<
-    React.SetStateAction<{
-      isSubmitAttempted: boolean;
-      isAnyFieldChanged: boolean;
-    }>
-  >;
-  setFormErrorStatus?: React.Dispatch<
-    React.SetStateAction<{
-      isNameError: boolean;
-      isEmailError: boolean;
-      isPhoneError: boolean;
-      isCommentError: boolean;
-      isPrivacyError: boolean;
-      isErrorPopupVisible: boolean;
-      errorFieldIndex: number | null | undefined;
-    }>
-  >;
+}
+
+export interface ITextAreaProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+}
+
+export interface ICheckboxProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  isFieldValid: boolean;
+  reviewFormStatus: IReviewFormStatus;
+  onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 export interface IErrorMessageProps extends IComponentProps {
@@ -259,9 +253,9 @@ export type IReviewsList = FC<IReviewsListProps>;
 export type IReviewsItem = FC<IReviewsItemProps>;
 export type IModal = FC<IModalProps>;
 export type IReviewSubmitForm = FC<IReviewSubmitFormProps>;
-export type IField = FC<IInputProps>;
-export type ILabel = FC<IInputProps>;
+export type IField = FC<IFieldProps>;
+export type ILabel = FC<ILabelProps>;
 export type IInput = FC<IInputProps>;
-export type ITextArea = FC<IInputProps>;
-export type ICheckbox = FC<IInputProps>;
+export type ITextArea = FC<ITextAreaProps>;
+export type ICheckbox = FC<ICheckboxProps>;
 export type IErrorMessage = FC<IErrorMessageProps>;
