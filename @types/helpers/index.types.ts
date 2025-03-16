@@ -127,6 +127,7 @@ export type IReviewFormStatus = {
 export type IReviewFormSubmitHandle = (
   event: FormEvent,
   reviewFormStatus: IReviewFormStatus,
+  setIsModalOpen: IBooleanStateSetter,
   setReviewFormStatus: IReviewFormStatusSetter
 ) => void;
 

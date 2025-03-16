@@ -8,6 +8,8 @@ export * from './Title/Title.tsx';
 export { default as titleModule } from './Title/title.module.css';
 export * from './TextArea/TextArea.tsx';
 export { default as textAreaModule } from './TextArea/textArea.module.css';
+export * from './SubmitNotification/SubmitNotification.tsx';
+export { default as submitNotificationModule } from './SubmitNotification/submitNotification.module.css';
 export * from './SocialsList/SocialsList.tsx';
 export { default as socialsListModule } from './SocialsList/socialsList.module.css';
 export * from './SocialsItem/SocialsItem.tsx';

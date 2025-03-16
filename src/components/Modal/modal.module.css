@@ -2,7 +2,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -12,6 +11,10 @@
   visibility: none;
   pointer-events: none;
   transition: opacity 250ms var(--transition);
+}
+
+.modal_backdrop.modal_backdrop__submit_notification {
+  z-index: 1;
 }
 
 .modal_backdrop__visible {
@@ -36,6 +39,15 @@
     width: 517px;
     padding: 40px;
   }
+}
+
+.modal_window.modal_window__submit_notification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 344px;
+  height: 150px;
+  padding: 16px;
 }
 
 .modal_close_button {

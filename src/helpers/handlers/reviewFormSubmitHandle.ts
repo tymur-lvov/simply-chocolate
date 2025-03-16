@@ -3,6 +3,7 @@ import type { IReviewFormSubmitHandle } from '@types';
 export const reviewFormSubmitHandle: IReviewFormSubmitHandle = (
   event,
   reviewFormStatus,
+  setIsModalOpen,
   setReviewFormStatus
 ) => {
   event.preventDefault();
@@ -26,4 +27,6 @@ export const reviewFormSubmitHandle: IReviewFormSubmitHandle = (
   if (formError) {
     return;
   }
+
+  setIsModalOpen(true);
 };

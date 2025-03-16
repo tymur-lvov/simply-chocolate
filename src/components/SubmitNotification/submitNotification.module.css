@@ -1,0 +1,16 @@
+.modal_title {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
+}
+
+.modal_description {
+  color: rgba(17, 17, 17, 0.7);
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  white-space: pre;
+}

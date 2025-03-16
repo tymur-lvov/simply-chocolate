@@ -12,7 +12,7 @@ import { reviewsModule as css } from '@styles';
 import type { IReviews } from '@types';
 
 export const Reviews: IReviews = ({
-  data: { sectionTitle, reviewsList, modalOpenButton, reviewsModal },
+  data: { sectionTitle, reviewsList, modalOpenButton, reviewsModal, reviewSubmitForm },
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -31,8 +31,13 @@ export const Reviews: IReviews = ({
         />
       </div>
       <Portal>
-        <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} data={reviewsModal}>
-          <ReviewSubmitForm data={reviewsModal.reviewSubmitForm} />
+        <Modal
+          variant='submitForm'
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+          data={reviewsModal}
+        >
+          <ReviewSubmitForm data={reviewSubmitForm} />
         </Modal>
       </Portal>
     </section>

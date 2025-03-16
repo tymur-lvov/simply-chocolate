@@ -123,10 +123,17 @@ export interface IREVIEWS_DATA {
   modalOpenButton: ICommonButton;
   reviewsModal: {
     closeButton: ICommonButton;
-    reviewSubmitForm: {
-      title: ICommonTitle;
-      inputs: ICommonInput[];
-      button: ICommonButton;
+  };
+  reviewSubmitForm: {
+    title: ICommonTitle;
+    inputs: ICommonInput[];
+    button: ICommonButton;
+    onSubmitModal: {
+      closeButton: ICommonButton;
+      submitNotification: {
+        title: ICommonTitle;
+        description: ICommonDescription;
+      };
     };
   };
 }

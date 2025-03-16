@@ -16,12 +16,19 @@ import { modalModule as css } from '@styles';
 
 import type { IModal } from '@types';
 
-export const Modal: IModal = ({ children, isModalOpen, setIsModalOpen, data: { closeButton } }) => {
+export const Modal: IModal = ({
+  children,
+  variant,
+  isModalOpen,
+  setIsModalOpen,
+  data: { closeButton },
+}) => {
   useEffect(() => {
     addKeydownEventListener(keydownHandle, setIsModalOpen);
 
     return () => {
       removeKeydownEventListener(keydownHandle, setIsModalOpen);
+
       releaseScrollLock();
     };
   }, []);
@@ -31,10 +38,16 @@ export const Modal: IModal = ({ children, isModalOpen, setIsModalOpen, data: { c
       className={clsx({
         [css.modal_backdrop]: true,
         [css.modal_backdrop__visible]: isModalOpen,
+        [css.modal_backdrop__submit_notification]: variant === 'submitNotification',
       })}
       onClick={(event) => backdropClickHandle(event, setIsModalOpen)}
     >
-      <div className={css.modal_window}>
+      <div
+        className={clsx({
+          [css.modal_window]: true,
+          [css.modal_window__submit_notification]: variant === 'submitNotification',
+        })}
+      >
         <Button
           className={css.modal_close_button}
           onClick={(event) => closeButtonClickHandle(event, setIsModalOpen)}

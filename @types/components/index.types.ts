@@ -166,27 +166,28 @@ export interface IReviewsItemProps extends IComponentProps {
 
 export interface IModalProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal'];
+  variant: 'submitForm' | 'submitNotification';
   isModalOpen: boolean;
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface IReviewSubmitFormProps extends IComponentProps {
-  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm'];
+  data: IREVIEWS_DATA['reviewSubmitForm'];
 }
 
 export interface ILabelProps extends IComponentProps {
-  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
 }
 
 export interface IFieldProps extends IComponentProps {
-  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
   fieldIndex: number;
   reviewFormStatus: IReviewFormStatus;
   setReviewFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
 }
 
 export interface IInputProps extends IComponentProps {
-  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
   isFieldValid: boolean;
   reviewFormStatus: IReviewFormStatus;
   setReviewFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
@@ -194,19 +195,23 @@ export interface IInputProps extends IComponentProps {
 }
 
 export interface ITextAreaProps extends IComponentProps {
-  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
   onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 export interface ICheckboxProps extends IComponentProps {
-  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number];
+  data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
   isFieldValid: boolean;
   reviewFormStatus: IReviewFormStatus;
   onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 export interface IErrorMessageProps extends IComponentProps {
-  data: IREVIEWS_DATA['reviewsModal']['reviewSubmitForm']['inputs'][number]['error'];
+  data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number]['error'];
+}
+
+export interface ISubmitNotificationProps extends IComponentProps {
+  data: IREVIEWS_DATA['reviewSubmitForm']['onSubmitModal']['submitNotification'];
 }
 
 export type IComponent = FC<IComponentProps>;
@@ -259,3 +264,4 @@ export type IInput = FC<IInputProps>;
 export type ITextArea = FC<ITextAreaProps>;
 export type ICheckbox = FC<ICheckboxProps>;
 export type IErrorMessage = FC<IErrorMessageProps>;
+export type ISubmitNotification = FC<ISubmitNotificationProps>;
