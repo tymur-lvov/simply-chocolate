@@ -17,11 +17,11 @@ import { modalModule as css } from '@styles';
 import type { IModal } from '@types';
 
 export const Modal: IModal = ({
-  children,
+  data: { closeButton },
   variant,
+  children,
   isModalOpen,
   setIsModalOpen,
-  data: { closeButton },
 }) => {
   useEffect(() => {
     addKeydownEventListener(keydownHandle, setIsModalOpen);
