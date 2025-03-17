@@ -7,13 +7,13 @@ import { inputModule as css } from '@styles';
 import type { IInput } from '@types';
 
 export const Input: IInput = ({
-  className,
   data: { id, type, icon },
+  className,
+  formStatus,
   isFieldValid,
-  reviewFormStatus,
   onChange,
 }) => {
-  const { isSubmitAttempted } = reviewFormStatus.event;
+  const { isSubmitAttempted } = formStatus;
 
   return (
     <div className={css.review_form_input_icon_wrapper}>
