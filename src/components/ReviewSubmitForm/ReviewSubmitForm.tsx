@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { reviewFormClickHandle, reviewFormSubmitHandle } from '@helpers';
 
-import { Button, Field, Modal, Portal, SubmitNotification, Title } from '@components';
+import { Button, Field, Title } from '@components';
 
 import { SECTION_TITLE, SECTION_TITLE_ACCENT } from '@constants';
 
@@ -11,34 +11,38 @@ import { reviewSubmitFormModule as css } from '@styles';
 import type { IReviewFormStatus, IReviewSubmitForm } from '@types';
 
 export const ReviewSubmitForm: IReviewSubmitForm = ({
-  data: { title, inputs, button, onSubmitModal },
+  data: { title, inputs, button },
+  setIsOnSubmitModalOpen,
+  setIsReviewFormModalOpen,
 }) => {
-  const [reviewFormStatus, setReviewFormStatus] = useState<IReviewFormStatus>({
-    event: {
-      isSubmitAttempted: false,
-      isAnyFieldChanged: false,
-    },
-    error: {
+  const [formStatus, setFormStatus] = useState<IReviewFormStatus>({
+    errorFieldIndex: null,
+    isSubmitAttempted: false,
+    isAnyFieldChanged: false,
+    isErrorPopupVisible: false,
+    fieldsErrorStatus: {
       isNameError: false,
       isEmailError: false,
       isPhoneError: false,
       isCommentError: false,
       isPrivacyError: false,
-      isErrorPopupVisible: false,
-      errorFieldIndex: null,
     },
   });
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
       <form
         className={css.review_form}
         onSubmit={(event) =>
-          reviewFormSubmitHandle(event, reviewFormStatus, setIsModalOpen, setReviewFormStatus)
+          reviewFormSubmitHandle(
+            event,
+            formStatus,
+            setFormStatus,
+            setIsOnSubmitModalOpen,
+            setIsReviewFormModalOpen
+          )
         }
-        onClick={(event) => reviewFormClickHandle(event, setReviewFormStatus)}
+        onClick={(event) => reviewFormClickHandle(event, setFormStatus)}
       >
         <Title
           classNames={[SECTION_TITLE, SECTION_TITLE_ACCENT, css.review_form_title]}
@@ -49,22 +53,12 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({
             data={input}
             key={input.id}
             fieldIndex={index}
-            reviewFormStatus={reviewFormStatus}
-            setReviewFormStatus={setReviewFormStatus}
+            formStatus={formStatus}
+            setFormStatus={setFormStatus}
           />
         ))}
         <Button className={css.review_form_button} type='submit' data={button} />
       </form>
-      <Portal>
-        <Modal
-          data={onSubmitModal}
-          isModalOpen={isModalOpen}
-          variant='submitNotification'
-          setIsModalOpen={setIsModalOpen}
-        >
-          <SubmitNotification data={onSubmitModal.submitNotification} />
-        </Modal>
-      </Portal>
     </>
   );
 };
