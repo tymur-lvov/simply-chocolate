@@ -16,6 +16,7 @@ import type {
   ICommonButton,
   ICommonDescription,
   IReviewFormStatus,
+  IBooleanStateSetter,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -173,6 +174,8 @@ export interface IModalProps extends IComponentProps {
 
 export interface IReviewSubmitFormProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm'];
+  setIsOnSubmitModalOpen: IBooleanStateSetter;
+  setIsReviewFormModalOpen: IBooleanStateSetter;
 }
 
 export interface ILabelProps extends IComponentProps {
@@ -182,16 +185,16 @@ export interface ILabelProps extends IComponentProps {
 export interface IFieldProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
   fieldIndex: number;
-  reviewFormStatus: IReviewFormStatus;
-  setReviewFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
+  formStatus: IReviewFormStatus;
+  setFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
 }
 
 export interface IInputProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
+  formStatus: IReviewFormStatus;
   isFieldValid: boolean;
-  reviewFormStatus: IReviewFormStatus;
-  setReviewFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
   onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  setFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
 }
 
 export interface ITextAreaProps extends IComponentProps {
@@ -201,8 +204,8 @@ export interface ITextAreaProps extends IComponentProps {
 
 export interface ICheckboxProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
+  formStatus: IReviewFormStatus;
   isFieldValid: boolean;
-  reviewFormStatus: IReviewFormStatus;
   onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
@@ -214,35 +217,35 @@ export interface ISubmitNotificationProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['onSubmitModal']['submitNotification'];
 }
 
-export type IComponent = FC<IComponentProps>;
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
+export type IComponent = FC<IComponentProps>;
 
-export type IHeader = FC<IHeaderProps>;
 export type ILogo = FC<ILogoProps>;
 export type IMenu = FC<IMenuProps>;
+export type IHeader = FC<IHeaderProps>;
 export type INavList = FC<INavListProps>;
 export type INavItem = FC<INavItemProps>;
 export type ISocialsList = FC<ISocialsListProps>;
 export type ISocialsItem = FC<ISocialsItemProps>;
 
-export type IMainTitle = FC<IMainTitleProps>;
 export type IHero = FC<IHeroProps>;
+export type IMainTitle = FC<IMainTitleProps>;
 
 export type ITitle = FC<ISectionTitleProps>;
+export type IHeading = FC<ITitleProps>;
 export type IBenefits = FC<IBenefitsProps>;
+export type IDescription = FC<IDescriptionProps>;
 export type IBenefitsList = FC<IBenefitsListProps>;
 export type IBenefitsItem = FC<IBenefitsItemProps>;
-export type IHeading = FC<ITitleProps>;
-export type IDescription = FC<IDescriptionProps>;
 
 export type IIngredients = FC<IIngredientsProps>;
 export type IIngredientsList = FC<IIngredientsListProps>;
 export type IIngredientsItem = FC<IIngredientsItemProps>;
 
-export type IHowItsMade = FC<IHowItsMadeProps>;
 export type IRecipeList = FC<IRecipeListProps>;
+export type IHowItsMade = FC<IHowItsMadeProps>;
 export type IRecipeItem = FC<IRecipeItemProps>;
 
 export type IProducts = FC<IProductsProps>;
@@ -253,15 +256,15 @@ export type ITopSellers = FC<ITopSellersProps>;
 export type ITopSellersList = FC<ITopSellersListProps>;
 export type ITopSellersItem = FC<ITopSellersItemProps>;
 
-export type IReviews = FC<IReviewsProps>;
-export type IReviewsList = FC<IReviewsListProps>;
-export type IReviewsItem = FC<IReviewsItemProps>;
 export type IModal = FC<IModalProps>;
-export type IReviewSubmitForm = FC<IReviewSubmitFormProps>;
 export type IField = FC<IFieldProps>;
 export type ILabel = FC<ILabelProps>;
 export type IInput = FC<IInputProps>;
+export type IReviews = FC<IReviewsProps>;
 export type ITextArea = FC<ITextAreaProps>;
 export type ICheckbox = FC<ICheckboxProps>;
+export type IReviewsList = FC<IReviewsListProps>;
+export type IReviewsItem = FC<IReviewsItemProps>;
 export type IErrorMessage = FC<IErrorMessageProps>;
+export type IReviewSubmitForm = FC<IReviewSubmitFormProps>;
 export type ISubmitNotification = FC<ISubmitNotificationProps>;
