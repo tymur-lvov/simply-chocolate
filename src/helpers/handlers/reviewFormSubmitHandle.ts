@@ -1,32 +1,37 @@
+import { getReviewFormFields, validateReviewField } from '@helpers';
+
 import type { IReviewFormSubmitHandle } from '@types';
 
 export const reviewFormSubmitHandle: IReviewFormSubmitHandle = (
   event,
-  reviewFormStatus,
-  setIsModalOpen,
-  setReviewFormStatus
+  formStatus,
+  setFormStatus,
+  setIsOnSubmitModalOpen,
+  setIsReviewFormModalOpen
 ) => {
   event.preventDefault();
 
-  setReviewFormStatus((prev) => ({
-    ...prev,
-    event: {
-      ...prev.event,
-      isSubmitAttempted: true,
-    },
-  }));
+  setFormStatus((prev) => ({ ...prev, isSubmitAttempted: true }));
 
-  if (!reviewFormStatus.event.isAnyFieldChanged) {
+  const { isAnyFieldChanged } = formStatus;
+
+  const form = event.currentTarget as HTMLFormElement;
+
+  const formFields = getReviewFormFields(form);
+
+  const fieldKeys = Object.keys(formFields);
+
+  const isAnyFieldInvalid = fieldKeys.some(
+    (key) => !validateReviewField(formFields[key as keyof typeof formFields])
+  );
+
+  if (!isAnyFieldChanged || isAnyFieldInvalid) {
     return;
   }
 
-  const errorKeys = Object.keys(reviewFormStatus.error);
+  setIsOnSubmitModalOpen(true);
 
-  const formError = errorKeys.some((key) => reviewFormStatus[key as keyof typeof reviewFormStatus]);
+  setIsReviewFormModalOpen(false);
 
-  if (formError) {
-    return;
-  }
-
-  setIsModalOpen(true);
+  form.reset();
 };
