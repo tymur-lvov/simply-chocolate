@@ -109,44 +109,43 @@ export type IRemoveKeydownEventListener = (
 ) => void;
 
 export type IReviewFormStatus = {
-  event: {
-    isSubmitAttempted: boolean;
-    isAnyFieldChanged: boolean;
-  };
-  error: {
+  isSubmitAttempted: boolean;
+  isAnyFieldChanged: boolean;
+  isErrorPopupVisible: boolean;
+  errorFieldIndex: number | null | undefined;
+  fieldsErrorStatus: {
     isNameError: boolean;
     isEmailError: boolean;
     isPhoneError: boolean;
     isCommentError: boolean;
     isPrivacyError: boolean;
-    isErrorPopupVisible: boolean;
-    errorFieldIndex: number | null | undefined;
   };
 };
 
 export type IReviewFormSubmitHandle = (
   event: FormEvent,
-  reviewFormStatus: IReviewFormStatus,
-  setIsModalOpen: IBooleanStateSetter,
-  setReviewFormStatus: IReviewFormStatusSetter
+  formStatus: IReviewFormStatus,
+  setFormStatus: IReviewFormStatusSetter,
+  setIsOnSubmitModalOpen: IBooleanStateSetter,
+  setIsReviewFormModalOpen: IBooleanStateSetter
 ) => void;
 
 export type IReviewFormClickHandle = (
   event: MouseEvent,
-  setReviewFormStatus: IReviewFormStatusSetter
+  setFormStatus: IReviewFormStatusSetter
 ) => void;
 
 export type IValidateReviewField = (field: HTMLInputElement) => boolean;
 
 export type IReviewFieldChangeHandle = (
   event: ChangeEvent,
-  setReviewFormStatus: IReviewFormStatusSetter,
+  setFormStatus: IReviewFormStatusSetter,
   setIsFieldValid: IBooleanStateSetter
 ) => void;
 
 export type IReviewFieldErrorIconClickHandle = (
+  formStatus: IReviewFormStatus,
   fieldIndex: number,
   isFieldValid: boolean,
-  reviewFormStatus: IReviewFormStatus,
-  setReviewFormStatus: IReviewFormStatusSetter
+  setFormStatus: IReviewFormStatusSetter
 ) => void;
