@@ -1,19 +1,18 @@
 import type { IReviewFieldErrorIconClickHandle } from '@types';
 
 export const reviewFieldErrorIconClickHandle: IReviewFieldErrorIconClickHandle = (
+  formStatus,
   fieldIndex,
   isFieldValid,
-  reviewFormStatus,
-  setReviewFormStatus
+  setFormStatus
 ) => {
-  if (reviewFormStatus.event.isSubmitAttempted && !isFieldValid) {
-    setReviewFormStatus?.((prev) => ({
+  const { isSubmitAttempted } = formStatus;
+
+  if (isSubmitAttempted && !isFieldValid) {
+    setFormStatus?.((prev) => ({
       ...prev,
-      error: {
-        ...prev.error,
-        isErrorPopupVisible: !prev.error.isErrorPopupVisible,
-        errorFieldIndex: fieldIndex,
-      },
+      isErrorPopupVisible: !prev.isErrorPopupVisible,
+      errorFieldIndex: fieldIndex,
     }));
   }
 };
