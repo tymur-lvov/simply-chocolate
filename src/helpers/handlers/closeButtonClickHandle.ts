@@ -7,6 +7,7 @@ export const closeButtonClickHandle: ICloseButtonClickHandle = (event, setIsModa
 
   if (parentButton?.className.includes('close_button')) {
     toggleModal('close', setIsModalOpen);
+
     toggleScrollLock();
   }
 };
