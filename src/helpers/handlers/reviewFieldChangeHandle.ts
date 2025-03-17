@@ -4,7 +4,7 @@ import type { IReviewFieldChangeHandle } from '@types';
 
 export const reviewFieldChangeHandle: IReviewFieldChangeHandle = (
   event,
-  setReviewFormStatus,
+  setFormStatus,
   setIsFieldValid
 ) => {
   const field = event.target as HTMLInputElement;
@@ -13,13 +13,11 @@ export const reviewFieldChangeHandle: IReviewFieldChangeHandle = (
 
   const isFieldValid = validateReviewField(field);
 
-  setReviewFormStatus?.((prev) => ({
-    event: {
-      ...prev.event,
-      isAnyFieldChanged: true,
-    },
-    error: {
-      ...prev.error,
+  setFormStatus?.((prev) => ({
+    ...prev,
+    isAnyFieldChanged: true,
+    fieldsErrorStatus: {
+      ...prev.fieldsErrorStatus,
       [errorKey]: !isFieldValid,
     },
   }));
