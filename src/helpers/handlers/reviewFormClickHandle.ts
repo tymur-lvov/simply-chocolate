@@ -1,16 +1,13 @@
 import type { IReviewFormClickHandle } from '@types';
 
-export const reviewFormClickHandle: IReviewFormClickHandle = (event, setReviewFormStatus) => {
+export const reviewFormClickHandle: IReviewFormClickHandle = (event, setFormStatus) => {
   const element = event.target as HTMLElement;
 
   if (element.nodeName !== 'svg' && element.nodeName !== 'use') {
-    setReviewFormStatus((prev) => ({
+    setFormStatus((prev) => ({
       ...prev,
-      error: {
-        ...prev.error,
-        isErrorPopupVisible: false,
-        errorFieldIndex: null,
-      },
+      isErrorPopupVisible: false,
+      errorFieldIndex: null,
     }));
   }
 };
