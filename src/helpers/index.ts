@@ -1,6 +1,7 @@
 export * from './misc/addKeydownEventListener.ts';
 export * from './misc/getIconFragment.ts';
 export * from './misc/getIconPath.ts';
+export * from './misc/getReviewFormFields.ts';
 export * from './misc/getVariantText.ts';
 export * from './misc/getVariantTextParts.ts';
 export * from './misc/releaseScrollLock.ts';
