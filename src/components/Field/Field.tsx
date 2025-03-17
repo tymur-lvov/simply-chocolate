@@ -9,12 +9,10 @@ import { fieldModule as css } from '@styles';
 
 import type { IField } from '@types';
 
-export const Field: IField = ({ data, fieldIndex, reviewFormStatus, setReviewFormStatus }) => {
+export const Field: IField = ({ data, fieldIndex, formStatus, setFormStatus }) => {
   const [isFieldValid, setIsFieldValid] = useState(false);
 
-  const { isSubmitAttempted } = reviewFormStatus.event;
-
-  const { isErrorPopupVisible, errorFieldIndex } = reviewFormStatus.error;
+  const { isSubmitAttempted, isErrorPopupVisible, errorFieldIndex } = formStatus;
 
   return (
     <>
@@ -29,11 +27,9 @@ export const Field: IField = ({ data, fieldIndex, reviewFormStatus, setReviewFor
               })}
               data={data}
               isFieldValid={isFieldValid}
-              reviewFormStatus={reviewFormStatus}
-              setReviewFormStatus={setReviewFormStatus}
-              onChange={(event) =>
-                reviewFieldChangeHandle(event, setReviewFormStatus, setIsFieldValid)
-              }
+              formStatus={formStatus}
+              setFormStatus={setFormStatus}
+              onChange={(event) => reviewFieldChangeHandle(event, setFormStatus, setIsFieldValid)}
             />
           )}
           {data.type === 'textArea' && (
@@ -43,9 +39,7 @@ export const Field: IField = ({ data, fieldIndex, reviewFormStatus, setReviewFor
                 [css.review_form_field__error]: !isFieldValid && isSubmitAttempted,
               })}
               data={data}
-              onChange={(event) =>
-                reviewFieldChangeHandle(event, setReviewFormStatus, setIsFieldValid)
-              }
+              onChange={(event) => reviewFieldChangeHandle(event, setFormStatus, setIsFieldValid)}
             />
           )}
           <Icon
@@ -56,12 +50,7 @@ export const Field: IField = ({ data, fieldIndex, reviewFormStatus, setReviewFor
             })}
             data={data.error?.icon}
             onClick={() =>
-              reviewFieldErrorIconClickHandle(
-                fieldIndex,
-                isFieldValid,
-                reviewFormStatus,
-                setReviewFormStatus
-              )
+              reviewFieldErrorIconClickHandle(formStatus, fieldIndex, isFieldValid, setFormStatus)
             }
           />
           <ErrorMessage
@@ -77,8 +66,8 @@ export const Field: IField = ({ data, fieldIndex, reviewFormStatus, setReviewFor
         <Checkbox
           data={data}
           isFieldValid={isFieldValid}
-          reviewFormStatus={reviewFormStatus}
-          onChange={(event) => reviewFieldChangeHandle(event, setReviewFormStatus, setIsFieldValid)}
+          formStatus={formStatus}
+          onChange={(event) => reviewFieldChangeHandle(event, setFormStatus, setIsFieldValid)}
         />
       )}
     </>
