@@ -16,6 +16,7 @@ export * from './hooks/removeMediaQueryListChangeListeners.ts';
 export * from './hooks/updateMediaQueryStates.ts';
 export * from './handlers/backdropClickHandle.ts';
 export * from './handlers/closeButtonClickHandle.ts';
+export * from './handlers/ingredientsItemClickHandle.ts';
 export * from './handlers/keydownHandle.ts';
 export * from './handlers/menuClickHandle.ts';
 export * from './handlers/reviewFieldChangeHandle.ts';

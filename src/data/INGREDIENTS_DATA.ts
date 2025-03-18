@@ -31,9 +31,6 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
   ingredientsList: {
     ingredientsItems: [
       {
-        link: {
-          href: '/',
-        },
         icon: {
           width: 24,
           height: 24,
@@ -51,11 +48,25 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: {
           text: 'milk chocolate',
         },
+        modal: {
+          closeButton: {
+            icon: {
+              width: 24,
+              height: 24,
+              fragment: 'close',
+            },
+          },
+          ingredientDescription: {
+            title: {
+              text: 'Milk Chocolate',
+            },
+            description: {
+              text: 'Smooth, creamy, and perfectly sweet.',
+            },
+          },
+        },
       },
       {
-        link: {
-          href: '/',
-        },
         icon: {
           width: 24,
           height: 24,
@@ -73,11 +84,25 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: {
           text: 'milk',
         },
+        modal: {
+          closeButton: {
+            icon: {
+              width: 24,
+              height: 24,
+              fragment: 'close',
+            },
+          },
+          ingredientDescription: {
+            title: {
+              text: 'Milk',
+            },
+            description: {
+              text: 'Adds a creamy, smooth texture and a delicate sweetness to every bite.',
+            },
+          },
+        },
       },
       {
-        link: {
-          href: '/',
-        },
         icon: {
           width: 24,
           height: 24,
@@ -95,11 +120,25 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: {
           text: 'nuts',
         },
+        modal: {
+          closeButton: {
+            icon: {
+              width: 24,
+              height: 24,
+              fragment: 'close',
+            },
+          },
+          ingredientDescription: {
+            title: {
+              text: 'Nuts',
+            },
+            description: {
+              text: 'Crunchy and flavorful, they bring a rich, nutty depth to the chocolate.',
+            },
+          },
+        },
       },
       {
-        link: {
-          href: '/',
-        },
         icon: {
           width: 24,
           height: 24,
@@ -117,11 +156,25 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: {
           text: 'semi - sweet chocolate',
         },
+        modal: {
+          closeButton: {
+            icon: {
+              width: 24,
+              height: 24,
+              fragment: 'close',
+            },
+          },
+          ingredientDescription: {
+            title: {
+              text: 'Coffee',
+            },
+            description: {
+              text: 'Bold and aromatic, it enhances the chocolate with a deep, roasted flavor.',
+            },
+          },
+        },
       },
       {
-        link: {
-          href: '/',
-        },
         icon: {
           width: 24,
           height: 24,
@@ -139,11 +192,25 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: {
           text: 'cacao',
         },
+        modal: {
+          closeButton: {
+            icon: {
+              width: 24,
+              height: 24,
+              fragment: 'close',
+            },
+          },
+          ingredientDescription: {
+            title: {
+              text: 'Cacao',
+            },
+            description: {
+              text: 'The heart of every chocolate, delivering intense, rich cocoa notes.',
+            },
+          },
+        },
       },
       {
-        link: {
-          href: '/',
-        },
         icon: {
           width: 24,
           height: 24,
@@ -161,11 +228,25 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: {
           text: 'raspberry',
         },
+        modal: {
+          closeButton: {
+            icon: {
+              width: 24,
+              height: 24,
+              fragment: 'close',
+            },
+          },
+          ingredientDescription: {
+            title: {
+              text: 'Raspberry',
+            },
+            description: {
+              text: 'A tangy and fruity touch that pairs perfectly with the sweetness of chocolate.',
+            },
+          },
+        },
       },
       {
-        link: {
-          href: '/',
-        },
         icon: {
           width: 24,
           height: 24,
@@ -183,11 +264,25 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         title: {
           text: 'coconut oil',
         },
+        modal: {
+          closeButton: {
+            icon: {
+              width: 24,
+              height: 24,
+              fragment: 'close',
+            },
+          },
+          ingredientDescription: {
+            title: {
+              text: 'Coconut Oil',
+            },
+            description: {
+              text: 'Adds a subtle tropical aroma and a silky smooth texture.',
+            },
+          },
+        },
       },
       {
-        link: {
-          href: '/',
-        },
         icon: {
           width: 24,
           height: 24,
@@ -204,6 +299,23 @@ export const INGREDIENTS_DATA: IINGREDIENTS_DATA = {
         },
         title: {
           text: 'vanilla',
+        },
+        modal: {
+          closeButton: {
+            icon: {
+              width: 24,
+              height: 24,
+              fragment: 'close',
+            },
+          },
+          ingredientDescription: {
+            title: {
+              text: 'Vanilla',
+            },
+            description: {
+              text: 'A warm and fragrant essence that enhances the chocolate\u2019s natural sweetness.',
+            },
+          },
         },
       },
     ],
