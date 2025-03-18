@@ -1,4 +1,4 @@
-.ingredients_link {
+.ingredients_wrapper {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -7,7 +7,7 @@
 }
 
 @media only screen and (min-width: 1158px) {
-  .ingredients_link {
+  .ingredients_wrapper {
     gap: 36px;
     padding: 27px 22px;
   }
