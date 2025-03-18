@@ -41,13 +41,15 @@
   }
 }
 
-.modal_window.modal_window__submit_notification {
+.modal_window.modal_window__submit_notification,
+.modal_window.modal_window__ingredients_info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 344px;
   height: 150px;
   padding: 16px;
+  text-align: center;
 }
 
 .modal_close_button {

@@ -38,6 +38,7 @@ export const Modal: IModal = ({
       className={clsx({
         [css.modal_backdrop]: true,
         [css.modal_backdrop__visible]: isModalOpen,
+        [css.modal_window__ingredients_info]: variant === 'ingredientsInfo',
         [css.modal_backdrop__submit_notification]: variant === 'submitNotification',
       })}
       onClick={(event) => backdropClickHandle(event, setIsModalOpen)}
@@ -45,6 +46,7 @@ export const Modal: IModal = ({
       <div
         className={clsx({
           [css.modal_window]: true,
+          [css.modal_window__ingredients_info]: variant === 'ingredientsInfo',
           [css.modal_window__submit_notification]: variant === 'submitNotification',
         })}
       >
