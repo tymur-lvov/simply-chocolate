@@ -58,6 +58,8 @@ export * from './IngredientsItem/IngredientsItem.tsx';
 export { default as ingredientsItemModule } from './IngredientsItem/ingredientsItem.module.css';
 export * from './Ingredients/Ingredients.tsx';
 export { default as ingredientsModule } from './Ingredients/ingredients.module.css';
+export * from './IngredientDescription/IngredientDescription.tsx';
+export { default as ingredientDescriptionModule } from './IngredientDescription/ingredientDescription.module.css';
 export * from './Image/Image.tsx';
 export { default as imageModule } from './Image/image.module.css';
 export * from './Icon/Icon.tsx';
