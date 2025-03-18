@@ -149,3 +149,5 @@ export type IReviewFieldErrorIconClickHandle = (
   isFieldValid: boolean,
   setFormStatus: IReviewFormStatusSetter
 ) => void;
+
+export type IIngredientsItemClickHandle = (setIsModalOpen: IBooleanStateSetter) => void;

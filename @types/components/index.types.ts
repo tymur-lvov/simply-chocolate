@@ -118,6 +118,10 @@ export interface IIngredientsItemProps extends IComponentProps {
   data: IINGREDIENTS_DATA['ingredientsList']['ingredientsItems'][number];
 }
 
+export interface IIngredientDescriptionProps extends IComponentProps {
+  data: IINGREDIENTS_DATA['ingredientsList']['ingredientsItems'][number]['modal']['ingredientDescription'];
+}
+
 export interface IHowItsMadeProps extends IComponentProps {
   data: IHOW_ITS_MADE_DATA;
 }
@@ -167,7 +171,7 @@ export interface IReviewsItemProps extends IComponentProps {
 
 export interface IModalProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal'];
-  variant: 'submitForm' | 'submitNotification';
+  variant: 'submitForm' | 'submitNotification' | 'ingredientsInfo';
   isModalOpen: boolean;
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }
@@ -243,6 +247,7 @@ export type IBenefitsItem = FC<IBenefitsItemProps>;
 export type IIngredients = FC<IIngredientsProps>;
 export type IIngredientsList = FC<IIngredientsListProps>;
 export type IIngredientsItem = FC<IIngredientsItemProps>;
+export type IIngredientDescription = FC<IIngredientDescriptionProps>;
 
 export type IRecipeList = FC<IRecipeListProps>;
 export type IHowItsMade = FC<IHowItsMadeProps>;

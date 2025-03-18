@@ -66,10 +66,16 @@ export interface IINGREDIENTS_DATA {
   sectionTitle: ICommonTitle;
   ingredientsList: {
     ingredientsItems: {
-      link: ICommonLink;
       icon: ICommonIcon;
       image: ICommonImage;
       title: ICommonTitle;
+      modal: {
+        closeButton: ICommonButton;
+        ingredientDescription: {
+          title: ICommonTitle;
+          description: ICommonDescription;
+        };
+      };
     }[];
   };
 }
