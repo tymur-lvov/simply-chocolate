@@ -72,6 +72,8 @@ export * from './Heading/Heading.tsx';
 export { default as headingModule } from './Heading/heading.module.css';
 export * from './Header/Header.tsx';
 export { default as headerModule } from './Header/header.module.css';
+export * from './Footer/Footer.tsx';
+export { default as footerModule } from './Footer/footer.module.css';
 export * from './Field/Field.tsx';
 export { default as fieldModule } from './Field/field.module.css';
 export * from './ErrorMessage/ErrorMessage.tsx';

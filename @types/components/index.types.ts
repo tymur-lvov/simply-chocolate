@@ -221,6 +221,8 @@ export interface ISubmitNotificationProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['onSubmitModal']['submitNotification'];
 }
 
+export interface IFooterProps extends IComponentProps {}
+
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
 export type IButton = FC<IButtonProps>;
@@ -273,3 +275,5 @@ export type IReviewsItem = FC<IReviewsItemProps>;
 export type IErrorMessage = FC<IErrorMessageProps>;
 export type IReviewSubmitForm = FC<IReviewSubmitFormProps>;
 export type ISubmitNotification = FC<ISubmitNotificationProps>;
+
+export type IFooter = FC<IFooterProps>;
