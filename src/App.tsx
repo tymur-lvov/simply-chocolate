@@ -1,7 +1,7 @@
 import {
   Hero,
   Header,
-  Footer,
+  // Footer,
   Reviews,
   Benefits,
   Products,
@@ -36,9 +36,7 @@ export const App = () => {
         <TopSellers data={TOP_SELLERS_DATA} />
         <Reviews data={REVIEWS_DATA} />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <footer>{/* <Footer /> */}</footer>
     </>
   );
 };
