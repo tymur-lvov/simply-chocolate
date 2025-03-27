@@ -1,0 +1,76 @@
+.form {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  width: 207px;
+  height: 45px;
+  padding: 14px 18px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  color: var(--white);
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (max-width: 320px) {
+  .input {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .input {
+    width: 232px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .input {
+    width: 313px;
+    height: 52px;
+    padding: 13px 24px;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+  }
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 1158px) {
+  .input::placeholder {
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+  }
+}
+
+.button {
+  width: 120px;
+  height: 45px;
+  border-radius: 100px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .button {
+    width: 128px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .button {
+    width: 137px;
+    height: 52px;
+    line-height: 1.29;
+  }
+}
