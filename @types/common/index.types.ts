@@ -37,6 +37,7 @@ export interface ICommonImage extends ICommonAsset {
 export interface ICommonLink extends ICommonComponent {
   href: string;
   rel?: string;
+  text?: string;
   target?: string;
 }
 

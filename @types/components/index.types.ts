@@ -17,6 +17,7 @@ import type {
   ICommonDescription,
   IReviewFormStatus,
   IBooleanStateSetter,
+  IFOOTER_DATA,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -221,7 +222,21 @@ export interface ISubmitNotificationProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['onSubmitModal']['submitNotification'];
 }
 
-export interface IFooterProps extends IComponentProps {}
+export interface IFooterProps extends IComponentProps {
+  data: IFOOTER_DATA;
+}
+
+export interface IContactsListProps extends IComponentProps {
+  data: IFOOTER_DATA['contactsList'];
+}
+
+export interface IContactsItemProps extends IComponentProps {
+  data: IFOOTER_DATA['contactsList']['contactsItems'][number];
+}
+
+export interface ISubscriptionFormProps extends IComponentProps {
+  data: IFOOTER_DATA['subscriptionForm'];
+}
 
 export type IIcon = FC<IIconProps>;
 export type IImage = FC<IImageProps>;
@@ -277,3 +292,6 @@ export type IReviewSubmitForm = FC<IReviewSubmitFormProps>;
 export type ISubmitNotification = FC<ISubmitNotificationProps>;
 
 export type IFooter = FC<IFooterProps>;
+export type IContactsList = FC<IContactsListProps>;
+export type IContactsItem = FC<IContactsItemProps>;
+export type ISubscriptionForm = FC<ISubscriptionFormProps>;

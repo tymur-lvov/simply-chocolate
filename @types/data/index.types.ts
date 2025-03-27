@@ -143,3 +143,27 @@ export interface IREVIEWS_DATA {
     };
   };
 }
+
+export interface IFOOTER_DATA {
+  sectionTitle: ICommonTitle;
+  contactsTitle: ICommonTitle;
+  contactsList: {
+    contactsItems: ICommonLink[];
+  };
+  socialsTitle: ICommonTitle;
+  socialsList: {
+    socialsItems: {
+      link: ICommonLink;
+      icon: ICommonIcon;
+    }[];
+  };
+  navList: {
+    navItems: {
+      link: ICommonLink;
+    }[];
+  };
+  subscriptionForm: {
+    input: ICommonInput;
+    button: ICommonButton;
+  };
+}
