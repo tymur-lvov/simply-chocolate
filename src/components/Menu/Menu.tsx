@@ -1,7 +1,13 @@
 import { clsx } from 'clsx';
 import { useEffect, useState } from 'react';
 
-import { releaseScrollLock, menuClickHandle } from '@helpers';
+import {
+  keydownHandle,
+  menuClickHandle,
+  releaseScrollLock,
+  addKeydownEventListener,
+  removeKeydownEventListener,
+} from '@helpers';
 
 import { Button, Icon, NavList, Portal, SocialsList } from '@components';
 
@@ -15,7 +21,13 @@ export const Menu: IMenu = ({ data }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    return () => releaseScrollLock();
+    addKeydownEventListener(keydownHandle, setIsMenuOpen);
+
+    return () => {
+      removeKeydownEventListener(keydownHandle, setIsMenuOpen);
+
+      releaseScrollLock();
+    };
   }, []);
 
   return (

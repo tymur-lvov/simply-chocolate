@@ -9,7 +9,7 @@ import {
   SubscriptionForm,
 } from '@components';
 
-import { CONTAINER, MENU, SECTION_TITLE_ACCENT } from '@constants';
+import { CONTAINER, FOOTER, MENU, SECTION_TITLE_ACCENT } from '@constants';
 
 import { footerModule as css } from '@styles';
 
@@ -29,19 +29,30 @@ export const Footer: IFooter = ({
   return (
     <footer className={css.footer}>
       <div className={CONTAINER}>
-        <SectionTitle classNames={[SECTION_TITLE_ACCENT, css.section_title]} data={sectionTitle} />
-        <div className={css.list_wrapper}>
-          <Title className={css.list_title} data={contactsTitle} />
-          <ContactsList data={contactsList} />
+        <div className={css.footer_wrapper}>
+          <div className={css.upper_container}>
+            <SectionTitle
+              classNames={[SECTION_TITLE_ACCENT, css.section_title]}
+              data={sectionTitle}
+            />
+            <div className={css.contacts_socials_lists_wrapper}>
+              <div className={css.list_wrapper__contacts}>
+                <Title className={css.list_title} data={contactsTitle} />
+                <ContactsList data={contactsList} />
+              </div>
+              <div className={clsx(css.list_wrapper, css.list_wrapper__socials)}>
+                <Title className={css.list_title} data={socialsTitle} />
+                <SocialsList variant={MENU} data={socialsList} />
+              </div>
+            </div>
+          </div>
+          <div className={css.nav_list_form_wrapper}>
+            <div className={clsx(css.list_wrapper, css.list_wrapper__nav)}>
+              <NavList variant={FOOTER} className={css.list_wrapper} data={navList} />
+            </div>
+            <SubscriptionForm data={subscriptionForm} />
+          </div>
         </div>
-        <div className={clsx(css.list_wrapper, css.list_wrapper__socials)}>
-          <Title className={css.list_title} data={socialsTitle} />
-          <SocialsList variant={MENU} data={socialsList} />
-        </div>
-        <div className={css.list_wrapper}>
-          <NavList variant={MENU} className={css.list_wrapper} data={navList} />
-        </div>
-        <SubscriptionForm data={subscriptionForm} />
       </div>
     </footer>
   );
