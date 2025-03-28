@@ -21,3 +21,27 @@
     width: 320px;
   }
 }
+
+.footer.nav_list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer.nav_list {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer.nav_list {
+    gap: 24px;
+  }
+}
