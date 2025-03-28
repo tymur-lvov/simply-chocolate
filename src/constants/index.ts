@@ -12,6 +12,7 @@ export const SECTION_TITLE = 'section_title';
 export const SECTION_TITLE_ACCENT = 'section_title_accent';
 export const MENU = 'menu';
 export const HEADER = 'header';
+export const FOOTER = 'footer';
 
 export const REVIEW_FIELD_INPUT_REGEXP = {
   name: /^[A-Za-z\s\-]{2,50}$/,
