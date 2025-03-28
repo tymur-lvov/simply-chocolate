@@ -30,35 +30,33 @@ export const ReviewSubmitForm: IReviewSubmitForm = ({
   });
 
   return (
-    <>
-      <form
-        className={css.review_form}
-        onSubmit={(event) =>
-          reviewFormSubmitHandle(
-            event,
-            formStatus,
-            setFormStatus,
-            setIsOnSubmitModalOpen,
-            setIsReviewFormModalOpen
-          )
-        }
-        onClick={(event) => reviewFormClickHandle(event, setFormStatus)}
-      >
-        <Title
-          classNames={[SECTION_TITLE, SECTION_TITLE_ACCENT, css.review_form_title]}
-          data={title}
+    <form
+      className={css.review_form}
+      onSubmit={(event) =>
+        reviewFormSubmitHandle(
+          event,
+          formStatus,
+          setFormStatus,
+          setIsOnSubmitModalOpen,
+          setIsReviewFormModalOpen
+        )
+      }
+      onClick={(event) => reviewFormClickHandle(event, setFormStatus)}
+    >
+      <Title
+        classNames={[SECTION_TITLE, SECTION_TITLE_ACCENT, css.review_form_title]}
+        data={title}
+      />
+      {inputs.map((input, index) => (
+        <Field
+          data={input}
+          key={input.id}
+          fieldIndex={index}
+          formStatus={formStatus}
+          setFormStatus={setFormStatus}
         />
-        {inputs.map((input, index) => (
-          <Field
-            data={input}
-            key={input.id}
-            fieldIndex={index}
-            formStatus={formStatus}
-            setFormStatus={setFormStatus}
-          />
-        ))}
-        <Button className={css.review_form_button} type='submit' data={button} />
-      </form>
-    </>
+      ))}
+      <Button className={css.review_form_button} type='submit' data={button} />
+    </form>
   );
 };
