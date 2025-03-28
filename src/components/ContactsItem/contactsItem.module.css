@@ -3,4 +3,16 @@
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  transition: color 250ms var(--transition);
+}
+
+.contacts_link:active {
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 1158px) {
+  .contacts_link:hover,
+  .contacts_link:focus {
+    color: var(--orange);
+  }
 }
