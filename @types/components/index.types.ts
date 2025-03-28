@@ -57,12 +57,12 @@ export interface IMenuProps extends IComponentProps {
 
 export interface INavListProps extends IComponentProps {
   data: IMENU_DATA['navList'];
-  variant: 'menu' | 'header';
+  variant: 'menu' | 'header' | 'footer';
 }
 
 export interface INavItemProps extends IComponentProps {
   data: IMENU_DATA['navList']['navItems'][number];
-  variant: 'menu' | 'header';
+  variant: 'menu' | 'header' | 'footer';
 }
 
 export interface ISocialsListProps extends IComponentProps {
