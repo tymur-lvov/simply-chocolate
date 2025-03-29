@@ -1,7 +1,14 @@
 import { clsx } from 'clsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { reviewFieldChangeHandle, reviewFieldErrorIconClickHandle } from '@helpers';
+import { useMedia } from '@hooks';
+
+import {
+  reviewFieldChangeHandle,
+  errorIconMouseEnterHandle,
+  errorIconMouseLeaveHandle,
+  reviewFieldErrorIconClickHandle,
+} from '@helpers';
 
 import { Checkbox, ErrorMessage, Icon, Input, Label, TextArea } from '@components';
 
@@ -11,6 +18,14 @@ import type { IField } from '@types';
 
 export const Field: IField = ({ data, fieldIndex, formStatus, setFormStatus }) => {
   const [isFieldValid, setIsFieldValid] = useState(false);
+
+  const { isDesktop } = useMedia();
+
+  useEffect(() => {
+    if (!formStatus.isSubmitAttempted) {
+      setIsFieldValid(false);
+    }
+  });
 
   const { isSubmitAttempted, isErrorPopupVisible, errorFieldIndex } = formStatus;
 
@@ -52,6 +67,10 @@ export const Field: IField = ({ data, fieldIndex, formStatus, setFormStatus }) =
             onClick={() =>
               reviewFieldErrorIconClickHandle(formStatus, fieldIndex, isFieldValid, setFormStatus)
             }
+            onMouseEnter={
+              isDesktop ? () => errorIconMouseEnterHandle(fieldIndex, setFormStatus) : () => {}
+            }
+            onMouseLeave={isDesktop ? () => errorIconMouseLeaveHandle(setFormStatus) : () => {}}
           />
           <ErrorMessage
             className={clsx({

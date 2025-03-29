@@ -51,11 +51,15 @@
 .review_form_input_icon.review_form_input_icon__error_icon {
   right: 18px;
   left: auto;
-  pointer-events: none;
   opacity: 0;
+  pointer-events: none;
   fill: var(--field-icon-error);
   stroke: none;
-  transition: opacity 250ms var(--transition);
+  transition: scale 250ms var(--transition) opacity 250ms var(--transition);
+}
+
+.review_form_input_icon.review_form_input_icon__error_icon:active {
+  scale: 0.95;
 }
 
 @media only screen and (min-width: 768px) {
@@ -77,8 +81,8 @@ textarea + .review_form_input_icon.review_form_input_icon__error_icon {
 
 .review_form_input_icon.review_form_input_icon__error_icon.review_form_input_icon__error_icon__visible {
   opacity: 1;
-  pointer-events: all;
   cursor: pointer;
+  pointer-events: all;
 }
 
 .error_message {
