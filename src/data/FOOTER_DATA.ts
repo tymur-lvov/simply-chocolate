@@ -96,5 +96,22 @@ export const FOOTER_DATA: IFOOTER_DATA = {
     button: {
       text: 'Subscribe',
     },
+    onSubmitModal: {
+      closeButton: {
+        icon: {
+          width: 24,
+          height: 24,
+          fragment: 'close',
+        },
+      },
+      submitNotification: {
+        title: {
+          text: 'Subscription successful!',
+        },
+        description: {
+          text: 'You have successfully subscribed\n to our newsletter.',
+        },
+      },
+    },
   },
 };
