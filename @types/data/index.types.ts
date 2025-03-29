@@ -165,5 +165,12 @@ export interface IFOOTER_DATA {
   subscriptionForm: {
     input: ICommonInput;
     button: ICommonButton;
+    onSubmitModal: {
+      closeButton: ICommonButton;
+      submitNotification: {
+        title: ICommonTitle;
+        description: ICommonDescription;
+      };
+    };
   };
 }

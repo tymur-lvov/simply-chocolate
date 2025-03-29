@@ -151,3 +151,15 @@ export type IReviewFieldErrorIconClickHandle = (
 ) => void;
 
 export type IIngredientsItemClickHandle = (setIsModalOpen: IBooleanStateSetter) => void;
+
+export type IErrorIconMouseEnterHandle = (
+  fieldIndex: number,
+  setFormStatus: IReviewFormStatusSetter
+) => void;
+
+export type IErrorIconMouseLeaveHandle = (setFormStatus: IReviewFormStatusSetter) => void;
+
+export type ISubscriptionFormSubmitHandle = (
+  event: FormEvent,
+  setIsModalOpen: IBooleanStateSetter
+) => void;

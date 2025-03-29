@@ -26,6 +26,8 @@ export interface IComponentProps {
   className?: string;
   classNames?: string[];
   onClick?: (event: MouseEvent<HTMLElement>) => void;
+  onMouseEnter?: (event: MouseEvent<HTMLElement>) => void;
+  onMouseLeave?: (event: MouseEvent<HTMLElement>) => void;
 }
 
 export interface IIconProps extends IComponentProps {
