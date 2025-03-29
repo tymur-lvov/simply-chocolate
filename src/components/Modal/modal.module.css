@@ -34,6 +34,10 @@
   transform: translate(-50%, -50%);
 }
 
+.modal_window::-webkit-scrollbar {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .modal_window {
     width: 517px;
