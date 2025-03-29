@@ -33,5 +33,19 @@ export const reviewFormSubmitHandle: IReviewFormSubmitHandle = (
 
   setIsReviewFormModalOpen(false);
 
+  setFormStatus({
+    errorFieldIndex: null,
+    isSubmitAttempted: false,
+    isAnyFieldChanged: false,
+    isErrorPopupVisible: false,
+    fieldsErrorStatus: {
+      isNameError: false,
+      isEmailError: false,
+      isPhoneError: false,
+      isCommentError: false,
+      isPrivacyError: false,
+    },
+  });
+
   form.reset();
 };
