@@ -4,6 +4,7 @@ import type {
   IMENU_DATA,
   IHERO_DATA,
   IHEADER_DATA,
+  IFOOTER_DATA,
   IREVIEWS_DATA,
   IBENEFITS_DATA,
   IPRODUCTS_DATA,
@@ -17,7 +18,6 @@ import type {
   ICommonDescription,
   IReviewFormStatus,
   IBooleanStateSetter,
-  IFOOTER_DATA,
 } from '../index.types';
 
 export interface IComponentProps {
