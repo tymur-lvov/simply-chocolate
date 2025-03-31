@@ -25,13 +25,13 @@ export const HEADER_DATA: IHEADER_DATA = {
       },
       {
         link: {
-          href: '/',
+          href: '#recipe_section',
           text: 'How it\u2019s made?',
         },
       },
       {
         link: {
-          href: '/',
+          href: '#reviews_section',
           text: 'Chocolate is loved',
         },
       },

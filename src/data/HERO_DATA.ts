@@ -11,15 +11,17 @@ export const HERO_DATA: IHERO_DATA = {
       },
     },
   },
-  orderButton: {
+  orderLink: {
+    href: '#products_section',
     text: 'Buy now',
   },
-  infoButton: {
+  infoLink: {
+    href: '#recipe_section',
     text: `How it\u2019s made`,
   },
   scrollBlock: {
     link: {
-      href: '/',
+      href: '#products_section',
       text: 'scroll down',
     },
     icon: {
