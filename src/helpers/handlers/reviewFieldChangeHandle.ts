@@ -1,4 +1,4 @@
-import { validateReviewField } from '@helpers';
+import { saveToLocalStorage, validateReviewField } from '@helpers';
 
 import type { IReviewFieldChangeHandle } from '@types';
 
@@ -13,6 +13,8 @@ export const reviewFieldChangeHandle: IReviewFieldChangeHandle = (
 
   const isFieldValid = validateReviewField(field);
 
+  setIsFieldValid(isFieldValid);
+
   setFormStatus?.((prev) => ({
     ...prev,
     isAnyFieldChanged: true,
@@ -22,5 +24,11 @@ export const reviewFieldChangeHandle: IReviewFieldChangeHandle = (
     },
   }));
 
-  setIsFieldValid(isFieldValid);
+  if (field.id === 'privacy' && !field.checked) {
+    saveToLocalStorage(field.id, '');
+
+    return;
+  }
+
+  saveToLocalStorage(field.id, field.value);
 };
