@@ -27,7 +27,7 @@ export const Reviews: IReviews = ({
   const [isOnSubmitModalOpen, setIsOnSubmitModalOpen] = useState(false);
 
   return (
-    <section className={clsx(css.reviews, SECTION)}>
+    <section className={clsx(css.reviews, SECTION)} id={'reviews_section'}>
       <div className={clsx(css.reviews_container, CONTAINER)}>
         <SectionTitle
           classNames={[css.reviews_section_title, SECTION_TITLE, SECTION_TITLE_ACCENT]}
