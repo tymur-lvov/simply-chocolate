@@ -43,8 +43,8 @@ export interface IHEADER_DATA {
 
 export interface IHERO_DATA {
   mainTitle: ICommonTitle;
-  orderButton: ICommonButton;
-  infoButton: ICommonButton;
+  orderLink: ICommonLink;
+  infoLink: ICommonLink;
   scrollBlock: {
     link: ICommonLink;
     icon: ICommonIcon;

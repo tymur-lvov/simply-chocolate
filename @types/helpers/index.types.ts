@@ -15,8 +15,6 @@ export type INumberStateSetter = Dispatch<SetStateAction<number>>;
 
 export type INumberOrNullStateSetter = Dispatch<SetStateAction<number | null>>;
 
-export type IReviewFormStatusSetter = React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
-
 export interface IMediaQueryLists {
   mobileList: MediaQueryList;
   tabletList: MediaQueryList;
@@ -122,10 +120,25 @@ export type IReviewFormStatus = {
   };
 };
 
+export type IReviewFormStatusSetter = React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
+
+export type IReviewFieldValues = {
+  name: '';
+  email: '';
+  phone: '';
+  comment: '';
+  privacy: '';
+};
+
+export type IReviewFieldValuesStateSetter = React.Dispatch<
+  React.SetStateAction<IReviewFieldValues>
+>;
+
 export type IReviewFormSubmitHandle = (
   event: FormEvent,
   formStatus: IReviewFormStatus,
   setFormStatus: IReviewFormStatusSetter,
+  setFieldValues: IReviewFieldValuesStateSetter,
   setIsOnSubmitModalOpen: IBooleanStateSetter,
   setIsReviewFormModalOpen: IBooleanStateSetter
 ) => void;
@@ -163,3 +176,7 @@ export type ISubscriptionFormSubmitHandle = (
   event: FormEvent,
   setIsModalOpen: IBooleanStateSetter
 ) => void;
+
+export type ISaveToLocalStorage = (key: string, data: string) => void;
+
+export type IGetSavedValue = (key: string) => string | null;

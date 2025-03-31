@@ -1,4 +1,4 @@
-import type { ReactNode, FC, MouseEvent, ChangeEvent, Dispatch, SetStateAction } from 'react';
+import type { ReactNode, FC, MouseEvent } from 'react';
 
 import type {
   IMENU_DATA,
@@ -15,9 +15,13 @@ import type {
   ICommonImage,
   ICommonTitle,
   ICommonButton,
-  ICommonDescription,
   IReviewFormStatus,
+  IReviewFieldValues,
+  ICommonDescription,
   IBooleanStateSetter,
+  IReviewFormStatusSetter,
+  IReviewFieldChangeHandle,
+  IReviewFieldValuesStateSetter,
 } from '../index.types';
 
 export interface IComponentProps {
@@ -176,7 +180,7 @@ export interface IModalProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewsModal'];
   variant: 'submitForm' | 'submitNotification' | 'ingredientsInfo';
   isModalOpen: boolean;
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
+  setIsModalOpen: IBooleanStateSetter;
 }
 
 export interface IReviewSubmitFormProps extends IComponentProps {
@@ -193,27 +197,40 @@ export interface IFieldProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
   fieldIndex: number;
   formStatus: IReviewFormStatus;
-  setFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
+  fieldValues: IReviewFieldValues;
+  setFormStatus: IReviewFormStatusSetter;
+  setFieldValues: IReviewFieldValuesStateSetter;
 }
 
 export interface IInputProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
-  formStatus: IReviewFormStatus;
   isFieldValid: boolean;
-  onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  setFormStatus: React.Dispatch<React.SetStateAction<IReviewFormStatus>>;
+  formStatus: IReviewFormStatus;
+  fieldValues: IReviewFieldValues;
+  onChange: IReviewFieldChangeHandle;
+  setIsFieldValid: IBooleanStateSetter;
+  setFormStatus: IReviewFormStatusSetter;
+  setFieldValues: IReviewFieldValuesStateSetter;
 }
 
 export interface ITextAreaProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
-  onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  fieldValues: IReviewFieldValues;
+  onChange: IReviewFieldChangeHandle;
+  setIsFieldValid: IBooleanStateSetter;
+  setFormStatus: IReviewFormStatusSetter;
+  setFieldValues: IReviewFieldValuesStateSetter;
 }
 
 export interface ICheckboxProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
-  formStatus: IReviewFormStatus;
   isFieldValid: boolean;
-  onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  formStatus: IReviewFormStatus;
+  fieldValues: IReviewFieldValues;
+  onChange: IReviewFieldChangeHandle;
+  setIsFieldValid: IBooleanStateSetter;
+  setFormStatus: IReviewFormStatusSetter;
+  setFieldValues: IReviewFieldValuesStateSetter;
 }
 
 export interface IErrorMessageProps extends IComponentProps {
