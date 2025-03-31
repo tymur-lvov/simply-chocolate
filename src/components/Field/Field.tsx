@@ -16,7 +16,14 @@ import { fieldModule as css } from '@styles';
 
 import type { IField } from '@types';
 
-export const Field: IField = ({ data, fieldIndex, formStatus, setFormStatus }) => {
+export const Field: IField = ({
+  data,
+  formStatus,
+  fieldIndex,
+  fieldValues,
+  setFormStatus,
+  setFieldValues,
+}) => {
   const [isFieldValid, setIsFieldValid] = useState(false);
 
   const { isDesktop } = useMedia();
@@ -25,7 +32,7 @@ export const Field: IField = ({ data, fieldIndex, formStatus, setFormStatus }) =
     if (!formStatus.isSubmitAttempted) {
       setIsFieldValid(false);
     }
-  });
+  }, []);
 
   const { isSubmitAttempted, isErrorPopupVisible, errorFieldIndex } = formStatus;
 
@@ -41,10 +48,13 @@ export const Field: IField = ({ data, fieldIndex, formStatus, setFormStatus }) =
                 [css.review_form_field__error]: !isFieldValid && isSubmitAttempted,
               })}
               data={data}
-              isFieldValid={isFieldValid}
               formStatus={formStatus}
+              fieldValues={fieldValues}
+              isFieldValid={isFieldValid}
               setFormStatus={setFormStatus}
-              onChange={(event) => reviewFieldChangeHandle(event, setFormStatus, setIsFieldValid)}
+              setFieldValues={setFieldValues}
+              setIsFieldValid={setIsFieldValid}
+              onChange={reviewFieldChangeHandle}
             />
           )}
           {data.type === 'textArea' && (
@@ -54,7 +64,11 @@ export const Field: IField = ({ data, fieldIndex, formStatus, setFormStatus }) =
                 [css.review_form_field__error]: !isFieldValid && isSubmitAttempted,
               })}
               data={data}
-              onChange={(event) => reviewFieldChangeHandle(event, setFormStatus, setIsFieldValid)}
+              fieldValues={fieldValues}
+              setFormStatus={setFormStatus}
+              setFieldValues={setFieldValues}
+              setIsFieldValid={setIsFieldValid}
+              onChange={reviewFieldChangeHandle}
             />
           )}
           <Icon
@@ -84,9 +98,13 @@ export const Field: IField = ({ data, fieldIndex, formStatus, setFormStatus }) =
       {data.type === 'checkbox' && (
         <Checkbox
           data={data}
-          isFieldValid={isFieldValid}
           formStatus={formStatus}
-          onChange={(event) => reviewFieldChangeHandle(event, setFormStatus, setIsFieldValid)}
+          fieldValues={fieldValues}
+          isFieldValid={isFieldValid}
+          setFormStatus={setFormStatus}
+          setFieldValues={setFieldValues}
+          setIsFieldValid={setIsFieldValid}
+          onChange={reviewFieldChangeHandle}
         />
       )}
     </>
