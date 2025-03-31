@@ -6,6 +6,7 @@ export const reviewFormSubmitHandle: IReviewFormSubmitHandle = (
   event,
   formStatus,
   setFormStatus,
+  setFieldValues,
   setIsOnSubmitModalOpen,
   setIsReviewFormModalOpen
 ) => {
@@ -47,5 +48,13 @@ export const reviewFormSubmitHandle: IReviewFormSubmitHandle = (
     },
   });
 
-  form.reset();
+  setFieldValues({
+    name: '',
+    email: '',
+    phone: '',
+    comment: '',
+    privacy: '',
+  });
+
+  Object.keys(formFields).forEach((key) => localStorage.removeItem(key));
 };
