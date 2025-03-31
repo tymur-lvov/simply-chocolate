@@ -107,7 +107,10 @@
   gap: 14px;
 }
 
-.hero_btn {
+.hero_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 41px;
   border-radius: 100px;
   color: var(--white);
@@ -115,65 +118,65 @@
   font-size: 14px;
 }
 
-.hero_btn:active {
+.hero_link:active {
   color: var(--orange);
 }
 
 @media only screen and (min-width: 768px) {
-  .hero_btn {
+  .hero_link {
     height: 45px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .hero_btn:hover,
-  .hero_btn:focus {
+  .hero_link:hover,
+  .hero_link:focus {
     color: var(--orange);
   }
 }
 
-.hero_order_btn {
+.hero_order_link {
   width: 120px;
   background-color: var(--orange);
   transition: color 250ms var(--transition), background-color 250ms var(--transition);
 }
 
-.hero_order_btn:active {
+.hero_order_link:active {
   background-color: var(--beige);
 }
 
 @media only screen and (min-width: 768px) {
-  .hero_order_btn {
+  .hero_order_link {
     width: 144px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .hero_order_btn:hover,
-  .hero_order_btn:focus {
+  .hero_order_link:hover,
+  .hero_order_link:focus {
     background-color: var(--beige);
   }
 }
 
-.hero_info_btn {
+.hero_info_link {
   width: 159px;
   border: 1px solid var(--white);
   transition: color 250ms var(--transition), border-color 250ms var(--transition);
 }
 
-.hero_info_btn:active {
+.hero_info_link:active {
   border-color: var(--orange);
 }
 
 @media only screen and (min-width: 768px) {
-  .hero_info_btn {
+  .hero_info_link {
     width: 183px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .hero_info_btn:hover,
-  .hero_info_btn:focus {
+  .hero_info_link:hover,
+  .hero_info_link:focus {
     border-color: var(--orange);
   }
 }

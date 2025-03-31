@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 
-import { Icon, Button, MainTitle } from '@components';
+import { Icon, MainTitle } from '@components';
 
 import { CONTAINER } from '@constants';
 
@@ -16,8 +16,12 @@ export const Hero: IHero = ({ data }) => {
           <MainTitle className={css.hero_main_title} data={data.mainTitle} />
           <div className={css.hero_interactive_elements_wrapper}>
             <div className={css.hero_order_info_btns_wrapper}>
-              <Button className={clsx(css.hero_order_btn, css.hero_btn)} data={data.orderButton} />
-              <Button className={clsx(css.hero_info_btn, css.hero_btn)} data={data.infoButton} />
+              <a className={clsx(css.hero_order_link, css.hero_link)} href={data.orderLink.href}>
+                {data.orderLink.text}
+              </a>
+              <a className={clsx(css.hero_info_link, css.hero_link)} href={data.infoLink.href}>
+                {data.infoLink.text}
+              </a>
             </div>
             <a className={css.hero_scroll_link} href={data.scrollBlock.link.href}>
               {data.scrollBlock.link.text}
