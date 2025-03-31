@@ -1,3 +1,7 @@
+.reviews {
+  scroll-margin-top: 25px;
+}
+
 .reviews_container .reviews_section_title {
   margin-bottom: 74px;
 }

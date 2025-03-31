@@ -10,8 +10,8 @@ import type { IProducts } from '@types';
 
 export const Products: IProducts = ({ data: { sectionTitle, productsList } }) => {
   return (
-    <section className={clsx(css.our_products, SECTION)}>
-      <div className={clsx(css.our_products_container, CONTAINER)}>
+    <section className={clsx(css.products, SECTION)} id={'products_section'}>
+      <div className={clsx(css.products_container, CONTAINER)}>
         <SectionTitle classNames={[SECTION_TITLE, SECTION_TITLE_ACCENT]} data={sectionTitle} />
         <ProductsList data={productsList} />
       </div>
