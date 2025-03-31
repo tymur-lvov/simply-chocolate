@@ -12,7 +12,7 @@ export const HowItsMade: IHowItsMade = ({
   data: { sectionTitle, videoThumb, title, recipeList },
 }) => {
   return (
-    <section className={clsx(css.how_its_made_section, SECTION)}>
+    <section className={clsx(css.how_its_made_section, SECTION)} id='recipe_section'>
       <div className={clsx(css.how_its_made_container, CONTAINER)}>
         <SectionTitle classNames={[SECTION_TITLE, SECTION_TITLE_ACCENT]} data={sectionTitle} />
         <div className={css.how_its_made_video_thumb_recipe_list_wrapper}>
