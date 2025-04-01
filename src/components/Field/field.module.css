@@ -55,7 +55,7 @@
   pointer-events: none;
   fill: var(--field-icon-error);
   stroke: none;
-  transition: scale 250ms var(--transition) opacity 250ms var(--transition);
+  transition: scale 250ms var(--transition), opacity 250ms var(--transition);
 }
 
 .review_form_input_icon.review_form_input_icon__error_icon:active {

@@ -28,13 +28,13 @@ export const Field: IField = ({
 
   const { isDesktop } = useMedia();
 
+  const { isSubmitAttempted, isErrorPopupVisible, errorFieldIndex } = formStatus;
+
   useEffect(() => {
-    if (!formStatus.isSubmitAttempted) {
+    if (!isSubmitAttempted) {
       setIsFieldValid(false);
     }
-  }, []);
-
-  const { isSubmitAttempted, isErrorPopupVisible, errorFieldIndex } = formStatus;
+  }, [isSubmitAttempted]);
 
   return (
     <>
