@@ -23,6 +23,7 @@ export * from './handlers/errorIconMouseLeaveHandle.ts';
 export * from './handlers/ingredientsItemClickHandle.ts';
 export * from './handlers/keydownHandle.ts';
 export * from './handlers/menuClickHandle.ts';
+export * from './handlers/recipeVideoClickHandle.ts';
 export * from './handlers/reviewFieldChangeHandle.ts';
 export * from './handlers/reviewFieldErrorIconClickHandle.ts';
 export * from './handlers/reviewFormClickHandle.ts';
