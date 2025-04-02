@@ -180,3 +180,5 @@ export type ISubscriptionFormSubmitHandle = (
 export type ISaveToLocalStorage = (key: string, data: string) => void;
 
 export type IGetSavedValue = (key: string) => string | null;
+
+export type IRecipeVideoClickHandle = (setIsVideoOpen: IBooleanStateSetter) => void;

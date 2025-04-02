@@ -141,6 +141,11 @@ export interface IRecipeItemProps extends IComponentProps {
   data: IHOW_ITS_MADE_DATA['recipeList']['recipeItems'][number];
 }
 
+export interface IRecipeVideoProps extends IComponentProps {
+  isVideoOpen: boolean;
+  setIsVideoOpen: IBooleanStateSetter;
+}
+
 export interface IProductsProps extends IComponentProps {
   data: IPRODUCTS_DATA;
 }
@@ -288,6 +293,7 @@ export type IIngredientDescription = FC<IIngredientDescriptionProps>;
 export type IRecipeList = FC<IRecipeListProps>;
 export type IHowItsMade = FC<IHowItsMadeProps>;
 export type IRecipeItem = FC<IRecipeItemProps>;
+export type IRecipeVideo = FC<IRecipeVideoProps>;
 
 export type IProducts = FC<IProductsProps>;
 export type IProductsList = FC<IProductsListProps>;
