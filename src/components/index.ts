@@ -26,6 +26,8 @@ export * from './Reviews/Reviews.tsx';
 export { default as reviewsModule } from './Reviews/reviews.module.css';
 export * from './ReviewSubmitForm/ReviewSubmitForm.tsx';
 export { default as reviewSubmitFormModule } from './ReviewSubmitForm/reviewSubmitForm.module.css';
+export * from './RecipeVideo/RecipeVideo.tsx';
+export { default as recipeVideoModule } from './RecipeVideo/recipeVideo.module.css';
 export * from './RecipeList/RecipeList.tsx';
 export { default as recipeListModule } from './RecipeList/recipeList.module.css';
 export * from './RecipeItem/RecipeItem.tsx';

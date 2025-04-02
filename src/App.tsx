@@ -1,7 +1,7 @@
 import {
   Hero,
   Header,
-  // Footer,
+  Footer,
   Reviews,
   Benefits,
   Products,
@@ -13,7 +13,7 @@ import {
 import {
   HERO_DATA,
   HEADER_DATA,
-  // FOOTER_DATA,
+  FOOTER_DATA,
   REVIEWS_DATA,
   BENEFITS_DATA,
   PRODUCTS_DATA,
@@ -35,7 +35,7 @@ export const App = () => {
         <TopSellers data={TOP_SELLERS_DATA} />
         <Reviews data={REVIEWS_DATA} />
       </main>
-      {/* <Footer data={FOOTER_DATA} /> */}
+      <Footer data={FOOTER_DATA} />
     </>
   );
 };
