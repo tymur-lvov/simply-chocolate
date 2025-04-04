@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 import {
   keydownHandle,
+  releaseScrollLock,
   backdropClickHandle,
   addKeydownEventListener,
   removeKeydownEventListener,
@@ -16,7 +17,11 @@ export const RecipeVideo: IRecipeVideo = ({ isVideoOpen, setIsVideoOpen }) => {
   useEffect(() => {
     addKeydownEventListener(keydownHandle, setIsVideoOpen);
 
-    return () => removeKeydownEventListener(keydownHandle, setIsVideoOpen);
+    return () => {
+      removeKeydownEventListener(keydownHandle, setIsVideoOpen);
+
+      releaseScrollLock();
+    };
   }, []);
 
   return (
