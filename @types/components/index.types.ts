@@ -229,13 +229,13 @@ export interface ITextAreaProps extends IComponentProps {
 
 export interface ICheckboxProps extends IComponentProps {
   data: IREVIEWS_DATA['reviewSubmitForm']['inputs'][number];
-  isFieldValid: boolean;
   formStatus: IReviewFormStatus;
   fieldValues: IReviewFieldValues;
+  isFieldValid: boolean;
   onChange: IReviewFieldChangeHandle;
-  setIsFieldValid: IBooleanStateSetter;
   setFormStatus: IReviewFormStatusSetter;
   setFieldValues: IReviewFieldValuesStateSetter;
+  setIsFieldValid: IBooleanStateSetter;
 }
 
 export interface IErrorMessageProps extends IComponentProps {
