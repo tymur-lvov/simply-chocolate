@@ -129,7 +129,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
           fragment: 'email',
         },
         error: {
-          text: 'Invalid email format. The email must contain "@" symbol and a valid domain name.',
+          text: 'Email must contain "@" symbol and a valid domain name.',
           key: 'isEmailError',
           icon: {
             width: 18,
@@ -150,7 +150,7 @@ export const REVIEWS_DATA: IREVIEWS_DATA = {
           fragment: 'phone',
         },
         error: {
-          text: 'Invalid phone number format. It should be in international or local format.',
+          text: 'Phone number must be in international or local format.',
           key: 'isPhoneError',
           icon: {
             width: 18,
