@@ -21,7 +21,7 @@ export const HERO_DATA: IHERO_DATA = {
   },
   scrollBlock: {
     link: {
-      href: '#products_section',
+      href: '#ingredients_section',
       text: 'scroll down',
     },
     icon: {
